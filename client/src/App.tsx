@@ -37,10 +37,6 @@ import { DataPolicyPage } from './pages/DataPolicy/DataPolicy.page';
 setupIonicReact();
 
 const ReactIonApp = () => {
-/*   const [isAuthAdmin, setIsAuthAdmin] = useState(false)
-  useEffect(() => {
-    
-  }, [isAuthAdmin]) */
   return (
     <IonApp>
       <IonReactRouter>
