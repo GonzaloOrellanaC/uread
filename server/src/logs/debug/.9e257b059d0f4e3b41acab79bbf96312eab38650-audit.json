@@ -1,0 +1,39 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\server\\src\\logs\\debug\\.9e257b059d0f4e3b41acab79bbf96312eab38650-audit.json",
+    "files": [
+        {
+            "date": 1686577544308,
+            "name": "C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\server\\src\\logs\\debug\\2023-06-12.log",
+            "hash": "3ff857feab61a4e9e2fd1f60453911bc"
+        },
+        {
+            "date": 1687180075867,
+            "name": "C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\server\\src\\logs\\debug\\2023-06-19.log",
+            "hash": "a34b4fbb1facdd039e99ec35c8107b70"
+        },
+        {
+            "date": 1689590327402,
+            "name": "C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\server\\src\\logs\\debug\\2023-07-17.log",
+            "hash": "6aa69d22ed0ca6a6ccefc1b4f4949979"
+        },
+        {
+            "date": 1691116507349,
+            "name": "C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\server\\src\\logs\\debug\\2023-08-03.log",
+            "hash": "a68282a86cc8151089790a1601a406a3"
+        },
+        {
+            "date": 1691201676795,
+            "name": "C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\server\\src\\logs\\debug\\2023-08-04.log",
+            "hash": "4726eb4125704882f5bf7af7ac6f779d"
+        },
+        {
+            "date": 1691208158158,
+            "name": "C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\server\\src\\logs\\debug\\2023-08-05.log",
+            "hash": "f11775dd120cf08cc36a08341f9c816e"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "ionic_boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate Ionic React - NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start --prefix server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "npm run start-dev --prefix server",
+    "dev-client": "npm run dev --prefix client",
+    "dev": "concurrently --kill-others-on-fail \"npm run dev-server\" \"npm run dev-client\"",
+    "install-server": "cd ./server && npm install",
+    "install-client": "cd ./client && npm install"
+  },
+  "author": "Gonzalo Orellana <gonzalo.orellana@kauel.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@types/convert-excel-to-json": "^1.7.1",
+    "concurrently": "^7.3.0",
+    "i18next": "^22.0.3",
+    "i18next-browser-languagedetector": "^7.0.0",
+    "react-i18next": "^12.0.0",
+    "rut.js": "^2.1.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\server\\dist\\logs\\error\\.0b802de51a818f12120d65f2079e0b45d446b36d-audit.json",
+    "files": [
+        {
+            "date": 1689592390386,
+            "name": "C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\server\\dist\\logs\\error\\2023-07-17.log",
+            "hash": "99b1f0ce07d419179972560eae290040"
+        }
+    ]
+}

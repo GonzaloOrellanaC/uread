@@ -1,0 +1,285 @@
+import { IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonModal, IonSelect, IonSelectOption, IonSpinner, IonTitle, IonToolbar } from "@ionic/react"
+import { closeOutline, eyeOffOutline, eyeOutline, star } from "ionicons/icons"
+import { useEffect, useState } from "react"
+import { ModalData } from "../../../interfaces/ModalData.interface"
+import { format } from 'rut.js'
+import { User } from "../../../interfaces/User.interface"
+import userRouter from "../../../router/user.router"
+import rolesRouter from "../../../router/roles.router"
+
+interface Rol {
+    name: string
+    _id: string
+}
+
+const NewUserModal = ({open, closeModal, user, deleteUser}: ModalData) => {
+    const [name, setName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+    const [run, setRun] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [levelUser, setLevelUser ] = useState<number>()
+    const [showPassword, setShowPassword] = useState<any>('password')
+    const [showConfirmPassword, setShowConfirmPassword] = useState<any>('password')
+    const [roles, setRoles] = useState<Rol[]>([])
+    const [roleSelected, setRoleSelected] = useState<string[]>()
+    const [userData, setUserData] = useState<User | undefined>()
+    const [premium, setPremium] = useState<boolean>()
+    const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        if (open) {
+            init()
+        }
+    }, [open])
+
+    useEffect(() => {
+        if (user) {
+            setUserData(user)
+        } else {
+            setUserData(undefined)
+        }
+    }, [user])
+
+    useEffect(() => {
+        console.log(userData)
+        if (userData) {
+            setName(userData.name)
+            setLastName(userData.lastName)
+            setEmail(userData.email)
+            setRun(userData.run)
+            setLevelUser(userData.levelUser)
+            setPremium(userData.premium)
+        } else {
+            setName('')
+            setLastName('')
+            setEmail('')
+            setRun('')
+            setRoleSelected([])
+            setLevelUser(undefined)
+            setPremium(false)
+        }
+    }, [userData])
+
+    useEffect(() => {
+        if (run)
+        if (run.length > 1) {
+            const runCache = run
+            setRun(format(runCache))
+        } else if (run === '-' || run.length === 0) {
+            setRun('')
+        }
+    }, [run])
+
+    useEffect(() => {
+        console.log(roles)
+        if (userData && (roles.length > 0)) {
+            const rolesCache: string[] = []
+            userData.roles.forEach((rol, i) => {
+                rolesCache.push(rol._id)
+            })
+            setRoleSelected(rolesCache)
+            console.log(rolesCache)
+        }
+    }, [roles])
+
+    const init = async () => {
+        const response = await rolesRouter.getRoles()
+        setRoles(response.data)
+    }
+    
+    useEffect(() => {
+        console.log(premium)
+    }, [premium])
+
+    const guardarUsuario = async () => {
+        if (userData) {
+            setLoading(true)
+            const userToEdit = {
+                _id: userData._id,
+                name: name,
+                lastName: lastName,
+                email: email,
+                password: password,
+                roles: roleSelected,
+                run: run,
+                levelUser: levelUser,
+                premium: premium
+            } as User
+            const response = await userRouter.editUser(userToEdit)
+            if (response) {
+                setLoading(false)
+                closeModal()
+            }
+        } else {
+            if (password === confirmPassword) {
+                setLoading(true)
+                const newUser = {
+                    name: name,
+                    lastName: lastName,
+                    email: email,
+                    password: password,
+                    roles: roleSelected,
+                    run: run,
+                    levelUser: levelUser,
+                    premium: premium
+                } as User
+                try {
+                    const response = await userRouter.createUser(newUser)
+                    console.log(response)
+                    setLoading(false)
+                    if (response) {
+                        closeModal()
+                    }
+                } catch (error: any) {
+                    setLoading(false)
+                    console.log(error)
+                    alert(error.message + ' Run: ' + error.response.data.data.keyValue.run )
+                }
+            } else {
+                alert('Contraseñas no coinciden.')
+            }
+        }
+    }
+    
+    return (
+        <IonModal
+            isOpen={open}
+            className='user-modal'
+            onWillDismiss={closeModal}
+        >
+            <IonHeader className={'ion-no-border'}>
+                <IonToolbar>
+                    <IonTitle color={'primary'}>{user ? 'Editar Usuario' : 'Crear Usuario'}</IonTitle>
+                    <IonButtons slot="end">
+                        <IonButton color={'primary'} onClick={closeModal} shape={'round'} >
+                            <IonIcon icon={closeOutline} />
+                        </IonButton>
+                    </IonButtons>
+                </IonToolbar>
+            </IonHeader>
+            <IonContent className="ion-padding">
+                <IonItem fill={'outline'} color={'primary'}>
+                    <IonLabel position={'floating'}>Nombre</IonLabel>
+                    <IonInput
+                        type={'text'}
+                        value={name}
+                        onIonChange={(e) => { e.target.value && setName(e.target.value.toString()) }}
+                    />
+                </IonItem>
+                <br />
+                <IonItem fill={'outline'} color={'primary'}>
+                    <IonLabel position={'floating'}>Apellido</IonLabel>
+                    <IonInput
+                        type={'text'}
+                        value={lastName}
+                        onIonChange={(e) => { e.target.value && setLastName(e.target.value.toString()) }}
+                    />
+                </IonItem>
+                <br />
+                <IonItem fill={'outline'} color={'primary'}>
+                    <IonLabel position={'floating'}>R.U.N.</IonLabel>
+                    <IonInput
+                        maxlength={12}
+                        type={'text'}
+                        value={run}
+                        onIonChange={(e) => { e.target.value && setRun(e.target.value.toString()) }}
+                    />
+                </IonItem>
+                <br />
+                <IonItem fill={'outline'} color={'primary'}>
+                    <IonLabel position={'floating'}>Seleccionar Rol</IonLabel>
+                    <IonSelect interface={'popover'} multiple value={roleSelected} onIonChange={(e) => {console.log(e.target.value); setRoleSelected(e.target.value) }}>
+                        {
+                            roles.map((rol, index) => {
+                                return (
+                                    <IonSelectOption key={index} value={rol._id} disabled={(rol.name === 'SuperAdmin') ? true : false}>
+                                        {rol.name}
+                                    </IonSelectOption>
+                                )
+                            })
+                        }
+                    </IonSelect>
+                </IonItem>
+                <br />
+                <IonItem fill={'outline'} color={'primary'}>
+                    <IonLabel position={'floating'}>Seleccionar Nivel (opcional)</IonLabel>
+                    <IonSelect interface={'popover'} value={levelUser} onIonChange={(e) => { setLevelUser(e.target.value) }}>
+                        <IonSelectOption value={1}>
+                            1
+                        </IonSelectOption>
+                        <IonSelectOption value={2}>
+                            2
+                        </IonSelectOption>
+                        <IonSelectOption value={3}>
+                            3
+                        </IonSelectOption>
+                        <IonSelectOption value={4}>
+                            4
+                        </IonSelectOption>
+                    </IonSelect>
+                </IonItem>
+                <br />
+                <IonItem fill={'outline'} color={'primary'}>
+                    <IonLabel position={'floating'}>Seleccionar Nivel Acceso</IonLabel>
+                    <IonSelect interface={'popover'} value={premium} onIonChange={(e) => { setPremium(e.target.value) }}>
+                        <IonSelectOption value={true}>
+                            Premium
+                        </IonSelectOption>
+                        <IonSelectOption value={false}>
+                            Free
+                        </IonSelectOption>
+                    </IonSelect>
+                </IonItem>
+                <br />
+                <IonItem fill={'outline'} color={'primary'}>
+                    <IonLabel position={'floating'}>Correo</IonLabel>
+                    <IonInput
+                        type={'email'}
+                        value={email}
+                        onIonChange={(e) => { e.target.value && setEmail(e.target.value.toString()) }}
+                    />
+                </IonItem>
+                {!userData && <br />}
+                {!userData && <IonItem fill={'outline'} color={'primary'}>
+                    <IonLabel position={'floating'}>Password</IonLabel>
+                    <IonInput
+                        type={showPassword}
+                        value={password}
+                        onIonChange={(e) => { e.target.value && setPassword(e.target.value.toString()) }}
+                    />
+                    <IonButtons slot="end">
+                        <IonButton color={'primary'} shape={'round'} onClick={() => { setShowPassword((showPassword==='password') ? 'text' : 'password') }}>
+                            <IonIcon icon={(showPassword==='text') ? eyeOffOutline : eyeOutline} />
+                        </IonButton>
+                    </IonButtons>
+                </IonItem>}
+                {!userData && <br />}
+                {!userData && <IonItem fill={'outline'} color={'primary'}>
+                    <IonLabel position={'floating'}>Confirm Password</IonLabel>
+                    <IonInput
+                        type={showConfirmPassword}
+                        value={confirmPassword}
+                        onIonChange={(e) => { e.target.value && setConfirmPassword(e.target.value.toString()) }}
+                    />
+                    <IonButtons slot="end">
+                        <IonButton color={'primary'} shape={'round'} onClick={() => { setShowConfirmPassword((showConfirmPassword==='password') ? 'text' : 'password') }}>
+                            <IonIcon icon={(showConfirmPassword==='text') ? eyeOffOutline : eyeOutline} />
+                        </IonButton>
+                    </IonButtons>
+                </IonItem>}
+                <br />
+                <IonButton expand={'block'} color={'primary'} onClick={guardarUsuario}>
+                    {loading && <IonSpinner style={{ marginRight: 10 }} />} {userData ? 'Editar usuario' : 'Crear usuario'}
+                </IonButton>
+                {userData && <br />}
+                {userData && <IonButton expand={'block'} color={'danger'} onClick={() => { deleteUser && deleteUser(userData) }}>
+                    Borrar Usuario
+                </IonButton>}
+            </IonContent>
+        </IonModal>
+    )
+}
+
+export default NewUserModal

@@ -1,0 +1,7 @@
+{
+  "name": "Uread",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
