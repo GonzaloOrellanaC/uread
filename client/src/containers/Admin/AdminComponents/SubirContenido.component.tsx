@@ -99,7 +99,7 @@ const SubirContenidoComponent = () => {
                                         <IonCol sizeXl="6" sizeLg="6" sizeMd="12" sizeSm="12" key={index} style={{padding: '0px 5px'}}>
                                             <IonRow className="contenido" >
                                                 <IonCol size="2">
-                                                    <img src={(contenido.imageUrl && contenido.imageUrl[0]) && contenido.imageUrl[0].url} height={70} width={70} style={{objectFit: 'cover'}} />
+                                                    <img src={(contenido.imageUrl && contenido.imageUrl[0]) ? contenido.imageUrl[0].url : 'https://imkchat.blob.core.windows.net/extras/noimage.jpg'} height={70} width={70} style={{objectFit: 'cover'}} />
                                                 </IonCol>
                                                 <IonCol size="2">
                                                     <p>{index+1}.- </p>

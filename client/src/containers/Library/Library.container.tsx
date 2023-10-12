@@ -157,6 +157,7 @@ const LibraryContainer = () => {
                         <div style={{ height: 'calc(100vh - 190px)', overflowY: 'auto', backgroundColor: 'white'/* 'rgb(243, 193, 27)' */, padding: 10 }}>
                             {
                                 listaContenido.map((elemento, index) => {
+                                    console.log(elemento.imageUrl)
                                     return (
                                         <IonCard
                                             key={index}
@@ -169,7 +170,7 @@ const LibraryContainer = () => {
                                             <IonCardContent>
                                                 <p style={{ fontSize: 12, color: 'white', fontWeight: 'bold', textShadow: '1px 1px 2px #ccc' }}>
                                                     <img
-                                                        src={elemento.imageUrl && elemento.imageUrl[0].url}
+                                                        src={(elemento.imageUrl && elemento.imageUrl[0] && elemento.imageUrl[0].url) ? elemento.imageUrl[0].url : 'https://imkchat.blob.core.windows.net/extras/noimage.jpg'}
                                                         height={60}
                                                         width={60}
                                                         style={{

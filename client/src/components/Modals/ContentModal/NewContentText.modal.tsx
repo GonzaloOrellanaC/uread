@@ -422,10 +422,16 @@ const NewContentTextModal = ({open, closeModal, data}: ModalData) => {
     const deleteImage = (index: number) => {
         const imagesCache = [...images]
         const imagesToSave : Image[] = []
+        console.log(imagesCache)
         imagesCache.forEach(async (image, number) => {
             if (index === number) {
-                await azureStorageRouter.deleteFile(image.description, 'imagenes')
-                console.log('imagen borrada')
+                try {
+                    const response = await azureStorageRouter.deleteFile(image.description, 'imagenes')
+                    console.log(response)
+                    console.log('imagen borrada')
+                } catch (error) {
+                    
+                }
             } else {
                 imagesToSave.push(image)
             }
