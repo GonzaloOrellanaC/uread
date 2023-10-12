@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm start --prefix server",
+    "start-prod": "npm start-prod --prefix server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "npm run start-dev --prefix server",
     "dev-client": "npm run dev --prefix client",

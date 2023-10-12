@@ -380,8 +380,12 @@ const NewContentTextModal = ({open, closeModal, data}: ModalData) => {
         documentsCache.forEach(async (doc, number) => {
             console.log(doc.description)
             if (index === number) {
-                await azureStorageRouter.deleteFile(doc.description, 'documentos')
-                console.log('documento borrado')
+                try {
+                    await azureStorageRouter.deleteFile(doc.description, 'documentos')
+                    console.log('documento borrado')
+                } catch (error) {
+                    
+                }
             } else {
                 documentsToSend.push(doc)
             }
@@ -654,6 +658,8 @@ const NewContentTextModal = ({open, closeModal, data}: ModalData) => {
                                             setAudioEnUrl(null)
                                         } catch (error) {
                                             alert(error)
+                                            setAudioEnUrl(null)
+                                            alert('Audio eliminado')
                                         }
                                     }
                                 }}>
@@ -713,6 +719,8 @@ const NewContentTextModal = ({open, closeModal, data}: ModalData) => {
                                             alert('Audio eliminado')
                                         } catch (error) {
                                             alert(error)
+                                            setAudioEsUrl(null)
+                                            alert('Audio eliminado')
                                         }
                                     }
                                 }}>
