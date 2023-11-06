@@ -11,7 +11,8 @@
     "dev-client": "npm run dev --prefix client",
     "dev": "concurrently --kill-others-on-fail \"npm run dev-server\" \"npm run dev-client\"",
     "install-server": "cd ./server && npm install",
-    "install-client": "cd ./client && npm install"
+    "install-client": "cd ./client && npm install",
+    "postinstall": "npm run install-server"
   },
   "author": "Gonzalo Orellana <gonzalo.orellana@kauel.com>",
   "license": "ISC",
