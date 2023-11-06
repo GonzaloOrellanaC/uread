@@ -135,7 +135,7 @@ const forgotPassword = async (email: string) => {
     const resetToken = createToken(findUser)
     const args = {
         fullName: `${findUser.name} ${findUser.lastName}`,
-        resetLink: (environment === 'development') ? `http://localhost:8100/reset-password/${resetToken.token}` : `${env.url}/reset-password/${resetToken.token}`
+        resetLink: (environment === 'development') ? `http://localhost:8100/reset-password/${resetToken.token}` : `${env.url}reset-password/${resetToken.token}`
     }
     await sendHTMLEmail(
         findUser.email,

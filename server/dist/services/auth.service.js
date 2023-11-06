@@ -101,7 +101,7 @@ const forgotPassword = async (email) => {
     const resetToken = createToken(findUser);
     const args = {
         fullName: `${findUser.name} ${findUser.lastName}`,
-        resetLink: (env_1.environment === 'development') ? `http://localhost:8100/reset-password/${resetToken.token}` : `${index_1.env.url}/reset-password/${resetToken.token}`
+        resetLink: (env_1.environment === 'development') ? `http://localhost:8100/reset-password/${resetToken.token}` : `${index_1.env.url}reset-password/${resetToken.token}`
     };
     await (0, email_service_1.sendHTMLEmail)(findUser.email, (0, i18n_1.__)({ phrase: 'Reset your password', locale: 'es' }), (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../../emailTemplates/reset.password.template/es.html`), args), null
     /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
