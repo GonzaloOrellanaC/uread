@@ -63,3 +63,7 @@
 2023-11-06 07:33:42 info: [0mGET /api/roles/getRoles [36m304[0m 70.079 ms - -[0m
 2023-11-06 07:33:46 info: [0mGET /api/roles/getRoles [36m304[0m 73.533 ms - -[0m
 2023-11-06 07:33:46 info: [0mGET /api/roles/getRoles [36m304[0m 83.542 ms - -[0m
+2023-11-06 07:38:32 info: [0mGET /api/roles/getRoles [36m304[0m 72.559 ms - -[0m
+2023-11-06 07:38:32 info: [0mGET /api/roles/getRoles [36m304[0m 77.338 ms - -[0m
+2023-11-06 07:38:33 info: [0mGET /api/roles/getRoles [36m304[0m 71.845 ms - -[0m
+2023-11-06 07:38:33 info: [0mGET /api/roles/getRoles [36m304[0m 73.797 ms - -[0m
