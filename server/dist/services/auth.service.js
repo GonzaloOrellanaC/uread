@@ -33,7 +33,10 @@ const signup = async (userData) => {
         platformName: index_1.env.platformName
     };
     console.log(args);
-    (0, email_service_1.sendHTMLEmail)(createUserData.email, (0, i18n_1.__)({ phrase: 'Verify your email', locale: 'es' }), (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../emailTemplates/verify.email.template/es.html`), args), { attachments: [{ filename: 'logo.png', path: (0, util_1.frontendAsset)('assets/images/logo.png'), cid: 'logo' }] }).catch(err => { console.log(err); logger_1.logger.error((0, i18n_1.__)({ phrase: err.message /* , locale */ })); });
+    console.log(path_1.default.join(__dirname, `/../../emailTemplates/verify.email.template/es.html`));
+    (0, email_service_1.sendHTMLEmail)(createUserData.email, (0, i18n_1.__)({ phrase: 'Verify your email', locale: 'es' }), (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../../emailTemplates/verify.email.template/es.html`), args), null
+    /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
+    ).catch(err => { console.log(err); logger_1.logger.error((0, i18n_1.__)({ phrase: err.message /* , locale */ })); });
     return { cookie, createdUser: createUserData };
 };
 const resendVerification = async (userData) => {
@@ -47,7 +50,9 @@ const resendVerification = async (userData) => {
         platformURL: index_1.env.url,
         platformName: index_1.env.platformName
     };
-    (0, email_service_1.sendHTMLEmail)(userData.email, (0, i18n_1.__)({ phrase: 'Verify your email', locale: 'es' }), (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../emailTemplates/verify.email.template/es.html`), args), { attachments: [{ filename: 'logo.png', path: (0, util_1.frontendAsset)('assets/images/logo.png'), cid: 'logo' }] }).catch(err => { console.log(err); logger_1.logger.error((0, i18n_1.__)({ phrase: err.message })); });
+    (0, email_service_1.sendHTMLEmail)(userData.email, (0, i18n_1.__)({ phrase: 'Verify your email', locale: 'es' }), (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../../emailTemplates/verify.email.template/es.html`), args), null
+    /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
+    ).catch(err => { console.log(err); logger_1.logger.error((0, i18n_1.__)({ phrase: err.message })); });
     return { cookie, user: userData };
 };
 const login = async (userData, locale = index_1.env.locale) => {
@@ -98,7 +103,9 @@ const forgotPassword = async (email) => {
         fullName: `${findUser.name} ${findUser.lastName}`,
         resetLink: (env_1.environment === 'development') ? `http://localhost:8100/reset-password/${resetToken.token}` : `${index_1.env.url}/reset-password/${resetToken.token}`
     };
-    await (0, email_service_1.sendHTMLEmail)(findUser.email, (0, i18n_1.__)({ phrase: 'Reset your password', locale: 'es' }), (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../emailTemplates/reset.password.template/es.html`), args), { attachments: [{ filename: 'logo.png', path: (0, util_1.frontendAsset)('assets/images/logo.png'), cid: 'logo' }] }).catch(err => logger_1.logger.error((0, i18n_1.__)({ phrase: err.message, locale: 'es' })));
+    await (0, email_service_1.sendHTMLEmail)(findUser.email, (0, i18n_1.__)({ phrase: 'Reset your password', locale: 'es' }), (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../../emailTemplates/reset.password.template/es.html`), args), null
+    /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
+    ).catch(err => logger_1.logger.error((0, i18n_1.__)({ phrase: err.message, locale: 'es' })));
     return findUser;
 };
 /**

@@ -1,0 +1,5 @@
+2023-11-06 06:07:12 error: [POST] /api/signup >> StatusCode:: 409, Message:: Something went wrong
+2023-11-06 06:10:03 error: undefined
+2023-11-06 06:20:24 error: [POST] /api/signup >> StatusCode:: 500, Message:: ENOENT: no such file or directory, open 'C:\Users\gorel\Documents\Tesso\Uread\Uread\server\src\services\emailTemplates\verify.email.template\es.html'
+2023-11-06 06:21:20 error: [POST] /api/signup >> StatusCode:: 409, Message:: Something went wrong
+2023-11-06 06:30:34 error: [POST] /api/signup >> StatusCode:: 409, Message:: Something went wrong

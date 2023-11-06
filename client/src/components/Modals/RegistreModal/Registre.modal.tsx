@@ -57,13 +57,13 @@ const RegistreModal = ({open, closeModal}: ModalData) => {
                 } as User
                 const response = await userRouter.signUpUser(newUser)
                 alert(response.message)
-                setName(undefined)
+                /* setName(undefined)
                 setLastName(undefined)
                 setEmail(undefined)
                 setPassword(undefined)
                 setConfirmPassword(undefined)
                 setRole(undefined)
-                closeModal()
+                closeModal() */
             } else {
                 alert('Contraseñas no son iguales.')
             }

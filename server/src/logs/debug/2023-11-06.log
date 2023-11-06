@@ -1,0 +1,57 @@
+2023-11-06 06:05:54 info: =================================
+2023-11-06 06:05:54 info: ======= ENV: development =======
+2023-11-06 06:05:54 info: 🚀 App listening on the port 5212
+2023-11-06 06:05:54 info: =================================
+2023-11-06 06:06:24 info: [0mGET /api/roles/getRoles [32m200[0m 79.674 ms - 444[0m
+2023-11-06 06:06:30 info: [0mGET /api/roles/getRoles [36m304[0m 72.612 ms - -[0m
+2023-11-06 06:06:47 info: [0mGET /api/roles/getRoles [36m304[0m 71.779 ms - -[0m
+2023-11-06 06:07:12 error: [POST] /api/signup >> StatusCode:: 409, Message:: Something went wrong
+2023-11-06 06:07:12 info: [0mPOST /api/signup [33m409[0m 309.808 ms - 34[0m
+2023-11-06 06:08:46 info: =================================
+2023-11-06 06:08:46 info: ======= ENV: development =======
+2023-11-06 06:08:46 info: 🚀 App listening on the port 5212
+2023-11-06 06:08:46 info: =================================
+2023-11-06 06:10:02 info: [0mPOST /api/signup [32m201[0m 274.529 ms - 580[0m
+2023-11-06 06:10:03 error: undefined
+2023-11-06 06:10:09 info: [0mGET /api/roles/getRoles [36m304[0m 74.335 ms - -[0m
+2023-11-06 06:12:57 info: =================================
+2023-11-06 06:12:57 info: ======= ENV: development =======
+2023-11-06 06:12:57 info: 🚀 App listening on the port 5212
+2023-11-06 06:12:57 info: =================================
+2023-11-06 06:13:28 info: [0mGET /api/roles/getRoles [36m304[0m 77.242 ms - -[0m
+2023-11-06 06:13:51 info: [0mPOST /api/signup [32m201[0m 285.038 ms - 580[0m
+2023-11-06 06:14:01 info: [0mGET /api/roles/getRoles [36m304[0m 72.198 ms - -[0m
+2023-11-06 06:15:55 info: [0mGET /api/roles/getRoles [36m304[0m 71.162 ms - -[0m
+2023-11-06 06:15:55 info: [0mPOST /api/verify [32m200[0m 161.733 ms - 470[0m
+2023-11-06 06:15:55 info: [0mPOST /api/verify [32m200[0m 157.241 ms - 470[0m
+2023-11-06 06:15:56 info: [0mGET /api/roles/getRoles [36m304[0m 74.879 ms - -[0m
+2023-11-06 06:18:31 info: [0mPOST /api/login [32m200[0m 206.118 ms - 758[0m
+2023-11-06 06:18:33 info: [0mGET /api/contenido/leerContenidosBasicos [32m200[0m 530.409 ms - -[0m
+2023-11-06 06:19:29 info: =================================
+2023-11-06 06:19:29 info: ======= ENV: development =======
+2023-11-06 06:19:29 info: 🚀 App listening on the port 5212
+2023-11-06 06:19:29 info: =================================
+2023-11-06 06:19:57 info: [0mGET /api/roles/getRoles [36m304[0m 80.411 ms - -[0m
+2023-11-06 06:20:24 error: [POST] /api/signup >> StatusCode:: 500, Message:: ENOENT: no such file or directory, open 'C:\Users\gorel\Documents\Tesso\Uread\Uread\server\src\services\emailTemplates\verify.email.template\es.html'
+2023-11-06 06:20:24 info: [0mPOST /api/signup [31m500[0m 245.901 ms - 175[0m
+2023-11-06 06:21:11 info: =================================
+2023-11-06 06:21:11 info: ======= ENV: development =======
+2023-11-06 06:21:11 info: 🚀 App listening on the port 5212
+2023-11-06 06:21:11 info: =================================
+2023-11-06 06:21:20 error: [POST] /api/signup >> StatusCode:: 409, Message:: Something went wrong
+2023-11-06 06:21:20 info: [0mPOST /api/signup [33m409[0m 185.388 ms - 34[0m
+2023-11-06 06:21:42 info: [0mPOST /api/signup [32m201[0m 261.149 ms - 584[0m
+2023-11-06 06:21:47 info: [0mGET /api/roles/getRoles [36m304[0m 73.606 ms - -[0m
+2023-11-06 06:30:12 info: [0mGET /api/roles/getRoles [36m304[0m 73.209 ms - -[0m
+2023-11-06 06:30:12 info: [0mGET /api/roles/getRoles [36m304[0m 76.826 ms - -[0m
+2023-11-06 06:30:13 info: [0mGET /api/roles/getRoles [36m304[0m 70.557 ms - -[0m
+2023-11-06 06:30:34 error: [POST] /api/signup >> StatusCode:: 409, Message:: Something went wrong
+2023-11-06 06:30:34 info: [0mPOST /api/signup [33m409[0m 142.256 ms - 34[0m
+2023-11-06 06:30:52 info: [0mPOST /api/signup [32m201[0m 247.520 ms - 580[0m
+2023-11-06 06:32:28 info: [0mPOST /api/signup [32m201[0m 201.953 ms - 574[0m
+2023-11-06 06:45:20 info: =================================
+2023-11-06 06:45:20 info: ======= ENV: development =======
+2023-11-06 06:45:20 info: 🚀 App listening on the port 5212
+2023-11-06 06:45:20 info: =================================
+2023-11-06 06:45:37 info: [0mPOST /api/signup [32m201[0m 288.537 ms - 574[0m
+2023-11-06 06:47:22 info: [0mPOST /api/signup [32m201[0m 263.293 ms - 580[0m

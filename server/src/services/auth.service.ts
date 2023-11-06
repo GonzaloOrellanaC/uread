@@ -42,11 +42,13 @@ const signup = async (
         platformName: env.platformName
     }
     console.log(args)
+    console.log(path.join(__dirname, `/../../emailTemplates/verify.email.template/es.html`))
     sendHTMLEmail(
         createUserData.email,
         __({ phrase: 'Verify your email' , locale: 'es'  }),
-        generateHTML(path.join(__dirname, `/../emailTemplates/verify.email.template/es.html`), args),
-        { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] }
+        generateHTML(path.join(__dirname, `/../../emailTemplates/verify.email.template/es.html`), args),
+        null
+        /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
     ).catch(err => {console.log(err); logger.error(__({ phrase: err.message/* , locale */ }))})
 
     return { cookie, createdUser: createUserData }
@@ -68,8 +70,9 @@ const resendVerification = async (
     sendHTMLEmail(
         userData.email,
         __({ phrase: 'Verify your email' , locale: 'es'  }),
-        generateHTML(path.join(__dirname, `/../emailTemplates/verify.email.template/es.html`), args),
-        { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] }
+        generateHTML(path.join(__dirname, `/../../emailTemplates/verify.email.template/es.html`), args),
+        null
+        /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
     ).catch(err => {console.log(err); logger.error(__({ phrase: err.message }))})
     return { cookie, user: userData }
 }
@@ -137,8 +140,9 @@ const forgotPassword = async (email: string) => {
     await sendHTMLEmail(
         findUser.email,
         __({ phrase: 'Reset your password', locale: 'es' }),
-        generateHTML(path.join(__dirname, `/../emailTemplates/reset.password.template/es.html`), args),
-        { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] }
+        generateHTML(path.join(__dirname, `/../../emailTemplates/reset.password.template/es.html`), args),
+        null
+        /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
     ).catch(err => logger.error(__({ phrase: err.message, locale: 'es' })))
 
     return findUser
