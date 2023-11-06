@@ -30,13 +30,13 @@ const Menu = () => {
             access: 'general',
             path: '/about-us'
         },
-        {
+        /* {
             id: 2,
             name: 'Niveles / Levels',
             state: false,
             access: 'no-logged',
             path: '/levels'
-        },
+        }, */
         {
             id: 4,
             name: 'Biblioteca / Library',
@@ -200,7 +200,7 @@ const Menu = () => {
                 <IonTitle slot={(windowWidth > 890) ? 'start' : ''} className='icon-logo-container'>
                     <img src={'/assets/icon/uread/uread_logo_transparente.png'} width={80} alt="logo-uread" />
                     <div hidden={(windowWidth < 768) ? true : false}>
-                        <p className='title size-title'>Reading <br /> Karaoke</p>
+                        <p className='title size-title'>Mamás en Acción <br /> por la Lectura</p>
                         {/* <p className='subTitle size-subTitle'>Read, Master, Succed.</p> */}
                     </div>
                 </IonTitle>

@@ -5,7 +5,7 @@ const UseUreadContainer = () => {
                 ¿Cómo uso URead?  
             </p>
             <p>
-                1.Crear cuenta
+                1.Regístrate
             </p>
             <p>
                 2.Partir en el Nivel 1. Lectura 1 (no importa el nivel que se tenga)

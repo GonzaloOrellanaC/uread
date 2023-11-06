@@ -59,3 +59,7 @@
 2023-11-06 06:51:19 info: ======= ENV: development =======
 2023-11-06 06:51:19 info: 🚀 App listening on the port 5212
 2023-11-06 06:51:19 info: =================================
+2023-11-06 07:33:41 info: [0mGET /api/roles/getRoles [36m304[0m 84.362 ms - -[0m
+2023-11-06 07:33:42 info: [0mGET /api/roles/getRoles [36m304[0m 70.079 ms - -[0m
+2023-11-06 07:33:46 info: [0mGET /api/roles/getRoles [36m304[0m 73.533 ms - -[0m
+2023-11-06 07:33:46 info: [0mGET /api/roles/getRoles [36m304[0m 83.542 ms - -[0m

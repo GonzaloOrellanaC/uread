@@ -69,7 +69,7 @@ const LoginModal = (props: any) => {
                 <div style={{ padding: '0px 50px' }}>
                     <div className='icon-logo-container'>
                         <img src={'/assets/images/logo.png'} width={80} alt=""/>
-                        <p className='title size-title'>Reading Karaoke</p>
+                        <p className='title size-title'>Mamás en Acción por la Lectura</p>
                         {/* <p className='subTitle size-subTitle'>Read, Master, Succed.</p> */}
                     </div>
                     <br />
