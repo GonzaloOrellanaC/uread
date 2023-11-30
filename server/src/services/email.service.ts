@@ -20,7 +20,14 @@ export const createTransporter = (host: string, port: number, user: string, pass
     if (isEmpty(host) || isEmpty(port) || isEmpty(user) || isEmpty(pass)) {
         throw new Error('SMTP credentials are required')
     }
-    return nodemailer.createTransport({ host, port, auth: { user, pass } })
+    return nodemailer.createTransport({ 
+        host,
+        port,
+        secure: true,
+        tls: {
+            rejectUnauthorized: false
+        },
+        auth: { user, pass } })
 }
 
 /**
