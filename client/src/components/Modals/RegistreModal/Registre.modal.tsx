@@ -56,7 +56,7 @@ const RegistreModal = ({open, closeModal}: ModalData) => {
                     roles: [role]
                 } as User
                 const response = await userRouter.signUpUser(newUser)
-                alert(response.message)
+                alert(/* response.message */ 'Bienvenid@ a UREAD. Ingrese a su cuenta.')
                 setName(undefined)
                 setLastName(undefined)
                 setEmail(undefined)

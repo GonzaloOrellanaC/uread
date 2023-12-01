@@ -17,9 +17,10 @@ export const ContenidoProvider = (props: any) => {
     useEffect(() => {
         if (userData) {
             console.log(userData)
-            if (userData.emailVerifiedAt) {
+            getContenido(userData.premium)
+            /* if (userData.emailVerifiedAt) {
                 getContenido(userData.premium)
-            }
+            } */
         }
     }, [userData])
     

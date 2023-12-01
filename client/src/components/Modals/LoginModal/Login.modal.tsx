@@ -14,16 +14,16 @@ const LoginModal = (props: any) => {
     /* const [isLoading, setIsLoading] = useState<boolean>(false) */
     useEffect(() => {
         if (userData) {
-            if (userData.emailVerifiedAt && props.open) {
+            if (/* userData.emailVerifiedAt &&  */props.open) {
                 alert(`Bienvenid@ ${userData.name} ${userData.lastName}`)
                 if(props.getDataModal)
                 props.getDataModal({isAuth: true, user: userData})
                 /* setIsLoading(false) */
                 props.closeModal()
-            } else if (!userData.emailVerifiedAt) {
+            }/*  else if (!userData.emailVerifiedAt) {
                 resendVerification(userData)
                 props.closeModal()
-            }
+            } */
         }
     },[userData])
     const resendVerification = async (userData: User) => {
