@@ -6,6 +6,7 @@ interface AuthContextValues {
     userData?: User,
     login: (email: string, password: string) => void,
     loading: boolean
+    isAdmin: boolean
 }
 
 export const AuthContext = createContext<AuthContextValues>({} as AuthContextValues)
@@ -13,6 +14,8 @@ export const AuthContext = createContext<AuthContextValues>({} as AuthContextVal
 export const AuthProvider = (props: any) => {
     const [ userData, setUserData ] = useState<User>()
     const [loading, setLoading] = useState<boolean>(false)
+    const [isAdmin, setIsAdmin] = useState(false)
+    
     const login = (email: string, password: string) => {
         if (email && password) {
             setLoading(true)
@@ -35,8 +38,16 @@ export const AuthProvider = (props: any) => {
     }
     useEffect(() => {
         const idUread = localStorage.getItem('id-uread')
+        console.log(userData)
         if (!userData && idUread) {
             getUserById(idUread)
+        }
+        if (userData) {
+            if (userData.roles && userData.roles[0]) {
+                if (userData.roles[0].name === "SuperAdmin" || userData.roles[0].name === "admin") {
+                    setIsAdmin(true)
+                }
+            }
         }
     },[userData])
     const getUserById = async (id: string) => {
@@ -46,7 +57,8 @@ export const AuthProvider = (props: any) => {
     const provider = {
         userData,
         login,
-        loading
+        loading,
+        isAdmin
     }
     return (
         <AuthContext.Provider value={provider}>

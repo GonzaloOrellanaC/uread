@@ -33,6 +33,7 @@ import { AuthProvider } from './context/Auth.context';
 import { UsersProvider } from './context/Users.context';
 import { ContenidoProvider } from './context/Contenido.context';
 import { DataPolicyPage } from './pages/DataPolicy/DataPolicy.page';
+import { LateralMenu } from './menu/Lateral.menu';
 
 setupIonicReact();
 
@@ -44,6 +45,7 @@ const ReactIonApp = () => {
             <UsersProvider>
               <ContenidoProvider>
               <Menu />
+              <LateralMenu />
               <IonRouterOutlet>
                 <Route exact path='/'>
                   <HomePage />

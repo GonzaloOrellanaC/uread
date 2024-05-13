@@ -1,10 +1,12 @@
-import { IonButton, IonButtons, IonHeader, IonIcon, IonTitle, IonToolbar } from '@ionic/react'
+import { IonButton, IonButtons, IonHeader, IonIcon, IonMenuButton, IonTitle, IonToolbar } from '@ionic/react'
 import { menuOutline } from 'ionicons/icons'
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
 import { LoginModal, RegistreModal } from '../components/Modals'
 import UserIdb from '../indexedDb/User.idb'
 import { User } from '../interfaces/User.interface'
+import { menuController } from '@ionic/core/components';
+import { LateralMenu } from './Lateral.menu'
 
 interface ElementNavbar {
     id: number
@@ -64,6 +66,7 @@ const Menu = () => {
     const [inAdmin, setInAdmin] = useState<boolean>(false)
 
     useEffect(() => {
+        
         getUserIfIsAuth()
         const handleWindowResize = () => {
             setWindowWidth(window.innerWidth);
@@ -73,6 +76,13 @@ const Menu = () => {
         /* setLogged(window.localStorage.getItem('logged') ? true : false) */
         detectUrl(routerList)
     }, [])
+    useEffect(() => {
+        if (windowWidth > 890) {
+            menuController.enable(false, 'lateral-menu')
+        } else {
+            menuController.enable(true, 'lateral-menu')
+        }
+    }, [windowWidth])
     useEffect(() => {
         routerList.forEach((button, i) => {
             button.state = false
@@ -187,13 +197,19 @@ const Menu = () => {
         const id = localStorage.getItem('id-uread') || ''
         history.push(`/user/${id}`)
     }
+
+    const openMenu = async () => {
+        console.log('OPEN MENU')
+        await menuController.open('lateral-menu');
+    }
     return (
-        <IonHeader /* className={'ion-no-border'} *//*  */>
+        <IonHeader>
             <LoginModal open={openLoginModal} closeModal={closeLoginModal} getDataModal={getDataModal}/>
             <RegistreModal open={openRegistreModal} closeModal={closeRegistreModal} />
             <IonToolbar className='menu-header'>
                 <IonButtons slot='start' hidden={(windowWidth > 890) ? true : false}>
-                    <IonButton disabled>
+                    {/* <IonMenuButton></IonMenuButton> */}
+                    <IonButton onClick={openMenu}>
                         <IonIcon slot='icon-only' icon={menuOutline} style={{ color: 'transparent' }} />
                     </IonButton>
                 </IonButtons>
@@ -222,7 +238,7 @@ const Menu = () => {
                     }
                 </IonButtons>
                 <IonButtons slot='end' hidden={(windowWidth > 1163) ? true : false}>
-                    <IonButton>
+                    <IonButton onClick={openMenu}>
                         <IonIcon slot='icon-only' icon={menuOutline} />
                     </IonButton>
                 </IonButtons>

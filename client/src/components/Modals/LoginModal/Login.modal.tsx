@@ -66,7 +66,7 @@ const LoginModal = (props: any) => {
                 </IonToolbar>
             </IonHeader>
             <IonContent className="ion-padding">
-                <div style={{ padding: '0px 50px' }}>
+                <div /* style={{ padding: '0px 50px' }} */>
                     <div className='icon-logo-container'>
                         <img src={'/assets/images/logo.png'} width={80} alt=""/>
                         <p className='title size-title'>Mamás en Acción por la Lectura</p>
@@ -125,7 +125,7 @@ const LoginModal = (props: any) => {
                             textAlign: 'center'
                         }}
                     >
-                        <a onClick={() => { history.push('/restore-password'); props.closeModal() }} style={{ padding: 5, textDecoration: 'none', borderColor: 'var(--ion-color-primary)', borderStyle: 'solid', borderWidth: 2, borderRadius: 8 }}>Restaurar contraseña / Restore password</a>
+                        <a onClick={() => { history.push('/restore-password'); props.closeModal() }} style={{ fontSize: 12, padding: 5, textDecoration: 'none', borderColor: 'var(--ion-color-primary)', borderStyle: 'solid', borderWidth: 2, borderRadius: 8 }}>Restaurar contraseña / Restore password</a>
                     </div>
                 </div>
             </IonContent>

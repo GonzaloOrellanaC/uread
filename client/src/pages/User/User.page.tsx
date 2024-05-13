@@ -3,7 +3,7 @@ import UserContainer from "../../containers/User/User.container"
 
 const UserPage = () => {
     return (
-        <IonPage>
+        <IonPage id="main-content">
             <UserContainer />
         </IonPage>
     )

@@ -2,7 +2,7 @@ import { IonCol, IonContent, IonGrid, IonPage, IonRow } from "@ionic/react"
 
 export const DataPolicyPage = () => {
     return (
-        <IonPage>
+        <IonPage id="main-content">
         <IonContent className='ion-padding'>
             <IonGrid>
                 <IonRow className='content-data content-data-size'>

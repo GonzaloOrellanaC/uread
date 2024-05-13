@@ -17,7 +17,7 @@ const UserContainer = () => {
     return (
         <IonContent className='page-container'>
             <IonGrid>
-                <IonRow className='content-data content-data-size'>
+                <IonRow className='content-data-size'>
                     <IonCol sizeXl='12' sizeLg='12' sizeMd='12' sizeSm='12' sizeXs='12'>
                         {user && <div style={{ textAlign: "center", fontFamily: "Comic Sans MS" }}>
                             <img src={user.profileImage ? user.profileImage : './assets/images/user-default.svg'} width={200} className={'profile-image'} alt={`user-image-${user?._id}`} />

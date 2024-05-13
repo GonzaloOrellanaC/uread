@@ -3,7 +3,7 @@ import { AdminContainer } from "../../containers"
 
 const AdminPage = () => {
     return (
-        <IonPage>
+        <IonPage id="main-content">
             <AdminContainer />
         </IonPage>
     )

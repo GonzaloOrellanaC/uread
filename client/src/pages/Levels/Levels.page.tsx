@@ -3,7 +3,7 @@ import { LevelsContainer } from '../../containers'
 
 const LevelsPage = () => {
     return (
-        <IonPage>
+        <IonPage id="main-content">
             <LevelsContainer />
         </IonPage>
     )

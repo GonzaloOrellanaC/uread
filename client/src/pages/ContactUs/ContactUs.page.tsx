@@ -3,7 +3,7 @@ import { ContactUsContainer } from '../../containers'
 
 const ContactUsPage = () => {
     return (
-        <IonPage>
+        <IonPage id="main-content">
             <ContactUsContainer />
         </IonPage>
     )

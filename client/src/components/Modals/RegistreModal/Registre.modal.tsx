@@ -89,17 +89,17 @@ const RegistreModal = ({open, closeModal}: ModalData) => {
             </IonHeader>
             <IonContent className="ion-padding">
                 <div className="item-button-registre">
-                    <IonButton disabled expand={'block'} color={'danger'}>
+                    <IonButton disabled expand={'block'} style={{fontSize: 12}} color={'danger'}>
                         <IonIcon icon={logoGoogle} className={'margin-right-10'}></IonIcon> Pronto registro con Google
                     </IonButton>
                 </div>
                 <div className="item-button-registre">
-                    <IonButton disabled expand={'block'} style={{ '--background': '#4267B2', color: '#fff' }}>
+                    <IonButton disabled expand={'block'} style={{fontSize: 12, '--background': '#4267B2', color: '#fff' }}>
                         <IonIcon icon={logoFacebook} className={'margin-right-10'}></IonIcon> Pronto registro con Facebook
                     </IonButton>
                 </div>
                 <div className="item-button-registre">
-                    <IonButton expand={'block'} color={'primary'} onClick={() => { setWithEmail(true) }}>
+                    <IonButton expand={'block'} style={{fontSize: 12}} color={'primary'} onClick={() => { setWithEmail(true) }}>
                         <IonIcon icon={mailOutline} className={'margin-right-10'}></IonIcon> Registrate con Correo Electrónico
                     </IonButton>
                 </div>
@@ -109,7 +109,7 @@ const RegistreModal = ({open, closeModal}: ModalData) => {
                         </div>}
                 {
                     withEmail &&
-                    <div style={{ padding: '0px 50px' }}>
+                    <div style={{ padding: '0px 10px' }}>
                         <IonItem
                             fill={'outline'}
                             lines={'none'}

@@ -152,7 +152,7 @@ const LibraryContainer = () => {
     return (
         <IonContent className='page-container'>
             <IonGrid>
-                <IonRow className='content-data content-data-size'>
+                <IonRow className='content-data-size'>
                     <IonCol sizeMd='4'>
                         <div style={{ height: 'calc(100vh - 190px)', overflowY: 'auto', backgroundColor: 'white'/* 'rgb(243, 193, 27)' */, padding: 10 }}>
                             {
