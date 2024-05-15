@@ -14,7 +14,7 @@
     "install-client": "cd ./client && npm install",
     "build-client": "cd ./client && ionic build --prod",
     "build-server": "cd ./server && npm run build",
-    "build": "npm run build-client && npm run build-server"
+    "build-to-prod": "npm run build-client && npm run build-server"
   },
   "author": "Gonzalo Orellana <gonzalo.orellana@kauel.com>",
   "license": "ISC",
