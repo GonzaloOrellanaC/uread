@@ -99,8 +99,11 @@
     .icon-logo-container {
         max-width: 100%;
     }
+}
+
+@media screen and (max-width: 767px) {
     .text-container {
-        height: 40vh;
+        height: 33vh;
     }
 }
 

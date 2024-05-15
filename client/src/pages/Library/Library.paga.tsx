@@ -7,7 +7,7 @@ import { LibraryContainer } from '../../containers'
 
 const LibraryPage = () => {
     const {isAdmin} = useAuthContext()
-    const [state, setState] = useState('inactiva')
+    const [state, setState] = useState('activa')
     return (
         <IonPage id="main-content">
             <IonContent>

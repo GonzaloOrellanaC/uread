@@ -1,4 +1,4 @@
-import { IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonModal, IonRow, IonTitle, IonToolbar } from "@ionic/react"
+import { IonButton, IonButtons, IonCard, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonModal, IonRow, IonTitle, IonToolbar } from "@ionic/react"
 import { close, playOutline, stopOutline } from "ionicons/icons"
 import { useEffect, useState } from "react"
 import { TextList } from "../../interfaces/TextList.interface"
@@ -16,9 +16,18 @@ export const TaleModal = ({closeModal, isOpen, item}: any) => {
     const [timeOut, setElementTimeout] = useState<any>()
     const [images, setImages] = useState<Image[]>()
     const [pdfs, setPdfs] = useState<{description: string, pdfUrl: string}[]>()
+    const [widthScreen, setWidthScreen] = useState(window.innerWidth)
 
     let timeoutId: any = null
     let stoped = true
+
+    useEffect(() => {
+        window.onresize = function(event: any) {
+            console.log(event.currentTarget.innerWidth)
+            setWidthScreen(event.currentTarget.innerWidth)
+        };
+        
+    }, [])
 
     useEffect(() => {
         if (item) {
@@ -130,7 +139,7 @@ export const TaleModal = ({closeModal, isOpen, item}: any) => {
           <IonContent className="ion-padding" style={{'--padding-top': 0}}>
             <IonGrid>
                 <IonRow>
-                    <IonCol sizeXs="12" sizeMd="8" sizeLg="6" sizeXl="6">
+                    <IonCol sizeXs="12" sizeMd="6" sizeLg="6" sizeXl="6">
                         <div className='text-container'>
                             {
                                 (element && listaTexto.length > 0) && listaTexto.map((content: any, num: number) => {
@@ -143,9 +152,9 @@ export const TaleModal = ({closeModal, isOpen, item}: any) => {
                             }
                         </div>
                     </IonCol>
-                    <IonCol sizeXs="12" sizeMd="2" sizeLg="3" sizeXl="3">
+                    <IonCol sizeXs="12" sizeMd="6" sizeLg="6" sizeXl="6">
                         <IonToolbar>
-                            <IonButtons slot='end'>
+                            <IonButtons slot='start'>
                                 {
                                     botones.map((leng, num) => {
                                         return (
@@ -187,9 +196,9 @@ export const TaleModal = ({closeModal, isOpen, item}: any) => {
                                 })
                             }
                         </div>
-                    </IonCol>
-                    <IonCol sizeXs="12" sizeMd="2" sizeLg="3" sizeXl="3">
-                    {
+                        <IonRow>
+                            <IonCol sizeXs="12" sizeMd="12" sizeLg="12" sizeXl="12">
+                            {
                                 (images && images.length > 0)
                                 ?
                                 <Swiper
@@ -205,7 +214,7 @@ export const TaleModal = ({closeModal, isOpen, item}: any) => {
                                     onSwiper={(swiper) => console.log(swiper)}
                                     
                                     style={{
-                                        height: 150,
+                                        height: (widthScreen > 991) ? '40vh' : '20vh',
                                         textAlign: 'center',
                                         border: 'var(--ion-color-primary) 2px solid',
                                         borderRadius: 8,
@@ -233,6 +242,30 @@ export const TaleModal = ({closeModal, isOpen, item}: any) => {
 
                                 </div>
                             }
+                            </IonCol>
+                            <IonCol>
+                                <IonRow>
+                                {
+                                    (pdfs && pdfs.length > 0)
+                                    &&
+                                    pdfs.map((len, index) => {
+                                        return (
+                                            <IonCol size="6" key={index} >
+                                                <IonCard button href={len.pdfUrl} target={'_blank'}>
+                                                    <div style={{ width: '100%', textAlign: 'center'}}>
+                                                        <img src="/assets/icon/pdf-icon.png" alt={`pdf_${index}`} height={40} />
+                                                        <p style={{fontSize: '70%'}}>
+                                                            {len.description}
+                                                        </p>
+                                                    </div>
+                                                </IonCard>
+                                            </IonCol>
+                                        )
+                                    })
+                                }
+                                </IonRow>
+                            </IonCol>
+                        </IonRow>
                     </IonCol>
                 </IonRow>
             </IonGrid>            
