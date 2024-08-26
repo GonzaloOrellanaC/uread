@@ -10,7 +10,7 @@ const getUsers = async (req, res, next) => {
         res.status(200).json({ data: findAllUsersData, message: 'findAll' });
     }
     catch (error) {
-        next(error);
+        console.log(error);
     }
 };
 const getAdminUsers = async (req, res, next) => {
@@ -19,7 +19,7 @@ const getAdminUsers = async (req, res, next) => {
         res.status(200).json({ data: findAllUsersData, message: 'findAll' });
     }
     catch (error) {
-        next(error);
+        console.log(error);
     }
 };
 const getAllSystemUser = async (req, res, next) => {
@@ -28,7 +28,7 @@ const getAllSystemUser = async (req, res, next) => {
         res.status(200).json({ data: findAllSystemUserData, message: 'findAll' });
     }
     catch (error) {
-        next(error);
+        console.log(error);
     }
 };
 const getUsersByOrg = async (req, res, next) => {
@@ -38,7 +38,7 @@ const getUsersByOrg = async (req, res, next) => {
         res.status(200).json({ data: findUsers, message: 'findOne' });
     }
     catch (error) {
-        next(error);
+        console.log(error);
     }
 };
 const getUserById = async (req, res, next) => {
@@ -48,7 +48,7 @@ const getUserById = async (req, res, next) => {
         res.status(200).json({ data: findOneUserData, message: 'findOne' });
     }
     catch (error) {
-        next(error);
+        console.log(error);
     }
 };
 const createAdminSysUser = async (req, res, next) => {
@@ -59,7 +59,7 @@ const createAdminSysUser = async (req, res, next) => {
         res.status(201).json({ data: createUserData, message: 'created' });
     }
     catch (error) {
-        next(error);
+        console.log(error);
     }
 };
 const createUser = async (req, res, next) => {
@@ -74,7 +74,7 @@ const createUser = async (req, res, next) => {
     }
     catch (error) {
         res.status(401).json({ data: error, message: 'error' });
-        next(error);
+        console.log(error);
     }
 };
 const editUser = async (req, res, next) => {
@@ -84,7 +84,7 @@ const editUser = async (req, res, next) => {
         res.status(200).json({ data: updateUserData, message: 'updated' });
     }
     catch (error) {
-        next(error);
+        console.log(error);
     }
 };
 const deleteUser = async (req, res, next) => {
@@ -96,7 +96,7 @@ const deleteUser = async (req, res, next) => {
         res.status(200).json({ data: deleteUserData, message: 'deleted' });
     }
     catch (error) {
-        next(error);
+        console.log(error);
     }
 };
 exports.default = {

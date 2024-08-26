@@ -11,7 +11,7 @@ const getUsers = async (req: RequestWithUser, res: Response, next: NextFunction)
         const findAllUsersData: User[] = await UserService.findAllUser()
         res.status(200).json({ data: findAllUsersData, message: 'findAll' })
     } catch (error) {
-        next(error)
+        console.log(error)
     }
 }
 
@@ -20,7 +20,7 @@ const getAdminUsers = async (req: RequestWithUser, res: Response, next: NextFunc
         const findAllUsersData: User[] = await UserService.findAllAdminUser()
         res.status(200).json({ data: findAllUsersData, message: 'findAll' })
     } catch (error) {
-        next(error)
+        console.log(error)
     }
 }
 
@@ -29,7 +29,7 @@ const getAllSystemUser = async (req: RequestWithUser, res: Response, next: NextF
         const findAllSystemUserData: User[] = await UserService.findAllSystemUser()
         res.status(200).json({ data: findAllSystemUserData, message: 'findAll' })
     } catch (error) {
-        next(error)
+        console.log(error)
     }
 }
 
@@ -40,7 +40,7 @@ const getUsersByOrg = async (req: Request, res: Response, next: NextFunction) =>
 
         res.status(200).json({ data: findUsers, message: 'findOne' })
     } catch (error) {
-        next(error)
+        console.log(error)
     }
 }
 
@@ -51,7 +51,7 @@ const getUserById = async (req: Request, res: Response, next: NextFunction) => {
 
         res.status(200).json({ data: findOneUserData, message: 'findOne' })
     } catch (error) {
-        next(error)
+        console.log(error)
     }
 }
 
@@ -62,7 +62,7 @@ const createAdminSysUser = async (req: Request, res: Response, next: NextFunctio
         const createUserData: User = await UserService.createUser(userData, userLocale)
         res.status(201).json({ data: createUserData, message: 'created' })
     } catch (error) {
-        next(error)
+        console.log(error)
     }
 }
 
@@ -77,7 +77,7 @@ const createUser = async (req: Request, res: Response, next: NextFunction) => {
         res.status(201).json({ data: [createUserData], message: 'created' })
     } catch (error) {
         res.status(401).json({data: error, message: 'error'})
-        next(error)
+        console.log(error)
     }
 }
 
@@ -87,7 +87,7 @@ const editUser = async (req: Request, res: Response, next: NextFunction) => {
         const updateUserData: User = await UserService.editUser(userData)
         res.status(200).json({ data: updateUserData, message: 'updated' })
     } catch (error) {
-        next(error)
+        console.log(error)
     }
 }
 
@@ -100,7 +100,7 @@ const deleteUser = async (req: Request, res: Response, next: NextFunction) => {
 
         res.status(200).json({ data: deleteUserData, message: 'deleted' })
     } catch (error) {
-        next(error)
+        console.log(error)
     }
 }
 

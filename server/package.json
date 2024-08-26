@@ -10,6 +10,7 @@
     },
     "scripts": {
         "start": "node dist/server.js",
+        "start-pm2": "npm run build && pm2 start --name 'uread-prod' dist/server.js",
         "start-prod": "npm run build && cross-env NODE_ENV=production node dist/server.js",
         "start-dev": "npm run build && cross-env NODE_ENV=development nodemon",
         "build": "tsc && npx tsc-alias",

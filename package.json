@@ -4,7 +4,7 @@
   "description": "Boilerplate Ionic React - NodeJS",
   "main": "index.js",
   "scripts": {
-    "start": "npm start --prefix server",
+    "start": "npm run start-pm2 --prefix server",
     "start-prod": "npm start-prod --prefix server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "npm run start-dev --prefix server",
@@ -14,7 +14,8 @@
     "install-client": "cd ./client && npm install",
     "build-client": "cd ./client && ionic build --prod",
     "build-server": "cd ./server && npm run build",
-    "build-to-prod": "npm run build-client && npm run build-server"
+    "build-to-prod": "npm run build-client && npm run build-server",
+    "postinstall": "npm run install-server && npm run install-client"
   },
   "author": "Gonzalo Orellana <gonzalo.orellana@kauel.com>",
   "license": "ISC",
