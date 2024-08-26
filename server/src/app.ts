@@ -44,6 +44,7 @@ const initializeMiddlewares = () => {
     if (env === 'development') {
         app.use(morgan(config.log.format, { stream }))
     }
+    console.log(1)
     app.use(cors({ origin: config.cors.origin, credentials: config.cors.credentials }))
     app.use(hpp())
     app.use(compression())
@@ -51,9 +52,11 @@ const initializeMiddlewares = () => {
     app.use(express.json())
     app.use(express.urlencoded({ extended: true }))
     app.use(cookieParser())
+    console.log(2)
     configureI18n()
     app.use(i18n.init)
     initializeRoutes()
+    console.log(3)
     app.use(express.static(path.resolve(__dirname, "../../client/build")))
     app.get('/*', (req: Request, res: Response) => {
         res.sendFile(path.resolve(__dirname, "../../client/build", "index.html"))
@@ -96,17 +99,21 @@ const configureI18n = () => {
 }
 
 const App = () => {
-    connectToDatabase()
-    initializeMiddlewares()
-    initializeSwagger()
-    initializeErrorHandling()
-    const server = app.listen(port, () => {
-        logger.info(`=================================`)
-        logger.info(`======= ENV: ${env} =======`)
-        logger.info(`🚀 App listening on the port ${port}`)
-        logger.info(`=================================`)
-    })
-    SocketController(server)
+    try {
+        connectToDatabase()
+        initializeMiddlewares()
+        initializeSwagger()
+        initializeErrorHandling()
+        const server = app.listen(port, () => {
+            logger.info(`=================================`)
+            logger.info(`======= ENV: ${env} =======`)
+            logger.info(`🚀 App listening on the port ${port}`)
+            logger.info(`=================================`)
+        })
+        SocketController(server)
+    } catch (error) {
+       console.log(error) 
+    }
 }
 
 export default App

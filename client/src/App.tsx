@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -34,6 +34,9 @@ import { UsersProvider } from './context/Users.context';
 import { ContenidoProvider } from './context/Contenido.context';
 import { DataPolicyPage } from './pages/DataPolicy/DataPolicy.page';
 import { LateralMenu } from './menu/Lateral.menu';
+import { MeetPage } from './pages/Meet/Meet.page';
+import { MeetListPage } from './pages/Meet/MeetList.page';
+import { SocketProvider } from './context/Socket.context';
 
 setupIonicReact();
 
@@ -41,58 +44,69 @@ const ReactIonApp = () => {
   return (
     <IonApp>
       <IonReactRouter>
+        <SocketProvider>
           <AuthProvider>
             <UsersProvider>
               <ContenidoProvider>
-              <Menu />
-              <LateralMenu />
-              <IonRouterOutlet>
-                <Route exact path='/'>
-                  <HomePage />
-                </Route>
-                <Route exact path='/restore-password'>
-                  <RestorePasswordPage />
-                </Route>
-                <Route exact path='/reset-password/:token'>
-                  <RessetPasswordPage />
-                </Route>
-                <Route exact path={'/validate-password/:token'}>
-                  <ValidateUserPage />
-                </Route>
-                <Route exact path='/about-us'>
-                  <AboutPage />
-                </Route>
-                <Route exact path='/contact-us'>
-                  <ContactUsPage />
-                </Route>
-                <Route exact path='/library'>
-                  <LibraryPage />
-                </Route>
-                <Route exact path='/levels'>
-                  <LevelsPage />
-                </Route>
-                <Route exact path='/login'>
-                  <LoginPage />
-                </Route>
-                <Route exact path='/registre'>
-                  <RegistrePage />
-                </Route>
-                <Route exact path='/admin'>
-                  <AdminPage />
-                </Route>
-                <Route exact path='/admin/:id'>
-                  <AdminPage />
-                </Route>
-                <Route exact path='/user/:id'>
-                  <UserPage />
-                </Route>
-                <Route exact path='/data-policy'>
-                  <DataPolicyPage />
-                </Route>
-              </IonRouterOutlet>
-            </ContenidoProvider>
-          </UsersProvider>
-        </AuthProvider>
+                {/* <Menu />
+                <LateralMenu /> */}
+                <IonRouterOutlet>
+                  <Route exact path='/'>
+                    <Redirect to='/login' />
+                  </Route>
+                  <Route exact path='/home'>
+                    <HomePage />
+                  </Route>
+                  <Route exact path='/restore-password'>
+                    <RestorePasswordPage />
+                  </Route>
+                  <Route exact path='/reset-password/:token'>
+                    <RessetPasswordPage />
+                  </Route>
+                  <Route exact path={'/validate-password/:token'}>
+                    <ValidateUserPage />
+                  </Route>
+                  <Route exact path='/about-us'>
+                    <AboutPage />
+                  </Route>
+                  <Route exact path='/contact-us'>
+                    <ContactUsPage />
+                  </Route>
+                  <Route exact path='/library'>
+                    <LibraryPage />
+                  </Route>
+                  <Route exact path='/levels'>
+                    <LevelsPage />
+                  </Route>
+                  <Route exact path='/login'>
+                    <LoginPage />
+                  </Route>
+                  <Route exact path='/registre'>
+                    <RegistrePage />
+                  </Route>
+                  <Route exact path='/admin'>
+                    <AdminPage />
+                  </Route>
+                  <Route exact path='/admin/:id'>
+                    <AdminPage />
+                  </Route>
+                  <Route exact path='/user/:id'>
+                    <UserPage />
+                  </Route>
+                  <Route exact path='/data-policy'>
+                    <DataPolicyPage />
+                  </Route>
+                  <Route exact path='/meet'>
+                    <MeetListPage />
+                  </Route>
+                  <Route exact path='/meet/:id'>
+                    <MeetPage />
+                  </Route>
+                </IonRouterOutlet>
+              </ContenidoProvider>
+            </UsersProvider>
+          </AuthProvider>
+        </SocketProvider>
       </IonReactRouter>
     </IonApp>
   )

@@ -26,6 +26,7 @@ export const ContenidoProvider = (props: any) => {
     
     const getContenido = async (premium: boolean) => {
         const response = await contenidoRouter.getContenido(premium)
+        console.log(response)
         setContenido(response.data)
     }
     const provider = {

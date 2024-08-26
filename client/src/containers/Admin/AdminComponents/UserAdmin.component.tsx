@@ -127,7 +127,7 @@ const UserAdminComponent = () => {
     }
 
     return (
-        <div style={{overflowY: 'auto', height: 'calc(100vh - 240px)'}}>
+        <div style={{overflowY: 'auto'}}>
             <IonToolbar className='toolbar-personalized'>
                 <h2>Usuarios</h2>
                 <IonButtons slot={'end'}>
@@ -197,7 +197,7 @@ const UserAdminComponent = () => {
                         }
                     </IonRow>
                     : */
-                    <div style={{ overflowY: 'auto', backgroundColor: 'transparent', height: 'calc(100vh - 315px)', borderLeft: '#ccc 1px solid', borderRight: '#ccc 1px solid', borderBottom: '#ccc 1px solid' }}>
+                    <div style={{ overflowY: 'auto', backgroundColor: 'transparent', height: 'calc(100vh - 150px)', borderLeft: '#ccc 1px solid', borderRight: '#ccc 1px solid', borderBottom: '#ccc 1px solid' }}>
                         <IonRow style={{ borderTop: '#ccc 1px solid' }}>
                             <IonCol sizeXs="0.5" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
                                 

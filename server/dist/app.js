@@ -43,6 +43,7 @@ const initializeMiddlewares = () => {
     if (env === 'development') {
         app.use((0, morgan_1.default)(configs_1.default.log.format, { stream: logger_1.stream }));
     }
+    console.log(1);
     app.use((0, cors_1.default)({ origin: configs_1.default.cors.origin, credentials: configs_1.default.cors.credentials }));
     app.use((0, hpp_1.default)());
     app.use((0, compression_1.default)());
@@ -50,9 +51,11 @@ const initializeMiddlewares = () => {
     app.use(express_1.default.json());
     app.use(express_1.default.urlencoded({ extended: true }));
     app.use((0, cookie_parser_1.default)());
+    console.log(2);
     configureI18n();
     app.use(i18n_1.default.init);
     initializeRoutes();
+    console.log(3);
     app.use(express_1.default.static(path_1.default.resolve(__dirname, "../../client/build")));
     app.get('/*', (req, res) => {
         res.sendFile(path_1.default.resolve(__dirname, "../../client/build", "index.html"));
@@ -89,17 +92,22 @@ const configureI18n = () => {
     });
 };
 const App = () => {
-    connectToDatabase();
-    initializeMiddlewares();
-    initializeSwagger();
-    initializeErrorHandling();
-    const server = app.listen(port, () => {
-        logger_1.logger.info(`=================================`);
-        logger_1.logger.info(`======= ENV: ${env} =======`);
-        logger_1.logger.info(`🚀 App listening on the port ${port}`);
-        logger_1.logger.info(`=================================`);
-    });
-    (0, socket_controller_1.default)(server);
+    try {
+        connectToDatabase();
+        initializeMiddlewares();
+        initializeSwagger();
+        initializeErrorHandling();
+        const server = app.listen(port, () => {
+            logger_1.logger.info(`=================================`);
+            logger_1.logger.info(`======= ENV: ${env} =======`);
+            logger_1.logger.info(`🚀 App listening on the port ${port}`);
+            logger_1.logger.info(`=================================`);
+        });
+        (0, socket_controller_1.default)(server);
+    }
+    catch (error) {
+        console.log(error);
+    }
 };
 exports.default = App;
 //# sourceMappingURL=app.js.map

@@ -52,6 +52,13 @@ const Menu = () => {
             state: false,
             access: 'general',
             path: '/contact-us'
+        },
+        {
+            id: 5,
+            name: 'Tus clases',
+            state: false,
+            access: 'logged',
+            path: '/meet'
         }
     ]
     const history = useHistory()

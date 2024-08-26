@@ -1,0 +1,2 @@
+2024-08-20 11:04:25 error: [POST] /api/login >> StatusCode:: 409, Message:: Contraseña incorrecta
+2024-08-20 17:01:25 error: [POST] /api/login >> StatusCode:: 409, Message:: Contraseña incorrecta
