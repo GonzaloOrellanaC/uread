@@ -49,7 +49,7 @@ const LoginContainer = () => {
                         <div style={{ marginTop: 50 }}>
                             <div className='icon-logo-container'>
                                 <img src={'/assets/images/logo.png'} width={80} alt=""/>
-                                <p className='title size-title'>Club de lectura bilingüe</p>
+                                <p className='title size-title'>Club bilingüe</p>
                                 {/* <p className='subTitle size-subTitle'>Read, Master, Succed.</p> */}
                             </div>
                             <br />
