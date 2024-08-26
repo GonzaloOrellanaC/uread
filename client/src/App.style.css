@@ -1,16 +1,20 @@
 .menu-header {
-    --background: url(./../public/assets/images/arcoiris_.jpg) 0 0/100% 100% no-repeat;
-    --padding-top: 10px;
-    --padding-bottom: 10px;
+    /* --background: url(./../public/assets/images/arcoiris_.jpg) 0 0/100% 100% no-repeat; */
+    /* --padding-top: 10px;
+    --padding-bottom: 10px; */
     --padding-start: 250px;
     --padding-end: 250px;
     background-size: cover;
-    width: 100%;
+    /* width: 100%; */
     /* height: 35vh; */
     z-index: 2;
     margin-top: 0px;
     text-align: center;
     position: relative;
+}
+
+.padding-top-100 {
+    --padding-top: 100px !important;
 }
 
 .text-container {
@@ -440,7 +444,7 @@ h2 {
 
   .contenidos-container {
     width: 100%;
-    height: calc(100vh - 320px);
+    height: calc(100vh - 130px);
     overflow-y: auto;
   }
 

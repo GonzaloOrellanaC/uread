@@ -11,7 +11,8 @@ const LibraryPage = () => {
     return (
         <IonPage id="main-content">
             <IonContent>
-                {isAdmin && <div style={{position: 'relative', width: '100%', zIndex: 100}}>
+                <LibraryContainerV2 />
+                {/* {isAdmin && <div style={{position: 'relative', width: '100%', zIndex: 100}}>
                     <button style={{position: 'absolute', top: 150, right: 50, border: '1px solid #fff', padding: 5}} onClick={() => {setState((state==='activa') ? 'inactiva' : 'activa')}}>
                         V2 {state}
                     </button>
@@ -25,7 +26,7 @@ const LibraryPage = () => {
 
                         <LibraryContainerV2 />
                     
-                }
+                } */}
             </IonContent>
         </IonPage>
     )

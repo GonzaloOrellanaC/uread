@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\gorel\\Documents\\Personales\\uread\\server\\dist\\logs\\error\\.c01f03fbe517972a5ed0ba3f798869d8b210311d-audit.json",
+    "files": [
+        {
+            "date": 1718023770978,
+            "name": "C:\\Users\\gorel\\Documents\\Personales\\uread\\server\\dist\\logs\\error\\2024-06-10.log",
+            "hash": "9ac3d68c7b3d96b1c22a1939bf1ad439"
+        }
+    ]
+}

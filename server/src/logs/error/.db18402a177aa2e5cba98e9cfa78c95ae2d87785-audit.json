@@ -1,0 +1,29 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\gorel\\Documents\\Personales\\uread\\server\\src\\logs\\error\\.db18402a177aa2e5cba98e9cfa78c95ae2d87785-audit.json",
+    "files": [
+        {
+            "date": 1718023451697,
+            "name": "C:\\Users\\gorel\\Documents\\Personales\\uread\\server\\src\\logs\\error\\2024-06-10.log",
+            "hash": "b59b005ae102fea465c7f40749cc2aae"
+        },
+        {
+            "date": 1724166161847,
+            "name": "C:\\Users\\gorel\\Documents\\Personales\\uread\\server\\src\\logs\\error\\2024-08-20.log",
+            "hash": "085957f798823c3f72e7d1c410db7685"
+        },
+        {
+            "date": 1724642954713,
+            "name": "C:\\Users\\gorel\\Documents\\Personales\\uread\\server\\src\\logs\\error\\2024-08-25.log",
+            "hash": "71e756e1b92a3c20f240d4cddfc952cd"
+        },
+        {
+            "date": 1724645292075,
+            "name": "C:\\Users\\gorel\\Documents\\Personales\\uread\\server\\src\\logs\\error\\2024-08-26.log",
+            "hash": "8ab3ce5eec9ab3b4794923b8a338de0e"
+        }
+    ]
+}
