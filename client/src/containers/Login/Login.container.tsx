@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import userRouter from '../../router/user.router'
 import { User } from '../../interfaces/User.interface'
 import { eyeOffOutline, eyeOutline } from 'ionicons/icons'
+import { RegistreModal } from '../../components/Modals'
 
 const LoginContainer = () => {
 
@@ -13,7 +14,7 @@ const LoginContainer = () => {
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const [showPassword, setShowPassword] = useState<boolean>(false)
-    /* const [isLoading, setIsLoading] = useState<boolean>(false) */
+    const [openRegistreModal, setOpenRegistreModal] = useState<boolean>(false)
     
     const resendVerification = async (userData: User) => {
         const res = await userRouter.resendVerification(userData)
@@ -31,7 +32,11 @@ const LoginContainer = () => {
         if (email && password) {
             try {
                 /* setIsLoading(true) */
-                login(email, password)
+                /* if (validateEmail(email)) { */
+                    login(email, password)
+                /* } else {
+                    alert('No se reconoce el formato de correo electrónico.')
+                } */
             } catch (error: any) {
                 console.log(error)
                 alert(error.response.data.message)
@@ -40,8 +45,21 @@ const LoginContainer = () => {
         }
     }
 
+    /* const validateEmail = (email: string) => {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+      }; */
+
+    const closeRegistreModal = () => {
+        setOpenRegistreModal(false)
+    }
+
     return (
         <IonContent className="ion-padding">
+            <RegistreModal open={openRegistreModal} closeModal={closeRegistreModal} />
             <IonGrid>
                 <IonRow>
                     <IonCol></IonCol>
@@ -98,11 +116,16 @@ const LoginContainer = () => {
                                     Login
                                 </IonButton>
                                 <br />
+                                <IonButton color={'secondary'} expand={'block'} onClick={() => {setOpenRegistreModal(true)}}>
+                                    Registre
+                                </IonButton>
+                                <br />
                             </div>
                             <div
                                 style={{
                                     width: '100%',
-                                    textAlign: 'center'
+                                    textAlign: 'center',
+                                    cursor: 'pointer'
                                 }}
                             >
                                 <a onClick={() => { history.push('/restore-password')}} style={{ fontSize: 12, padding: 5, textDecoration: 'none', borderColor: 'var(--ion-color-primary)', borderStyle: 'solid', borderWidth: 2, borderRadius: 8 }}>Restaurar contraseña / Restore password</a>

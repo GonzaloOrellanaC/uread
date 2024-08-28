@@ -45,32 +45,45 @@ const RegistreModal = ({open, closeModal}: ModalData) => {
 
     const createUser = async () => {
         if (name && lastName && email && password && confirmPassword) {
-            if (password === confirmPassword) {
-                const newUser = {
-                    name: name,
-                    lastName: lastName,
-                    email: email,
-                    password: password,
-                    premium: false,
-                    state: false,
-                    roles: [role]
-                } as User
-                const response = await userRouter.signUpUser(newUser)
-                alert(/* response.message */ 'Bienvenid@ a UREAD. Ingrese a su cuenta.')
-                setName(undefined)
-                setLastName(undefined)
-                setEmail(undefined)
-                setPassword(undefined)
-                setConfirmPassword(undefined)
-                setRole(undefined)
-                closeModal()
+            if (validateEmail(email)) {
+                if (password === confirmPassword) {
+                    const newUser = {
+                        name: name,
+                        lastName: lastName,
+                        email: email,
+                        password: password,
+                        premium: false,
+                        state: false,
+                        roles: [role]
+                    } as User
+                    const response = await userRouter.signUpUser(newUser)
+                    alert(/* response.message */ 'Bienvenid@ a UREAD. Ingrese a su cuenta.')
+                    setName(undefined)
+                    setLastName(undefined)
+                    setEmail(undefined)
+                    setPassword(undefined)
+                    setConfirmPassword(undefined)
+                    setRole(undefined)
+                    closeModal()
+                } else {
+                    alert('Contraseñas no son iguales.')
+                }
             } else {
-                alert('Contraseñas no son iguales.')
+                alert('No se reconoce el formato de correo electrónico.')
             }
         } else {
             alert('Faltan datos')
         }
     }
+
+    const validateEmail = (email: string) => {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+      };
+
     return (
         <IonModal
             className={'registre-modal'}
