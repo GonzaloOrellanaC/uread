@@ -6,16 +6,6 @@
     "auditLog": "/home/gonzalo/projects/uread/server/dist/logs/debug/.3702c940c63452d4bbaf2ec16c9f907198e3f279-audit.json",
     "files": [
         {
-            "date": 1721780761147,
-            "name": "/home/gonzalo/projects/uread/server/dist/logs/debug/2024-07-24.log",
-            "hash": "3e55cbf366c65ea08328279da0171b8d"
-        },
-        {
-            "date": 1721866681628,
-            "name": "/home/gonzalo/projects/uread/server/dist/logs/debug/2024-07-25.log",
-            "hash": "1a685caa989fca956144f9613fdbed5a"
-        },
-        {
             "date": 1721953605395,
             "name": "/home/gonzalo/projects/uread/server/dist/logs/debug/2024-07-26.log",
             "hash": "44cb75ccc96fd2d1ab3ef061843cf6a3"
@@ -154,6 +144,16 @@
             "date": 1724630839336,
             "name": "/home/gonzalo/projects/uread/server/dist/logs/debug/2024-08-26.log",
             "hash": "3e19d9ddd4ff2bd3bccd1383ffbca58e"
+        },
+        {
+            "date": 1724718457904,
+            "name": "/home/gonzalo/projects/uread/server/dist/logs/debug/2024-08-27.log",
+            "hash": "a3e7f3721ea77bb6a4e9ef3f946097ee"
+        },
+        {
+            "date": 1724806651433,
+            "name": "/home/gonzalo/projects/uread/server/dist/logs/debug/2024-08-28.log",
+            "hash": "b91b9f72220213d2f9227fc5780ec0be"
         }
     ]
 }
