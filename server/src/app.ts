@@ -26,18 +26,28 @@ const port: number = config.env.port
 const env: string = config.env.environment
 const locale: string = config.env.locale
 
-const connectToDatabase = () => {
+const connectToDatabase = async () => {
     if (env !== 'production') {
         set('debug', true)
     }
 
-    connect(dbConnection.url, dbConnection.options, async () => {
+    console.log(dbConnection.url)
+
+    try {
+        await connect(dbConnection.url)
+        await AccessControlServices.initAccessControl()
+    } catch (error) {
+        console.log(error)
+    }
+
+    /* connect(dbConnection.url, dbConnection.options, async () => {
         try{
+            console.log('Connected')
             await AccessControlServices.initAccessControl()
         } catch (err) {
             console.log(err)
         }
-    }) 
+    })  */
 }
 
 const initializeMiddlewares = () => {
@@ -57,6 +67,9 @@ const initializeMiddlewares = () => {
     app.use(i18n.init)
     initializeRoutes()
     console.log(3)
+    app.use("/audios", express.static(path.join(__dirname, '../../files/audios')))
+    app.use("/images", express.static(path.join(__dirname, '../../files/images')))
+    app.use("/pdf", express.static(path.join(__dirname, '../../files/pdf')))
     app.use(express.static(path.resolve(__dirname, "../../client/build")))
     app.get('/*', (req: Request, res: Response) => {
         res.sendFile(path.resolve(__dirname, "../../client/build", "index.html"))

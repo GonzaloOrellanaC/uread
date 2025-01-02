@@ -1,12 +1,33 @@
 import { NextFunction, Request, Response } from 'express'
 import contenidoService from '@/services/contenido.service'
 import { Contenido } from '@/interfaces/contenido.interface'
+import contenidoModel from '@/models/contenido.model'
 
 const guardarContenido = async (req: Request, res: Response, next: NextFunction) => {
     console.log(req.body)
     try {
         const contenido: Contenido = await contenidoService.guardarContenido(req.body)
         res.status(200).json({ data: contenido, message: 'contenido creado' })
+    } catch (error) {
+        next(error)
+    }
+}
+
+const crearContenidoV2 = async (req: Request, res: Response, next: NextFunction) => {
+    console.log(req.body)
+    try {
+        const response = await contenidoService.crearContenidoV2(req.body as Contenido)
+        res.status(200).json({ data: response.contenido, message: 'contenido v2 creado' })
+    } catch (error) {
+        next(error)
+    }
+}
+
+const editarContenidoV2 = async (req: Request, res: Response, next: NextFunction) => {
+    console.log(req.body)
+    try {
+        const response = await contenidoService.editarContenidoV2(req.body as Contenido)
+        res.status(200).json({ data: response.contenido, message: 'contenido v2 creado' })
     } catch (error) {
         next(error)
     }
@@ -41,6 +62,15 @@ const leerContenidos = async (req: Request, res: Response, next: NextFunction) =
     }
 }
 
+const leerContenidosV2 = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const contenidos: Contenido[] = await contenidoService.leerContenidosV2()
+        res.status(200).json({ data: contenidos, message: 'lista de contenidos v2' })
+    } catch (error) {
+        next(error)
+    }
+}
+
 const leerContenidosBasicos = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const contenidos: Contenido[] = await contenidoService.leerContenidosBasicos()
@@ -50,10 +80,19 @@ const leerContenidosBasicos = async (req: Request, res: Response, next: NextFunc
     }
 }
 
+const buscarContenidoPorId = async (_id: string) => {
+    const contenido = await contenidoModel.findById(_id)
+    return contenido
+}
+
 export default {
     guardarContenido,
+    crearContenidoV2,
+    editarContenidoV2,
     editarContenido,
     borrarContenido,
     leerContenidos,
-    leerContenidosBasicos
+    leerContenidosV2,
+    leerContenidosBasicos,
+    buscarContenidoPorId
 }

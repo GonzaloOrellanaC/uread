@@ -1,0 +1,1 @@
+2025-01-02 06:43:31 error: [GET] /api/contenido/leerContenidos >> StatusCode:: 500, Message:: Operation `contenidos.find()` buffering timed out after 10000ms

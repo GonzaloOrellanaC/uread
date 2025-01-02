@@ -25,6 +25,7 @@ const initAccessControl = async () => {
             adminResult = 'Super admin Role created'
         }
         console.info(`Initialized access control. ${adminResult}`)
+        
     } catch (error) {
         console.error(error)
     }

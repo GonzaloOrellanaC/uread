@@ -1,0 +1,27 @@
+2024-10-03 08:07:40 info: =================================
+2024-10-03 08:07:40 info: ======= ENV: development =======
+2024-10-03 08:07:40 info: 🚀 App listening on the port 5212
+2024-10-03 08:07:40 info: =================================
+2024-10-03 08:08:31 info: [0mGET /api/roles/getRoles [36m304[0m 103.998 ms - -[0m
+2024-10-03 08:08:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 83.987 ms - -[0m
+2024-10-03 08:08:31 info: [0mGET /api/roles/getRoles [36m304[0m 79.021 ms - -[0m
+2024-10-03 08:08:32 info: [0mGET /api/contenido/leerContenidos [36m304[0m 799.130 ms - -[0m
+2024-10-03 08:08:32 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 149.377 ms - -[0m
+2024-10-03 08:08:32 info: [0mGET /api/users/getUsers [32m200[0m 982.095 ms - -[0m
+2024-10-03 08:17:31 info: [0mGET /api/lenguajes/leerLenguajes [36m304[0m 612.706 ms - -[0m
+2024-10-03 08:17:31 info: [0mGET /api/lenguajes/leerLenguajes [36m304[0m 70.794 ms - -[0m
+2024-10-03 08:17:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 121.996 ms - -[0m
+2024-10-03 08:17:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 74.925 ms - -[0m
+2024-10-03 08:20:03 info: [0mGET /audios/1727756939595.mp3 [36m304[0m 7.150 ms - -[0m
+2024-10-03 08:20:09 info: [0mGET /audios/1727756929852.mp3 [36m304[0m 3.293 ms - -[0m
+2024-10-03 08:22:18 info: [0mGET /audios/1727756939595.mp3 [36m304[0m 3.509 ms - -[0m
+2024-10-03 08:23:16 info: [0mGET /audios/1727814164537.mp3 [36m304[0m 2.467 ms - -[0m
+2024-10-03 08:24:34 info: [0mGET /audios/1727814164537.mp3 [36m304[0m 1.569 ms - -[0m
+2024-10-03 08:26:35 info: [0mGET /api/lenguajes/leerLenguajes [36m304[0m 71.332 ms - -[0m
+2024-10-03 08:26:35 info: [0mGET /api/lenguajes/leerLenguajes [36m304[0m 80.200 ms - -[0m
+2024-10-03 08:26:35 info: [0mGET /api/niveles/leerNiveles [36m304[0m 70.456 ms - -[0m
+2024-10-03 08:26:35 info: [0mGET /api/niveles/leerNiveles [36m304[0m 75.121 ms - -[0m
+2024-10-03 08:31:06 info: [0mGET /api/niveles/leerNiveles [36m304[0m 73.385 ms - -[0m
+2024-10-03 08:31:06 info: [0mGET /api/contenido/leerContenidos [36m304[0m 673.540 ms - -[0m
+2024-10-03 08:31:07 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 98.189 ms - -[0m
+2024-10-03 08:31:07 info: [0mGET /api/users/getUsers [36m304[0m 629.072 ms - -[0m

@@ -8,6 +8,9 @@ const contenidoSchema = new mongoose_1.Schema({
     nombreTexto: {
         type: String
     },
+    descripcion: {
+        type: String
+    },
     audioEnUrl: {
         type: String
     },
@@ -37,6 +40,9 @@ const contenidoSchema = new mongoose_1.Schema({
             },
             urlAudio: {
                 type: String
+            },
+            contenido: {
+                type: Object
             }
         }
     ],

@@ -13,6 +13,8 @@ const contenido_route_1 = (0, tslib_1.__importDefault)(require("./contenido.rout
 const languages_route_1 = (0, tslib_1.__importDefault)(require("./languages.route"));
 const niveles_route_1 = (0, tslib_1.__importDefault)(require("./niveles.route"));
 const storage_route_1 = (0, tslib_1.__importDefault)(require("./storage.route"));
+const calendar_route_1 = (0, tslib_1.__importDefault)(require("./calendar.route"));
+const ia_router_1 = (0, tslib_1.__importDefault)(require("./ia.router"));
 const router = (0, express_1.Router)();
 router.use('/api', auth_route_1.default);
 router.use('/api/users', users_route_1.default);
@@ -25,5 +27,7 @@ router.use('/api/contenido', contenido_route_1.default);
 router.use('/api/lenguajes', languages_route_1.default);
 router.use('/api/niveles', niveles_route_1.default);
 router.use('/api/azure-storage', storage_route_1.default);
+router.use('/api/calendar', calendar_route_1.default);
+router.use('/api/ia', ia_router_1.default);
 exports.default = router;
 //# sourceMappingURL=index.route.js.map

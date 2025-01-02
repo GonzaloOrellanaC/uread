@@ -18,7 +18,8 @@ router.get(`/leerNiveles`, async (req: Request, res: Response, next: NextFunctio
         const nivelesToSend: Niveles[] = await niveles.find()
         res.status(200).json({ data: nivelesToSend, message: 'lista de niveles' })
     } catch (error) {
-        next(error)
+        console.log(error)
+        res.status(400).json({data: error})
     }
 })
 

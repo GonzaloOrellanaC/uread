@@ -9,6 +9,9 @@ const contenidoSchema = new Schema(
         nombreTexto: {
             type: String
         },
+        descripcion: {
+            type: String
+        },
         audioEnUrl: {
             type: String
         },
@@ -38,6 +41,9 @@ const contenidoSchema = new Schema(
                 },
                 urlAudio: {
                     type: String
+                },
+                contenido: {
+                    type: Object
                 }
             }
         ],

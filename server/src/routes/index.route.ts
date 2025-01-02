@@ -10,6 +10,8 @@ import ContenidoRouter from './contenido.route'
 import LenguajeRouter from './languages.route'
 import NivelesRouter from './niveles.route'
 import StorageRouter from './storage.route'
+import CalendarRouter from './calendar.route'
+import IaRouter from './ia.router'
 
 const router = Router()
 
@@ -24,5 +26,7 @@ router.use('/api/contenido', ContenidoRouter)
 router.use('/api/lenguajes', LenguajeRouter)
 router.use('/api/niveles', NivelesRouter)
 router.use('/api/azure-storage', StorageRouter)
+router.use('/api/calendar', CalendarRouter)
+router.use('/api/ia', IaRouter)
 
 export default router

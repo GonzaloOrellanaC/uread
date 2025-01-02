@@ -11,7 +11,8 @@ router.get(`/leerNiveles`, async (req, res, next) => {
         res.status(200).json({ data: nivelesToSend, message: 'lista de niveles' });
     }
     catch (error) {
-        next(error);
+        console.log(error);
+        res.status(400).json({ data: error });
     }
 });
 exports.default = router;

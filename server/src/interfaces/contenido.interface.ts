@@ -1,8 +1,10 @@
 import { ObjectId } from "mongoose"
+import { Transcription } from "openai/resources/audio/transcriptions"
 
 export interface Contenido {
     _id: ObjectId
     nombreTexto: string
+    descripcion?: string
     audioEnUrl: string
     audioEsUrl: string
     imageUrl: Image[]
@@ -15,6 +17,7 @@ export interface Contenido {
     state: boolean,
     nivel: ObjectId
     pdf: PDFData[]
+    idContenido?: number
 }
 
 export interface PDFData {
@@ -28,9 +31,11 @@ export interface Image {
 }
 
 export interface Lenguajes {
-    lenguaje: string
-    listaTexto: TextList[]
+    lenguaje: Transcription
+    listaTexto?: TextList[]
     urlAudio: string
+    contenido?: string
+    transcripcion?: Object
 }
 
 export interface ListaLenguajes {

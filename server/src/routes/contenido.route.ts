@@ -9,4 +9,9 @@ router.post(`/borrarContenido`, contenidoController.borrarContenido)
 router.get(`/leerContenidos`, contenidoController.leerContenidos)
 router.get(`/leerContenidosBasicos`, contenidoController.leerContenidosBasicos)
 
+
+router.get(`/leerContenidosV2`, contenidoController.leerContenidosV2)
+router.post(`/crearContenido`, contenidoController.crearContenidoV2)
+router.post(`/editarContenidoV2`, contenidoController.editarContenidoV2)
+
 export default router

@@ -1,0 +1,3 @@
+2024-09-29 12:17:48 error: [POST] /api/contenido/crearContenido >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'contenido')
+2024-09-29 12:18:55 error: [POST] /api/contenido/crearContenido >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'contenido')
+2024-09-29 12:21:12 error: [POST] /api/contenido/crearContenido >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'contenido')

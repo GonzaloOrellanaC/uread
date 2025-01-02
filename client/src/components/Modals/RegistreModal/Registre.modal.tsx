@@ -12,6 +12,7 @@ const RegistreModal = ({open, closeModal}: ModalData) => {
     const [name, setName] = useState<string | undefined>()
     const [lastName, setLastName] = useState<string>()
     const [email, setEmail] = useState<string>()
+    const [phone, setPhone] = useState<string>()
     const [password, setPassword] = useState<string>()
     const [confirmPassword, setConfirmPassword] = useState<string>()
     const [role, setRole] = useState<string>()
@@ -44,13 +45,14 @@ const RegistreModal = ({open, closeModal}: ModalData) => {
     }
 
     const createUser = async () => {
-        if (name && lastName && email && password && confirmPassword) {
+        if (name && lastName && email && phone && password && confirmPassword) {
             if (validateEmail(email)) {
                 if (password === confirmPassword) {
                     const newUser = {
                         name: name,
                         lastName: lastName,
                         email: email,
+                        phone: phone,
                         password: password,
                         premium: false,
                         state: false,
@@ -61,6 +63,7 @@ const RegistreModal = ({open, closeModal}: ModalData) => {
                     setName(undefined)
                     setLastName(undefined)
                     setEmail(undefined)
+                    setPhone(undefined)
                     setPassword(undefined)
                     setConfirmPassword(undefined)
                     setRole(undefined)
@@ -113,16 +116,21 @@ const RegistreModal = ({open, closeModal}: ModalData) => {
                 </div>
                 <div className="item-button-registre">
                     <IonButton expand={'block'} style={{fontSize: 12}} color={'primary'} onClick={() => { setWithEmail(true) }}>
-                        <IonIcon icon={mailOutline} className={'margin-right-10'}></IonIcon> Registrate con Correo Electrónico
+                        <IonIcon icon={mailOutline} className={'margin-right-10'}></IonIcon> Registrate en plataforma
                     </IonButton>
                 </div>
                 {!withEmail && 
                         <div style={{padding: '20px 0px', textAlign: 'center'}}>
-                            <a href="/data-policy">Políticas de seguridad</a>
+                            <a href="https://uread.cl/wp/politica-uso-de-datos/" target="_blank">Políticas de seguridad</a>
                         </div>}
                 {
                     withEmail &&
                     <div style={{ padding: '0px 10px' }}>
+                        <IonItem>
+                            <IonLabel>
+                                * Todos los datos obligatorios
+                            </IonLabel>
+                        </IonItem>
                         <IonItem
                             fill={'outline'}
                             lines={'none'}
@@ -166,6 +174,22 @@ const RegistreModal = ({open, closeModal}: ModalData) => {
                             </IonLabel>
                             <IonInput
                                 onIonChange={(e) => {setEmail(e.target.value?.toString())}}
+                                type={'email'}
+                                color={'primary'}
+                            />
+                        </IonItem>
+                        <br />
+                        <IonItem
+                            fill={'outline'}
+                            lines={'none'}
+                            color={'primary'}
+                            style={{ backgroundColor: '#E6D3FF'}}            
+                        >
+                            <IonLabel position="stacked" color={'primary'}>
+                                Teléfono / Phone
+                            </IonLabel>
+                            <IonInput
+                                onIonChange={(e) => {setPhone(e.target.value?.toString())}}
                                 type={'email'}
                                 color={'primary'}
                             />
