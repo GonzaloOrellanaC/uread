@@ -11,6 +11,7 @@ declare const platformName: string;
 declare const storageApi: {
     accessKeys: string;
 };
+declare const deepSeekApiKey: string;
 declare const env: {
     environment: string;
     port: number;
@@ -25,6 +26,7 @@ declare const env: {
     storageApi: {
         accessKeys: string;
     };
+    deepSeekApiKey: string;
 };
-export { environment, port, locale, name, lastName, run, email, password, url, platformName, storageApi };
+export { environment, port, locale, name, lastName, run, email, password, url, platformName, storageApi, deepSeekApiKey };
 export default env;

@@ -104,7 +104,7 @@ const LoginContainer = () => {
                             <br />
                             <div style={{ padding: '0px 100px', textAlign: 'center' }}>
                                 <IonButton disabled={loading} expand={'block'} onClick={initSession}>
-                                    <IonSpinner hidden={!loading} />
+                                    {loading && <IonSpinner />}
                                     Login
                                 </IonButton>
                                 <br />

@@ -11,8 +11,9 @@ const platformName = process.env.PLATFORM_NAME
 const storageApi = {
     accessKeys: process.env.ACCESS_KEYS
 }
+const deepSeekApiKey = process.env.DEEP_SEEK_API_KEY
 
-const env = { environment, port, locale, name, lastName, run, email, password, url, platformName, storageApi }
+const env = { environment, port, locale, name, lastName, run, email, password, url, platformName, storageApi, deepSeekApiKey }
 
-export { environment, port, locale, name, lastName, run, email, password, url, platformName, storageApi }
+export { environment, port, locale, name, lastName, run, email, password, url, platformName, storageApi, deepSeekApiKey }
 export default env

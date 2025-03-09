@@ -1,0 +1,36 @@
+2025-03-03 07:17:50 info: [0mGET /api/contenido/leerContenidos [36m304[0m 649.612 ms - -[0m
+2025-03-03 07:18:36 info: =================================
+2025-03-03 07:18:36 info: ======= ENV: development =======
+2025-03-03 07:18:36 info: 🚀 App listening on the port 5212
+2025-03-03 07:18:36 info: =================================
+2025-03-03 07:44:30 info: =================================
+2025-03-03 07:44:30 info: ======= ENV: development =======
+2025-03-03 07:44:30 info: 🚀 App listening on the port 5212
+2025-03-03 07:44:30 info: =================================
+2025-03-03 07:48:09 info: [0mGET /api/niveles/leerNiveles [36m304[0m 106.295 ms - -[0m
+2025-03-03 07:48:10 info: [0mGET /api/contenido/leerContenidos [36m304[0m 1170.257 ms - -[0m
+2025-03-03 07:48:11 info: [0mGET /api/users/getUsers [36m304[0m 1147.652 ms - -[0m
+2025-03-03 07:48:11 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 186.196 ms - -[0m
+2025-03-03 07:48:39 info: [0mGET /api/niveles/leerNiveles [36m304[0m 65.277 ms - -[0m
+2025-03-03 07:48:39 info: [0mGET /api/contenido/leerContenidos [36m304[0m 568.798 ms - -[0m
+2025-03-03 07:48:39 info: [0mGET /api/users/getUsers [36m304[0m 611.480 ms - -[0m
+2025-03-03 07:48:39 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 133.865 ms - -[0m
+2025-03-03 07:48:52 info: [0mGET /audios/1727756939595.mp3 [32m206[0m 14.317 ms - 701280[0m
+2025-03-03 20:57:49 info: =================================
+2025-03-03 20:57:49 info: ======= ENV: development =======
+2025-03-03 20:57:49 info: 🚀 App listening on the port 5212
+2025-03-03 20:57:49 info: =================================
+2025-03-03 21:01:11 info: [0mGET /api/roles/getRoles [36m304[0m 92.901 ms - -[0m
+2025-03-03 21:01:12 info: [0mGET /api/roles/getRoles [36m304[0m 84.804 ms - -[0m
+2025-03-03 21:01:12 info: [0mGET /api/niveles/leerNiveles [36m304[0m 75.885 ms - -[0m
+2025-03-03 21:01:12 info: [0mGET /api/contenido/leerContenidos [36m304[0m 532.906 ms - -[0m
+2025-03-03 21:01:12 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 187.074 ms - -[0m
+2025-03-03 21:01:12 info: [0mGET /api/users/getUsers [32m200[0m 832.591 ms - -[0m
+2025-03-03 21:04:37 info: =================================
+2025-03-03 21:04:37 info: ======= ENV: development =======
+2025-03-03 21:04:37 info: 🚀 App listening on the port 5212
+2025-03-03 21:04:37 info: =================================
+2025-03-03 21:38:00 info: =================================
+2025-03-03 21:38:00 info: ======= ENV: development =======
+2025-03-03 21:38:00 info: 🚀 App listening on the port 5212
+2025-03-03 21:38:00 info: =================================

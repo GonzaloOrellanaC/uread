@@ -51,12 +51,12 @@ const leerContenidosBasicos = async () => {
 
 const crearContenidoV2 = async (contenido: Contenido) => {
     try {
-        const audioEs = await createAudio(contenido.lenguajes[0].contenido, Date.now(), 'nova')
+        const audioEs: any = await createAudio(contenido.lenguajes[0].contenido, Date.now(), 'nova')
         const audioEsUrl = audioEs.url
         const transcriptionEs: any = await transcript(audioEs.fileName)
         const translation = await translateText(contenido.lenguajes[0].contenido, 'inglés')
         contenido.lenguajes[0].transcripcion = transcriptionEs
-        const audioEn = await createAudio(translation.choices[0].message.content, Date.now(), 'nova')
+        const audioEn: any = await createAudio(translation.choices[0].message.content, Date.now(), 'nova')
         const audioEnUrl = audioEn.url
         const transcriptionEn: any = await transcript(audioEn.fileName)
         contenido.lenguajes[1].transcripcion = transcriptionEn

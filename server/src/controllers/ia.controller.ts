@@ -23,7 +23,7 @@ export const editContent = async (req: Request, res: Response) => {
     const contenidoCache: Contenido = {...contentFound}
     try {
         const id = Date.now()
-        const audio = await createAudio(content, id, nameVoice)
+        const audio : any = await createAudio(content, id, nameVoice)
         if (audio.state) {
             const transcription: any = await transcript(audio.fileName)
             const filterLenguaje = contenidoCache.lenguajes.filter(leng => (leng.lenguaje === language))

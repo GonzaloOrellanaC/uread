@@ -516,3 +516,13 @@ ion-modal.registre-modal {
 .swiper-button-next {
     --swiper-navigation-color: var(--ion-color-secondary);
 }
+
+.webpay-button {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.webpay-button:hover {
+    background-color: #d0d9dd;
+}

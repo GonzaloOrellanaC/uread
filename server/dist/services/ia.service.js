@@ -2,55 +2,80 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.translateText = exports.transcript = exports.createAudio = void 0;
 const tslib_1 = require("tslib");
-const openai_1 = require("openai");
 const fs_1 = (0, tslib_1.__importDefault)(require("fs"));
 const path_1 = (0, tslib_1.__importDefault)(require("path"));
-const generative_ai_1 = require("@google/generative-ai");
-const server_1 = require("@google/generative-ai/server");
-const fileManager = new server_1.GoogleAIFileManager(process.env.GEMINI_API_KEY);
-const genAI = new generative_ai_1.GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-const cacheManager = new server_1.GoogleAICacheManager(process.env.GEMINI_API_KEY);
-const openai = new openai_1.OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
-});
+const text_to_speech_1 = (0, tslib_1.__importDefault)(require("@google-cloud/text-to-speech"));
+const ia_connection_1 = require("../configs/ia.connection");
 const createAudio = async (message, id, voice) => {
     try {
         const folder = 'audios/';
         const speechFile = path_1.default.resolve(`../files/audios/${id}.mp3`);
-        const mp3 = await openai.audio.speech.create({
-            model: "tts-1",
-            voice: voice,
-            input: message,
-            speed: 0.75
-        });
-        const buffer = Buffer.from(await mp3.arrayBuffer());
-        await fs_1.default.promises.writeFile(speechFile, buffer);
+        const client = new text_to_speech_1.default.TextToSpeechClient();
+        const request = {
+            input: { text: message },
+            // Select the language and SSML Voice Gender (optional)
+            voice: { languageCode: 'en-US', ssmlGender: 'FEMALE' },
+            // Select the type of audio encoding
+            audioConfig: { audioEncoding: 'MP3' },
+        };
+        try {
+            const response = await saveAudio(client, request, speechFile, folder, id);
+            return response;
+        }
+        catch ({ name, message }) {
+            return ({
+                state: false,
+                error: { name, message }
+            });
+        }
+        /* const buffer = Buffer.from(await mp3.arrayBuffer());
+        await fs.promises.writeFile(speechFile, buffer);
         return ({
-            state: true,
-            url: `${process.env.URL}${folder}${id}.mp3`,
-            fileName: `${id}.mp3`
-        });
+                    state: true,
+                    url: `${process.env.URL}${folder}${id}.mp3`,
+                    fileName: `${id}.mp3`
+                })
+         */
     }
-    catch (error) {
+    catch ({ name, message }) {
         return ({
             state: false,
-            error: error
+            error: { name, message }
         });
     }
 };
 exports.createAudio = createAudio;
+const saveAudio = async (client, request, speechFile, folder, id) => {
+    return new Promise((resolve, reject) => {
+        client.synthesizeSpeech(request, (err, response) => {
+            if (err) {
+                console.error('ERROR:', err);
+                reject(err);
+            }
+            // Write the binary audio content to a local file
+            fs_1.default.writeFile(speechFile, response.audioContent, 'binary', err => {
+                if (err) {
+                    console.error('ERROR:', err);
+                    reject(err);
+                }
+                console.log(`Audio content written to file: ${id}.mp3`);
+                resolve({
+                    state: true,
+                    url: `${process.env.URL}${folder}${id}.mp3`,
+                    fileName: `${id}.mp3`
+                });
+            });
+        });
+    });
+};
 const transcript = async (fileName) => {
     try {
         const pathFile = path_1.default.resolve(`../files/audios/${fileName}`);
         const newFile = fs_1.default.createReadStream(pathFile);
-        const transcription = await openai.audio.transcriptions.create({
+        const transcription = await ia_connection_1.openai.audio.transcriptions.create({
             file: newFile,
-            model: "whisper-1",
-            response_format: "verbose_json",
-            timestamp_granularities: ["segment"]
+            model: "deepseek-chat",
         });
-        /* return resp.data */
         return transcription;
     }
     catch (error) {
@@ -65,7 +90,7 @@ const transcript = async (fileName) => {
 };
 exports.transcript = transcript;
 const translateText = async (text, language) => {
-    const completion = await openai.chat.completions.create({
+    const completion = await ia_connection_1.openai.chat.completions.create({
         messages: [
             {
                 role: "user",

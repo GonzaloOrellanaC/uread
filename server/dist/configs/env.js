@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.storageApi = exports.platformName = exports.url = exports.password = exports.email = exports.run = exports.lastName = exports.name = exports.locale = exports.port = exports.environment = void 0;
+exports.deepSeekApiKey = exports.storageApi = exports.platformName = exports.url = exports.password = exports.email = exports.run = exports.lastName = exports.name = exports.locale = exports.port = exports.environment = void 0;
 const environment = process.env.NODE_ENV;
 exports.environment = environment;
 const port = parseInt(process.env.PORT);
@@ -25,6 +25,8 @@ const storageApi = {
     accessKeys: process.env.ACCESS_KEYS
 };
 exports.storageApi = storageApi;
-const env = { environment, port, locale, name, lastName, run, email, password, url, platformName, storageApi };
+const deepSeekApiKey = process.env.DEEP_SEEK_API_KEY;
+exports.deepSeekApiKey = deepSeekApiKey;
+const env = { environment, port, locale, name, lastName, run, email, password, url, platformName, storageApi, deepSeekApiKey };
 exports.default = env;
 //# sourceMappingURL=env.js.map

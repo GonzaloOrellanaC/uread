@@ -19,6 +19,7 @@ declare const config: {
         storageApi: {
             accessKeys: string;
         };
+        deepSeekApiKey: string;
     };
     dbConfig: {
         host: string;

@@ -26,18 +26,26 @@ const app = (0, express_1.default)();
 const port = configs_1.default.env.port;
 const env = configs_1.default.env.environment;
 const locale = configs_1.default.env.locale;
-const connectToDatabase = () => {
+const connectToDatabase = async () => {
     if (env !== 'production') {
         (0, mongoose_1.set)('debug', true);
     }
-    (0, mongoose_1.connect)(_databases_1.dbConnection.url, _databases_1.dbConnection.options, async () => {
-        try {
-            await accessControl_service_1.default.initAccessControl();
+    console.log(_databases_1.dbConnection.url);
+    try {
+        await (0, mongoose_1.connect)(_databases_1.dbConnection.url);
+        await accessControl_service_1.default.initAccessControl();
+    }
+    catch (error) {
+        console.log(error);
+    }
+    /* connect(dbConnection.url, dbConnection.options, async () => {
+        try{
+            console.log('Connected')
+            await AccessControlServices.initAccessControl()
+        } catch (err) {
+            console.log(err)
         }
-        catch (err) {
-            console.log(err);
-        }
-    });
+    })  */
 };
 const initializeMiddlewares = () => {
     if (env === 'development') {

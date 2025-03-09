@@ -10,12 +10,12 @@
     "dev-server": "npm run start-dev --prefix server",
     "dev-client": "npm run dev --prefix uread",
     "dev": "concurrently --kill-others-on-fail \"npm run dev-server\" \"npm run dev-client\"",
-    "install-server": "cd ./server && npm install",
+    "install-server": "npm run install-server --prefix server",
     "install-client": "cd ./uread && npm install",
     "build-client": "cd ./uread && ionic build --prod",
     "build-server": "cd ./server && npm run build",
     "build-to-prod": "npm run build-client && npm run build-server",
-    "postinstall": "npm run install-server && npm run install-client"
+    "postinstall": "npm run install-server"
   },
   "author": "Gonzalo Orellana <gonzalo.orellana@kauel.com>",
   "license": "ISC",
