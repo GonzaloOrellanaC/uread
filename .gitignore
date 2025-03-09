@@ -1,5 +1,3 @@
 /node_modules
-/files/audios/*
-/files/data/*
-/files/pdf/*
-/files/images/*
+#/dist
+.env
