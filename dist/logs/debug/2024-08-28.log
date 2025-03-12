@@ -1,8 +1,0 @@
-2024-08-28 00:57:31 info: [0mGET /robots.txt [32m200[0m 4.283 ms - 901[0m
-2024-08-28 00:57:31 info: [0mGET /assets/icon/uread/uread_logo_violet.png [36m304[0m 2.285 ms - -[0m
-2024-08-28 00:59:36 info: [0mGET / [36m304[0m 1.919 ms - -[0m
-2024-08-28 01:10:37 info: [0mGET /assets/icon/uread/uread_logo_violet.png [36m304[0m 2.129 ms - -[0m
-2024-08-28 01:10:37 info: [0mGET /assets/icon/uread/uread_logo_violet.png [36m304[0m 1.945 ms - -[0m
-2024-08-28 01:10:38 info: [0mGET /static/js/22.7358c59f.chunk.js [36m304[0m 4.791 ms - -[0m
-2024-08-28 01:10:38 info: [0mGET /assets/icon/uread/uread_logo_transparente.png [36m304[0m 1.965 ms - -[0m
-2024-08-28 01:10:39 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 674.848 ms - -[0m
