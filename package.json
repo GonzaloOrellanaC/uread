@@ -14,7 +14,7 @@
         "start-pm2": "npm run build && pm2 start --name 'uread-prod' dist/server.js",
         "start-prod": "npm run build && cross-env NODE_ENV=production node dist/server.js",
         "start-dev": "npm run build && cross-env NODE_ENV=development nodemon",
-        "build": "tsc && npx tsc-alias",
+        "build-server": "tsc && npx tsc-alias",
         "build-client": "npm run build --prefix uread",
         "test": "jest --forceExit --detectOpenHandles --setupFiles dotenv/config",
         "test-node": "echo \"Error: no test specified\" && exit 1",
@@ -24,7 +24,7 @@
         "deploy:dev": "pm2 start ecosystem.config.js --only dev",
         "dev-client": "npm run dev --prefix uread",
         "dev": "concurrently --kill-others-on-fail \"npm run start-dev\" \"npm run dev-client\"",
-        "build-prod": "npm run build && npm run build-client"
+        "build-prod": "npm run build-server && npm run build-client"
     },
     "dependencies": {
         "@azure/identity": "^3.1.3",
