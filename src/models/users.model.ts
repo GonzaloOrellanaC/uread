@@ -40,7 +40,7 @@ const userSchema: Schema = new Schema(
         email: {
             type: String,
             required: [true, 'Email is required'],
-            unique: true
+            unique: [true, 'Email exist']
         },
         password: {
             type: String,
@@ -60,12 +60,12 @@ const userSchema: Schema = new Schema(
             required: false
         },
         levelUser: {
-            type: Number,
-            required: false
+            type: Schema.Types.ObjectId,
+            ref: 'Niveles'
         },
         premium: {
             type: Boolean,
-            required: true
+            default: false
         },
         roles: [
             {
@@ -84,7 +84,19 @@ const userSchema: Schema = new Schema(
                 type: Schema.Types.ObjectId,
                 ref: 'User'
             }
-        ]
+        ],
+        alumnos: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Alumno'
+            }
+        ],
+        plan: {
+            type: Schema.Types.String
+        },
+        medioPago: {
+            type: Schema.Types.String
+        }
     },
     {
         timestamps: true,

@@ -1,4 +1,4 @@
-import { Redirect, Route, useLocation } from 'react-router-dom';
+import { Redirect, Route, useHistory, useLocation } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -39,7 +39,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import UserPage from './pages/User/User.page';
 import RestorePasswordPage from './pages/RestorePassword/RestorePassword.page';
-import { AuthProvider, useAuthContext } from './context/Auth.context';
+import { AuthProvider } from './context/Auth.context';
 import { UsersProvider } from './context/Users.context';
 import { ContenidoProvider } from './context/Contenido.context';
 import { DataPolicyPage } from './pages/DataPolicy/DataPolicy.page';
@@ -51,8 +51,8 @@ import UserAdminComponent from './containers/Admin/AdminComponents/UserAdmin.com
 import SubirContenidoComponent from './containers/Admin/AdminComponents/SubirContenido.component';
 import { CalendarComponent } from './containers/Admin/AdminComponents/Calendar.component';
 import { SubirContenidoV2Component } from './containers/Admin/AdminComponents/SubirContenidoV2.component';
-import { useEffect } from 'react';
 import { ContartarPlanPage } from './pages/Plans/ContratarPlan.page';
+import { AlumnosPage } from './pages/Alumnos/Alumnos.page';
 
 
 setupIonicReact();
@@ -78,19 +78,11 @@ const ReactIonApp = () => {
 }
 
 const RouterApp = () => {
-  const location = useLocation()
-  const {userData} = useAuthContext()
-  useEffect(() => {
-    console.log(location)
-    if (userData) {
-      console.log(userData)
-    }
-  }, [location])
   return (
     <IonRouterOutlet>
-      {/* <Route exact path='/'>
-        <Redirect to='/login' />
-      </Route> */}
+      <Route exact path='/'>
+        <Redirect to={'/login'} />
+      </Route>
       <Route exact path='/home'>
         <HomePage />
       </Route>
@@ -115,7 +107,7 @@ const RouterApp = () => {
       <Route exact path='/levels'>
         <LevelsPage />
       </Route>
-      <Route exact path='/'>
+      <Route exact path='/login'>
         <LoginPage />
       </Route>
       <Route exact path='/registre'>
@@ -151,6 +143,11 @@ const RouterApp = () => {
       <Route exact path={'/plan/:idPlan'}>
         <ContartarPlanPage />
       </Route>
+      
+      <Route exact path={'/alumnos'}>
+        <AlumnosPage />
+      </Route>
+      
     </IonRouterOutlet>
   )
 }

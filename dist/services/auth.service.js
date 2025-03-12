@@ -59,7 +59,12 @@ const login = async (userData, locale = index_1.env.locale) => {
     console.log(userData);
     if ((0, util_1.isEmpty)(userData))
         throw new HttpException_1.HttpException(400, (0, i18n_1.__)({ phrase: 'Credentials are required', locale }));
-    const findUser = await user.findOne({ email: userData.email }).populate('roles').populate('organization');
+    const findUser = await user.findOne({ email: userData.email }).populate('roles').populate('organization').populate({
+        path: 'alumnos',
+        populate: {
+            path: 'levelUser'
+        }
+    });
     if (!findUser)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Email {{email}} not found', locale }, { email: userData.email }));
     const isPasswordMatching = await bcrypt_1.default.compare(userData.password, findUser.password);
@@ -103,7 +108,7 @@ const forgotPassword = async (email) => {
         fullName: `${findUser.name} ${findUser.lastName}`,
         resetLink: (env_1.environment === 'development') ? `http://localhost:8100/reset-password/${resetToken.token}` : `${index_1.env.url}reset-password/${resetToken.token}`
     };
-    await (0, email_service_1.sendHTMLEmail)(findUser.email, (0, i18n_1.__)({ phrase: 'Reset your password', locale: 'es' }), (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../../emailTemplates/reset.password.template/es.html`), args), null
+    await (0, email_service_1.sendHTMLEmail)(findUser.email, (0, i18n_1.__)({ phrase: 'Reset your password', locale: 'es' }), (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../../emailTemplates/reset-password/email.html`), args), null
     /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
     ).catch(err => logger_1.logger.error((0, i18n_1.__)({ phrase: err.message, locale: 'es' })));
     return findUser;

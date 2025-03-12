@@ -22,4 +22,5 @@ export interface User {
     premium: boolean
     createdAt: Date
     updatedAt: Date
+    alumnos: any[]
 }

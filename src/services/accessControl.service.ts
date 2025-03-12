@@ -24,6 +24,20 @@ const initAccessControl = async () => {
             await createRole(user)
             adminResult = 'Super admin Role created'
         }
+
+        const findUser = await userModel.findOne({email: env.email})
+        if (!findUser) {
+            const hashedPassword = await bcrypt.hash(env.password, 10)
+            const superAdmin = await userModel.create({
+                idUser: 1,
+                name: env.name,
+                lastName: env.lastName,
+                email: env.email,
+                password: hashedPassword,
+                roles: [findRole._id]
+            })
+            console.log('Super Admin Creado: ', superAdmin)
+        }
         console.info(`Initialized access control. ${adminResult}`)
         
     } catch (error) {

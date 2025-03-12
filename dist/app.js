@@ -64,9 +64,9 @@ const initializeMiddlewares = () => {
     app.use(i18n_1.default.init);
     initializeRoutes();
     console.log(3);
-    app.use("/audios", express_1.default.static(path_1.default.join(__dirname, '../../files/audios')));
-    app.use("/images", express_1.default.static(path_1.default.join(__dirname, '../../files/images')));
-    app.use("/pdf", express_1.default.static(path_1.default.join(__dirname, '../../files/pdf')));
+    app.use("/audios", express_1.default.static(path_1.default.join(__dirname, '../files/audios')));
+    app.use("/images", express_1.default.static(path_1.default.join(__dirname, '../files/images')));
+    app.use("/pdf", express_1.default.static(path_1.default.join(__dirname, '../files/pdf')));
     app.use(express_1.default.static(path_1.default.resolve(__dirname, "../uread/dist")));
     app.get('/*', (req, res) => {
         res.sendFile(path_1.default.resolve(__dirname, "../uread/dist", "index.html"));

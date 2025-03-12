@@ -39,7 +39,7 @@ const userSchema = new mongoose_1.Schema({
     email: {
         type: String,
         required: [true, 'Email is required'],
-        unique: true
+        unique: [true, 'Email exist']
     },
     password: {
         type: String,
@@ -59,12 +59,12 @@ const userSchema = new mongoose_1.Schema({
         required: false
     },
     levelUser: {
-        type: Number,
-        required: false
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: 'Niveles'
     },
     premium: {
         type: Boolean,
-        required: true
+        default: false
     },
     roles: [
         {
@@ -83,7 +83,19 @@ const userSchema = new mongoose_1.Schema({
             type: mongoose_1.Schema.Types.ObjectId,
             ref: 'User'
         }
-    ]
+    ],
+    alumnos: [
+        {
+            type: mongoose_1.Schema.Types.ObjectId,
+            ref: 'Alumno'
+        }
+    ],
+    plan: {
+        type: mongoose_1.Schema.Types.String
+    },
+    medioPago: {
+        type: mongoose_1.Schema.Types.String
+    }
 }, {
     timestamps: true,
     toObject: {

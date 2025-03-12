@@ -21,6 +21,19 @@ const initAccessControl = async () => {
             await createRole(roles_config_1.user);
             adminResult = 'Super admin Role created';
         }
+        const findUser = await users_model_1.default.findOne({ email: configs_1.env.email });
+        if (!findUser) {
+            const hashedPassword = await bcrypt_1.default.hash(configs_1.env.password, 10);
+            const superAdmin = await users_model_1.default.create({
+                idUser: 1,
+                name: configs_1.env.name,
+                lastName: configs_1.env.lastName,
+                email: configs_1.env.email,
+                password: hashedPassword,
+                roles: [findRole._id]
+            });
+            console.log('Super Admin Creado: ', superAdmin);
+        }
         console.info(`Initialized access control. ${adminResult}`);
     }
     catch (error) {

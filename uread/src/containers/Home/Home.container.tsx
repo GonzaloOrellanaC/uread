@@ -56,8 +56,8 @@ const HomeContainer = () => {
                                 </IonCol>
                                 <IonCol sizeLg='6' sizeXs='12'>
                                     <div style={{height: '15vh'}}>
-                                        <IonButton onClick={() => {alert('Próximamente')}} style={{height: '100%', width: '100%'}}>
-                                            Calendario
+                                        <IonButton onClick={() => {history.push('/alumnos')}} disabled={userData?.roles[0].name === 'user'} style={{height: '100%', width: '100%'}}>
+                                            Mis Alumnos
                                         </IonButton>
                                     </div>
                                 </IonCol>

@@ -76,9 +76,9 @@ const createUser = async (userData, locale = configs_1.env.locale) => {
     const findUser = await user.findOne({ email: userData.email }, '-password'); // .select('-password')
     if (findUser)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Email {{email}} already exists', locale }, { email: userData.email }));
+    const lastUser = await users_model_1.default.find().sort({ _id: -1 }).limit(1);
     const hashedPassword = await bcrypt_1.default.hash(userData.password, 10);
-    const users = await user.find();
-    userData.idUser = users.length + 1;
+    userData.idUser = lastUser[0].idUser + 1;
     const createUserData = await user.create(Object.assign(Object.assign({}, userData), { password: hashedPassword }));
     return createUserData;
 };

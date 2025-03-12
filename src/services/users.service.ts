@@ -89,9 +89,9 @@ const createUser = async (userData: User, locale: string = env.locale) => {
             __({ phrase: 'Email {{email}} already exists', locale }, { email: userData.email })
         )
 
+    const lastUser = await userModel.find().sort({_id:-1}).limit(1)
     const hashedPassword = await bcrypt.hash(userData.password, 10)
-    const users: User[] = await user.find()
-    userData.idUser = users.length + 1
+    userData.idUser = lastUser[0].idUser + 1
     const createUserData: User = await user.create({ ...userData, password: hashedPassword })
     return createUserData
 }

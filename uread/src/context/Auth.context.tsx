@@ -46,7 +46,7 @@ export const AuthProvider = (props: any) => {
     useEffect(() => {
         if (userData) {
             console.log(userData)
-            history.replace('/home')
+            /* history.replace('/home') */
             if (userData.roles && userData.roles[0]) {
                 if (userData.roles[0].name === "SuperAdmin" || userData.roles[0].name === "admin") {
                     setIsAdmin(true)

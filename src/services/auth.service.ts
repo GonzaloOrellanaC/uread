@@ -84,7 +84,12 @@ const login = async (
     console.log(userData)
     if (isEmpty(userData)) throw new HttpException(400, __({ phrase: 'Credentials are required', locale }))
 
-    const findUser: User = await user.findOne({ email: userData.email }).populate('roles').populate('organization')
+    const findUser: User = await user.findOne({ email: userData.email }).populate('roles').populate('organization').populate({
+        path : 'alumnos',
+        populate : {
+          path : 'levelUser'
+        }
+      })
     if (!findUser)
         throw new HttpException(409, __({ phrase: 'Email {{email}} not found', locale }, { email: userData.email }))
 
@@ -140,7 +145,7 @@ const forgotPassword = async (email: string) => {
     await sendHTMLEmail(
         findUser.email,
         __({ phrase: 'Reset your password', locale: 'es' }),
-        generateHTML(path.join(__dirname, `/../../emailTemplates/reset.password.template/es.html`), args),
+        generateHTML(path.join(__dirname, `/../../emailTemplates/reset-password/email.html`), args),
         null
         /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
     ).catch(err => logger.error(__({ phrase: err.message, locale: 'es' })))

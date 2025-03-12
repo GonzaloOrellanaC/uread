@@ -1,0 +1,185 @@
+import { IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonInputPasswordToggle, IonItem, IonModal, IonRadio, IonRow, IonTitle, IonToolbar } from "@ionic/react"
+import { useAuthContext } from "../../context/Auth.context"
+import { useEffect, useState } from "react"
+import { arrowBack, arrowUp, close } from "ionicons/icons"
+import { useHistory } from "react-router"
+
+export const AlumnosContainer = () => {
+
+    const history = useHistory()
+    const {userData} = useAuthContext()
+
+
+    const [alumnos, setAlumnos] = useState<any[]>([])
+
+    const [alumnoSeleccionado, setAlumnoSeleccionado] = useState<any>()
+
+    const [openAlumnoModal, setOpenAlumnoModal] = useState(false)
+
+    const [typePassword, setTypePassword] = useState<'password' | 'text'>('password')
+    const [typePasswordConfirm, setTypePasswordConfirm] = useState<'password' | 'text'>('password')
+
+    useEffect(() => {
+        if (userData)
+        setAlumnos(userData.alumnos)
+    },[userData])
+
+
+    const seleccionarUsuario = (alumno: any) => {
+        setAlumnoSeleccionado({
+            ...alumno
+        })
+        setOpenAlumnoModal(true)
+    }
+
+    const editUsuario = (e: any) => {
+        const value: string = e.target.value;
+        const name: string = e.target.name;
+        setAlumnoSeleccionado({
+            ...alumnoSeleccionado,
+            [name]: value
+        })
+    }
+
+    return (
+        <IonContent class="ion-padding">
+            {openAlumnoModal && <IonModal
+                isOpen={openAlumnoModal}
+                onWillDismiss={() => setOpenAlumnoModal(false)}
+            >
+                <IonHeader className="ion-no-border">
+                    <IonToolbar>
+                        <IonButtons slot="end">
+                            <IonButton onClick={() => {setOpenAlumnoModal(false)}}>
+                                <IonIcon icon={close} />
+                            </IonButton>
+                        </IonButtons>
+                    </IonToolbar>
+                </IonHeader>
+                <IonContent class="ion-padding">
+                    <p>Para habilitar usuario asociado a {alumnoSeleccionado.name} ingresar los datos.</p>
+                    <IonItem>
+                        <IonInput labelPlacement={'floating'} label='Nombre' name={'name'} value={alumnoSeleccionado.name} onIonChange={editUsuario}/>
+                    </IonItem>
+                    <IonItem>
+                        <IonInput labelPlacement={'floating'} label='Apellido' name={'lastName'} value={alumnoSeleccionado.lastName} onIonChange={editUsuario}/>
+                    </IonItem>
+                    <IonItem>
+                        <IonInput labelPlacement={'floating'} label='Email' name={'email'} value={alumnoSeleccionado.email} onIonChange={editUsuario}/>
+                    </IonItem>
+                    <IonItem>
+                        <IonInput type={typePassword} labelPlacement={'floating'} label='Nueva Password' name={'password'} value={alumnoSeleccionado.password} onIonChange={editUsuario}>
+                            <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
+                        </IonInput>
+                    </IonItem>
+                    <IonItem>
+                        <IonInput type={typePasswordConfirm} labelPlacement={'floating'} label='Confirme Password' name={'confirmPassword'} value={alumnoSeleccionado.confirmPassword} onIonChange={editUsuario}>
+                            <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
+                        </IonInput>
+                    </IonItem>
+                    <div style={{width: '100%', textAlign: 'center', paddingTop: 10}}>
+                        <IonButton>
+                            Habilitar
+                        </IonButton>
+                    </div>
+                </IonContent>
+            </IonModal>}
+            <IonHeader class="no-lines">
+                <IonToolbar>
+                    <IonButtons slot="start">
+                        <IonButton onClick={() => {
+                            history.push('/home')
+                        }}>
+                            <IonIcon icon={arrowBack}></IonIcon>
+                        </IonButton>
+                    </IonButtons>
+                    <IonTitle slot="start">
+                        Mis Alumnos
+                    </IonTitle>
+                </IonToolbar>
+            </IonHeader>
+            <IonGrid>
+                <IonRow>
+                    <IonCol />
+                    <IonCol sizeXl="6" sizeLg="6" sizeMd="8" sizeSm="10" sizeXs="12" style={{padding: 0}}>
+                        <IonGrid style={{padding: 0, fontSize: 11}}>
+                            <IonRow style={{padding: 0}}>
+                                <IonCol size="1.5">
+                                    
+                                </IonCol>
+                                <IonCol size="2">
+                                    <div style={{textAlign: 'center', width: '100%'}}>
+                                        <p>Nombre</p>
+                                    </div>
+                                </IonCol>
+                                <IonCol size="2">
+                                    <div style={{textAlign: 'center', width: '100%'}}>
+                                        <p>Apellido</p>
+                                    </div>
+                                </IonCol>
+                                <IonCol size="2">
+                                    <div style={{textAlign: 'center', width: '100%'}}>
+                                        <p>Plan</p>
+                                    </div>
+                                </IonCol>
+                                <IonCol size="2">
+                                    <div style={{textAlign: 'center', width: '100%'}}>
+                                        <p>Nivel</p>
+                                    </div>
+                                </IonCol>
+                                <IonCol>
+                                    <div style={{textAlign: 'left', width: '100%'}}>
+                                        <p>Acciones</p>
+                                    </div>
+                                </IonCol>
+                            </IonRow>
+                            <div style={{height: 'calc(100vh - 200px)', overflowY: 'auto'}}>
+                                {
+                                    alumnos.map((alumno, index) => {
+                                        return (
+                                            <IonRow key={index} style={{borderBottom: '1px #ccc solid'}}>
+                                                <IonCol size="1.5">
+                                                    <img src={'/assets/images/user-profile-default.svg'} style={{maxHeight: 20, maxWidth: 20, borderRadius: '50%'}} />
+                                                </IonCol>
+                                                <IonCol size="2">
+                                                    <div style={{textAlign: 'center', width: '100%'}}>
+                                                        <p>{alumno.name}</p>
+                                                    </div>
+                                                </IonCol>
+                                                <IonCol size="2">
+                                                    <div style={{textAlign: 'center', width: '100%'}}>
+                                                        <p>{alumno.lastName}</p>
+                                                    </div>
+                                                </IonCol>
+                                                <IonCol size="2">
+                                                    <div style={{textAlign: 'center', width: '100%'}}>
+                                                        <p>{alumno.plan}</p>
+                                                    </div>
+                                                </IonCol>
+                                                <IonCol size="2">
+                                                    <div style={{textAlign: 'center', width: '100%'}}>
+                                                        <p>{alumno.levelUser.name}</p>
+                                                    </div>
+                                                </IonCol>
+                                                <IonCol>
+                                                    <IonButtons>
+                                                        <IonButton title="Habilitar usuario" onClick={() => {
+                                                            seleccionarUsuario(alumno)
+                                                        }}>
+                                                            <IonIcon icon={arrowUp} />
+                                                        </IonButton>
+                                                    </IonButtons>
+                                                </IonCol>
+                                            </IonRow>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </IonGrid>
+                    </IonCol>
+                    <IonCol />
+                </IonRow>
+            </IonGrid>
+        </IonContent>
+    )
+}

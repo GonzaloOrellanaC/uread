@@ -12,6 +12,7 @@ import NivelesRouter from './niveles.route'
 import StorageRouter from './storage.route'
 import CalendarRouter from './calendar.route'
 import IaRouter from './ia.router'
+import InscripcionRouter from './inscripcion.route'
 
 const router = Router()
 
@@ -28,5 +29,6 @@ router.use('/api/niveles', NivelesRouter)
 router.use('/api/azure-storage', StorageRouter)
 router.use('/api/calendar', CalendarRouter)
 router.use('/api/ia', IaRouter)
+router.use('/api/form', InscripcionRouter)
 
 export default router
