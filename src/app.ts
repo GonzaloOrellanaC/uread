@@ -30,24 +30,12 @@ const connectToDatabase = async () => {
     if (env !== 'production') {
         set('debug', true)
     }
-
-    console.log(dbConnection.url)
-
     try {
         await connect(dbConnection.url)
         await AccessControlServices.initAccessControl()
     } catch (error) {
         console.log(error)
     }
-
-    /* connect(dbConnection.url, dbConnection.options, async () => {
-        try{
-            console.log('Connected')
-            await AccessControlServices.initAccessControl()
-        } catch (err) {
-            console.log(err)
-        }
-    })  */
 }
 
 const initializeMiddlewares = () => {
@@ -118,10 +106,10 @@ const App = () => {
         initializeSwagger()
         initializeErrorHandling()
         const server = app.listen(port, () => {
-            logger.info(`=================================`)
-            logger.info(`======= ENV: ${env} =======`)
+            logger.info(`====================================`)
+            logger.info(`============ ENV: ${env} ===========`)
             logger.info(`🚀 App listening on the port ${port}`)
-            logger.info(`=================================`)
+            logger.info(`====================================`)
         })
         SocketController(server)
     } catch (error) {

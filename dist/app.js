@@ -30,7 +30,6 @@ const connectToDatabase = async () => {
     if (env !== 'production') {
         (0, mongoose_1.set)('debug', true);
     }
-    console.log(_databases_1.dbConnection.url);
     try {
         await (0, mongoose_1.connect)(_databases_1.dbConnection.url);
         await accessControl_service_1.default.initAccessControl();
@@ -38,14 +37,6 @@ const connectToDatabase = async () => {
     catch (error) {
         console.log(error);
     }
-    /* connect(dbConnection.url, dbConnection.options, async () => {
-        try{
-            console.log('Connected')
-            await AccessControlServices.initAccessControl()
-        } catch (err) {
-            console.log(err)
-        }
-    })  */
 };
 const initializeMiddlewares = () => {
     if (env === 'development') {
@@ -109,10 +100,10 @@ const App = () => {
         initializeSwagger();
         initializeErrorHandling();
         const server = app.listen(port, () => {
-            logger_1.logger.info(`=================================`);
-            logger_1.logger.info(`======= ENV: ${env} =======`);
+            logger_1.logger.info(`====================================`);
+            logger_1.logger.info(`============ ENV: ${env} ===========`);
             logger_1.logger.info(`🚀 App listening on the port ${port}`);
-            logger_1.logger.info(`=================================`);
+            logger_1.logger.info(`====================================`);
         });
         (0, socket_controller_1.default)(server);
     }
