@@ -53,6 +53,7 @@ import { CalendarComponent } from './containers/Admin/AdminComponents/Calendar.c
 import { SubirContenidoV2Component } from './containers/Admin/AdminComponents/SubirContenidoV2.component';
 import { ContartarPlanPage } from './pages/Plans/ContratarPlan.page';
 import { AlumnosPage } from './pages/Alumnos/Alumnos.page';
+import { BienvenidaPage } from './pages/Bienvenida/Bienvenida.page';
 
 
 setupIonicReact();
@@ -146,6 +147,9 @@ const RouterApp = () => {
       
       <Route exact path={'/alumnos'}>
         <AlumnosPage />
+      </Route>
+      <Route exact path={'/bienvenida/:id'}>
+        <BienvenidaPage />
       </Route>
       
     </IonRouterOutlet>

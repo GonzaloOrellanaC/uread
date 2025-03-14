@@ -14,5 +14,6 @@ declare const _default: {
     createAdminSysUser: (userData: User, locale?: string) => Promise<User>;
     updateUser: (userId: string, userData: User, locale?: string) => Promise<User>;
     deleteUser: (userId: string, locale?: string) => Promise<User>;
+    validar: (user: User) => Promise<User>;
 };
 export default _default;

@@ -9,7 +9,9 @@ interface AuthContextValues {
     loading: boolean
     isAdmin: boolean
     setUserData: React.Dispatch<React.SetStateAction<User | undefined>>
-
+    apoderado: boolean
+    alumno: boolean
+    profesor: boolean
 }
 
 export const AuthContext = createContext<AuthContextValues>({} as AuthContextValues)
@@ -18,6 +20,9 @@ export const AuthProvider = (props: any) => {
     const [ userData, setUserData ] = useState<User>()
     const [loading, setLoading] = useState<boolean>(false)
     const [isAdmin, setIsAdmin] = useState(false)
+    const [apoderado, setApoderado] = useState(false)
+    const [alumno, setAlumno] = useState(false)
+    const [profesor, setProfesor] = useState(false)
 
     const history = useHistory()
     
@@ -45,11 +50,15 @@ export const AuthProvider = (props: any) => {
     }
     useEffect(() => {
         if (userData) {
-            console.log(userData)
-            /* history.replace('/home') */
             if (userData.roles && userData.roles[0]) {
                 if (userData.roles[0].name === "SuperAdmin" || userData.roles[0].name === "admin") {
                     setIsAdmin(true)
+                } else if (userData.roles[0].name === "studentRepresentative") {
+                    setApoderado(true)
+                } else if (userData.roles[0].name === "user") {
+                    setAlumno(true)
+                } else {
+                    setProfesor(true)
                 }
             }
         } else {
@@ -60,17 +69,15 @@ export const AuthProvider = (props: any) => {
         }
     },[userData])
 
-    /* const getUserById = async (id: string) => {
-        const response = await userRouter.getUser(id)
-        setUserData(response.data)
-    } */
-
     const provider = {
         userData,
         login,
         loading,
         isAdmin,
-        setUserData
+        setUserData,
+        apoderado,
+        alumno,
+        profesor
     }
     return (
         <AuthContext.Provider value={provider}>

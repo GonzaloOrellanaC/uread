@@ -44,6 +44,9 @@ declare const config: {
         pass: string;
         from_name: string;
         from_email: string;
+        user_bienvenida: string;
+        from_bienvenida: string;
+        pass_bienvenida: string;
     };
 };
 export { env, dbConfig, keys, log, cors, smtp };

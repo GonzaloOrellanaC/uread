@@ -96,6 +96,10 @@ const userSchema: Schema = new Schema(
         },
         medioPago: {
             type: Schema.Types.String
+        },
+        validado: {
+            type: Schema.Types.String,
+            default: 'No validado'
         }
     },
     {

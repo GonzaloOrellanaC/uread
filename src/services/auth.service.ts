@@ -140,7 +140,7 @@ const forgotPassword = async (email: string) => {
     const resetToken = createToken(findUser)
     const args = {
         fullName: `${findUser.name} ${findUser.lastName}`,
-        resetLink: (environment === 'development') ? `http://localhost:8100/reset-password/${resetToken.token}` : `${env.url}reset-password/${resetToken.token}`
+        resetLink: `${env.url}reset-password/${resetToken.token}`
     }
     await sendHTMLEmail(
         findUser.email,
@@ -177,20 +177,20 @@ const resetPassword = async (token: string, password: string) => {
     return findUser
 }
 
-const createToken = (user: User, expiresIn = 3600) => {
+export const createToken = (user: User, expiresIn = 3600) => {
     const dataStoredInToken: DataStoredInToken = { _id: user._id } // user._id, [organizationId, resources]
     const secretKey: string = keys.secretKey
 
     return { expiresIn, token: jwt.sign(dataStoredInToken, secretKey, { expiresIn }) }
 }
 
-const verifyToken = (token: string, ignoreExpiration = false) => {
+export const verifyToken = (token: string, ignoreExpiration = false) => {
     const secretKey: string = keys.secretKey
 
     return jwt.verify(token, secretKey, { ignoreExpiration }) as DataStoredInToken
 }
 
-const createCookie = (tokenData: TokenData) => {
+export const createCookie = (tokenData: TokenData) => {
     return `Authorization=${tokenData.token}; HttpOnly; Max-Age=${tokenData.expiresIn};`
 }
 

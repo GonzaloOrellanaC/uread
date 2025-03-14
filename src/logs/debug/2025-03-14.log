@@ -1,0 +1,131 @@
+2025-03-14 06:05:57 info: ====================================
+2025-03-14 06:05:57 info: ============ ENV: development ===========
+2025-03-14 06:05:57 info: 🚀 App listening on the port 5212
+2025-03-14 06:05:57 info: ====================================
+2025-03-14 06:06:28 info: [0mGET /api/roles/getRoles [36m304[0m 63.127 ms - -[0m
+2025-03-14 06:06:28 info: [0mGET /api/roles/getRoles [36m304[0m 25.633 ms - -[0m
+2025-03-14 06:06:28 info: [0mGET /api/niveles/leerNiveles [36m304[0m 95.606 ms - -[0m
+2025-03-14 06:06:28 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 457.969 ms - -[0m
+2025-03-14 06:06:28 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 13.323 ms - -[0m
+2025-03-14 06:07:37 info: [0mGET /api/roles/getRoles [36m304[0m 10.292 ms - -[0m
+2025-03-14 06:07:37 info: [0mGET /api/roles/getRoles [36m304[0m 10.330 ms - -[0m
+2025-03-14 06:14:02 info: [0mGET /api/roles/getRoles [36m304[0m 15.270 ms - -[0m
+2025-03-14 06:14:02 info: [0mGET /api/roles/getRoles [36m304[0m 30.467 ms - -[0m
+2025-03-14 06:14:03 info: [0mGET /api/niveles/leerNiveles [36m304[0m 16.329 ms - -[0m
+2025-03-14 06:14:03 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 140.530 ms - -[0m
+2025-03-14 06:14:03 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 5.652 ms - -[0m
+2025-03-14 06:14:15 info: [0mOPTIONS /api/login [32m204[0m 3.200 ms - 0[0m
+2025-03-14 06:14:16 info: [0mPOST /api/login [32m200[0m 693.844 ms - 768[0m
+2025-03-14 06:14:16 info: [0mGET /api/niveles/leerNiveles [36m304[0m 21.901 ms - -[0m
+2025-03-14 06:14:16 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 202.780 ms - -[0m
+2025-03-14 06:14:17 info: [0mGET /api/niveles/leerNiveles [36m304[0m 391.232 ms - -[0m
+2025-03-14 06:14:17 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 398.882 ms - -[0m
+2025-03-14 06:14:17 info: [0mGET /api/users/getUsers [32m200[0m 417.671 ms - -[0m
+2025-03-14 06:14:17 info: [0mGET /api/contenido/leerContenidos [32m200[0m 413.953 ms - -[0m
+2025-03-14 06:14:17 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 5.429 ms - -[0m
+2025-03-14 06:14:39 info: [0mGET /api/roles/getRoles [36m304[0m 7.029 ms - -[0m
+2025-03-14 06:14:39 info: [0mGET /api/roles/getRoles [36m304[0m 8.045 ms - -[0m
+2025-03-14 06:14:39 info: [0mGET /api/niveles/leerNiveles [36m304[0m 17.641 ms - -[0m
+2025-03-14 06:14:39 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 208.293 ms - -[0m
+2025-03-14 06:14:40 info: [0mGET /api/contenido/leerContenidos [36m304[0m 392.199 ms - -[0m
+2025-03-14 06:14:40 info: [0mGET /api/niveles/leerNiveles [36m304[0m 386.676 ms - -[0m
+2025-03-14 06:14:40 info: [0mGET /api/users/getUsers [36m304[0m 400.708 ms - -[0m
+2025-03-14 06:14:40 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 16.453 ms - -[0m
+2025-03-14 06:14:40 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 5.395 ms - -[0m
+2025-03-14 06:14:54 info: [0mOPTIONS /api/login [32m204[0m 0.851 ms - 0[0m
+2025-03-14 06:14:55 error: [POST] /api/login >> StatusCode:: 409, Message:: Contraseña incorrecta
+2025-03-14 06:14:55 info: [0mPOST /api/login [33m409[0m 312.536 ms - 36[0m
+2025-03-14 06:27:05 info: ====================================
+2025-03-14 06:27:05 info: ============ ENV: development ===========
+2025-03-14 06:27:05 info: 🚀 App listening on the port 5212
+2025-03-14 06:27:05 info: ====================================
+2025-03-14 06:27:14 info: [0mOPTIONS /api/login [32m204[0m 2.652 ms - 0[0m
+2025-03-14 06:27:14 info: [0mPOST /api/login [32m200[0m 268.303 ms - 793[0m
+2025-03-14 06:27:14 info: [0mGET /api/contenido/leerContenidos [36m304[0m 378.601 ms - -[0m
+2025-03-14 06:27:14 info: [0mGET /api/niveles/leerNiveles [36m304[0m 373.884 ms - -[0m
+2025-03-14 06:27:15 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 12.472 ms - -[0m
+2025-03-14 06:27:33 info: [0mGET /api/niveles/leerNiveles [36m304[0m 19.576 ms - -[0m
+2025-03-14 06:27:33 info: [0mGET /api/contenido/leerContenidos [36m304[0m 320.188 ms - -[0m
+2025-03-14 06:27:33 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 423.579 ms - -[0m
+2025-03-14 06:27:33 info: [0mGET /api/niveles/leerNiveles [36m304[0m 358.374 ms - -[0m
+2025-03-14 06:27:33 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 6.571 ms - -[0m
+2025-03-14 06:27:33 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 14.136 ms - -[0m
+2025-03-14 06:27:33 info: [0mGET /api/users/getUsers [32m200[0m 385.035 ms - -[0m
+2025-03-14 06:38:46 info: ====================================
+2025-03-14 06:38:46 info: ============ ENV: development ===========
+2025-03-14 06:38:46 info: 🚀 App listening on the port 5212
+2025-03-14 06:38:46 info: ====================================
+2025-03-14 06:38:56 info: [0mOPTIONS /api/validarUsuario [32m204[0m 2.085 ms - 0[0m
+2025-03-14 06:38:56 info: [0mPOST /api/validarUsuario [33m404[0m 63.527 ms - 158[0m
+2025-03-14 06:40:04 info: [0mGET /api/contenido/leerContenidos [36m304[0m 335.827 ms - -[0m
+2025-03-14 06:40:04 info: [0mGET /api/niveles/leerNiveles [36m304[0m 334.181 ms - -[0m
+2025-03-14 06:40:04 info: [0mGET /api/users/getUsers [36m304[0m 390.159 ms - -[0m
+2025-03-14 06:40:04 info: [0mGET /api/contenido/leerContenidos [36m304[0m 309.536 ms - -[0m
+2025-03-14 06:40:04 info: [0mGET /api/niveles/leerNiveles [36m304[0m 304.177 ms - -[0m
+2025-03-14 06:40:04 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 13.261 ms - -[0m
+2025-03-14 06:40:04 info: [0mGET /api/users/getUsers [36m304[0m 29.752 ms - -[0m
+2025-03-14 06:40:04 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 7.381 ms - -[0m
+2025-03-14 06:40:09 info: [0mOPTIONS /api/users/validarUsuario [32m204[0m 1.068 ms - 0[0m
+2025-03-14 06:40:11 error: Invalid login: 535 Incorrect authentication data
+2025-03-14 06:40:11 info: [0mPOST /api/users/validarUsuario [32m200[0m 2364.551 ms - 653[0m
+2025-03-14 06:40:21 info: ====================================
+2025-03-14 06:40:21 info: ============ ENV: development ===========
+2025-03-14 06:40:21 info: 🚀 App listening on the port 5212
+2025-03-14 06:40:21 info: ====================================
+2025-03-14 06:45:46 info: ====================================
+2025-03-14 06:45:46 info: ============ ENV: development ===========
+2025-03-14 06:45:46 info: 🚀 App listening on the port 5212
+2025-03-14 06:45:46 info: ====================================
+2025-03-14 06:53:39 info: ====================================
+2025-03-14 06:53:39 info: ============ ENV: development ===========
+2025-03-14 06:53:39 info: 🚀 App listening on the port 5212
+2025-03-14 06:53:39 info: ====================================
+2025-03-14 06:53:52 info: [0mOPTIONS /api/users/validarUsuario [32m204[0m 4.433 ms - 0[0m
+2025-03-14 06:53:52 error: Se requieren credenciales SMTP
+2025-03-14 06:53:52 info: [0mPOST /api/users/validarUsuario [32m200[0m 101.949 ms - 653[0m
+2025-03-14 06:54:12 info: ====================================
+2025-03-14 06:54:12 info: ============ ENV: development ===========
+2025-03-14 06:54:12 info: 🚀 App listening on the port 5212
+2025-03-14 06:54:12 info: ====================================
+2025-03-14 06:54:15 info: [0mOPTIONS /api/users/validarUsuario [32m204[0m 4.133 ms - 0[0m
+2025-03-14 06:54:15 error: Se requieren credenciales SMTP
+2025-03-14 06:54:15 info: [0mPOST /api/users/validarUsuario [32m200[0m 96.424 ms - 653[0m
+2025-03-14 06:55:22 info: ====================================
+2025-03-14 06:55:22 info: ============ ENV: development ===========
+2025-03-14 06:55:22 info: 🚀 App listening on the port 5212
+2025-03-14 06:55:22 info: ====================================
+2025-03-14 06:55:55 info: [0mGET /api/niveles/leerNiveles [36m304[0m 40.285 ms - -[0m
+2025-03-14 06:55:56 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 284.319 ms - -[0m
+2025-03-14 06:55:56 info: [0mGET /api/niveles/leerNiveles [36m304[0m 170.463 ms - -[0m
+2025-03-14 06:55:56 info: [0mGET /api/contenido/leerContenidos [36m304[0m 502.628 ms - -[0m
+2025-03-14 06:55:56 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 12.499 ms - -[0m
+2025-03-14 06:55:56 info: [0mGET /api/users/getUsers [36m304[0m 550.652 ms - -[0m
+2025-03-14 06:55:56 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 23.591 ms - -[0m
+2025-03-14 06:57:16 info: [0mOPTIONS /api/users/validarUsuario [32m204[0m 0.936 ms - 0[0m
+2025-03-14 06:57:22 info: [0mPOST /api/users/validarUsuario [32m200[0m 5883.361 ms - 653[0m
+2025-03-14 07:12:09 info: [0mGET /bienvenida/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QxNTI3ZmEzOTMzODUzOTQ5MDY1YzQiLCJpYXQiOjE3NDE5NDYyMzYsImV4cCI6MTc0MTk0OTgzNn0.DbZPckUlOJDc0ZEy3Rvvgr6FRpP9hvur4F6Q13cLfGo [32m200[0m 202.953 ms - -[0m
+2025-03-14 07:12:09 info: [0mGET /assets/index-Da8VmRVi.css [32m200[0m 40.787 ms - -[0m
+2025-03-14 07:12:10 info: [0mGET /assets/index-BoVdbqy4.js [32m200[0m 994.186 ms - -[0m
+2025-03-14 07:12:10 info: [0mGET /assets/swipe-back-BmQDVAkB.js [32m200[0m 39.562 ms - 682[0m
+2025-03-14 07:12:10 info: [0mGET /manifest.json [32m200[0m 22.491 ms - 462[0m
+2025-03-14 07:12:10 info: [0mGET /assets/index9-Cbzu6K-6.js [32m200[0m 29.870 ms - -[0m
+2025-03-14 07:12:10 info: [0mGET /assets/icon/uread/uread_logo_violet.png [32m200[0m 27.139 ms - 47403[0m
+2025-03-14 07:13:38 info: [0mGET /api/niveles/leerNiveles [36m304[0m 16.150 ms - -[0m
+2025-03-14 07:13:38 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 200.659 ms - -[0m
+2025-03-14 07:13:39 info: [0mGET /api/contenido/leerContenidos [36m304[0m 433.486 ms - -[0m
+2025-03-14 07:13:39 info: [0mGET /api/niveles/leerNiveles [36m304[0m 433.009 ms - -[0m
+2025-03-14 07:13:39 info: [0mGET /api/users/getUsers [36m304[0m 449.476 ms - -[0m
+2025-03-14 07:13:39 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 14.245 ms - -[0m
+2025-03-14 07:13:39 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 6.616 ms - -[0m
+2025-03-14 07:15:15 info: [0mOPTIONS /api/reset-password [32m204[0m 0.327 ms - 0[0m
+2025-03-14 07:15:16 info: [0mPOST /api/reset-password [32m200[0m 221.578 ms - 559[0m
+2025-03-14 07:15:19 info: [0mGET /api/roles/getRoles [36m304[0m 8.146 ms - -[0m
+2025-03-14 07:15:19 info: [0mGET /api/roles/getRoles [36m304[0m 12.500 ms - -[0m
+2025-03-14 07:15:41 info: [0mOPTIONS /api/login [32m204[0m 0.394 ms - 0[0m
+2025-03-14 07:15:41 error: [POST] /api/login >> StatusCode:: 409, Message:: Contraseña incorrecta
+2025-03-14 07:15:41 info: [0mPOST /api/login [33m409[0m 196.081 ms - 36[0m
+2025-03-14 07:16:23 info: [0mOPTIONS /api/login [32m204[0m 1.294 ms - 0[0m
+2025-03-14 07:16:23 info: [0mPOST /api/login [32m200[0m 217.142 ms - -[0m
+2025-03-14 07:16:24 info: [0mGET /api/contenido/leerContenidos [36m304[0m 332.832 ms - -[0m
+2025-03-14 07:16:24 info: [0mGET /api/niveles/leerNiveles [36m304[0m 328.176 ms - -[0m
+2025-03-14 07:16:24 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 6.133 ms - -[0m

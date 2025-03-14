@@ -7,6 +7,11 @@ const users_model_1 = (0, tslib_1.__importDefault)(require("../models/users.mode
 const util_1 = require("../utils/util");
 const bcrypt_1 = (0, tslib_1.__importDefault)(require("bcrypt"));
 const i18n_1 = require("i18n");
+const auth_service_1 = require("./auth.service");
+const email_service_1 = require("./email.service");
+const html_1 = require("../utils/html");
+const logger_1 = require("../utils/logger");
+const path_1 = (0, tslib_1.__importDefault)(require("path"));
 const user = users_model_1.default;
 const findAllUser = async () => {
     const users = await user.find().populate('roles');
@@ -109,6 +114,17 @@ const deleteUser = async (userId, locale = configs_1.env.locale) => {
         throw new HttpException_1.HttpException(404, (0, i18n_1.__)({ phrase: 'User not found', locale }));
     return deleteUserById;
 };
+const validar = async (user) => {
+    const resetToken = (0, auth_service_1.createToken)(user);
+    const args = {
+        fullName: `${user.name} ${user.lastName}`,
+        resetLink: `${configs_1.env.url}bienvenida/${resetToken.token}`
+    };
+    await (0, email_service_1.sendHTMLEmail)(user.email, 'Bienvenid@ a UREAD', (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../../emailTemplates/bienvenida/email.html`), args), null
+    /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
+    ).catch(err => logger_1.logger.error((0, i18n_1.__)({ phrase: err.message, locale: 'es' })));
+    return user;
+};
 exports.default = {
     findAllUser,
     findAllAdminUser,
@@ -122,6 +138,7 @@ exports.default = {
     createUser,
     createAdminSysUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    validar
 };
 //# sourceMappingURL=users.service.js.map

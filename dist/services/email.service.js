@@ -36,10 +36,12 @@ exports.createTransporter = createTransporter;
  * @param {AddressObject=} from - The email address and name to send from (defaults to the SMTP config)
  */
 const sendHTMLEmail = async (to, subject, html, optionals) => {
-    const transporter = (0, exports.createTransporter)(smtp_1.default.host, smtp_1.default.port, smtp_1.default.user, smtp_1.default.pass);
+    const user = subject.includes('Bienvenid@') ? smtp_1.default.user_bienvenida : smtp_1.default.user;
+    const password = subject.includes('Bienvenid@') ? smtp_1.default.pass_bienvenida : smtp_1.default.pass;
+    const transporter = (0, exports.createTransporter)(smtp_1.default.host, smtp_1.default.port, user, password);
     console.log(transporter);
     return await transporter.sendMail({
-        from: (optionals === null || optionals === void 0 ? void 0 : optionals.from) || { name: smtp_1.default.from_name, address: smtp_1.default.from_email },
+        from: (optionals === null || optionals === void 0 ? void 0 : optionals.from) || { name: subject.includes('Bienvenid@') ? smtp_1.default.from_bienvenida : smtp_1.default.from_name, address: subject.includes('Bienvenid@') ? smtp_1.default.user_bienvenida : smtp_1.default.from_email },
         to,
         subject,
         html,

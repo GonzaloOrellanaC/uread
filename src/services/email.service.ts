@@ -46,10 +46,12 @@ export const sendHTMLEmail = async (
         attachments?: Mail.Attachment[]
     }
 ): Promise<nodemailer.SentMessageInfo> => {
-    const transporter = createTransporter(smtp.host, smtp.port, smtp.user, smtp.pass)
+    const user = subject.includes('Bienvenid@') ? smtp.user_bienvenida : smtp.user
+    const password = subject.includes('Bienvenid@') ? smtp.pass_bienvenida : smtp.pass
+    const transporter = createTransporter(smtp.host, smtp.port, user, password)
     console.log(transporter)
     return await transporter.sendMail({
-        from: optionals?.from || { name: smtp.from_name, address: smtp.from_email },
+        from: optionals?.from || { name: subject.includes('Bienvenid@') ? smtp.from_bienvenida : smtp.from_name, address: subject.includes('Bienvenid@') ? smtp.user_bienvenida : smtp.from_email },
         to,
         subject,
         html,

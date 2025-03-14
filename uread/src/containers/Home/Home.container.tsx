@@ -5,7 +5,7 @@ import { useHistory } from 'react-router'
 import { exitOutline } from 'ionicons/icons'
 
 const HomeContainer = () => {
-    const {isAdmin, userData, setUserData} = useAuthContext()
+    const {isAdmin, userData, setUserData, alumno, apoderado, profesor} = useAuthContext()
     const history = useHistory()
     return (
         <IonContent>
@@ -49,14 +49,14 @@ const HomeContainer = () => {
                                 </IonCol>
                                 <IonCol sizeLg='6' sizeXs='12'>
                                     <div style={{height: '15vh'}}>
-                                        <IonButton onClick={() => {history.push('/admin')}} disabled={!isAdmin} style={{height: '100%', width: '100%'}}>
+                                        <IonButton onClick={() => {history.push('/admin')}} disabled={!isAdmin || alumno || profesor || apoderado} style={{height: '100%', width: '100%'}}>
                                             Administración
                                         </IonButton>
                                     </div>
                                 </IonCol>
                                 <IonCol sizeLg='6' sizeXs='12'>
                                     <div style={{height: '15vh'}}>
-                                        <IonButton onClick={() => {history.push('/alumnos')}} disabled={userData?.roles[0].name === 'user'} style={{height: '100%', width: '100%'}}>
+                                        <IonButton onClick={() => {history.push('/alumnos')}} disabled={alumno} style={{height: '100%', width: '100%'}}>
                                             Mis Alumnos
                                         </IonButton>
                                     </div>

@@ -33,5 +33,6 @@
 	"ENOENT: no such file or directory, open 'C:\\Users\\gorel\\Documents\\Tesso\\DemocraciaDigital\\DemocraciaDigital\\client\\public\\assets\\images\\logo.png'": "ENOENT: no such file or directory, open 'C:\\Users\\gorel\\Documents\\Tesso\\DemocraciaDigital\\DemocraciaDigital\\client\\public\\assets\\images\\logo.png'",
 	"ENOENT: no such file or directory, open 'C:\\Users\\gorel\\Documents\\Tesso\\DemocraciaDigital\\DemocraciaDigital\\client\\public\\assets\\images\\logo\\logo.webp'": "ENOENT: no such file or directory, open 'C:\\Users\\gorel\\Documents\\Tesso\\DemocraciaDigital\\DemocraciaDigital\\client\\public\\assets\\images\\logo\\logo.webp'",
 	"ENOENT: no such file or directory, open 'C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\client\\public\\assets\\logo\\logo-mail.jpeg'": "ENOENT: no such file or directory, open 'C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\client\\public\\assets\\logo\\logo-mail.jpeg'",
-	"connect ETIMEDOUT 186.64.116.140:465": "connect ETIMEDOUT 186.64.116.140:465"
+	"connect ETIMEDOUT 186.64.116.140:465": "connect ETIMEDOUT 186.64.116.140:465",
+	"Invalid login: 535 Incorrect authentication data": "Invalid login: 535 Incorrect authentication data"
 }

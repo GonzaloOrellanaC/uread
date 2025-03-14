@@ -38,6 +38,7 @@ declare const locales: {
         "ENOENT: no such file or directory, open 'C:\\Users\\gorel\\Documents\\Tesso\\DemocraciaDigital\\DemocraciaDigital\\client\\public\\assets\\images\\logo\\logo.webp'": string;
         "ENOENT: no such file or directory, open 'C:\\Users\\gorel\\Documents\\Tesso\\Uread\\Uread\\client\\public\\assets\\logo\\logo-mail.jpeg'": string;
         "connect ETIMEDOUT 186.64.116.140:465": string;
+        "Invalid login: 535 Incorrect authentication data": string;
     };
     en: {
         "An ID is required": string;

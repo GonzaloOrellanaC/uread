@@ -57,6 +57,11 @@ const restorePassword = async (token: string, password: string) => {
     return response.data
 }
 
+const enviarValidacionUsuario = async (usuario: User) => {
+    const response = await axios.post(api.url + '/api/users/validarUsuario', {usuario})
+    return response.data
+}
+
 export default {
     login,
     resendVerification,
@@ -68,5 +73,6 @@ export default {
     signUpUser,
     veryfyUser,
     resetPassword,
-    restorePassword
+    restorePassword,
+    enviarValidacionUsuario
 }

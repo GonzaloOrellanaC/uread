@@ -4,6 +4,9 @@ declare const user: string | undefined;
 declare const pass: string | undefined;
 declare const from_name: string;
 declare const from_email: string;
+declare const user_bienvenida: string;
+declare const from_bienvenida: string;
+declare const pass_bienvenida: string;
 declare const smtpConfig: {
     host: string;
     port: number;
@@ -11,6 +14,9 @@ declare const smtpConfig: {
     pass: string;
     from_name: string;
     from_email: string;
+    user_bienvenida: string;
+    from_bienvenida: string;
+    pass_bienvenida: string;
 };
-export { host, port, user, pass, from_name, from_email };
+export { host, port, user, pass, from_name, from_email, user_bienvenida, from_bienvenida, pass_bienvenida };
 export default smtpConfig;

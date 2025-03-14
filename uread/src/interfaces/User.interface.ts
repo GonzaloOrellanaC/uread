@@ -23,4 +23,5 @@ export interface User {
     createdAt: Date
     updatedAt: Date
     alumnos: any[]
+    validado: string
 }

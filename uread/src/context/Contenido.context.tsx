@@ -15,18 +15,18 @@ interface ContenidoContextValues {
 export const ContenidoContext = createContext<ContenidoContextValues>({} as ContenidoContextValues)
 
 export const ContenidoProvider = (props: any) => {
-    const {userData} = useContext(AuthContext)
+    const {userData, isAdmin} = useContext(AuthContext)
     const [ contenido, setContenido ] = useState<Contenido[]>([])
     const [ contenidoV2, setContenidoV2 ] = useState<Contenido[]>([])
     const [niveles, setNiveles] = useState<any[]>([])
     useEffect(() => {
         if (userData) {
             console.log(userData)
-            const premium = (userData.roles[0].name === 'SuperAdmin' || userData.roles[0].name === 'admin') ? true : userData.premium
+            const premium = isAdmin ? true : userData.premium
             getContenido(premium)
             leerNiveles()
         }
-    }, [userData])
+    }, [userData, isAdmin])
     
     const getContenido = async (premium: boolean) => {
         const response = await contenidoRouter.getContenido(premium)

@@ -104,6 +104,18 @@ const deleteUser = async (req: Request, res: Response, next: NextFunction) => {
     }
 }
 
+const validarUsuario = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        
+        const {usuario} = req.body
+        const deleteUserData: User = await UserService.validar(usuario)
+
+        res.status(200).json({ data: deleteUserData, message: 'validado' })
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 export default {
     getUsers,
     getAdminUsers,
@@ -113,5 +125,6 @@ export default {
     createAdminSysUser,
     createUser,
     editUser,
-    deleteUser
+    deleteUser,
+    validarUsuario
 }

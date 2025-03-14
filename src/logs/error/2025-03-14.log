@@ -1,0 +1,5 @@
+2025-03-14 06:14:55 error: [POST] /api/login >> StatusCode:: 409, Message:: Contraseña incorrecta
+2025-03-14 06:40:11 error: Invalid login: 535 Incorrect authentication data
+2025-03-14 06:53:52 error: Se requieren credenciales SMTP
+2025-03-14 06:54:15 error: Se requieren credenciales SMTP
+2025-03-14 07:15:41 error: [POST] /api/login >> StatusCode:: 409, Message:: Contraseña incorrecta

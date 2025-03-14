@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.createCookie = exports.verifyToken = exports.createToken = void 0;
 const tslib_1 = require("tslib");
 const index_1 = require("../configs/index");
 const HttpException_1 = require("../exceptions/HttpException");
@@ -12,7 +13,6 @@ const i18n_1 = require("i18n");
 const jsonwebtoken_1 = (0, tslib_1.__importDefault)(require("jsonwebtoken"));
 const email_service_1 = require("./email.service");
 const path_1 = (0, tslib_1.__importDefault)(require("path"));
-const env_1 = require("../configs/env");
 const user = users_model_1.default;
 const signup = async (userData) => {
     if ((0, util_1.isEmpty)(userData))
@@ -22,9 +22,9 @@ const signup = async (userData) => {
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Email {{email}} already exists' }, { email: userData.email }));
     const hashedPassword = await bcrypt_1.default.hash(userData.password, 10);
     const createUserData = await user.create(Object.assign(Object.assign({}, userData), { password: hashedPassword }));
-    const loginToken = createToken(createUserData);
-    const cookie = createCookie(loginToken);
-    const verificationToken = createToken(createUserData, 0);
+    const loginToken = (0, exports.createToken)(createUserData);
+    const cookie = (0, exports.createCookie)(loginToken);
+    const verificationToken = (0, exports.createToken)(createUserData, 0);
     const args = {
         fullName: `${createUserData.name} ${createUserData.lastName}`,
         email: createUserData.email,
@@ -40,9 +40,9 @@ const signup = async (userData) => {
     return { cookie, createdUser: createUserData };
 };
 const resendVerification = async (userData) => {
-    const loginToken = createToken(userData);
-    const cookie = createCookie(loginToken);
-    const verificationToken = createToken(userData, 0);
+    const loginToken = (0, exports.createToken)(userData);
+    const cookie = (0, exports.createCookie)(loginToken);
+    const verificationToken = (0, exports.createToken)(userData, 0);
     const args = {
         fullName: `${userData.name} ${userData.lastName}`,
         email: userData.email,
@@ -70,8 +70,8 @@ const login = async (userData, locale = index_1.env.locale) => {
     const isPasswordMatching = await bcrypt_1.default.compare(userData.password, findUser.password);
     if (!isPasswordMatching)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Wrong password', locale }));
-    const token = createToken(findUser, 86400);
-    const cookie = createCookie(token);
+    const token = (0, exports.createToken)(findUser, 86400);
+    const cookie = (0, exports.createCookie)(token);
     return { cookie, findUser, token };
 };
 const logout = async (userData, locale = index_1.env.locale) => {
@@ -103,10 +103,10 @@ const forgotPassword = async (email) => {
     const findUser = await user.findOneAndUpdate({ email }, { updatedAt: new Date() }, { new: true, timestamps: false });
     if ((0, util_1.isEmpty)(findUser))
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Email {{email}} not found', locale: 'es' }, { email }));
-    const resetToken = createToken(findUser);
+    const resetToken = (0, exports.createToken)(findUser);
     const args = {
         fullName: `${findUser.name} ${findUser.lastName}`,
-        resetLink: (env_1.environment === 'development') ? `http://localhost:8100/reset-password/${resetToken.token}` : `${index_1.env.url}reset-password/${resetToken.token}`
+        resetLink: `${index_1.env.url}reset-password/${resetToken.token}`
     };
     await (0, email_service_1.sendHTMLEmail)(findUser.email, (0, i18n_1.__)({ phrase: 'Reset your password', locale: 'es' }), (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../../emailTemplates/reset-password/email.html`), args), null
     /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
@@ -124,7 +124,7 @@ const resetPassword = async (token, password) => {
         throw new HttpException_1.HttpException(400, (0, i18n_1.__)({ phrase: 'Token is required', locale: 'es' }));
     if ((0, util_1.isEmpty)(password))
         throw new HttpException_1.HttpException(400, (0, i18n_1.__)({ phrase: 'Password is required', locale: 'es' }));
-    const tokenData = verifyToken(token);
+    const tokenData = (0, exports.verifyToken)(token);
     if (!tokenData)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Invalid token', locale: 'es' }));
     const hashedPassword = await bcrypt_1.default.hash(password, 10);
@@ -138,13 +138,16 @@ const createToken = (user, expiresIn = 3600) => {
     const secretKey = index_1.keys.secretKey;
     return { expiresIn, token: jsonwebtoken_1.default.sign(dataStoredInToken, secretKey, { expiresIn }) };
 };
+exports.createToken = createToken;
 const verifyToken = (token, ignoreExpiration = false) => {
     const secretKey = index_1.keys.secretKey;
     return jsonwebtoken_1.default.verify(token, secretKey, { ignoreExpiration });
 };
+exports.verifyToken = verifyToken;
 const createCookie = (tokenData) => {
     return `Authorization=${tokenData.token}; HttpOnly; Max-Age=${tokenData.expiresIn};`;
 };
+exports.createCookie = createCookie;
 exports.default = {
     signup,
     resendVerification,
@@ -153,8 +156,8 @@ exports.default = {
     verifyUserEmail,
     forgotPassword,
     resetPassword,
-    createToken,
-    verifyToken,
-    createCookie
+    createToken: exports.createToken,
+    verifyToken: exports.verifyToken,
+    createCookie: exports.createCookie
 };
 //# sourceMappingURL=auth.service.js.map

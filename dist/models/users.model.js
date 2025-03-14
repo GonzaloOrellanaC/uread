@@ -95,6 +95,10 @@ const userSchema = new mongoose_1.Schema({
     },
     medioPago: {
         type: mongoose_1.Schema.Types.String
+    },
+    validado: {
+        type: mongoose_1.Schema.Types.String,
+        default: 'No validado'
     }
 }, {
     timestamps: true,

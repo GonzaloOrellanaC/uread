@@ -99,6 +99,16 @@ const deleteUser = async (req, res, next) => {
         console.log(error);
     }
 };
+const validarUsuario = async (req, res, next) => {
+    try {
+        const { usuario } = req.body;
+        const deleteUserData = await users_service_1.default.validar(usuario);
+        res.status(200).json({ data: deleteUserData, message: 'validado' });
+    }
+    catch (error) {
+        console.log(error);
+    }
+};
 exports.default = {
     getUsers,
     getAdminUsers,
@@ -108,6 +118,7 @@ exports.default = {
     createAdminSysUser,
     createUser,
     editUser,
-    deleteUser
+    deleteUser,
+    validarUsuario
 };
 //# sourceMappingURL=users.controller.js.map

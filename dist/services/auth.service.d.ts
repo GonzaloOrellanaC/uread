@@ -1,6 +1,12 @@
 /// <reference types="mongoose" />
 import { DataStoredInToken, TokenData } from '../interfaces/auth.interface';
 import { LoginData, User } from '../interfaces/users.interface';
+export declare const createToken: (user: User, expiresIn?: number) => {
+    expiresIn: number;
+    token: string;
+};
+export declare const verifyToken: (token: string, ignoreExpiration?: boolean) => DataStoredInToken;
+export declare const createCookie: (tokenData: TokenData) => string;
 declare const _default: {
     signup: (userData: User) => Promise<{
         cookie: string;

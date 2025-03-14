@@ -14,4 +14,7 @@ router.get(`/getAdminUsers`, /* authMiddleware, */ UsersController.getAdminUsers
 router.get('/getAllSystemUser', /* authMiddleware, */ UsersController.getAllSystemUser)
 router.post('/getUsersByOrg', /* authMiddleware, */ UsersController.getUsersByOrg)
 
+
+router.post('/validarUsuario', /* authMiddleware, */ UsersController.validarUsuario)
+
 export default router

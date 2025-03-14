@@ -1,5 +1,5 @@
 import { IonButton, IonButtons, IonCard, IonCardContent, IonCol, IonContent, IonGrid, IonIcon, IonPage, IonRow, IonToolbar } from "@ionic/react"
-import { gridOutline, listOutline, pencilOutline, personAddOutline, trashOutline } from "ionicons/icons"
+import { arrowUp, gridOutline, listOutline, pencilOutline, personAddOutline, trashOutline } from "ionicons/icons"
 import { useEffect, useState } from "react"
 import { useHistory } from "react-router"
 import { NewUserModal } from "../../../components/Modals"
@@ -9,6 +9,7 @@ import userRouter from "../../../router/user.router"
 import xlsx from "json-as-xlsx"
 import { useUsersContext } from "../../../context/Users.context"
 import {Pagination} from "@mui/material"
+import { useAuthContext } from "../../../context/Auth.context"
 
 const UserAdminComponent = () => {
     const {users, init} = useUsersContext()
@@ -170,6 +171,16 @@ const UserAdminComponent = () => {
         }
     }
 
+    const validarUsuario = async  (usuario: User) => {
+        try {
+            const response = await userRouter.enviarValidacionUsuario(usuario)
+            console.log(response)
+            alert(`Enviada validación a usuario ${usuario.name} ${usuario.lastName}\nCorreo electrónico: ${usuario.email}`)
+        } catch (error) {
+            alert('Error')
+        }
+    }
+
     return (
         <IonPage>
             <IonContent class="ion-padding">
@@ -244,11 +255,14 @@ const UserAdminComponent = () => {
                                             </IonCol>
                                             <IonCol sizeXs="2" style={{ textAlign: 'center' }}>
                                                 <IonButtons>
-                                                    <IonButton fill={'outline'} color={'primary'} onClick={() => { (user.id! > 0) ? editUser(user) : alert('Super Usuario no puede ser editado') }}>
-                                                        <IonIcon icon={pencilOutline} style={{ marginRight: 10 }} /> Edit
+                                                    <IonButton disabled={user.validado === 'validado'} fill={'outline'} color={'primary'} onClick={() => { (user.id! > 1) ? validarUsuario(user) : alert('Super Usuario no puede ser editado') }}>
+                                                        <IonIcon icon={arrowUp} style={{ marginRight: 10 }} /> 
                                                     </IonButton>
-                                                    <IonButton fill={'outline'} color={'danger'} onClick={() => { (user.id! > 0) ? deleteUser(user) : alert('Super Usuario no puede ser eliminado') }}>
-                                                        <IonIcon icon={trashOutline} style={{ marginRight: 10 }} /> Delete
+                                                    <IonButton fill={'outline'} color={'primary'} onClick={() => { (user.id! > 1) ? editUser(user) : alert('Super Usuario no puede ser editado') }}>
+                                                        <IonIcon icon={pencilOutline} style={{ marginRight: 10 }} /> 
+                                                    </IonButton>
+                                                    <IonButton fill={'outline'} color={'danger'} onClick={() => { (user.id! > 1) ? deleteUser(user) : alert('Super Usuario no puede ser eliminado') }}>
+                                                        <IonIcon icon={trashOutline} style={{ marginRight: 10 }} /> 
                                                     </IonButton>
                                                 </IonButtons>
                                             </IonCol>

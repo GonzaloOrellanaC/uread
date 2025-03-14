@@ -7,6 +7,11 @@ import { isEmpty } from '@utils/util'
 import bcrypt from 'bcrypt'
 import { __ } from 'i18n'
 import { ObjectId } from 'mongoose'
+import { createToken } from './auth.service'
+import { sendHTMLEmail } from './email.service'
+import { generateHTML } from '@/utils/html'
+import { logger } from '@/utils/logger'
+import path from 'path'
 
 const user = userModel
 
@@ -128,6 +133,24 @@ const deleteUser = async (userId: string, locale: string = env.locale) => {
     return deleteUserById
 }
 
+const validar = async (user: User) => {
+    
+    const resetToken = createToken(user)
+    const args = {
+        fullName: `${user.name} ${user.lastName}`,
+        resetLink: `${env.url}bienvenida/${resetToken.token}`
+    }
+    await sendHTMLEmail(
+        user.email,
+        'Bienvenid@ a UREAD',
+        generateHTML(path.join(__dirname, `/../../emailTemplates/bienvenida/email.html`), args),
+        null
+        /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
+    ).catch(err => logger.error(__({ phrase: err.message, locale: 'es' })))
+
+    return user
+}
+
 export default {
     findAllUser,
     findAllAdminUser,
@@ -141,5 +164,6 @@ export default {
     createUser,
     createAdminSysUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    validar
 }

@@ -6,7 +6,7 @@ const lastName: string = process.env.LASTNAME
 const run: string = process.env.RUN
 const email: string = process.env.EMAIL
 const password: string = process.env.PASSWORD
-const url = process.env.URL || `http://localhost:${port}`
+const url = process.env.URL
 const platformName = process.env.PLATFORM_NAME
 const storageApi = {
     accessKeys: process.env.ACCESS_KEYS
