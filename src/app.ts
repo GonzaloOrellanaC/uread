@@ -56,6 +56,7 @@ const initializeMiddlewares = () => {
     initializeRoutes()
     console.log(3)
     app.use("/audios", express.static(path.join(__dirname, '../files/audios')))
+    app.use("/mp3", express.static(path.join(__dirname, '../files/audios/mp3')))
     app.use("/images", express.static(path.join(__dirname, '../files/images')))
     app.use("/pdf", express.static(path.join(__dirname, '../files/pdf')))
     app.use(express.static(path.resolve(__dirname, "../uread/dist")))
