@@ -1,12 +1,12 @@
 import { IonAccordion, IonAccordionGroup, IonButton, IonButtons, IonCheckbox, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonItemDivider, IonLabel, IonModal, IonPage, IonRippleEffect, IonRow, IonSelect, IonSelectOption, IonTitle, IonToolbar } from "@ionic/react"
-import axios from "axios"
 import { add, arrowBack, close, planet } from "ionicons/icons"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 import { formularioInscripcion } from "../../router/form.router"
+import { useContenidoContext } from "../../context/Contenido.context"
 
 export const ContartarPlanPage = () => {
-
+    const {setLoading} = useContenidoContext()
     const transbankList: {A: string[], B: string[], C: string[]} = {
         'A': ['https://www.webpay.cl/form-pay/253730', 'https://www.webpay.cl/form-pay/262693', 'https://www.webpay.cl/form-pay/262694'],
         'B': ['https://www.webpay.cl/form-pay/261774', 'https://www.webpay.cl/form-pay/262695', 'https://www.webpay.cl/form-pay/262696'],
@@ -148,7 +148,6 @@ export const ContartarPlanPage = () => {
             }
         } else if (transferenciaBancaria && !transbanckSelected) {
             setOpenTransferencia(true)
-
         } else {
             alert('Debe seleccionar su método de pago.')
         }
@@ -185,7 +184,9 @@ export const ContartarPlanPage = () => {
     } */
 
     const enviarPago = async () => {
+        setLoading(true)
         guardarDatosPago().then(() => {
+            setLoading(false)
             alert('Muchas gracias por informarnos. Revisaremos el pago y te contactaremos en un plazo máximo de 24 HRS.')
         })
     }

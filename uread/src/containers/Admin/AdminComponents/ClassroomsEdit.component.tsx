@@ -7,7 +7,7 @@ import { useContenidoContext } from "../../../context/Contenido.context"
 
 export const ClassRoomsComponent = () => {
     const history = useHistory()
-    const {niveles} = useContenidoContext()
+    const {niveles, setLoading} = useContenidoContext()
     const planes = [
             {
                 index: 0,
@@ -166,6 +166,7 @@ export const ClassRoomsComponent = () => {
     }
 
     const guardarTodo = async () => {
+        setLoading(true)
         let revision = true
         classRoomList.forEach((c) => {
             if (c.name.length === 0 || c.url.length === 0) {
@@ -188,8 +189,10 @@ export const ClassRoomsComponent = () => {
                 }
                 return c
             }))
+            setLoading(false)
         } else {
             alert('Hay datos obligatorios que no están rellenados.')
+            setLoading(false)
         }
     }
 

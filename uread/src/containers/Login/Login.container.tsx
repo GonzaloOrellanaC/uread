@@ -6,6 +6,7 @@ import userRouter from '../../router/user.router'
 import { User } from '../../interfaces/User.interface'
 import { eyeOffOutline, eyeOutline } from 'ionicons/icons'
 import { RegistreModal } from '../../components/Modals'
+import { useContenidoContext } from '../../context/Contenido.context'
 
 const LoginContainer = () => {
 

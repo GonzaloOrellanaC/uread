@@ -1,5 +1,5 @@
-import { IonButton, IonButtons, IonCard, IonCardContent, IonCol, IonContent, IonGrid, IonIcon, IonPage, IonRow, IonTitle, IonToolbar } from "@ionic/react"
-import { arrowBack, arrowUp, gridOutline, listOutline, pencilOutline, personAddOutline, trashOutline } from "ionicons/icons"
+import { IonButton, IonButtons, IonCol, IonContent, IonGrid, IonIcon, IonPage, IonRow, IonTitle, IonToolbar } from "@ionic/react"
+import { arrowBack, arrowUp, pencilOutline, personAddOutline, trashOutline } from "ionicons/icons"
 import { useEffect, useState } from "react"
 import { useHistory } from "react-router"
 import { NewUserModal } from "../../../components/Modals"
@@ -9,9 +9,11 @@ import userRouter from "../../../router/user.router"
 import xlsx from "json-as-xlsx"
 import { useUsersContext } from "../../../context/Users.context"
 import {Pagination} from "@mui/material"
+import { useContenidoContext } from "../../../context/Contenido.context"
 
 const UserAdminComponent = () => {
     const {users, init} = useUsersContext()
+    const {setLoading} = useContenidoContext()
     const history = useHistory()
     const [openModal, setOpenModal] = useState(false)
     const [typeUsersList, setTypeUsersList] = useState('column')
@@ -72,6 +74,7 @@ const UserAdminComponent = () => {
     }
 
     const toExcel = () => {
+        setLoading(true)
         if (users.length > 0) {
             const data = [
                 {
@@ -124,6 +127,9 @@ const UserAdminComponent = () => {
                 fileName: `${Date.now()}`
             })
         }
+        setTimeout(() => {
+            setLoading(false)
+        }, 1000);
     }
 
     const closeModal = () => {
@@ -147,6 +153,7 @@ const UserAdminComponent = () => {
 
     const deleteUser = async (user: User) => {
         if (window.confirm('Confirme que se eliminará el usuario')) {
+            setLoading(true)
             const response = await userRouter.deleteUser(user._id)
             if (response) {
                 const myUid = localStorage.getItem('id-uread')
@@ -167,16 +174,22 @@ const UserAdminComponent = () => {
                     init()
                 }
             }
+            setTimeout(() => {
+                setLoading(false)
+            }, 1000);
         }
     }
 
     const validarUsuario = async  (usuario: User) => {
+        setLoading(true)
         try {
             const response = await userRouter.enviarValidacionUsuario(usuario)
             console.log(response)
             alert(`Enviada validación a usuario ${usuario.name} ${usuario.lastName}\nCorreo electrónico: ${usuario.email}`)
+            setLoading(false)
         } catch (error) {
             alert('Error')
+            setLoading(false)
         }
     }
 
