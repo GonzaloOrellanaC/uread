@@ -12,6 +12,8 @@ import { sendHTMLEmail } from './email.service'
 import { generateHTML } from '@/utils/html'
 import { logger } from '@/utils/logger'
 import path from 'path'
+import alumnoProvisorioModel from '@/models/alumnos-provisorios.model'
+import roleModel from '@/models/roles.model'
 
 const user = userModel
 
@@ -134,21 +136,59 @@ const deleteUser = async (userId: string, locale: string = env.locale) => {
 }
 
 const validar = async (user: User) => {
-    
-    const resetToken = createToken(user)
-    const args = {
-        fullName: `${user.name} ${user.lastName}`,
-        resetLink: `${env.url}bienvenida/${resetToken.token}`
-    }
-    await sendHTMLEmail(
-        user.email,
-        'Bienvenid@ a UREAD',
-        generateHTML(path.join(__dirname, `/../../emailTemplates/bienvenida/email.html`), args),
-        null
-        /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
-    ).catch(err => logger.error(__({ phrase: err.message, locale: 'es' })))
+    try {
+        
+        const resetToken = createToken(user)
+        const args = {
+            fullName: `${user.name} ${user.lastName}`,
+            resetLink: `${env.url}bienvenida/${resetToken.token}`
+        }
+        await sendHTMLEmail(
+            user.email,
+            'Bienvenid@ a UREAD',
+            generateHTML(path.join(__dirname, `/../../emailTemplates/bienvenida/email.html`), args),
+            null
+        )
 
-    return user
+        const userEdited = await userModel.findByIdAndUpdate(user._id, {validado: 'Por validar'}, {new: true})
+
+        return userEdited
+    } catch (error) {
+        logger.error(__({ phrase: error.message, locale: 'es' }))
+        return null
+    }
+}
+
+const habilitarAlumno = async (user: User) => {
+    try {
+        const hashedPassword = await bcrypt.hash(user.password, 10)
+        const createUserData: User = await userModel.create({ ...user, password: hashedPassword })
+        const args = {
+            fullName: `${createUserData.name} ${createUserData.lastName}`,
+        }
+        await sendHTMLEmail(
+            user.email,
+            'Bienvenid@ a UREAD',
+            generateHTML(path.join(__dirname, `/../../emailTemplates/bienvenida-alumno/email.html`), args),
+            null
+        )
+
+        const rolAlumno = await roleModel.findOne({name: 'user'})
+
+        await userModel.findByIdAndUpdate(
+            user._id,
+            {
+                validado: 'Validado',
+                roles: [rolAlumno._id]
+            }, {new: true})
+
+        const alumnoEditado = await alumnoProvisorioModel.findByIdAndUpdate(user._id, {state: false}, {new: true}).populate('levelUser')
+
+        return alumnoEditado
+    } catch (error) {
+        logger.error(__({ phrase: error.message, locale: 'es' }))
+        return null
+    }
 }
 
 export default {
@@ -165,5 +205,6 @@ export default {
     createAdminSysUser,
     updateUser,
     deleteUser,
-    validar
+    validar,
+    habilitarAlumno
 }

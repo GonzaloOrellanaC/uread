@@ -1,0 +1,622 @@
+2025-03-16 08:06:15 info: ====================================
+2025-03-16 08:06:15 info: ============ ENV: development ===========
+2025-03-16 08:06:15 info: 🚀 App listening on the port 5212
+2025-03-16 08:06:15 info: ====================================
+2025-03-16 08:17:48 info: ====================================
+2025-03-16 08:17:48 info: ============ ENV: development ===========
+2025-03-16 08:17:48 info: 🚀 App listening on the port 5212
+2025-03-16 08:17:48 info: ====================================
+2025-03-16 08:22:24 info: [0mGET /api/roles/getRoles [36m304[0m 42.670 ms - -[0m
+2025-03-16 08:22:24 info: [0mGET /api/roles/getRoles [36m304[0m 10.238 ms - -[0m
+2025-03-16 08:22:34 info: [0mOPTIONS /api/login [32m204[0m 0.304 ms - 0[0m
+2025-03-16 08:22:35 info: [0mPOST /api/login [32m200[0m 266.895 ms - 790[0m
+2025-03-16 08:22:35 info: [0mGET /api/niveles/leerNiveles [36m304[0m 22.968 ms - -[0m
+2025-03-16 08:22:35 info: [0mGET /api/contenido/leerContenidos [36m304[0m 133.991 ms - -[0m
+2025-03-16 08:22:35 info: [0mGET /api/niveles/leerNiveles [36m304[0m 133.054 ms - -[0m
+2025-03-16 08:22:35 info: [0mGET /api/contenido/leerContenidosBasicos [32m200[0m 141.085 ms - -[0m
+2025-03-16 08:22:35 info: [0mGET /api/users/getUsers [32m200[0m 152.373 ms - -[0m
+2025-03-16 08:22:35 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 7.820 ms - -[0m
+2025-03-16 08:22:35 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 13.348 ms - -[0m
+2025-03-16 14:23:18 info: [0mGET /api/roles/getRoles [36m304[0m 20.038 ms - -[0m
+2025-03-16 14:23:18 info: [0mGET /api/roles/getRoles [36m304[0m 6.277 ms - -[0m
+2025-03-16 14:23:18 info: [0mGET /api/niveles/leerNiveles [36m304[0m 8.037 ms - -[0m
+2025-03-16 14:23:18 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 61.965 ms - -[0m
+2025-03-16 14:23:18 info: [0mGET /api/contenido/leerContenidos [36m304[0m 130.455 ms - -[0m
+2025-03-16 14:23:18 info: [0mGET /api/niveles/leerNiveles [36m304[0m 129.192 ms - -[0m
+2025-03-16 14:23:18 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 8.676 ms - -[0m
+2025-03-16 14:23:18 info: [0mGET /api/users/getUsers [36m304[0m 152.604 ms - -[0m
+2025-03-16 14:23:18 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.711 ms - -[0m
+2025-03-16 14:59:48 info: [0mGET /api/niveles/leerNiveles [36m304[0m 12.084 ms - -[0m
+2025-03-16 14:59:48 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 59.709 ms - -[0m
+2025-03-16 14:59:49 info: [0mGET /api/niveles/leerNiveles [36m304[0m 7.505 ms - -[0m
+2025-03-16 14:59:49 info: [0mGET /api/contenido/leerContenidos [36m304[0m 123.521 ms - -[0m
+2025-03-16 14:59:49 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 122.815 ms - -[0m
+2025-03-16 14:59:49 info: [0mGET /api/users/getUsers [36m304[0m 132.456 ms - -[0m
+2025-03-16 14:59:49 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.749 ms - -[0m
+2025-03-16 15:09:25 info: [0mGET /api/niveles/leerNiveles [36m304[0m 16.758 ms - -[0m
+2025-03-16 15:09:25 info: [0mGET /api/contenido/leerContenidos [36m304[0m 257.120 ms - -[0m
+2025-03-16 15:09:25 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 341.280 ms - -[0m
+2025-03-16 15:09:25 info: [0mGET /api/niveles/leerNiveles [36m304[0m 63.643 ms - -[0m
+2025-03-16 15:09:25 info: [0mGET /api/users/getUsers [36m304[0m 348.591 ms - -[0m
+2025-03-16 15:09:25 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 13.446 ms - -[0m
+2025-03-16 15:09:25 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.790 ms - -[0m
+2025-03-16 15:10:07 info: [0mGET /api/niveles/leerNiveles [36m304[0m 8.065 ms - -[0m
+2025-03-16 15:10:07 info: [0mGET /api/contenido/leerContenidos [36m304[0m 152.074 ms - -[0m
+2025-03-16 15:10:07 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 187.917 ms - -[0m
+2025-03-16 15:10:07 info: [0mGET /api/niveles/leerNiveles [36m304[0m 165.929 ms - -[0m
+2025-03-16 15:10:07 info: [0mGET /api/users/getUsers [36m304[0m 174.302 ms - -[0m
+2025-03-16 15:10:07 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 7.294 ms - -[0m
+2025-03-16 15:10:07 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.583 ms - -[0m
+2025-03-16 15:12:06 info: [0mGET /api/niveles/leerNiveles [36m304[0m 4.351 ms - -[0m
+2025-03-16 15:12:06 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 52.079 ms - -[0m
+2025-03-16 15:12:06 info: [0mGET /api/contenido/leerContenidos [36m304[0m 149.018 ms - -[0m
+2025-03-16 15:12:06 info: [0mGET /api/niveles/leerNiveles [36m304[0m 148.206 ms - -[0m
+2025-03-16 15:12:06 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 5.740 ms - -[0m
+2025-03-16 15:12:06 info: [0mGET /api/users/getUsers [36m304[0m 156.509 ms - -[0m
+2025-03-16 15:12:06 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.795 ms - -[0m
+2025-03-16 15:14:18 info: [0mGET /api/niveles/leerNiveles [36m304[0m 3.851 ms - -[0m
+2025-03-16 15:14:18 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 43.049 ms - -[0m
+2025-03-16 15:14:18 info: [0mGET /api/contenido/leerContenidos [36m304[0m 113.582 ms - -[0m
+2025-03-16 15:14:18 info: [0mGET /api/niveles/leerNiveles [36m304[0m 112.902 ms - -[0m
+2025-03-16 15:14:18 info: [0mGET /api/users/getUsers [36m304[0m 116.974 ms - -[0m
+2025-03-16 15:14:18 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.675 ms - -[0m
+2025-03-16 15:14:18 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.724 ms - -[0m
+2025-03-16 16:32:40 info: ====================================
+2025-03-16 16:32:40 info: ============ ENV: development ===========
+2025-03-16 16:32:40 info: 🚀 App listening on the port 5212
+2025-03-16 16:32:40 info: ====================================
+2025-03-16 16:32:53 info: ====================================
+2025-03-16 16:32:53 info: ============ ENV: development ===========
+2025-03-16 16:32:53 info: 🚀 App listening on the port 5212
+2025-03-16 16:32:53 info: ====================================
+2025-03-16 16:35:47 info: ====================================
+2025-03-16 16:35:47 info: ============ ENV: development ===========
+2025-03-16 16:35:47 info: 🚀 App listening on the port 5212
+2025-03-16 16:35:47 info: ====================================
+2025-03-16 16:39:30 info: ====================================
+2025-03-16 16:39:30 info: ============ ENV: development ===========
+2025-03-16 16:39:30 info: 🚀 App listening on the port 5212
+2025-03-16 16:39:30 info: ====================================
+2025-03-16 16:50:35 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.837 ms - 0[0m
+2025-03-16 16:50:35 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 194.595 ms - 417[0m
+2025-03-16 16:59:12 info: [0mGET /api/niveles/leerNiveles [36m304[0m 13.146 ms - -[0m
+2025-03-16 16:59:12 info: [0mGET /api/contenido/leerContenidos [36m304[0m 179.800 ms - -[0m
+2025-03-16 16:59:12 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 231.366 ms - -[0m
+2025-03-16 16:59:12 info: [0mGET /api/niveles/leerNiveles [36m304[0m 195.541 ms - -[0m
+2025-03-16 16:59:12 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 6.136 ms - -[0m
+2025-03-16 16:59:12 info: [0mGET /api/users/getUsers [36m304[0m 216.376 ms - -[0m
+2025-03-16 16:59:12 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 8.513 ms - -[0m
+2025-03-16 17:12:55 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.220 ms - 0[0m
+2025-03-16 17:14:01 info: ====================================
+2025-03-16 17:14:01 info: ============ ENV: development ===========
+2025-03-16 17:14:01 info: 🚀 App listening on the port 5212
+2025-03-16 17:14:01 info: ====================================
+2025-03-16 17:14:05 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.883 ms - 0[0m
+2025-03-16 17:14:19 info: ====================================
+2025-03-16 17:14:19 info: ============ ENV: development ===========
+2025-03-16 17:14:19 info: 🚀 App listening on the port 5212
+2025-03-16 17:14:19 info: ====================================
+2025-03-16 17:14:35 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 1.091 ms - 0[0m
+2025-03-16 17:19:59 info: ====================================
+2025-03-16 17:19:59 info: ============ ENV: development ===========
+2025-03-16 17:19:59 info: 🚀 App listening on the port 5212
+2025-03-16 17:19:59 info: ====================================
+2025-03-16 17:38:28 info: [0mGET /api/niveles/leerNiveles [36m304[0m 34.689 ms - -[0m
+2025-03-16 17:38:28 info: [0mGET /api/contenido/leerContenidos [36m304[0m 307.717 ms - -[0m
+2025-03-16 17:38:28 info: [0mGET /api/niveles/leerNiveles [36m304[0m 46.589 ms - -[0m
+2025-03-16 17:38:28 info: [0mGET /api/users/getUsers [36m304[0m 418.653 ms - -[0m
+2025-03-16 17:38:28 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 501.433 ms - -[0m
+2025-03-16 17:38:28 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 67.851 ms - -[0m
+2025-03-16 17:38:29 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.252 ms - -[0m
+2025-03-16 17:39:10 info: [0mGET /api/niveles/leerNiveles [36m304[0m 8.101 ms - -[0m
+2025-03-16 17:39:10 info: [0mGET /api/contenido/leerContenidos [36m304[0m 141.104 ms - -[0m
+2025-03-16 17:39:10 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 175.547 ms - -[0m
+2025-03-16 17:39:10 info: [0mGET /api/niveles/leerNiveles [36m304[0m 30.612 ms - -[0m
+2025-03-16 17:39:10 info: [0mGET /api/users/getUsers [36m304[0m 168.036 ms - -[0m
+2025-03-16 17:39:10 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 5.635 ms - -[0m
+2025-03-16 17:39:10 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.769 ms - -[0m
+2025-03-16 17:44:26 info: ====================================
+2025-03-16 17:44:26 info: ============ ENV: development ===========
+2025-03-16 17:44:26 info: 🚀 App listening on the port 5212
+2025-03-16 17:44:26 info: ====================================
+2025-03-16 17:44:56 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.979 ms - 0[0m
+2025-03-16 17:44:56 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 52.409 ms - 234[0m
+2025-03-16 17:45:27 info: [0mGET /api/niveles/leerNiveles [36m304[0m 13.122 ms - -[0m
+2025-03-16 17:45:27 info: [0mGET /api/contenido/leerContenidos [36m304[0m 166.384 ms - -[0m
+2025-03-16 17:45:27 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 273.034 ms - -[0m
+2025-03-16 17:45:27 info: [0mGET /api/niveles/leerNiveles [36m304[0m 98.267 ms - -[0m
+2025-03-16 17:45:27 info: [0mGET /api/users/getUsers [36m304[0m 270.981 ms - -[0m
+2025-03-16 17:45:27 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 16.427 ms - -[0m
+2025-03-16 17:45:27 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.970 ms - -[0m
+2025-03-16 17:45:43 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.150 ms - 0[0m
+2025-03-16 17:45:43 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 6.394 ms - 235[0m
+2025-03-16 17:45:46 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 4.764 ms - 234[0m
+2025-03-16 17:45:56 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.361 ms - 0[0m
+2025-03-16 17:45:56 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 4.997 ms - 235[0m
+2025-03-16 17:46:51 info: ====================================
+2025-03-16 17:46:51 info: ============ ENV: development ===========
+2025-03-16 17:46:51 info: 🚀 App listening on the port 5212
+2025-03-16 17:46:51 info: ====================================
+2025-03-16 17:47:04 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 1.147 ms - 0[0m
+2025-03-16 17:47:04 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 41.011 ms - 353[0m
+2025-03-16 17:47:56 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.288 ms - 0[0m
+2025-03-16 17:47:56 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 24.038 ms - 697[0m
+2025-03-16 17:48:20 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.133 ms - 0[0m
+2025-03-16 17:48:20 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 11.129 ms - 697[0m
+2025-03-16 17:48:33 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.185 ms - 0[0m
+2025-03-16 17:48:33 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 9.032 ms - 696[0m
+2025-03-16 17:49:30 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.132 ms - 0[0m
+2025-03-16 17:49:30 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 46.901 ms - -[0m
+2025-03-16 17:50:15 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.266 ms - 0[0m
+2025-03-16 17:50:15 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 17.440 ms - -[0m
+2025-03-16 17:51:32 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.188 ms - 0[0m
+2025-03-16 17:51:32 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 41.222 ms - -[0m
+2025-03-16 17:52:22 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.201 ms - 0[0m
+2025-03-16 17:52:22 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 21.896 ms - -[0m
+2025-03-16 17:58:14 info: ====================================
+2025-03-16 17:58:14 info: ============ ENV: development ===========
+2025-03-16 17:58:14 info: 🚀 App listening on the port 5212
+2025-03-16 17:58:14 info: ====================================
+2025-03-16 18:01:38 info: ====================================
+2025-03-16 18:01:38 info: ============ ENV: development ===========
+2025-03-16 18:01:38 info: 🚀 App listening on the port 5212
+2025-03-16 18:01:38 info: ====================================
+2025-03-16 18:01:40 info: [0mGET /api/classroom/get-classrooms [32m200[0m 12.515 ms - -[0m
+2025-03-16 18:01:40 info: [0mGET /api/classroom/get-classrooms [36m304[0m 7.336 ms - -[0m
+2025-03-16 18:02:58 info: [0mGET /api/classroom/get-classrooms [36m304[0m 5.180 ms - -[0m
+2025-03-16 18:03:43 info: [0mGET /api/classroom/get-classrooms [36m304[0m 5.338 ms - -[0m
+2025-03-16 18:04:18 info: [0mGET /api/classroom/get-classrooms [36m304[0m 5.885 ms - -[0m
+2025-03-16 18:04:18 info: [0mGET /api/classroom/get-classrooms [36m304[0m 4.917 ms - -[0m
+2025-03-16 18:04:26 info: [0mGET /api/classroom/get-classrooms [36m304[0m 8.520 ms - -[0m
+2025-03-16 18:04:26 info: [0mGET /api/classroom/get-classrooms [36m304[0m 8.044 ms - -[0m
+2025-03-16 18:04:26 info: [0mGET /api/niveles/leerNiveles [36m304[0m 24.644 ms - -[0m
+2025-03-16 18:04:26 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 132.563 ms - -[0m
+2025-03-16 18:04:26 info: [0mGET /api/contenido/leerContenidos [36m304[0m 159.872 ms - -[0m
+2025-03-16 18:04:26 info: [0mGET /api/niveles/leerNiveles [36m304[0m 158.443 ms - -[0m
+2025-03-16 18:04:26 info: [0mGET /api/users/getUsers [36m304[0m 182.502 ms - -[0m
+2025-03-16 18:04:26 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 22.343 ms - -[0m
+2025-03-16 18:04:26 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.962 ms - -[0m
+2025-03-16 18:05:18 info: [0mGET /api/classroom/get-classrooms [36m304[0m 3.813 ms - -[0m
+2025-03-16 18:05:23 info: [0mGET /api/classroom/get-classrooms [36m304[0m 6.408 ms - -[0m
+2025-03-16 18:05:23 info: [0mGET /api/classroom/get-classrooms [36m304[0m 6.514 ms - -[0m
+2025-03-16 18:05:23 info: [0mGET /api/niveles/leerNiveles [36m304[0m 6.083 ms - -[0m
+2025-03-16 18:05:23 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 46.898 ms - -[0m
+2025-03-16 18:05:23 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 10.919 ms - -[0m
+2025-03-16 18:05:23 info: [0mGET /api/contenido/leerContenidos [36m304[0m 182.181 ms - -[0m
+2025-03-16 18:05:23 info: [0mGET /api/niveles/leerNiveles [36m304[0m 181.555 ms - -[0m
+2025-03-16 18:05:23 info: [0mGET /api/users/getUsers [36m304[0m 189.206 ms - -[0m
+2025-03-16 18:05:23 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.028 ms - -[0m
+2025-03-16 18:06:56 info: [0mGET /api/classroom/get-classrooms [36m304[0m 3.370 ms - -[0m
+2025-03-16 18:07:03 info: [0mGET /api/classroom/get-classrooms [36m304[0m 13.378 ms - -[0m
+2025-03-16 18:07:03 info: [0mGET /api/classroom/get-classrooms [36m304[0m 6.983 ms - -[0m
+2025-03-16 18:07:03 info: [0mGET /api/niveles/leerNiveles [36m304[0m 7.557 ms - -[0m
+2025-03-16 18:07:03 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 47.663 ms - -[0m
+2025-03-16 18:07:03 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 10.403 ms - -[0m
+2025-03-16 18:07:03 info: [0mGET /api/contenido/leerContenidos [36m304[0m 144.976 ms - -[0m
+2025-03-16 18:07:03 info: [0mGET /api/niveles/leerNiveles [36m304[0m 144.958 ms - -[0m
+2025-03-16 18:07:03 info: [0mGET /api/users/getUsers [36m304[0m 146.515 ms - -[0m
+2025-03-16 18:07:03 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.349 ms - -[0m
+2025-03-16 18:07:27 info: [0mGET /api/classroom/get-classrooms [36m304[0m 4.828 ms - -[0m
+2025-03-16 18:07:54 info: [0mGET /api/classroom/get-classrooms [36m304[0m 11.589 ms - -[0m
+2025-03-16 18:08:14 info: [0mGET /api/classroom/get-classrooms [36m304[0m 4.843 ms - -[0m
+2025-03-16 18:09:29 info: [0mGET /api/classroom/get-classrooms [36m304[0m 4.059 ms - -[0m
+2025-03-16 18:11:25 info: [0mGET /api/classroom/get-classrooms [36m304[0m 13.147 ms - -[0m
+2025-03-16 18:12:45 info: [0mGET /api/classroom/get-classrooms [36m304[0m 3.341 ms - -[0m
+2025-03-16 18:13:24 info: [0mGET /api/classroom/get-classrooms [36m304[0m 4.656 ms - -[0m
+2025-03-16 18:13:40 info: [0mGET /api/classroom/get-classrooms [36m304[0m 4.373 ms - -[0m
+2025-03-16 18:13:40 info: [0mGET /api/classroom/get-classrooms [36m304[0m 16.841 ms - -[0m
+2025-03-16 18:13:40 info: [0mGET /api/niveles/leerNiveles [36m304[0m 5.577 ms - -[0m
+2025-03-16 18:13:40 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 95.271 ms - -[0m
+2025-03-16 18:13:40 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 18.059 ms - -[0m
+2025-03-16 18:13:40 info: [0mGET /api/contenido/leerContenidos [36m304[0m 175.942 ms - -[0m
+2025-03-16 18:13:40 info: [0mGET /api/niveles/leerNiveles [36m304[0m 171.606 ms - -[0m
+2025-03-16 18:13:40 info: [0mGET /api/users/getUsers [36m304[0m 17.037 ms - -[0m
+2025-03-16 18:13:40 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 5.640 ms - -[0m
+2025-03-16 18:13:54 info: [0mGET /api/classroom/get-classrooms [36m304[0m 3.189 ms - -[0m
+2025-03-16 18:14:09 info: [0mGET /api/classroom/get-classrooms [36m304[0m 2.847 ms - -[0m
+2025-03-16 18:16:34 info: [0mGET /api/classroom/get-classrooms [36m304[0m 3.094 ms - -[0m
+2025-03-16 18:19:00 info: [0mGET /api/classroom/get-classrooms [36m304[0m 3.545 ms - -[0m
+2025-03-16 18:19:18 info: [0mGET /api/classroom/get-classrooms [36m304[0m 3.477 ms - -[0m
+2025-03-16 18:19:26 info: [0mGET /api/classroom/get-classrooms [36m304[0m 7.093 ms - -[0m
+2025-03-16 18:19:26 info: [0mGET /api/classroom/get-classrooms [36m304[0m 6.941 ms - -[0m
+2025-03-16 18:19:26 info: [0mGET /api/niveles/leerNiveles [36m304[0m 8.019 ms - -[0m
+2025-03-16 18:19:26 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 65.510 ms - -[0m
+2025-03-16 18:19:26 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 5.105 ms - -[0m
+2025-03-16 18:19:26 info: [0mGET /api/contenido/leerContenidos [36m304[0m 190.711 ms - -[0m
+2025-03-16 18:19:26 info: [0mGET /api/niveles/leerNiveles [36m304[0m 190.222 ms - -[0m
+2025-03-16 18:19:26 info: [0mGET /api/users/getUsers [36m304[0m 204.106 ms - -[0m
+2025-03-16 18:19:26 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.871 ms - -[0m
+2025-03-16 18:20:31 info: [0mGET /api/classroom/get-classrooms [36m304[0m 3.903 ms - -[0m
+2025-03-16 18:20:36 info: [0mGET /api/classroom/get-classrooms [36m304[0m 11.104 ms - -[0m
+2025-03-16 18:20:36 info: [0mGET /api/classroom/get-classrooms [36m304[0m 7.558 ms - -[0m
+2025-03-16 18:20:36 info: [0mGET /api/niveles/leerNiveles [36m304[0m 14.764 ms - -[0m
+2025-03-16 18:20:36 info: [0mGET /api/contenido/leerContenidos [36m304[0m 207.128 ms - -[0m
+2025-03-16 18:20:37 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 239.619 ms - -[0m
+2025-03-16 18:20:37 info: [0mGET /api/niveles/leerNiveles [36m304[0m 28.997 ms - -[0m
+2025-03-16 18:20:37 info: [0mGET /api/users/getUsers [36m304[0m 218.798 ms - -[0m
+2025-03-16 18:20:37 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 6.053 ms - -[0m
+2025-03-16 18:20:37 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.493 ms - -[0m
+2025-03-16 18:20:49 info: [0mGET /api/classroom/get-classrooms [36m304[0m 8.185 ms - -[0m
+2025-03-16 18:20:49 info: [0mGET /api/classroom/get-classrooms [36m304[0m 5.904 ms - -[0m
+2025-03-16 18:20:49 info: [0mGET /api/niveles/leerNiveles [36m304[0m 17.127 ms - -[0m
+2025-03-16 18:20:49 info: [0mGET /api/contenido/leerContenidos [36m304[0m 139.420 ms - -[0m
+2025-03-16 18:20:49 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 190.681 ms - -[0m
+2025-03-16 18:20:49 info: [0mGET /api/users/getUsers [36m304[0m 181.157 ms - -[0m
+2025-03-16 18:20:49 info: [0mGET /api/niveles/leerNiveles [36m304[0m 42.943 ms - -[0m
+2025-03-16 18:20:49 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.677 ms - -[0m
+2025-03-16 18:20:49 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.232 ms - -[0m
+2025-03-16 18:21:17 info: [0mGET /api/classroom/get-classrooms [36m304[0m 4.512 ms - -[0m
+2025-03-16 18:21:44 info: [0mGET /api/classroom/get-classrooms [36m304[0m 3.220 ms - -[0m
+2025-03-16 18:22:03 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.231 ms - 0[0m
+2025-03-16 18:22:03 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 79.174 ms - -[0m
+2025-03-16 18:22:32 info: [0mGET /api/classroom/get-classrooms [32m200[0m 14.791 ms - -[0m
+2025-03-16 18:23:04 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.136 ms - 0[0m
+2025-03-16 18:23:04 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 32.744 ms - -[0m
+2025-03-16 18:33:45 info: ====================================
+2025-03-16 18:33:45 info: ============ ENV: development ===========
+2025-03-16 18:33:45 info: 🚀 App listening on the port 5212
+2025-03-16 18:33:45 info: ====================================
+2025-03-16 18:34:04 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.933 ms - 0[0m
+2025-03-16 18:34:04 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 35.323 ms - -[0m
+2025-03-16 18:34:50 info: ====================================
+2025-03-16 18:34:50 info: ============ ENV: development ===========
+2025-03-16 18:34:50 info: 🚀 App listening on the port 5212
+2025-03-16 18:34:50 info: ====================================
+2025-03-16 18:34:54 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.881 ms - 0[0m
+2025-03-16 18:34:54 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 28.328 ms - -[0m
+2025-03-16 18:38:25 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.156 ms - 0[0m
+2025-03-16 18:38:25 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 7.780 ms - -[0m
+2025-03-16 18:39:05 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.136 ms - 0[0m
+2025-03-16 18:39:05 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 4.440 ms - -[0m
+2025-03-16 18:39:53 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.188 ms - 0[0m
+2025-03-16 18:39:53 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 4.270 ms - -[0m
+2025-03-16 18:41:00 info: ====================================
+2025-03-16 18:41:00 info: ============ ENV: development ===========
+2025-03-16 18:41:00 info: 🚀 App listening on the port 5212
+2025-03-16 18:41:00 info: ====================================
+2025-03-16 18:41:01 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 1.520 ms - 0[0m
+2025-03-16 18:41:01 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 71.586 ms - -[0m
+2025-03-16 18:41:09 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.169 ms - 0[0m
+2025-03-16 18:41:09 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 43.546 ms - -[0m
+2025-03-16 18:41:27 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.505 ms - 0[0m
+2025-03-16 18:41:27 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 48.955 ms - -[0m
+2025-03-16 18:41:37 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.710 ms - 0[0m
+2025-03-16 18:41:37 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 32.032 ms - -[0m
+2025-03-16 18:41:46 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.210 ms - 0[0m
+2025-03-16 18:41:46 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 28.143 ms - -[0m
+2025-03-16 18:41:56 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.119 ms - 0[0m
+2025-03-16 18:41:56 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 27.395 ms - -[0m
+2025-03-16 20:55:59 info: ====================================
+2025-03-16 20:55:59 info: ============ ENV: development ===========
+2025-03-16 20:55:59 info: 🚀 App listening on the port 5212
+2025-03-16 20:55:59 info: ====================================
+2025-03-16 20:57:06 info: ====================================
+2025-03-16 20:57:06 info: ============ ENV: development ===========
+2025-03-16 20:57:06 info: 🚀 App listening on the port 5212
+2025-03-16 20:57:06 info: ====================================
+2025-03-16 20:58:31 info: ====================================
+2025-03-16 20:58:31 info: ============ ENV: development ===========
+2025-03-16 20:58:31 info: 🚀 App listening on the port 5212
+2025-03-16 20:58:31 info: ====================================
+2025-03-16 20:58:33 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=1&plan=A [33m400[0m 12.177 ms - 87[0m
+2025-03-16 20:58:33 info: [0mGET /favicon.ico [32m200[0m 80.799 ms - -[0m
+2025-03-16 20:58:59 info: ====================================
+2025-03-16 20:58:59 info: ============ ENV: development ===========
+2025-03-16 20:58:59 info: 🚀 App listening on the port 5212
+2025-03-16 20:58:59 info: ====================================
+2025-03-16 20:58:59 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=1&plan=A [32m200[0m 38.527 ms - -[0m
+2025-03-16 20:58:59 info: [0mGET /favicon.ico [36m304[0m 4.177 ms - -[0m
+2025-03-16 21:03:31 info: ====================================
+2025-03-16 21:03:31 info: ============ ENV: development ===========
+2025-03-16 21:03:31 info: 🚀 App listening on the port 5212
+2025-03-16 21:03:31 info: ====================================
+2025-03-16 21:03:34 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=1&plan=A [32m200[0m 16.930 ms - -[0m
+2025-03-16 21:03:34 info: [0mGET /favicon.ico [36m304[0m 4.144 ms - -[0m
+2025-03-16 21:10:41 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=1&plan=C [32m200[0m 9.490 ms - 11[0m
+2025-03-16 21:10:41 info: [0mGET /favicon.ico [36m304[0m 4.143 ms - -[0m
+2025-03-16 21:11:06 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=5&plan=C [32m200[0m 6.388 ms - -[0m
+2025-03-16 21:11:06 info: [0mGET /favicon.ico [36m304[0m 1.298 ms - -[0m
+2025-03-16 21:12:11 info: [0mGET /api/niveles/leerNiveles [36m304[0m 14.964 ms - -[0m
+2025-03-16 21:12:12 info: [0mGET /api/contenido/leerContenidos [36m304[0m 162.571 ms - -[0m
+2025-03-16 21:12:12 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 235.995 ms - -[0m
+2025-03-16 21:12:12 info: [0mGET /api/niveles/leerNiveles [36m304[0m 198.228 ms - -[0m
+2025-03-16 21:12:12 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 16.218 ms - -[0m
+2025-03-16 21:12:12 info: [0mGET /api/users/getUsers [36m304[0m 233.386 ms - -[0m
+2025-03-16 21:12:12 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.778 ms - -[0m
+2025-03-16 21:12:35 info: [0mGET /api/niveles/leerNiveles [36m304[0m 6.972 ms - -[0m
+2025-03-16 21:12:35 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 65.110 ms - -[0m
+2025-03-16 21:12:35 info: [0mGET /api/contenido/leerContenidos [36m304[0m 148.767 ms - -[0m
+2025-03-16 21:12:35 info: [0mGET /api/niveles/leerNiveles [36m304[0m 146.993 ms - -[0m
+2025-03-16 21:12:35 info: [0mGET /api/users/getUsers [36m304[0m 151.655 ms - -[0m
+2025-03-16 21:12:35 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 5.718 ms - -[0m
+2025-03-16 21:12:35 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.287 ms - -[0m
+2025-03-16 21:12:36 info: [0mGET /api/roles/getRoles [36m304[0m 4.003 ms - -[0m
+2025-03-16 21:12:36 info: [0mGET /api/roles/getRoles [36m304[0m 3.509 ms - -[0m
+2025-03-16 21:14:01 info: [0mOPTIONS /api/form [32m204[0m 0.241 ms - 0[0m
+2025-03-16 21:14:01 info: [0mPOST /api/form [32m200[0m 220.521 ms - -[0m
+2025-03-16 21:14:21 info: [0mGET /api/roles/getRoles [36m304[0m 3.772 ms - -[0m
+2025-03-16 21:14:21 info: [0mGET /api/roles/getRoles [36m304[0m 5.120 ms - -[0m
+2025-03-16 21:14:21 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 122.900 ms - -[0m
+2025-03-16 21:14:21 info: [0mGET /api/niveles/leerNiveles [36m304[0m 96.222 ms - -[0m
+2025-03-16 21:14:21 info: [0mGET /api/contenido/leerContenidos [36m304[0m 168.730 ms - -[0m
+2025-03-16 21:14:21 info: [0mGET /api/niveles/leerNiveles [36m304[0m 10.733 ms - -[0m
+2025-03-16 21:14:21 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 11.286 ms - -[0m
+2025-03-16 21:14:21 info: [0mGET /api/users/getUsers [32m200[0m 178.965 ms - -[0m
+2025-03-16 21:14:21 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.275 ms - -[0m
+2025-03-16 21:14:27 info: [0mOPTIONS /api/login [32m204[0m 0.131 ms - 0[0m
+2025-03-16 21:14:27 info: [0mPOST /api/login [32m200[0m 65.905 ms - 790[0m
+2025-03-16 21:14:27 info: [0mGET /api/contenido/leerContenidos [36m304[0m 80.317 ms - -[0m
+2025-03-16 21:14:27 info: [0mGET /api/niveles/leerNiveles [36m304[0m 80.097 ms - -[0m
+2025-03-16 21:14:27 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 11.342 ms - -[0m
+2025-03-16 21:14:33 info: [0mOPTIONS /api/users/validarUsuario [32m204[0m 0.274 ms - 0[0m
+2025-03-16 21:14:38 info: [0mPOST /api/users/validarUsuario [32m200[0m 5427.730 ms - 479[0m
+2025-03-16 21:14:53 info: [0mGET /bienvenida/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3Njk0OTMzMjQxYTNmOGQ0NTBkNDEiLCJpYXQiOjE3NDIxNzA0NzMsImV4cCI6MTc0MjE3NDA3M30.twuSfccX8EF6ZsfQwiONCnmHhaO_XpNjSQ1PT8zM9Oo [32m200[0m 5.709 ms - -[0m
+2025-03-16 21:14:54 info: [0mGET /assets/index-Da8VmRVi.css [32m200[0m 36.791 ms - -[0m
+2025-03-16 21:14:54 info: [0mGET /assets/index-DyenY1sK.js [32m200[0m 500.231 ms - -[0m
+2025-03-16 21:14:54 info: [0mGET /assets/swipe-back-C_Cslmvy.js [32m200[0m 16.942 ms - 682[0m
+2025-03-16 21:14:54 info: [0mGET /manifest.json [36m304[0m 1.778 ms - -[0m
+2025-03-16 21:14:54 info: [0mGET /assets/index9-D3mEJI1J.js [32m200[0m 18.903 ms - -[0m
+2025-03-16 21:15:34 info: [0mGET /assets/index-Da8VmRVi.css [36m304[0m 6.133 ms - -[0m
+2025-03-16 21:15:34 info: [0mGET /manifest.json [36m304[0m 3.872 ms - -[0m
+2025-03-16 21:16:09 info: [0mGET /assets/index-Da8VmRVi.css [36m304[0m 1.227 ms - -[0m
+2025-03-16 21:16:10 info: [0mGET /manifest.json [36m304[0m 1.509 ms - -[0m
+2025-03-16 21:16:19 info: [0mGET /api/niveles/leerNiveles [36m304[0m 20.208 ms - -[0m
+2025-03-16 21:16:19 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 171.560 ms - -[0m
+2025-03-16 21:16:19 info: [0mGET /api/contenido/leerContenidos [36m304[0m 152.768 ms - -[0m
+2025-03-16 21:16:19 info: [0mGET /api/niveles/leerNiveles [36m304[0m 152.806 ms - -[0m
+2025-03-16 21:16:19 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 10.043 ms - -[0m
+2025-03-16 21:16:19 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.918 ms - -[0m
+2025-03-16 21:16:19 info: [0mGET /api/users/getUsers [32m200[0m 164.865 ms - -[0m
+2025-03-16 21:16:35 info: [0mOPTIONS /api/reset-password [32m204[0m 0.104 ms - 0[0m
+2025-03-16 21:16:35 info: [0mPOST /api/reset-password [32m200[0m 62.786 ms - 556[0m
+2025-03-16 21:16:38 info: [0mGET /api/roles/getRoles [36m304[0m 3.587 ms - -[0m
+2025-03-16 21:16:38 info: [0mGET /api/roles/getRoles [36m304[0m 2.929 ms - -[0m
+2025-03-16 21:16:49 info: [0mOPTIONS /api/login [32m204[0m 0.221 ms - 0[0m
+2025-03-16 21:16:49 info: [0mPOST /api/login [32m200[0m 87.926 ms - -[0m
+2025-03-16 21:16:49 info: [0mGET /api/contenido/leerContenidos [36m304[0m 197.512 ms - -[0m
+2025-03-16 21:16:49 info: [0mGET /api/niveles/leerNiveles [36m304[0m 197.392 ms - -[0m
+2025-03-16 21:16:49 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.396 ms - -[0m
+2025-03-16 21:17:24 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.122 ms - 0[0m
+2025-03-16 21:17:30 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 6203.069 ms - 513[0m
+2025-03-16 21:17:35 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.269 ms - 0[0m
+2025-03-16 21:17:35 error: E11000 duplicate key error collection: uread.users index: _id_ dup key: { _id: ObjectId('67d7694933241a3f8d450d47') }
+2025-03-16 21:17:35 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 70.734 ms - 34[0m
+2025-03-16 21:17:39 info: ====================================
+2025-03-16 21:17:39 info: ============ ENV: development ===========
+2025-03-16 21:17:39 info: 🚀 App listening on the port 5212
+2025-03-16 21:17:39 info: ====================================
+2025-03-16 21:18:20 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.812 ms - 0[0m
+2025-03-16 21:18:26 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 6341.515 ms - 512[0m
+2025-03-16 21:18:56 info: [0mGET /api/roles/getRoles [36m304[0m 22.978 ms - -[0m
+2025-03-16 21:18:56 info: [0mGET /api/roles/getRoles [36m304[0m 8.338 ms - -[0m
+2025-03-16 21:18:58 info: [0mOPTIONS /api/login [32m204[0m 0.247 ms - 0[0m
+2025-03-16 21:18:58 info: [0mPOST /api/login [32m200[0m 71.301 ms - 790[0m
+2025-03-16 21:18:58 info: [0mGET /api/niveles/leerNiveles [36m304[0m 11.429 ms - -[0m
+2025-03-16 21:18:59 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 111.647 ms - -[0m
+2025-03-16 21:18:59 info: [0mGET /api/contenido/leerContenidos [36m304[0m 139.203 ms - -[0m
+2025-03-16 21:18:59 info: [0mGET /api/niveles/leerNiveles [36m304[0m 140.215 ms - -[0m
+2025-03-16 21:18:59 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 10.085 ms - -[0m
+2025-03-16 21:18:59 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.014 ms - -[0m
+2025-03-16 21:18:59 info: [0mGET /api/users/getUsers [32m200[0m 151.789 ms - -[0m
+2025-03-16 21:19:30 info: [0mGET /api/roles/getRoles [32m200[0m 14.799 ms - 734[0m
+2025-03-16 21:19:30 info: [0mGET /api/roles/getRoles [36m304[0m 5.637 ms - -[0m
+2025-03-16 21:19:38 info: [0mOPTIONS /api/login [32m204[0m 0.119 ms - 0[0m
+2025-03-16 21:19:38 info: [0mPOST /api/login [32m200[0m 59.866 ms - 693[0m
+2025-03-16 21:19:38 info: [0mGET /api/niveles/leerNiveles [32m200[0m 8.032 ms - 543[0m
+2025-03-16 21:19:38 info: [0mGET /api/contenido/leerContenidosBasicos [32m200[0m 42.821 ms - -[0m
+2025-03-16 21:19:38 info: [0mGET /api/contenido/leerContenidosV2 [32m200[0m 5.191 ms - 46[0m
+2025-03-16 21:20:07 info: ====================================
+2025-03-16 21:20:07 info: ============ ENV: development ===========
+2025-03-16 21:20:07 info: 🚀 App listening on the port 5212
+2025-03-16 21:20:07 info: ====================================
+2025-03-16 21:22:59 info: ====================================
+2025-03-16 21:22:59 info: ============ ENV: development ===========
+2025-03-16 21:22:59 info: 🚀 App listening on the port 5212
+2025-03-16 21:22:59 info: ====================================
+2025-03-16 21:28:47 info: ====================================
+2025-03-16 21:28:47 info: ============ ENV: development ===========
+2025-03-16 21:28:47 info: 🚀 App listening on the port 5212
+2025-03-16 21:28:47 info: ====================================
+2025-03-16 21:30:37 info: [0mGET /api/niveles/leerNiveles [36m304[0m 43.869 ms - -[0m
+2025-03-16 21:30:37 info: [0mGET /api/contenido/leerContenidos [36m304[0m 197.470 ms - -[0m
+2025-03-16 21:30:37 info: [0mGET /api/niveles/leerNiveles [36m304[0m 15.413 ms - -[0m
+2025-03-16 21:30:37 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 292.150 ms - -[0m
+2025-03-16 21:30:37 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 56.180 ms - -[0m
+2025-03-16 21:30:37 info: [0mGET /api/users/getUsers [32m200[0m 227.760 ms - -[0m
+2025-03-16 21:30:37 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.715 ms - -[0m
+2025-03-16 21:30:55 info: [0mGET /api/niveles/leerNiveles [36m304[0m 8.270 ms - -[0m
+2025-03-16 21:30:55 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 71.621 ms - -[0m
+2025-03-16 21:30:55 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.514 ms - -[0m
+2025-03-16 21:31:18 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.325 ms - 0[0m
+2025-03-16 21:31:23 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 5148.049 ms - 537[0m
+2025-03-16 21:32:20 info: ====================================
+2025-03-16 21:32:20 info: ============ ENV: development ===========
+2025-03-16 21:32:20 info: 🚀 App listening on the port 5212
+2025-03-16 21:32:20 info: ====================================
+2025-03-16 21:32:27 info: [0mGET /api/niveles/leerNiveles [36m304[0m 18.900 ms - -[0m
+2025-03-16 21:32:28 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 95.520 ms - -[0m
+2025-03-16 21:32:28 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.358 ms - -[0m
+2025-03-16 21:36:59 info: ====================================
+2025-03-16 21:36:59 info: ============ ENV: development ===========
+2025-03-16 21:36:59 info: 🚀 App listening on the port 5212
+2025-03-16 21:36:59 info: ====================================
+2025-03-16 21:39:00 info: ====================================
+2025-03-16 21:39:00 info: ============ ENV: development ===========
+2025-03-16 21:39:00 info: 🚀 App listening on the port 5212
+2025-03-16 21:39:00 info: ====================================
+2025-03-16 21:44:14 info: [0mGET /api/niveles/leerNiveles [36m304[0m 21.524 ms - -[0m
+2025-03-16 21:44:15 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 131.168 ms - -[0m
+2025-03-16 21:44:15 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.396 ms - -[0m
+2025-03-16 21:44:44 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.228 ms - 0[0m
+2025-03-16 21:44:50 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 5854.432 ms - 345[0m
+2025-03-16 21:45:47 info: [0mOPTIONS /api/login [32m204[0m 0.172 ms - 0[0m
+2025-03-16 21:45:47 info: [0mPOST /api/login [32m200[0m 68.345 ms - 850[0m
+2025-03-16 21:45:47 info: [0mGET /api/niveles/leerNiveles [36m304[0m 6.201 ms - -[0m
+2025-03-16 21:45:47 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 132.452 ms - -[0m
+2025-03-16 21:45:47 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.304 ms - -[0m
+2025-03-16 21:55:19 info: ====================================
+2025-03-16 21:55:19 info: ============ ENV: development ===========
+2025-03-16 21:55:19 info: 🚀 App listening on the port 5212
+2025-03-16 21:55:19 info: ====================================
+2025-03-16 21:55:26 info: [0mGET /api/niveles/leerNiveles [36m304[0m 16.402 ms - -[0m
+2025-03-16 21:55:26 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 91.722 ms - -[0m
+2025-03-16 21:55:26 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.808 ms - -[0m
+2025-03-16 21:55:49 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.444 ms - 0[0m
+2025-03-16 21:55:56 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 7421.673 ms - 345[0m
+2025-03-16 21:56:57 info: ====================================
+2025-03-16 21:56:57 info: ============ ENV: development ===========
+2025-03-16 21:56:57 info: 🚀 App listening on the port 5212
+2025-03-16 21:56:57 info: ====================================
+2025-03-16 21:57:16 info: ====================================
+2025-03-16 21:57:16 info: ============ ENV: development ===========
+2025-03-16 21:57:16 info: 🚀 App listening on the port 5212
+2025-03-16 21:57:16 info: ====================================
+2025-03-16 21:58:19 info: [0mGET /api/niveles/leerNiveles [36m304[0m 16.320 ms - -[0m
+2025-03-16 21:58:19 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 176.249 ms - -[0m
+2025-03-16 21:58:19 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 5.492 ms - -[0m
+2025-03-16 21:59:16 info: ====================================
+2025-03-16 21:59:16 info: ============ ENV: development ===========
+2025-03-16 21:59:16 info: 🚀 App listening on the port 5212
+2025-03-16 21:59:16 info: ====================================
+2025-03-16 21:59:19 info: [0mGET /api/niveles/leerNiveles [36m304[0m 27.030 ms - -[0m
+2025-03-16 21:59:19 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 111.893 ms - -[0m
+2025-03-16 21:59:19 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 14.874 ms - -[0m
+2025-03-16 21:59:29 info: [0mGET /api/roles/getRoles [36m304[0m 5.812 ms - -[0m
+2025-03-16 21:59:29 info: [0mGET /api/roles/getRoles [36m304[0m 4.682 ms - -[0m
+2025-03-16 21:59:31 info: [0mOPTIONS /api/login [32m204[0m 0.276 ms - 0[0m
+2025-03-16 21:59:31 info: [0mPOST /api/login [32m200[0m 97.157 ms - 886[0m
+2025-03-16 21:59:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 5.934 ms - -[0m
+2025-03-16 21:59:31 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 88.546 ms - -[0m
+2025-03-16 21:59:31 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.336 ms - -[0m
+2025-03-16 22:05:09 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [32m200[0m 8.481 ms - -[0m
+2025-03-16 22:05:55 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 7.538 ms - -[0m
+2025-03-16 22:06:19 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 4.258 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/niveles/leerNiveles [36m304[0m 11.553 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 122.670 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/niveles/leerNiveles [36m304[0m 92.245 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/contenido/leerContenidos [36m304[0m 223.215 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/niveles/leerNiveles [36m304[0m 239.998 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 16.625 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/niveles/leerNiveles [36m304[0m 35.592 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/niveles/leerNiveles [36m304[0m 18.066 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 10.435 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 25.156 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/contenido/leerContenidos [36m304[0m 142.664 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 180.980 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/niveles/leerNiveles [36m304[0m 29.116 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 200.902 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 46.576 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 6.051 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 5.274 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 13.331 ms - -[0m
+2025-03-16 22:10:42 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 45.109 ms - -[0m
+2025-03-16 22:10:43 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.741 ms - -[0m
+2025-03-16 22:13:20 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 10.477 ms - -[0m
+2025-03-16 22:13:20 info: [0mGET /api/niveles/leerNiveles [36m304[0m 8.257 ms - -[0m
+2025-03-16 22:13:20 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 57.660 ms - -[0m
+2025-03-16 22:13:20 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.281 ms - -[0m
+2025-03-16 22:15:32 info: [0mGET /api/niveles/leerNiveles [36m304[0m 12.551 ms - -[0m
+2025-03-16 22:15:33 info: [0mGET /api/contenido/leerContenidos [36m304[0m 202.129 ms - -[0m
+2025-03-16 22:15:33 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.100 ms - -[0m
+2025-03-16 22:15:33 info: [0mGET /api/niveles/leerNiveles [36m304[0m 5.040 ms - -[0m
+2025-03-16 22:15:33 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 31.408 ms - -[0m
+2025-03-16 22:15:33 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.725 ms - -[0m
+2025-03-16 22:15:33 info: [0mGET /api/niveles/leerNiveles [36m304[0m 3.329 ms - -[0m
+2025-03-16 22:15:33 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 46.597 ms - -[0m
+2025-03-16 22:15:33 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 3.822 ms - -[0m
+2025-03-16 22:15:33 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 3.069 ms - -[0m
+2025-03-16 22:15:33 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.875 ms - -[0m
+2025-03-16 22:16:55 info: [0mGET /api/contenido/leerContenidos [36m304[0m 216.435 ms - -[0m
+2025-03-16 22:16:55 info: [0mGET /api/niveles/leerNiveles [36m304[0m 213.327 ms - -[0m
+2025-03-16 22:16:55 info: [0mGET /api/niveles/leerNiveles [36m304[0m 14.846 ms - -[0m
+2025-03-16 22:16:55 info: [0mGET /api/niveles/leerNiveles [36m304[0m 22.925 ms - -[0m
+2025-03-16 22:16:55 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 31.483 ms - -[0m
+2025-03-16 22:16:55 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 299.844 ms - -[0m
+2025-03-16 22:16:55 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 106.515 ms - -[0m
+2025-03-16 22:16:55 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 22.264 ms - -[0m
+2025-03-16 22:16:55 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 6.307 ms - -[0m
+2025-03-16 22:16:55 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.958 ms - -[0m
+2025-03-16 22:16:55 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.601 ms - -[0m
+2025-03-16 22:17:13 info: [0mGET /api/niveles/leerNiveles [36m304[0m 6.153 ms - -[0m
+2025-03-16 22:17:13 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 72.664 ms - -[0m
+2025-03-16 22:17:13 info: [0mGET /api/contenido/leerContenidos [36m304[0m 173.843 ms - -[0m
+2025-03-16 22:17:13 info: [0mGET /api/niveles/leerNiveles [36m304[0m 173.268 ms - -[0m
+2025-03-16 22:17:13 info: [0mGET /api/niveles/leerNiveles [36m304[0m 175.970 ms - -[0m
+2025-03-16 22:17:13 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 14.585 ms - -[0m
+2025-03-16 22:17:13 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 249.045 ms - -[0m
+2025-03-16 22:17:13 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 59.143 ms - -[0m
+2025-03-16 22:17:13 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 65.358 ms - -[0m
+2025-03-16 22:17:13 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 18.372 ms - -[0m
+2025-03-16 22:17:13 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 8.426 ms - -[0m
+2025-03-16 22:18:24 info: [0mGET /api/niveles/leerNiveles [36m304[0m 4.324 ms - -[0m
+2025-03-16 22:18:24 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 49.962 ms - -[0m
+2025-03-16 22:18:24 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 25.522 ms - -[0m
+2025-03-16 22:18:24 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 6.535 ms - -[0m
+2025-03-16 22:18:24 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 6.295 ms - -[0m
+2025-03-16 22:18:25 info: [0mGET /api/niveles/leerNiveles [36m304[0m 3.570 ms - -[0m
+2025-03-16 22:18:25 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 36.071 ms - -[0m
+2025-03-16 22:18:25 info: [0mGET /api/contenido/leerContenidos [36m304[0m 83.420 ms - -[0m
+2025-03-16 22:18:25 info: [0mGET /api/niveles/leerNiveles [36m304[0m 82.857 ms - -[0m
+2025-03-16 22:18:25 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.173 ms - -[0m
+2025-03-16 22:18:25 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.593 ms - -[0m
+2025-03-16 22:18:55 info: [0mGET /api/niveles/leerNiveles [36m304[0m 5.883 ms - -[0m
+2025-03-16 22:18:55 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 52.340 ms - -[0m
+2025-03-16 22:18:55 info: [0mGET /api/contenido/leerContenidos [36m304[0m 140.465 ms - -[0m
+2025-03-16 22:18:55 info: [0mGET /api/niveles/leerNiveles [36m304[0m 139.621 ms - -[0m
+2025-03-16 22:18:55 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 13.773 ms - -[0m
+2025-03-16 22:18:55 info: [0mGET /api/users/getUsers [32m200[0m 163.415 ms - -[0m
+2025-03-16 22:18:55 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.549 ms - -[0m
+2025-03-16 22:19:07 info: [0mGET /api/niveles/leerNiveles [36m304[0m 16.289 ms - -[0m
+2025-03-16 22:19:07 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 65.501 ms - -[0m
+2025-03-16 22:19:07 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.740 ms - -[0m
+2025-03-16 22:19:07 info: [0mGET /api/contenido/leerContenidos [36m304[0m 127.544 ms - -[0m
+2025-03-16 22:19:07 info: [0mGET /api/niveles/leerNiveles [36m304[0m 127.056 ms - -[0m
+2025-03-16 22:19:07 info: [0mGET /api/niveles/leerNiveles [36m304[0m 4.791 ms - -[0m
+2025-03-16 22:19:07 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 91.685 ms - -[0m
+2025-03-16 22:19:07 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 68.854 ms - -[0m
+2025-03-16 22:19:07 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 66.932 ms - -[0m
+2025-03-16 22:19:07 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 5.184 ms - -[0m
+2025-03-16 22:19:07 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 5.601 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 17.756 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 17.413 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 14.657 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 50.872 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidos [36m304[0m 131.303 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 194.863 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 52.385 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 53.290 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 54.080 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 10.773 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 54.336 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidos [36m304[0m 86.999 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 30.685 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 31.086 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 225.666 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 91.801 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 210.204 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 22.524 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 21.503 ms - -[0m
+2025-03-16 22:23:31 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 6.670 ms - -[0m
+2025-03-16 22:23:39 info: [0mGET /api/niveles/leerNiveles [36m304[0m 6.057 ms - -[0m
+2025-03-16 22:23:39 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 41.250 ms - -[0m
+2025-03-16 22:23:39 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.749 ms - -[0m
+2025-03-16 22:24:08 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.241 ms - 0[0m
+2025-03-16 22:24:14 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 5148.093 ms - 344[0m
+2025-03-16 22:25:23 info: [0mGET /api/niveles/leerNiveles [36m304[0m 6.309 ms - -[0m
+2025-03-16 22:25:23 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 100.570 ms - -[0m
+2025-03-16 22:25:23 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.481 ms - -[0m
+2025-03-16 22:25:38 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 11.071 ms - -[0m
+2025-03-16 22:25:38 info: [0mGET /api/niveles/leerNiveles [36m304[0m 11.265 ms - -[0m
+2025-03-16 22:25:38 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 64.051 ms - -[0m
+2025-03-16 22:25:38 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 3.882 ms - -[0m
+2025-03-16 22:26:47 info: [0mGET /api/contenido/leerContenidos [36m304[0m 112.964 ms - -[0m
+2025-03-16 22:26:47 info: [0mGET /api/niveles/leerNiveles [36m304[0m 112.424 ms - -[0m
+2025-03-16 22:26:47 info: [0mGET /api/niveles/leerNiveles [36m304[0m 22.267 ms - -[0m
+2025-03-16 22:26:47 info: [0mGET /api/niveles/leerNiveles [36m304[0m 25.717 ms - -[0m
+2025-03-16 22:26:47 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 27.965 ms - -[0m
+2025-03-16 22:26:47 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 107.148 ms - -[0m
+2025-03-16 22:26:47 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 120.760 ms - -[0m
+2025-03-16 22:26:47 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=4&plan=A [36m304[0m 56.644 ms - -[0m
+2025-03-16 22:26:47 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 56.035 ms - -[0m
+2025-03-16 22:26:47 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.708 ms - -[0m
+2025-03-16 22:26:47 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 2.394 ms - -[0m

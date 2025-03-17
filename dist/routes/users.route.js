@@ -15,5 +15,6 @@ router.get(`/getAdminUsers`, /* authMiddleware, */ users_controller_1.default.ge
 router.get('/getAllSystemUser', /* authMiddleware, */ users_controller_1.default.getAllSystemUser);
 router.post('/getUsersByOrg', /* authMiddleware, */ users_controller_1.default.getUsersByOrg);
 router.post('/validarUsuario', /* authMiddleware, */ users_controller_1.default.validarUsuario);
+router.post('/habilitarUsuarioDesdeAlumno', /* authMiddleware, */ users_controller_1.default.habilitarUsuarioDesdeAlumno);
 exports.default = router;
 //# sourceMappingURL=users.route.js.map

@@ -7,14 +7,14 @@ import { formularioInscripcion } from "../../router/form.router"
 
 export const ContartarPlanPage = () => {
 
-    const transbankList: {A: string, B: string, C: string} = {
-        'A': 'https://www.webpay.cl/form-pay/253730',
-        'B': 'https://www.webpay.cl/form-pay/261774',
-        'C': 'https://www.webpay.cl/form-pay/261776'
+    const transbankList: {A: string[], B: string[], C: string[]} = {
+        'A': ['https://www.webpay.cl/form-pay/253730', 'https://www.webpay.cl/form-pay/262693', 'https://www.webpay.cl/form-pay/262694'],
+        'B': ['https://www.webpay.cl/form-pay/261774', 'https://www.webpay.cl/form-pay/262695', 'https://www.webpay.cl/form-pay/262696'],
+        'C': ['https://www.webpay.cl/form-pay/261776', 'https://www.webpay.cl/form-pay/262697', 'https://www.webpay.cl/form-pay/262698']
     }
 
     const params: any = useParams()
-    const [idPlan, setIdPlan] = useState()
+    const [idPlan, setIdPlan] = useState<'A' | 'B' | 'C'>()
     const [alumnos, setAlumnos] = useState([{
         name: '',
         lastName: '',
@@ -120,7 +120,7 @@ export const ContartarPlanPage = () => {
     const pagar = async () => {
         if (transbanckSelected && !transferenciaBancaria) {
             const params = `location=no, toolbar=no, menubar=no`
-            const popup = window.open(transbankList[idPlan!], 'Transbank Webpay', params)
+            const popup = window.open(transbankList[`${idPlan!}`][alumnos.length-1], 'Transbank Webpay', params)
             if (popup) {
                 let tiempo= 0;
                 const interval = setInterval(async () => {

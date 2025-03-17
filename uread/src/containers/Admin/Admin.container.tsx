@@ -37,6 +37,13 @@ const AdminContainer = () => {
             link: 'calendario',
             state: false,
             enable: true
+        },
+        {
+            id: 5,
+            name: 'ClassRoomEdit',
+            link: 'classroom-edit',
+            state: false,
+            enable: true
         }
     ])
     const detectUrl = (buttons_: ButtonAdmin[]) => {

@@ -62,6 +62,11 @@ const enviarValidacionUsuario = async (usuario: User) => {
     return response.data
 }
 
+const habilitarUsuarioDesdeAlumno = async (alumno: User) => {
+    const response = await axios.post(api.url + '/api/users/habilitarUsuarioDesdeAlumno', {alumno})
+    return response.data
+}
+
 export default {
     login,
     resendVerification,
@@ -74,5 +79,6 @@ export default {
     veryfyUser,
     resetPassword,
     restorePassword,
-    enviarValidacionUsuario
+    enviarValidacionUsuario,
+    habilitarUsuarioDesdeAlumno
 }

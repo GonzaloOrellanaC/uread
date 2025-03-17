@@ -16,5 +16,6 @@ router.post('/getUsersByOrg', /* authMiddleware, */ UsersController.getUsersByOr
 
 
 router.post('/validarUsuario', /* authMiddleware, */ UsersController.validarUsuario)
+router.post('/habilitarUsuarioDesdeAlumno', /* authMiddleware, */ UsersController.habilitarUsuarioDesdeAlumno)
 
 export default router

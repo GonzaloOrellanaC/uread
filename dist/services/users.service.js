@@ -12,6 +12,8 @@ const email_service_1 = require("./email.service");
 const html_1 = require("../utils/html");
 const logger_1 = require("../utils/logger");
 const path_1 = (0, tslib_1.__importDefault)(require("path"));
+const alumnos_provisorios_model_1 = (0, tslib_1.__importDefault)(require("../models/alumnos-provisorios.model"));
+const roles_model_1 = (0, tslib_1.__importDefault)(require("../models/roles.model"));
 const user = users_model_1.default;
 const findAllUser = async () => {
     const users = await user.find().populate('roles');
@@ -115,15 +117,41 @@ const deleteUser = async (userId, locale = configs_1.env.locale) => {
     return deleteUserById;
 };
 const validar = async (user) => {
-    const resetToken = (0, auth_service_1.createToken)(user);
-    const args = {
-        fullName: `${user.name} ${user.lastName}`,
-        resetLink: `${configs_1.env.url}bienvenida/${resetToken.token}`
-    };
-    await (0, email_service_1.sendHTMLEmail)(user.email, 'Bienvenid@ a UREAD', (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../../emailTemplates/bienvenida/email.html`), args), null
-    /* { attachments: [{ filename: 'logo.png', path: frontendAsset('assets/images/logo.png'), cid: 'logo' }] } */
-    ).catch(err => logger_1.logger.error((0, i18n_1.__)({ phrase: err.message, locale: 'es' })));
-    return user;
+    try {
+        const resetToken = (0, auth_service_1.createToken)(user);
+        const args = {
+            fullName: `${user.name} ${user.lastName}`,
+            resetLink: `${configs_1.env.url}bienvenida/${resetToken.token}`
+        };
+        await (0, email_service_1.sendHTMLEmail)(user.email, 'Bienvenid@ a UREAD', (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../../emailTemplates/bienvenida/email.html`), args), null);
+        const userEdited = await users_model_1.default.findByIdAndUpdate(user._id, { validado: 'Por validar' }, { new: true });
+        return userEdited;
+    }
+    catch (error) {
+        logger_1.logger.error((0, i18n_1.__)({ phrase: error.message, locale: 'es' }));
+        return null;
+    }
+};
+const habilitarAlumno = async (user) => {
+    try {
+        const hashedPassword = await bcrypt_1.default.hash(user.password, 10);
+        const createUserData = await users_model_1.default.create(Object.assign(Object.assign({}, user), { password: hashedPassword }));
+        const args = {
+            fullName: `${createUserData.name} ${createUserData.lastName}`,
+        };
+        await (0, email_service_1.sendHTMLEmail)(user.email, 'Bienvenid@ a UREAD', (0, html_1.generateHTML)(path_1.default.join(__dirname, `/../../emailTemplates/bienvenida-alumno/email.html`), args), null);
+        const rolAlumno = await roles_model_1.default.findOne({ name: 'user' });
+        await users_model_1.default.findByIdAndUpdate(user._id, {
+            validado: 'Validado',
+            roles: [rolAlumno._id]
+        }, { new: true });
+        const alumnoEditado = await alumnos_provisorios_model_1.default.findByIdAndUpdate(user._id, { state: false }, { new: true }).populate('levelUser');
+        return alumnoEditado;
+    }
+    catch (error) {
+        logger_1.logger.error((0, i18n_1.__)({ phrase: error.message, locale: 'es' }));
+        return null;
+    }
 };
 exports.default = {
     findAllUser,
@@ -139,6 +167,7 @@ exports.default = {
     createAdminSysUser,
     updateUser,
     deleteUser,
-    validar
+    validar,
+    habilitarAlumno
 };
 //# sourceMappingURL=users.service.js.map

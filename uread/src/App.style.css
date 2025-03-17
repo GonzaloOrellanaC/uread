@@ -526,3 +526,16 @@ ion-modal.registre-modal {
 .webpay-button:hover {
     background-color: #d0d9dd;
 }
+
+ion-modal.loading {
+    --background: transparent;
+    --box-shadow: 0;
+    --max-width: 100px;
+    --max-height: 100px;
+}
+
+.loading-general {
+    height: 100px;
+    width: 100px;
+    --color: #54dc98;
+}

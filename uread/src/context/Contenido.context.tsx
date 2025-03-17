@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { Contenido } from "../interfaces/Contenido.interface";
 import contenidoRouter from "../router/contenido.router";
 import { AuthContext } from "./Auth.context";
+import { IonModal, IonSpinner } from "@ionic/react";
 
 interface ContenidoContextValues {
     contenido: Contenido[],
@@ -10,6 +11,7 @@ interface ContenidoContextValues {
     niveles: any[]
     crearContenido: (contenido: Contenido) => Promise<any>
     editarContenido: (contenido: Contenido) => Promise<any>
+    setLoading: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const ContenidoContext = createContext<ContenidoContextValues>({} as ContenidoContextValues)
@@ -19,6 +21,9 @@ export const ContenidoProvider = (props: any) => {
     const [ contenido, setContenido ] = useState<Contenido[]>([])
     const [ contenidoV2, setContenidoV2 ] = useState<Contenido[]>([])
     const [niveles, setNiveles] = useState<any[]>([])
+
+    const [loading, setLoading] = useState(false)
+
     useEffect(() => {
         if (userData) {
             console.log(userData)
@@ -62,11 +67,19 @@ export const ContenidoProvider = (props: any) => {
         getContenido,
         niveles,
         crearContenido,
-        editarContenido
+        editarContenido,
+        setLoading
     }
     return (
         <ContenidoContext.Provider value={provider}>
             {props.children}
+            <IonModal 
+                className="loading"
+                isOpen={loading}
+                backdropDismiss={false}
+            >
+                <IonSpinner className="loading-general" />
+            </IonModal>
         </ContenidoContext.Provider>
     )
 }

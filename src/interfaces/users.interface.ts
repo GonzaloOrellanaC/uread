@@ -19,7 +19,7 @@ export interface User {
     profileImage: string
     roles: Role[]
     organization: Organization[]
-    levelUser?: number
+    levelUser?: any
     premium: boolean
     createdAt: Date
     updatedAt: Date

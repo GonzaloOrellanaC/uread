@@ -105,8 +105,20 @@ const validarUsuario = async (req, res, next) => {
         const deleteUserData = await users_service_1.default.validar(usuario);
         res.status(200).json({ data: deleteUserData, message: 'validado' });
     }
-    catch (error) {
-        console.log(error);
+    catch ({ name, message }) {
+        console.log({ name, message });
+        res.status(200).json({ data: { name }, message });
+    }
+};
+const habilitarUsuarioDesdeAlumno = async (req, res, next) => {
+    try {
+        const { alumno } = req.body;
+        const userData = await users_service_1.default.habilitarAlumno(alumno);
+        res.status(200).json({ user: userData, message: 'validado' });
+    }
+    catch ({ name, message }) {
+        console.log({ name, message });
+        res.status(200).json({ data: { name }, message });
     }
 };
 exports.default = {
@@ -119,6 +131,7 @@ exports.default = {
     createUser,
     editUser,
     deleteUser,
-    validarUsuario
+    validarUsuario,
+    habilitarUsuarioDesdeAlumno
 };
 //# sourceMappingURL=users.controller.js.map

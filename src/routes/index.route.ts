@@ -13,6 +13,7 @@ import StorageRouter from './storage.route'
 import CalendarRouter from './calendar.route'
 import IaRouter from './ia.router'
 import InscripcionRouter from './inscripcion.route'
+import ClassroomRouter from './classroom.route'
 
 const router = Router()
 
@@ -30,5 +31,6 @@ router.use('/api/azure-storage', StorageRouter)
 router.use('/api/calendar', CalendarRouter)
 router.use('/api/ia', IaRouter)
 router.use('/api/form', InscripcionRouter)
+router.use('/api/classroom', ClassroomRouter)
 
 export default router

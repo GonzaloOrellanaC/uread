@@ -3,11 +3,14 @@ import { useAuthContext } from "../../context/Auth.context"
 import { useEffect, useState } from "react"
 import { arrowBack, arrowUp, close } from "ionicons/icons"
 import { useHistory } from "react-router"
+import userRouter from "../../router/user.router"
+import { useContenidoContext } from "../../context/Contenido.context"
 
 export const AlumnosContainer = () => {
 
     const history = useHistory()
     const {userData} = useAuthContext()
+    const {setLoading} = useContenidoContext()
 
 
     const [alumnos, setAlumnos] = useState<any[]>([])
@@ -39,6 +42,22 @@ export const AlumnosContainer = () => {
             ...alumnoSeleccionado,
             [name]: value
         })
+    }
+
+    const habilitarUsuarioDesdeAlumno = async () => {
+        setLoading(true)
+        const response = await userRouter.habilitarUsuarioDesdeAlumno(alumnoSeleccionado)
+        console.log(response)
+        setAlumnos(alumnos.map(alumno => {
+            if (alumno._id === response.user._id) {
+                return response.user
+            } else {
+                return alumno
+            }
+        }))
+        alert('Alumno validado. Se ha enviado un correo electrónico para darle la bienvenida.')
+        setOpenAlumnoModal(false)
+        setLoading(false)
     }
 
     return (
@@ -78,7 +97,7 @@ export const AlumnosContainer = () => {
                         </IonInput>
                     </IonItem>
                     <div style={{width: '100%', textAlign: 'center', paddingTop: 10}}>
-                        <IonButton>
+                        <IonButton onClick={() => {habilitarUsuarioDesdeAlumno()}}>
                             Habilitar
                         </IonButton>
                     </div>
@@ -163,11 +182,11 @@ export const AlumnosContainer = () => {
                                                 </IonCol>
                                                 <IonCol>
                                                     <IonButtons>
-                                                        <IonButton title="Habilitar usuario" onClick={() => {
+                                                        {alumno.state && <IonButton title="Habilitar usuario" onClick={() => {
                                                             seleccionarUsuario(alumno)
                                                         }}>
                                                             <IonIcon icon={arrowUp} />
-                                                        </IonButton>
+                                                        </IonButton>}
                                                     </IonButtons>
                                                 </IonCol>
                                             </IonRow>

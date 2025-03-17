@@ -14,6 +14,7 @@ declare const _default: {
     createAdminSysUser: (userData: User, locale?: string) => Promise<User>;
     updateUser: (userId: string, userData: User, locale?: string) => Promise<User>;
     deleteUser: (userId: string, locale?: string) => Promise<User>;
-    validar: (user: User) => Promise<User>;
+    validar: (user: User) => Promise<User & import("mongoose").Document<any, any, any>>;
+    habilitarAlumno: (user: User) => Promise<import("mongoose").Document<any, any, any>>;
 };
 export default _default;

@@ -89,7 +89,7 @@ const login = async (
         populate : {
           path : 'levelUser'
         }
-      })
+      }).populate('levelUser')
     if (!findUser)
         throw new HttpException(409, __({ phrase: 'Email {{email}} not found', locale }, { email: userData.email }))
 
@@ -170,7 +170,7 @@ const resetPassword = async (token: string, password: string) => {
 
     const findUser: User = await user.findOneAndUpdate(
         { _id: tokenData._id },
-        { password: hashedPassword },
+        { password: hashedPassword, validado: 'Validado' },
         { new: true }
     )
     if (!findUser) throw new HttpException(409, __({ phrase: 'User not found', locale: 'es' }))

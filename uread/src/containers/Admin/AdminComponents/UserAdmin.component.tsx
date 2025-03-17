@@ -1,5 +1,5 @@
-import { IonButton, IonButtons, IonCard, IonCardContent, IonCol, IonContent, IonGrid, IonIcon, IonPage, IonRow, IonToolbar } from "@ionic/react"
-import { arrowUp, gridOutline, listOutline, pencilOutline, personAddOutline, trashOutline } from "ionicons/icons"
+import { IonButton, IonButtons, IonCard, IonCardContent, IonCol, IonContent, IonGrid, IonIcon, IonPage, IonRow, IonTitle, IonToolbar } from "@ionic/react"
+import { arrowBack, arrowUp, gridOutline, listOutline, pencilOutline, personAddOutline, trashOutline } from "ionicons/icons"
 import { useEffect, useState } from "react"
 import { useHistory } from "react-router"
 import { NewUserModal } from "../../../components/Modals"
@@ -9,7 +9,6 @@ import userRouter from "../../../router/user.router"
 import xlsx from "json-as-xlsx"
 import { useUsersContext } from "../../../context/Users.context"
 import {Pagination} from "@mui/material"
-import { useAuthContext } from "../../../context/Auth.context"
 
 const UserAdminComponent = () => {
     const {users, init} = useUsersContext()
@@ -181,18 +180,24 @@ const UserAdminComponent = () => {
         }
     }
 
+    const goAdminList = () => {
+        history.goBack()
+    }
+
     return (
         <IonPage>
             <IonContent class="ion-padding">
                 <IonToolbar className='toolbar-personalized'>
-                    <h2>Usuarios</h2>
+                    <IonButtons slot="start">
+                        <IonButton onClick={goAdminList}>
+                            <IonIcon icon={arrowBack} />
+                        </IonButton>
+                    </IonButtons>
+                    <IonTitle slot="start">Usuarios</IonTitle>
                     <IonButtons slot={'end'}>
                         <IonButton fill={'outline'} color={'primary'} slot="end" onClick={toExcel}>
                             Exportar a excel
                         </IonButton>
-                        {/* <IonButton fill={'outline'} color={'primary'} slot="end" onClick={changeView}>
-                            <IonIcon icon={(typeUsersList==='column') ? listOutline : gridOutline} style={{ marginRight: 10 }}/> {(typeUsersList==='column') ? 'Ver Listado' : 'Ver Tarjetas'}
-                        </IonButton> */}
                         <IonButton fill={'outline'} color={'primary'} slot="end" onClick={openNewUserModal}>
                             <IonIcon icon={personAddOutline} style={{ marginRight: 10 }}/> Nuevo Usuario
                         </IonButton>
@@ -255,9 +260,10 @@ const UserAdminComponent = () => {
                                             </IonCol>
                                             <IonCol sizeXs="2" style={{ textAlign: 'center' }}>
                                                 <IonButtons>
-                                                    <IonButton disabled={user.validado === 'validado'} fill={'outline'} color={'primary'} onClick={() => { (user.id! > 1) ? validarUsuario(user) : alert('Super Usuario no puede ser editado') }}>
+                                                    {(user.validado === 'No validado' || user.validado === 'Por validar') && 
+                                                    <IonButton fill={'outline'} color={(user.validado === 'No validado') ? 'primary' : 'warning'} onClick={() => { (user.id! > 1) ? validarUsuario(user) : alert('Super Usuario no puede ser editado') }}>
                                                         <IonIcon icon={arrowUp} style={{ marginRight: 10 }} /> 
-                                                    </IonButton>
+                                                    </IonButton>}
                                                     <IonButton fill={'outline'} color={'primary'} onClick={() => { (user.id! > 1) ? editUser(user) : alert('Super Usuario no puede ser editado') }}>
                                                         <IonIcon icon={pencilOutline} style={{ marginRight: 10 }} /> 
                                                     </IonButton>

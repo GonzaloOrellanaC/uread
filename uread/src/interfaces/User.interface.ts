@@ -18,10 +18,11 @@ export interface User {
     profileImage: string
     roles: any[]
     organization: any[]
-    levelUser?: number
+    levelUser?: any
     premium: boolean
     createdAt: Date
     updatedAt: Date
     alumnos: any[]
     validado: string
+    plan: string
 }

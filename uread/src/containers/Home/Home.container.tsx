@@ -63,8 +63,8 @@ const HomeContainer = () => {
                                 </IonCol>
                                 <IonCol sizeLg='6' sizeXs='12'>
                                     <div style={{height: '15vh'}}>
-                                        <IonButton onClick={() => {alert('Proximamente')}} style={{height: '100%', width: '100%'}}>
-                                            Videoconferencias
+                                        <IonButton onClick={() => {history.push('/espacio-estudiantes')}} style={{height: '100%', width: '100%'}}>
+                                            Espacio Estudiantes
                                         </IonButton>
                                     </div>
                                 </IonCol>

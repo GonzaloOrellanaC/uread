@@ -64,7 +64,7 @@ const login = async (userData, locale = index_1.env.locale) => {
         populate: {
             path: 'levelUser'
         }
-    });
+    }).populate('levelUser');
     if (!findUser)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Email {{email}} not found', locale }, { email: userData.email }));
     const isPasswordMatching = await bcrypt_1.default.compare(userData.password, findUser.password);
@@ -128,7 +128,7 @@ const resetPassword = async (token, password) => {
     if (!tokenData)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Invalid token', locale: 'es' }));
     const hashedPassword = await bcrypt_1.default.hash(password, 10);
-    const findUser = await user.findOneAndUpdate({ _id: tokenData._id }, { password: hashedPassword }, { new: true });
+    const findUser = await user.findOneAndUpdate({ _id: tokenData._id }, { password: hashedPassword, validado: 'Validado' }, { new: true });
     if (!findUser)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'User not found', locale: 'es' }));
     return findUser;

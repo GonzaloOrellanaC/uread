@@ -3,3 +3,46 @@
 2025-03-14 06:53:52 error: Se requieren credenciales SMTP
 2025-03-14 06:54:15 error: Se requieren credenciales SMTP
 2025-03-14 07:15:41 error: [POST] /api/login >> StatusCode:: 409, Message:: Contraseña incorrecta
+2025-03-14 13:10:22 error: uncaughtException: EPIPE: broken pipe, write
+Error: EPIPE: broken pipe, write
+    at Socket._write (node:internal/net:61:25)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at console.value (node:internal/console/constructor:305:16)
+    at console.log (node:internal/console/constructor:380:26)
+    at NativeCollection.$print (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:308:11)
+    at NativeCollection.<computed> [as findOne] (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:231:14)
+    at NodeCollection.findOne (C:\Users\gorel\Documents\Personales\uread\node_modules\mquery\lib\collection\node.js:42:19)
+    at model.Query.Query.findOne (C:\Users\gorel\Documents\Personales\uread\node_modules\mquery\lib\mquery.js:2024:20)
+    at model.Query.<anonymous> (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\query.js:2245:22)
+    at model.Query._wrappedThunk [as _findOne] (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\kareem\index.js:370:33
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-03-14 13:10:22 error: uncaughtException: EPIPE: broken pipe, write
+Error: EPIPE: broken pipe, write
+    at Socket._write (node:internal/net:61:25)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at console.value (node:internal/console/constructor:305:16)
+    at console.log (node:internal/console/constructor:380:26)
+    at NativeCollection.$print (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:308:11)
+    at NativeCollection.<computed> [as findOne] (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:231:14)
+    at NodeCollection.findOne (C:\Users\gorel\Documents\Personales\uread\node_modules\mquery\lib\collection\node.js:42:19)
+    at model.Query.Query.findOne (C:\Users\gorel\Documents\Personales\uread\node_modules\mquery\lib\mquery.js:2024:20)
+    at model.Query.<anonymous> (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\query.js:2245:22)
+    at model.Query._wrappedThunk [as _findOne] (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\kareem\index.js:370:33
+    at processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-03-14 13:10:22 error: uncaughtException: EPIPE: broken pipe, write
+Error: EPIPE: broken pipe, write
+    at Socket._write (node:internal/net:61:25)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at console.value (node:internal/console/constructor:305:16)
+    at console.log (node:internal/console/constructor:380:26)
+    at Object.initAccessControl (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:41:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async connectToDatabase (C:\Users\gorel\Documents\Personales\uread\src\app.ts:35:9)

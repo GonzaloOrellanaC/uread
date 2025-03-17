@@ -1,0 +1,61 @@
+2025-03-16 17:12:55 error: uncaughtException: classroom validation failed: niveles.0: Cast to [string] failed for value "[{"name":"A","checked":true},{"name":"B","checked":true},{"name":"C","checked":true}]" (type string) at path "niveles.0"
+ValidationError: classroom validation failed: niveles.0: Cast to [string] failed for value "[{"name":"A","checked":true},{"name":"B","checked":true},{"name":"C","checked":true}]" (type string) at path "niveles.0"
+    at model.Document.invalidate (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:2782:32)
+    at model.$set (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:1349:12)
+    at model.$set (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:1058:16)
+    at model.Document (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:4911:15)
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3157:22
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3193:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3192:15
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\index.js:1149:10)
+    at Function.create (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3127:23)
+    at C:\Users\gorel\Documents\Personales\uread\src\controllers\classroom.controller.ts:11:52
+2025-03-16 17:14:05 error: uncaughtException: classroom validation failed: planes.0: Cast to [string] failed for value "[{"name":"A","checked":true},{"name":"B","checked":true},{"name":"C","checked":true}]" (type string) at path "planes.0"
+ValidationError: classroom validation failed: planes.0: Cast to [string] failed for value "[{"name":"A","checked":true},{"name":"B","checked":true},{"name":"C","checked":true}]" (type string) at path "planes.0"
+    at model.Document.invalidate (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:2782:32)
+    at model.$set (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:1349:12)
+    at model.$set (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:1058:16)
+    at model.Document (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:4911:15)
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3157:22
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3193:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3192:15
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\index.js:1149:10)
+    at Function.create (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3127:23)
+    at C:\Users\gorel\Documents\Personales\uread\src\controllers\classroom.controller.ts:11:52
+2025-03-16 17:14:35 error: uncaughtException: classroom validation failed: planes.0: Cast to [string] failed for value "[{"name":"A","checked":true},{"name":"B","checked":true},{"name":"C","checked":true}]" (type string) at path "planes.0"
+ValidationError: classroom validation failed: planes.0: Cast to [string] failed for value "[{"name":"A","checked":true},{"name":"B","checked":true},{"name":"C","checked":true}]" (type string) at path "planes.0"
+    at model.Document.invalidate (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:2782:32)
+    at model.$set (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:1349:12)
+    at model.$set (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:1058:16)
+    at model.Document (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:106:12)
+    at new model (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:4911:15)
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3157:22
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3193:7
+    at Array.forEach (<anonymous>)
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3192:15
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)
+    at Mongoose._promiseOrCallback (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\index.js:1149:10)
+    at Function.create (C:\Users\gorel\Documents\Personales\uread\node_modules\mongoose\lib\model.js:3127:23)
+    at C:\Users\gorel\Documents\Personales\uread\src\controllers\classroom.controller.ts:11:52
+2025-03-16 20:57:16 error: uncaughtException: Cannot read properties of undefined (reading 'filter')
+TypeError: Cannot read properties of undefined (reading 'filter')
+    at C:\Users\gorel\Documents\Personales\uread\src\controllers\classroom.controller.ts:32:35
+    at Array.filter (<anonymous>)
+    at leerClassroomsPorNivelPlan (C:\Users\gorel\Documents\Personales\uread\src\controllers\classroom.controller.ts:30:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-16 21:17:35 error: E11000 duplicate key error collection: uread.users index: _id_ dup key: { _id: ObjectId('67d7694933241a3f8d450d47') }

@@ -111,8 +111,21 @@ const validarUsuario = async (req: Request, res: Response, next: NextFunction) =
         const deleteUserData: User = await UserService.validar(usuario)
 
         res.status(200).json({ data: deleteUserData, message: 'validado' })
-    } catch (error) {
-        console.log(error)
+    } catch ({name, message}) {
+        console.log({name, message})
+        res.status(200).json({ data: {name}, message })
+    }
+}
+
+const habilitarUsuarioDesdeAlumno = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const {alumno} = req.body
+        const userData: any = await UserService.habilitarAlumno(alumno)
+
+        res.status(200).json({ user: userData, message: 'validado' })
+    } catch ({name, message}) {
+        console.log({name, message})
+        res.status(200).json({ data: {name}, message })
     }
 }
 
@@ -126,5 +139,6 @@ export default {
     createUser,
     editUser,
     deleteUser,
-    validarUsuario
+    validarUsuario,
+    habilitarUsuarioDesdeAlumno
 }

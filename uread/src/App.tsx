@@ -54,6 +54,8 @@ import { SubirContenidoV2Component } from './containers/Admin/AdminComponents/Su
 import { ContartarPlanPage } from './pages/Plans/ContratarPlan.page';
 import { AlumnosPage } from './pages/Alumnos/Alumnos.page';
 import { BienvenidaPage } from './pages/Bienvenida/Bienvenida.page';
+import { EspacioEstudiantesPage } from './pages/EspacioEstudiantes/EspacioEstudiantes.page';
+import { ClassRoomsComponent } from './containers/Admin/AdminComponents/ClassroomsEdit.component';
 
 
 setupIonicReact();
@@ -120,6 +122,9 @@ const RouterApp = () => {
       <Route exact path='/usuarios'>
           <UserAdminComponent />
       </Route>
+      <Route exact path='/classroom-edit'>
+          <ClassRoomsComponent />
+      </Route>
       <Route exact path='/subir-contenido'>
           <SubirContenidoComponent />
       </Route>
@@ -150,6 +155,9 @@ const RouterApp = () => {
       </Route>
       <Route exact path={'/bienvenida/:id'}>
         <BienvenidaPage />
+      </Route>
+      <Route exact path={'/espacio-estudiantes'}>
+        <EspacioEstudiantesPage />
       </Route>
       
     </IonRouterOutlet>
