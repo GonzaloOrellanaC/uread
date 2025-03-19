@@ -16,7 +16,7 @@ const alumnos_provisorios_model_1 = (0, tslib_1.__importDefault)(require("../mod
 const roles_model_1 = (0, tslib_1.__importDefault)(require("../models/roles.model"));
 const user = users_model_1.default;
 const findAllUser = async () => {
-    const users = await user.find().populate('roles');
+    const users = await user.find().populate('roles').populate('levelUser');
     return users;
 };
 const findAllAdminUser = async () => {
@@ -50,7 +50,12 @@ const findUserById = async (userId) => {
 const editUser = async (usuario, locale = configs_1.env.locale) => {
     if ((0, util_1.isEmpty)(user))
         throw new HttpException_1.HttpException(400, (0, i18n_1.__)({ phrase: 'Datos de usuario no encontrados', locale }));
-    const findUser = await user.findByIdAndUpdate(usuario._id, usuario);
+    const findUser = await user.findByIdAndUpdate(usuario._id, usuario, { new: true }).populate('roles').populate('organization').populate({
+        path: 'alumnos',
+        populate: {
+            path: 'levelUser'
+        }
+    }).populate('levelUser');
     if (!findUser)
         throw new HttpException_1.HttpException(404, (0, i18n_1.__)({ phrase: 'User not found', locale }));
     return findUser;

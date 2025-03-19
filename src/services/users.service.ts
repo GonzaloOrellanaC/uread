@@ -18,7 +18,7 @@ import roleModel from '@/models/roles.model'
 const user = userModel
 
 const findAllUser = async () => {
-    const users: User[] = await user.find().populate('roles')
+    const users: User[] = await user.find().populate('roles').populate('levelUser')
     return users
 }
 
@@ -56,7 +56,12 @@ const findUserById = async (userId: string) => {
 
 const editUser = async (usuario: User, locale: string = env.locale) => {
     if (isEmpty(user)) throw new HttpException(400, __({ phrase: 'Datos de usuario no encontrados', locale }))
-    const findUser: User = await user.findByIdAndUpdate(usuario._id, usuario)
+    const findUser: User = await user.findByIdAndUpdate(usuario._id, usuario, {new: true}).populate('roles').populate('organization').populate({
+        path : 'alumnos',
+        populate : {
+          path : 'levelUser'
+        }
+      }).populate('levelUser')
     if (!findUser) throw new HttpException(404, __({ phrase: 'User not found', locale }))
     return findUser 
 }

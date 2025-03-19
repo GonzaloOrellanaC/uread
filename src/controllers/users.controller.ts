@@ -84,8 +84,8 @@ const createUser = async (req: Request, res: Response, next: NextFunction) => {
 const editUser = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const userData: User = req.body
-        const updateUserData: User = await UserService.editUser(userData)
-        res.status(200).json({ data: updateUserData, message: 'updated' })
+        const user: User = await UserService.editUser(userData)
+        res.status(200).json({ user, message: 'updated' })
     } catch (error) {
         console.log(error)
     }

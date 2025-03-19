@@ -1,3 +1,4 @@
+import { User } from "@/interfaces/users.interface";
 import alumnoProvisorioModel from "@/models/alumnos-provisorios.model";
 import nivelesModel from "@/models/niveles.model";
 import roleModel from "@/models/roles.model";
@@ -19,7 +20,18 @@ export const postDatosFormulario = async (req: Request, res: Response) => {
         try {
             const findRole = await roleModel.findOne({name: 'studentRepresentative'})
             apoderado.roles = [findRole._id]
-            const newApoderado = await userModel.create(apoderado)
+            let apoderadoBD: any
+            let exist: boolean = false
+            let alumnosSave: any[] = []
+            const findApoderado: User = await userModel.findOne({email: apoderado.email})
+            if (findApoderado) {
+                apoderadoBD = findApoderado
+                exist = true
+                alumnosSave = [...findApoderado.alumnos]
+            } else {
+                const newApoderado = await userModel.create(apoderado)
+                apoderadoBD = newApoderado
+            }
 
             const alumnosGuardados = await Promise.all(alumnos.map(async (alumno: any) => {
                 const encontrarNivel = await nivelesModel.findOne({number: Number(alumno.year)})
@@ -31,9 +43,9 @@ export const postDatosFormulario = async (req: Request, res: Response) => {
                 return alumnoGuardado._id
             }))
 
-            const apoderadoDatos = await userModel.findByIdAndUpdate(newApoderado._id, {alumnos: alumnosGuardados}, {new: true}).populate('roles').populate('alumnos')
+            const apoderadoDatos = await userModel.findByIdAndUpdate(apoderadoBD._id, {alumnos: [...alumnosSave, ...alumnosGuardados]}, {new: true}).populate('roles').populate('alumnos')
     
-            res.status(200).json({msg: 'ok', apoderado: apoderadoDatos})
+            res.status(200).json({msg: 'ok', apoderado: apoderadoDatos, exist})
         } catch ({name, message}) {
             console.log(name)
             console.log(message)

@@ -19,15 +19,27 @@ const postDatosFormulario = async (req, res) => {
         try {
             const findRole = await roles_model_1.default.findOne({ name: 'studentRepresentative' });
             apoderado.roles = [findRole._id];
-            const newApoderado = await users_model_1.default.create(apoderado);
+            let apoderadoBD;
+            let exist = false;
+            let alumnosSave = [];
+            const findApoderado = await users_model_1.default.findOne({ email: apoderado.email });
+            if (findApoderado) {
+                apoderadoBD = findApoderado;
+                exist = true;
+                alumnosSave = [...findApoderado.alumnos];
+            }
+            else {
+                const newApoderado = await users_model_1.default.create(apoderado);
+                apoderadoBD = newApoderado;
+            }
             const alumnosGuardados = await Promise.all(alumnos.map(async (alumno) => {
                 const encontrarNivel = await niveles_model_1.default.findOne({ number: Number(alumno.year) });
                 const newAlumno = Object.assign(Object.assign({}, alumno), { levelUser: encontrarNivel._id });
                 const alumnoGuardado = await alumnos_provisorios_model_1.default.create(newAlumno);
                 return alumnoGuardado._id;
             }));
-            const apoderadoDatos = await users_model_1.default.findByIdAndUpdate(newApoderado._id, { alumnos: alumnosGuardados }, { new: true }).populate('roles').populate('alumnos');
-            res.status(200).json({ msg: 'ok', apoderado: apoderadoDatos });
+            const apoderadoDatos = await users_model_1.default.findByIdAndUpdate(apoderadoBD._id, { alumnos: [...alumnosSave, ...alumnosGuardados] }, { new: true }).populate('roles').populate('alumnos');
+            res.status(200).json({ msg: 'ok', apoderado: apoderadoDatos, exist });
         }
         catch ({ name, message }) {
             console.log(name);

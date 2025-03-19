@@ -1,3 +1,6 @@
 /node_modules
 /dist/logs
 .env
+/files/audios/mp3/*
+/files/images/*
+/files/pdf/*

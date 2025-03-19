@@ -80,8 +80,8 @@ const createUser = async (req, res, next) => {
 const editUser = async (req, res, next) => {
     try {
         const userData = req.body;
-        const updateUserData = await users_service_1.default.editUser(userData);
-        res.status(200).json({ data: updateUserData, message: 'updated' });
+        const user = await users_service_1.default.editUser(userData);
+        res.status(200).json({ user, message: 'updated' });
     }
     catch (error) {
         console.log(error);

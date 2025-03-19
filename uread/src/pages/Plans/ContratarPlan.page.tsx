@@ -163,11 +163,16 @@ export const ContartarPlanPage = () => {
                 }),
                 apoderado
             })
-            console.log(response)
-            return (true)
+            return ({
+             state: true,
+             response   
+            })
         } catch (error) {
             console.log(error)
-            return(false)
+            return({
+                state: false,
+                error
+            })
         }
     }
 
@@ -185,7 +190,8 @@ export const ContartarPlanPage = () => {
 
     const enviarPago = async () => {
         setLoading(true)
-        guardarDatosPago().then(() => {
+        guardarDatosPago().then((data) => {
+            console.log(data)
             setLoading(false)
             alert('Muchas gracias por informarnos. Revisaremos el pago y te contactaremos en un plazo máximo de 24 HRS.')
         })

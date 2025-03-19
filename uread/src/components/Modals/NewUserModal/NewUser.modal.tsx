@@ -198,60 +198,6 @@ const NewUserModal = ({open, closeModal, user, deleteUser}: ModalData) => {
                 </IonItem>
                 <br />
                 <IonItem >
-                    <IonSelect
-                        label="Seleccionar Nivel (opcional)"
-                        labelPlacement={'floating'}                    
-                        fill={'outline'}
-                        color={'primary'} interface={'popover'} multiple value={roleSelected} onIonChange={(e) => {console.log(e.target.value); setRoleSelected(e.target.value) }}>
-                        {
-                            roles.map((rol, index) => {
-                                return (
-                                    <IonSelectOption key={index} value={rol._id} disabled={(rol.name === 'SuperAdmin') ? true : false}>
-                                        {rol.name}
-                                    </IonSelectOption>
-                                )
-                            })
-                        }
-                    </IonSelect>
-                </IonItem>
-                <br />
-                <IonItem >
-                    <IonSelect
-                        label="Seleccionar Nivel (opcional)"
-                        labelPlacement={'floating'}
-                        fill={'outline'}
-                        color={'primary'} interface={'popover'} value={levelUser} onIonChange={(e) => { setLevelUser(e.target.value) }}>
-                        <IonSelectOption value={1}>
-                            1
-                        </IonSelectOption>
-                        <IonSelectOption value={2}>
-                            2
-                        </IonSelectOption>
-                        <IonSelectOption value={3}>
-                            3
-                        </IonSelectOption>
-                        <IonSelectOption value={4}>
-                            4
-                        </IonSelectOption>
-                    </IonSelect>
-                </IonItem>
-                <br />
-                <IonItem >
-                    <IonSelect
-                        label="Seleccionar Nivel Acceso"
-                        labelPlacement={'floating'}
-                        fill={'outline'}
-                        color={'primary'} interface={'popover'} value={premium} onIonChange={(e) => { setPremium(e.target.value) }}>
-                        <IonSelectOption value={true}>
-                            Premium
-                        </IonSelectOption>
-                        <IonSelectOption value={false}>
-                            Free
-                        </IonSelectOption>
-                    </IonSelect>
-                </IonItem>
-                <br />
-                <IonItem >
                     <IonInput
                         label="Correo"
                         labelPlacement={'floating'}

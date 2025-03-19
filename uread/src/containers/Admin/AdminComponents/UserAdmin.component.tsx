@@ -1,5 +1,5 @@
 import { IonButton, IonButtons, IonCol, IonContent, IonGrid, IonIcon, IonPage, IonRow, IonTitle, IonToolbar } from "@ionic/react"
-import { arrowBack, arrowUp, pencilOutline, personAddOutline, trashOutline } from "ionicons/icons"
+import { archiveOutline, arrowBack, arrowUp, pencilOutline, personAddOutline, trashOutline } from "ionicons/icons"
 import { useEffect, useState } from "react"
 import { useHistory } from "react-router"
 import { NewUserModal } from "../../../components/Modals"
@@ -10,13 +10,14 @@ import xlsx from "json-as-xlsx"
 import { useUsersContext } from "../../../context/Users.context"
 import {Pagination} from "@mui/material"
 import { useContenidoContext } from "../../../context/Contenido.context"
+import { useAuthContext } from "../../../context/Auth.context"
 
 const UserAdminComponent = () => {
+    const {traducirNombreRol} = useAuthContext()
     const {users, init} = useUsersContext()
     const {setLoading} = useContenidoContext()
     const history = useHistory()
     const [openModal, setOpenModal] = useState(false)
-    const [typeUsersList, setTypeUsersList] = useState('column')
     const [user, setUser] = useState<User>()
     const [usersCache, setUsersCache] = useState<User[]>([])
 
@@ -65,17 +66,10 @@ const UserAdminComponent = () => {
         console.log(usersToShow)
     }, [usersToShow])
 
-    const changeView = () => {
-        if (typeUsersList==='column') {
-            setTypeUsersList('list')
-        } else {
-            setTypeUsersList('column')
-        }
-    }
-
     const toExcel = () => {
         setLoading(true)
         if (users.length > 0) {
+            console.log(users)
             const data = [
                 {
                   sheet: "Adults",
@@ -209,21 +203,18 @@ const UserAdminComponent = () => {
                     <IonTitle slot="start">Usuarios</IonTitle>
                     <IonButtons slot={'end'}>
                         <IonButton fill={'outline'} color={'primary'} slot="end" onClick={toExcel}>
-                            Exportar a excel
+                            <IonIcon icon={archiveOutline} />
                         </IonButton>
                         <IonButton fill={'outline'} color={'primary'} slot="end" onClick={openNewUserModal}>
-                            <IonIcon icon={personAddOutline} style={{ marginRight: 10 }}/> Nuevo Usuario
+                            <IonIcon icon={personAddOutline} />
                         </IonButton>
                     </IonButtons>
                 </IonToolbar>
                 <IonGrid>
                     {
-                        <div style={{ overflowY: 'auto', backgroundColor: 'transparent', maxHeight: 'calc(440px + 44px + 24.4px)', borderLeft: '#ccc 1px solid', borderRight: '#ccc 1px solid', borderBottom: '#ccc 1px solid' }}>
+                        <div style={{ overflowY: 'auto', backgroundColor: 'transparent', maxHeight: 'calc(100vh - 137px)', borderLeft: '#ccc 1px solid', borderRight: '#ccc 1px solid', borderBottom: '#ccc 1px solid' }}>
                             <IonRow style={{ borderTop: '#ccc 1px solid' }}>
-                                <IonCol sizeXs="0.5" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
-                                    
-                                </IonCol>
-                                <IonCol sizeXs="0.5" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
+                                <IonCol sizeXs="1" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
                                     
                                 </IonCol>
                                 <IonCol sizeXs="2" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
@@ -247,31 +238,31 @@ const UserAdminComponent = () => {
                                 usersToShow.map((user) => {
                                     return (
                                         <IonRow key={user.id} style={{ borderTop: '#ccc 1px solid' }}>
-                                            <IonCol sizeXs="0.5">
-                                            <p style={{ margin: 5, fontSize: 12 }}>{user.id!}</p>
+                                            <IonCol sizeXs="1" sizeLg="0.5">
+                                                <p style={{ margin: 5, fontSize: 12 }}>{user.id!}</p>
                                             </IonCol>
-                                            <IonCol sizeXs="0.5" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
+                                            <IonCol sizeXs="11" sizeLg="0.5" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
                                                 <img className="image-profile-list" src={user.profileImage ? user.profileImage : './assets/images/user-profile-default.svg'} height={30} alt="" />
                                             </IonCol>
-                                            <IonCol sizeXs="2" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
+                                            <IonCol sizeXs="3" sizeLg="2" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
                                                 <p style={{ margin: 5, fontSize: 12 }}>{user.name} {user.lastName}</p>
                                             </IonCol>
-                                            <IonCol sizeXs="1" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
-                                                <p style={{ margin: 5, fontSize: 12 }}>{user.levelUser}</p>
+                                            <IonCol sizeXs="3" sizeLg="1" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
+                                                <p style={{ margin: 5, fontSize: 12 }}>{(user.levelUser && user.levelUser.name) ? user.levelUser.name : 'N/A'}</p>
                                             </IonCol>
-                                            <IonCol sizeXs="3" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
+                                            <IonCol sizeXs="3" sizeLg="3" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
                                                 <p style={{ margin: 5, fontSize: 12 }}>{user.email}</p>
                                             </IonCol>
-                                            <IonCol sizeXs="2" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
+                                            <IonCol sizeXs="3" sizeLg="2" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
                                                 {user.roles.map((role, i) => {
                                                     return (
                                                         <p key={i} style={{ display: 'inline-block', margin: 5, fontSize: 12 }}>
-                                                            {`${role.name}`}{(i === (user.roles.length - 1)) ? '' : ', '}
+                                                            {`${traducirNombreRol(role.name)}`}{(i === (user.roles.length - 1)) ? '' : ', '}
                                                         </p>
                                                     )
                                                 })}
                                             </IonCol>
-                                            <IonCol sizeXs="2" style={{ textAlign: 'center' }}>
+                                            <IonCol sizeXs="12" sizeLg="2" style={{ textAlign: 'center' }}>
                                                 <IonButtons>
                                                     {(user.validado === 'No validado' || user.validado === 'Por validar') && 
                                                     <IonButton fill={'outline'} color={(user.validado === 'No validado') ? 'primary' : 'warning'} onClick={() => { (user.id! > 1) ? validarUsuario(user) : alert('Super Usuario no puede ser editado') }}>
