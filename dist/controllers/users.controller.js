@@ -121,6 +121,18 @@ const habilitarUsuarioDesdeAlumno = async (req, res, next) => {
         res.status(200).json({ data: { name }, message });
     }
 };
+const cambiarPassword = async (req, res, next) => {
+    try {
+        const { userId, password } = req.body;
+        console.log(userId, password);
+        const userData = await users_service_1.default.camibiarPassword(userId, password);
+        res.status(200).json({ user: userData, msg: 'Password Cambiada con éxito' });
+    }
+    catch ({ name, message }) {
+        console.log({ name, message });
+        res.status(200).json({ data: { name }, message });
+    }
+};
 exports.default = {
     getUsers,
     getAdminUsers,
@@ -132,6 +144,7 @@ exports.default = {
     editUser,
     deleteUser,
     validarUsuario,
-    habilitarUsuarioDesdeAlumno
+    habilitarUsuarioDesdeAlumno,
+    cambiarPassword
 };
 //# sourceMappingURL=users.controller.js.map

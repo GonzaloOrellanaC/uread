@@ -539,3 +539,22 @@ ion-modal.loading {
     width: 100px;
     --color: #54dc98;
 }
+
+.menu-profile {
+    text-align: center;
+}
+
+.menu-profile p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-profile img {
+    height: 70px;
+    width: 70px;
+    border-radius: 70px;
+}
+
+ion-menu.profile-management-modal {
+    --min-height: 400px !important;
+}

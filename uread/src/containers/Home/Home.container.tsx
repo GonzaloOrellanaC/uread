@@ -1,39 +1,43 @@
 import { IonButton, IonButtons, IonCard, IonCol, IonContent, IonGrid, IonIcon, IonRow, IonTitle, IonToolbar } from '@ionic/react'
 import { UseUreadContainer } from '../../components/Containers'
 import { useAuthContext } from '../../context/Auth.context'
-import { useHistory } from 'react-router'
-import { exitOutline } from 'ionicons/icons'
+import { useHistory, useLocation } from 'react-router'
+import { exitOutline, menu } from 'ionicons/icons'
+import { menuController } from '@ionic/core/components';
 
 const HomeContainer = () => {
     const {isAdmin, userData, setUserData, alumno, apoderado, profesor} = useAuthContext()
     const history = useHistory()
+    const location = useLocation()
+
+    const openMenu = async () => {
+        if (
+            location.pathname.includes('login') ||
+            location.pathname.includes('restore-password') ||
+            location.pathname.includes('reset-password') ||
+            location.pathname.includes('validate-password') ||
+            location.pathname.includes('plan') ||
+            location.pathname.includes('bienvenida')
+        ) {
+            console.log('No menu')
+        } else {
+            await menuController.open('menu-home')
+        }
+    }
+
     return (
         <IonContent>
             <IonToolbar>
-                <IonButtons slot='end'>
-                    <IonButton onClick={() => {
-                        history.replace('/login');
-                        setUserData(undefined);
-                        localStorage.clear()
-                    }}>
-                        <IonIcon icon={exitOutline} />
+                <IonButtons slot='start'>
+                    <IonButton onClick={openMenu}>
+                        <IonIcon icon={menu} />
                     </IonButton>
                 </IonButtons>
+                <IonTitle slot='start'>
+                    Bienvenid@ {userData?.name}
+                </IonTitle>
             </IonToolbar>
                 <IonGrid>
-                    <IonRow>
-                        <IonCol sizeXl='4' sizeLg='3.5' sizeMd='2' sizeSm='1' sizeXs='0'>
-
-                        </IonCol>
-                        <IonCol sizeXl='4' sizeLg='5' sizeMd='8' sizeSm='10' sizeXs='12'>
-                            <IonTitle>
-                                Bienvenid@ {userData?.name}
-                            </IonTitle>
-                        </IonCol>
-                        <IonCol sizeXl='4' sizeLg='3.5' sizeMd='2' sizeSm='1' sizeXs='0'>
-                            
-                        </IonCol>
-                    </IonRow>
                     <IonRow>
                         <IonCol sizeXl='4' sizeLg='3.5' sizeMd='2' sizeSm='1' sizeXs='0'>
 

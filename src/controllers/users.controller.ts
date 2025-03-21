@@ -129,6 +129,19 @@ const habilitarUsuarioDesdeAlumno = async (req: Request, res: Response, next: Ne
     }
 }
 
+const cambiarPassword = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const {userId, password} = req.body
+        console.log(userId, password)
+        const userData: any = await UserService.camibiarPassword(userId, password)
+
+        res.status(200).json({ user: userData, msg: 'Password Cambiada con éxito' })
+    } catch ({name, message}) {
+        console.log({name, message})
+        res.status(200).json({ data: {name}, message })
+    }
+}
+
 export default {
     getUsers,
     getAdminUsers,
@@ -140,5 +153,6 @@ export default {
     editUser,
     deleteUser,
     validarUsuario,
-    habilitarUsuarioDesdeAlumno
+    habilitarUsuarioDesdeAlumno,
+    cambiarPassword
 }

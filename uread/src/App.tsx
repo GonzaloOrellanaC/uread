@@ -1,4 +1,4 @@
-import { Redirect, Route, useHistory, useLocation } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -18,22 +18,10 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
-
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css';
-
 /* Theme variables */
 import './theme/variables.css';
 import { AboutPage, AdminPage, ContactUsPage, HomePage, LevelsPage, LibraryPage, LoginPage, RegistrePage, RessetPasswordPage, ValidateUserPage } from './pages';
 import './App.style.css'
-/* import { useEffect, useState } from 'react'; */
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -56,7 +44,6 @@ import { AlumnosPage } from './pages/Alumnos/Alumnos.page';
 import { BienvenidaPage } from './pages/Bienvenida/Bienvenida.page';
 import { EspacioEstudiantesPage } from './pages/EspacioEstudiantes/EspacioEstudiantes.page';
 import { ClassRoomsComponent } from './containers/Admin/AdminComponents/ClassroomsEdit.component';
-
 
 setupIonicReact();
 
@@ -149,7 +136,6 @@ const RouterApp = () => {
       <Route exact path={'/plan/:idPlan'}>
         <ContartarPlanPage />
       </Route>
-      
       <Route exact path={'/alumnos'}>
         <AlumnosPage />
       </Route>
@@ -159,7 +145,6 @@ const RouterApp = () => {
       <Route exact path={'/espacio-estudiantes'}>
         <EspacioEstudiantesPage />
       </Route>
-      
     </IonRouterOutlet>
   )
 }

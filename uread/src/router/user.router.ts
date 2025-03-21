@@ -57,6 +57,11 @@ const restorePassword = async (token: string, password: string) => {
     return response.data
 }
 
+const cambiarPassword = async (userId: string, password: string) => {
+    const response = await axios.post(api.url + '/api/users/cambiar-password', {userId, password})
+    return response.data
+}
+
 const enviarValidacionUsuario = async (usuario: User) => {
     const response = await axios.post(api.url + '/api/users/validarUsuario', {usuario})
     return response.data
@@ -80,5 +85,6 @@ export default {
     resetPassword,
     restorePassword,
     enviarValidacionUsuario,
-    habilitarUsuarioDesdeAlumno
+    habilitarUsuarioDesdeAlumno,
+    cambiarPassword
 }

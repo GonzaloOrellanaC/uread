@@ -10,6 +10,7 @@ interface UsersContextValues {
     init: () => Promise<void>
     profesores: any[]
     usuarios: any[]
+    editUser: (userData: User) => Promise<any>
 }
 
 export const UsersContext = createContext<UsersContextValues>({} as UsersContextValues)
@@ -55,6 +56,14 @@ export const UsersProvider = (props: any) => {
         setUsers(response.data)
     }
 
+    const editUser = async (userData: User) => {
+        const response = await userRouter.editUser(userData)
+        console.log(response)
+        setUserData(response.user)
+        alert(`Datos cambiados exitosamente.`)
+        return response
+    }
+
 
     const getUserById = async (id: string) => {
         const response = await userRouter.getUser(id)
@@ -67,7 +76,8 @@ export const UsersProvider = (props: any) => {
         users,
         init,
         profesores,
-        usuarios
+        usuarios,
+        editUser
     }
     return (
         <UsersContext.Provider value={provider}>

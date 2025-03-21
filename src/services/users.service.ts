@@ -196,6 +196,13 @@ const habilitarAlumno = async (user: User) => {
     }
 }
 
+const camibiarPassword = async (userId: string, password: string) => {
+    const hashedPassword = await bcrypt.hash(password, 10)
+    const findUser = await userModel.findByIdAndUpdate(userId, {password: hashedPassword})
+
+    return findUser
+}
+
 export default {
     findAllUser,
     findAllAdminUser,
@@ -211,5 +218,6 @@ export default {
     updateUser,
     deleteUser,
     validar,
-    habilitarAlumno
+    habilitarAlumno,
+    camibiarPassword
 }

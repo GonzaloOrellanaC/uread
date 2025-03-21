@@ -16,5 +16,6 @@ declare const _default: {
     deleteUser: (userId: string, locale?: string) => Promise<User>;
     validar: (user: User) => Promise<User & import("mongoose").Document<any, any, any>>;
     habilitarAlumno: (user: User) => Promise<import("mongoose").Document<any, any, any>>;
+    camibiarPassword: (userId: string, password: string) => Promise<User & import("mongoose").Document<any, any, any>>;
 };
 export default _default;

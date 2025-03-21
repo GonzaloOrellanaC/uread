@@ -158,6 +158,11 @@ const habilitarAlumno = async (user) => {
         return null;
     }
 };
+const camibiarPassword = async (userId, password) => {
+    const hashedPassword = await bcrypt_1.default.hash(password, 10);
+    const findUser = await users_model_1.default.findByIdAndUpdate(userId, { password: hashedPassword });
+    return findUser;
+};
 exports.default = {
     findAllUser,
     findAllAdminUser,
@@ -173,6 +178,7 @@ exports.default = {
     updateUser,
     deleteUser,
     validar,
-    habilitarAlumno
+    habilitarAlumno,
+    camibiarPassword
 };
 //# sourceMappingURL=users.service.js.map

@@ -77,7 +77,9 @@ const UserAdminComponent = () => {
                     { label: "ID", value: "id" },
                     { label: "Nombre", value: "name" },
                     { label: "Email", value: "email" },
-                    { label: "Rol", value: "rol" }
+                    { label: "Rol", value: "rol" },
+                    { label: "Plan", value: "plan" },
+                    { label: "Nivel", value: "levelUser" }
                   ],
                   content: [],
                 },
@@ -93,12 +95,12 @@ const UserAdminComponent = () => {
                 user.roles.forEach((rol, i) => {
                     if (user.roles.length > 1) {
                         if (i < (user.roles.length -1)) {
-                            roles += `${rol.name}, `
+                            roles += `${traducirNombreRol(rol.name)}, `
                         } else {
-                            roles += rol.name
+                            roles += traducirNombreRol(rol.name)
                         }
                     } else {
-                        roles += rol.name
+                        roles += traducirNombreRol(rol.name)
                     }
                     
                 })
@@ -106,12 +108,16 @@ const UserAdminComponent = () => {
                     id: number,
                     name: string,
                     email: string,
-                    rol: string
+                    rol: string,
+                    plan: string,
+                    levelUser: string
                 } = {
                     id: index+1,
                     name: `${user.name} ${user.lastName}`,
                     email: `${user.email}`,
-                    rol: roles
+                    rol: roles,
+                    plan: user.plan,
+                    levelUser: (user.levelUser && user.levelUser.name) ? user.levelUser.name : 'N/A'
                 }
                 contenido.push(dataContenido)
             })
@@ -223,7 +229,10 @@ const UserAdminComponent = () => {
                                 <IonCol sizeXs="1" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
                                     <p style={{ margin: 0, fontSize: 12 }}>Nivel</p>
                                 </IonCol>
-                                <IonCol sizeXs="3" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
+                                <IonCol sizeXs="1" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
+                                    <p style={{ margin: 0, fontSize: 12 }}>Plan</p>
+                                </IonCol>
+                                <IonCol sizeXs="2" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
                                     <p style={{ margin: 0, fontSize: 12 }}>Email</p>
                                 </IonCol>
                                 <IonCol sizeXs="2" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
@@ -250,7 +259,10 @@ const UserAdminComponent = () => {
                                             <IonCol sizeXs="3" sizeLg="1" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
                                                 <p style={{ margin: 5, fontSize: 12 }}>{(user.levelUser && user.levelUser.name) ? user.levelUser.name : 'N/A'}</p>
                                             </IonCol>
-                                            <IonCol sizeXs="3" sizeLg="3" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
+                                            <IonCol sizeXs="3" sizeLg="1" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
+                                                <p style={{ margin: 5, fontSize: 12 }}>{user.plan}</p>
+                                            </IonCol>
+                                            <IonCol sizeXs="3" sizeLg="2" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
                                                 <p style={{ margin: 5, fontSize: 12 }}>{user.email}</p>
                                             </IonCol>
                                             <IonCol sizeXs="3" sizeLg="2" style={{ textAlign: 'center', borderRight: '#ccc 1px solid' }}>
