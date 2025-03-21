@@ -156,7 +156,7 @@ const UserAdminComponent = () => {
             setLoading(true)
             const response = await userRouter.deleteUser(user._id)
             if (response) {
-                const myUid = localStorage.getItem('id-uread')
+                const myUid = localStorage.getItem('uread_id')
                 closeModal()
                 
                 if (myUid === user._id) {
@@ -166,8 +166,8 @@ const UserAdminComponent = () => {
                         console.log(data)
                         await UserIdb.deleteDb(data.id, database)
                     })
-                    localStorage.removeItem('id-uread')
-                    localStorage.removeItem('user-uread')
+                    localStorage.removeItem('uread_id')
+                    localStorage.removeItem('uread_user')
                     history.replace('/')
                     window.location.reload()
                 } else {

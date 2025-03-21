@@ -1,0 +1,2 @@
+2025-03-21 09:20:23 error: [GET] /home >> StatusCode:: 404, Message:: ENOENT: no such file or directory, stat 'C:\Users\gorel\Documents\Personales\uread\uread\dist\index.html'
+2025-03-21 09:20:23 error: [GET] /favicon.ico >> StatusCode:: 404, Message:: ENOENT: no such file or directory, stat 'C:\Users\gorel\Documents\Personales\uread\uread\dist\index.html'

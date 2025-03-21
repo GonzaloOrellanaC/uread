@@ -40,7 +40,7 @@ export const AuthProvider = (props: any) => {
                 userRouter.login(email, password)
                 .then(response => {
                     setUserData(response.data)
-                    localStorage.setItem('user', JSON.stringify(response.data))
+                    localStorage.setItem('uread_user', JSON.stringify(response.data))
                     setLoading(false)
                     history.push('/home')
                 })
@@ -65,7 +65,7 @@ export const AuthProvider = (props: any) => {
             } as User
             const response = await userRouter.editUser(newUser)
             setUserData(response.user)
-            localStorage.setItem('user', JSON.stringify(response.user))
+            localStorage.setItem('uread_user', JSON.stringify(response.user))
             setOpenRunEditor(false)
             setLoading(false)
         }
@@ -93,10 +93,34 @@ export const AuthProvider = (props: any) => {
                 setOpenRunEditor(true)
             }
         } else {
-            const userCache = localStorage.getItem('user')
+            const userCache = localStorage.getItem('uread_user')
             if (userCache) {
-                setUserData(JSON.parse(userCache))
-                history.replace('/home')
+                if (
+                    location.pathname.includes('login') ||
+                    location.pathname.includes('restore-password') ||
+                    location.pathname.includes('reset-password') ||
+                    location.pathname.includes('validate-password') ||
+                    location.pathname.includes('plan') ||
+                    location.pathname.includes('bienvenida')
+                ) {
+                    console.log('Nothing')
+                } else {
+                    setUserData(JSON.parse(userCache))
+                    history.replace('/home')
+                }
+            } else {
+                if (
+                    location.pathname.includes('login') ||
+                    location.pathname.includes('restore-password') ||
+                    location.pathname.includes('reset-password') ||
+                    location.pathname.includes('validate-password') ||
+                    location.pathname.includes('plan') ||
+                    location.pathname.includes('bienvenida')
+                ) {
+                    console.log('Nothing')
+                } else {
+                    history.replace('/login')
+                }
             }
         }
     },[userData])
