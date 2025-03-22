@@ -241,3 +241,5 @@
 2025-03-21 10:13:13 info: [0mGET /api/contenido/leerContenidos [36m304[0m 108.131 ms - -[0m
 2025-03-21 10:13:13 info: [0mGET /api/niveles/leerNiveles [36m304[0m 106.828 ms - -[0m
 2025-03-21 10:13:14 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 4.098 ms - -[0m
+2025-03-21 10:16:34 info: [0mGET /assets/images/logo.png [36m304[0m 0.790 ms - -[0m
+2025-03-21 10:17:29 info: [0mGET /assets/md.transition-1eWWgmOU.js [32m200[0m 2.004 ms - -[0m

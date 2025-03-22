@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { api } from '../configuration/environments'
 import Peer from 'simple-peer';
 
 import {io} from 'socket.io-client'
@@ -19,7 +20,7 @@ interface SocketContextValues {
     setEnableVideo: React.Dispatch<React.SetStateAction<boolean>>
     setEnableAudio: React.Dispatch<React.SetStateAction<boolean>>
 }
-const socket = io('http://localhost:5212');
+const socket = io(api.url);
 
 export const SocketContext = createContext<SocketContextValues>({} as SocketContextValues)
 

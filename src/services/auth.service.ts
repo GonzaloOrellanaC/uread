@@ -177,7 +177,7 @@ const resetPassword = async (token: string, password: string) => {
     return findUser
 }
 
-export const createToken = (user: User, expiresIn = 3600) => {
+export const createToken = (user: User, expiresIn = (3600 * 24)) => {
     const dataStoredInToken: DataStoredInToken = { _id: user._id } // user._id, [organizationId, resources]
     const secretKey: string = keys.secretKey
 

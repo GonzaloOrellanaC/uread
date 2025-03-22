@@ -133,7 +133,7 @@ const resetPassword = async (token, password) => {
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'User not found', locale: 'es' }));
     return findUser;
 };
-const createToken = (user, expiresIn = 3600) => {
+const createToken = (user, expiresIn = (3600 * 24)) => {
     const dataStoredInToken = { _id: user._id }; // user._id, [organizationId, resources]
     const secretKey = index_1.keys.secretKey;
     return { expiresIn, token: jsonwebtoken_1.default.sign(dataStoredInToken, secretKey, { expiresIn }) };
