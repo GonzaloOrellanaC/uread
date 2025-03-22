@@ -6,8 +6,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 import { TextList } from '../../interfaces/TextList.interface';
 import { pauseOutline, playOutline, stopOutline } from 'ionicons/icons';
+import { useHistory } from 'react-router';
 
 const LibraryContainer = () => {
+    const history = useHistory()
     const {contenido} = useContext(ContenidoContext)
     const [element, setElement] = useState<Contenido>()
     const [listaContenido, setListaContenido] = useState<Contenido[]>([])
@@ -22,6 +24,12 @@ const LibraryContainer = () => {
     const [listaTexto, setListaTexto] = useState([])
     let timeoutId: any = null
     let stoped = true
+
+    useEffect(() => {
+        history.goBack()
+    }, [])
+
+
     useEffect(() => {
         if(contenido) {
             console.log(contenido)

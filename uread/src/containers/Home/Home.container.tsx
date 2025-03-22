@@ -46,7 +46,7 @@ const HomeContainer = () => {
                             <IonRow>
                                 <IonCol sizeLg='6' sizeXs='12'>
                                     <div style={{height: '15vh'}}>
-                                        <IonButton onClick={() => {history.push('/library')}} style={{height: '100%', width: '100%'}}>
+                                        <IonButton onClick={() => {alert('Estamos trabajando para reponer el servicio.\nDisponible desde el lunes 24 de Marzo a las 12:00 hrs.')/* history.push('/library') */}} style={{height: '100%', width: '100%'}}>
                                             Biblioteca
                                         </IonButton>
                                     </div>
