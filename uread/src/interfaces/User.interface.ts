@@ -25,4 +25,5 @@ export interface User {
     alumnos: any[]
     validado: string
     plan: string
+    medioPago: string
 }

@@ -18,7 +18,12 @@ import roleModel from '@/models/roles.model'
 const user = userModel
 
 const findAllUser = async () => {
-    const users: User[] = await user.find().populate('roles').populate('levelUser')
+    const users: User[] = await user.find().populate('roles').populate('levelUser').populate({
+        path : 'alumnos',
+        populate : {
+          path : 'levelUser'
+        }
+    })
     return users
 }
 

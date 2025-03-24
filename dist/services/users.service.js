@@ -16,7 +16,12 @@ const alumnos_provisorios_model_1 = (0, tslib_1.__importDefault)(require("../mod
 const roles_model_1 = (0, tslib_1.__importDefault)(require("../models/roles.model"));
 const user = users_model_1.default;
 const findAllUser = async () => {
-    const users = await user.find().populate('roles').populate('levelUser');
+    const users = await user.find().populate('roles').populate('levelUser').populate({
+        path: 'alumnos',
+        populate: {
+            path: 'levelUser'
+        }
+    });
     return users;
 };
 const findAllAdminUser = async () => {

@@ -45,7 +45,8 @@ const enviarNuevaPassword = async () => {
                         <IonCol />
                         <IonCol sizeXl="3" sizeLg="4" sizeMd="7" sizeSm="10" sizeXs="12">
                             <div style={{textAlign: 'center'}}>
-                                <h3>Para iniciar en UREAD debes crear una contraseña</h3>
+                            <h3>Para iniciar en UREAD debes crear una contraseña</h3>
+                            <p>Debes crear una contraseña de mínimo 6 carácteres y escribirla nuevamente para confirmar.</p>
                                 <br />
                                 <IonItem>
                                     <IonInput type={'password'} labelPlacement={'floating'} label='Nueva Password' name={'password'} value={password} onIonChange={(e) => {setPassword(e.target.value as string)}}>

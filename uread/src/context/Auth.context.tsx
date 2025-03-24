@@ -14,7 +14,7 @@ interface AuthContextValues {
     apoderado: boolean
     alumno: boolean
     profesor: boolean
-    traducirNombreRol: (name: string) => string
+    traducirNombreRol: (name: string) => "Apoderado" | "Alumno" | "Administrador" | "SuperAdmin"
 }
 
 export const AuthContext = createContext<AuthContextValues>({} as AuthContextValues)
@@ -135,7 +135,7 @@ export const AuthProvider = (props: any) => {
         } else if (name === 'admin') {
             return 'Administrador'
         } else {
-            return name
+            return 'SuperAdmin'
         }
     }
 

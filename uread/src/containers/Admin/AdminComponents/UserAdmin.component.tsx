@@ -1,5 +1,5 @@
-import { IonButton, IonButtons, IonCol, IonContent, IonGrid, IonIcon, IonPage, IonRow, IonTitle, IonToolbar } from "@ionic/react"
-import { archiveOutline, arrowBack, arrowUp, pencilOutline, personAddOutline, trashOutline } from "ionicons/icons"
+import { IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonModal, IonPage, IonRow, IonTitle, IonToolbar } from "@ionic/react"
+import { archiveOutline, arrowBack, arrowUp, close, pencilOutline, people, personAddOutline, trashOutline } from "ionicons/icons"
 import { useEffect, useState } from "react"
 import { useHistory } from "react-router"
 import { NewUserModal } from "../../../components/Modals"
@@ -27,9 +27,16 @@ const UserAdminComponent = () => {
     const [page, setPage] = useState(1)
     const [pages, setPages] = useState(0)
 
+    const [alumnosDeApoderado, setAlumnosDeApoderado] = useState<User[]>([])
+    const [openAlumnos, setOpenAlumnos] = useState(false)
+
     useEffect(() => {
         setUsersCache(users)
     }, [users])
+
+    useEffect(() => {
+        console.log(alumnosDeApoderado)
+    }, [alumnosDeApoderado])
     
     useEffect(() => {
         if (usersCache.length > 0) {
@@ -197,8 +204,77 @@ const UserAdminComponent = () => {
         history.goBack()
     }
 
+    const revealAlumnos = (alumnos: User[]) => {
+        setAlumnosDeApoderado(alumnos)
+        setOpenAlumnos(true)
+    }
+
     return (
         <IonPage>
+            {
+                openAlumnos && <IonModal
+                    isOpen={openAlumnos}
+                    onWillDismiss={() => {setOpenAlumnos(false)}}
+                >
+                    <IonHeader className="ion-no-border">
+                        <IonToolbar>
+                            <IonTitle slot='start'>
+                                Alumnos
+                            </IonTitle>
+                            <IonButtons slot="end">
+                                <IonButton onClick={() => {setOpenAlumnos(false)}}>
+                                    <IonIcon icon={close} />
+                                </IonButton>
+                            </IonButtons>
+                        </IonToolbar>
+                    </IonHeader>
+                    <IonContent class="ion-padding">
+                        <IonGrid>
+                            <IonRow style={{borderBottom: '1px #ccc solid'}}>
+                                <IonCol size="3.5">
+                                    Nombre y apellido
+                                </IonCol>
+                                <IonCol size="2.5">
+                                    Medio Pago
+                                </IonCol>
+                                <IonCol size="1.5">
+                                    Plan
+                                </IonCol>
+                                <IonCol size="1.5">
+                                    Nivel
+                                </IonCol>
+                                <IonCol>
+                                    Estado
+                                </IonCol>
+                            </IonRow>
+                            {
+                                alumnosDeApoderado.map((alumno, index) => {
+                                    console.log(alumno)
+                                    return (
+                                        <IonRow key={index}>
+                                            <IonCol size="3.5">
+                                                <p>{alumno.name} {alumno.lastName}</p>
+                                            </IonCol>
+                                            <IonCol size="2.5">
+                                                <p>{alumno.medioPago}</p>
+                                            </IonCol>
+                                            <IonCol size="1.5">
+                                                <p>{alumno.plan}</p>
+                                            </IonCol>
+                                            <IonCol size="1.5">
+                                                <p>{alumno.levelUser.number}</p>
+                                            </IonCol>
+                                            <IonCol>
+                                                <p>{!alumno.state ? 'Validado' : 'No validado'}</p>
+                                            </IonCol>
+                                        </IonRow>
+                                    )
+                                })
+                            }
+                        </IonGrid>
+                    </IonContent>
+                </IonModal>
+            }
             <IonContent class="ion-padding">
                 <IonToolbar className='toolbar-personalized'>
                     <IonButtons slot="start">
@@ -279,6 +355,9 @@ const UserAdminComponent = () => {
                                                     {(user.validado === 'No validado' || user.validado === 'Por validar') && 
                                                     <IonButton fill={'outline'} color={(user.validado === 'No validado') ? 'primary' : 'warning'} onClick={() => { (user.id! > 1) ? validarUsuario(user) : alert('Super Usuario no puede ser editado') }}>
                                                         <IonIcon icon={arrowUp} style={{ marginRight: 10 }} /> 
+                                                    </IonButton>}
+                                                    {(traducirNombreRol(user.roles[0].name) === 'Apoderado') && <IonButton fill={'outline'} color={'primary'} onClick={() => { revealAlumnos(user.alumnos) }}>
+                                                        <IonIcon icon={people} style={{ marginRight: 10 }} /> 
                                                     </IonButton>}
                                                     <IonButton fill={'outline'} color={'primary'} onClick={() => { (user.id! > 1) ? editUser(user) : alert('Super Usuario no puede ser editado') }}>
                                                         <IonIcon icon={pencilOutline} style={{ marginRight: 10 }} /> 
