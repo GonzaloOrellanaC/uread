@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
+const logger_1 = require("../utils/logger");
 const env_1 = require("../configs/env");
 const auth_service_1 = (0, tslib_1.__importDefault)(require("../services/auth.service"));
 const signUp = async (req, res, next) => {
@@ -82,8 +83,9 @@ const resetPassword = async (req, res, next) => {
         const resetUserPassword = await auth_service_1.default.resetPassword(token, password);
         res.status(200).json({ data: resetUserPassword, message: 'password reset' });
     }
-    catch (error) {
-        next(error);
+    catch ({ name, message }) {
+        logger_1.logger.error(`Errir setting password | ${name}: ${message}`);
+        res.status(400).json({ data: { name, message }, message: 'password reset' });
     }
 };
 exports.default = {

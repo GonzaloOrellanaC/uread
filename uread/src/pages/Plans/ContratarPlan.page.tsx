@@ -100,7 +100,7 @@ export const ContartarPlanPage = () => {
             medioPago: string
         } = {
             ...apoderado,
-            [name]: value
+            [name]: (name === 'email') ? value.toLowerCase() : value
         }
         setApoderado(apoderadoCache)
     }

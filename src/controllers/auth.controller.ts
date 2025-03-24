@@ -1,3 +1,4 @@
+import { logger } from '@/utils/logger'
 import { locale } from '@configs/env'
 import { LoginData, User } from '@interfaces/users.interface'
 import AuthService from '@services/auth.service'
@@ -79,8 +80,9 @@ const resetPassword = async (req: Request, res: Response, next: NextFunction) =>
         const resetUserPassword: User = await AuthService.resetPassword(token, password)
 
         res.status(200).json({ data: resetUserPassword, message: 'password reset' })
-    } catch (error) {
-        next(error)
+    } catch ({name, message}) {
+        logger.error(`Errir setting password | ${name}: ${message}`)
+        res.status(400).json({ data: {name, message}, message: 'password reset' })
     }
 }
 

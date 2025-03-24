@@ -25,8 +25,8 @@ const enviarNuevaPassword = async () => {
                         history.replace('/login')
                     }, 500);
                 }
-            } catch (error) {
-                alert('Error')
+            } catch ({name, message}: any) {
+                alert(`Error: ${name}: ${message}.\nComuníquese con el administrador.`)
             }
         } else {
             alert('Contraseñas no coinciden.')
