@@ -23,6 +23,7 @@ declare const _default: {
             expiresIn: number;
             token: string;
         };
+        grupos: any;
     }>;
     logout: (userData: User, locale?: string) => Promise<User>;
     verifyUserEmail: (userId: import("mongoose").Schema.Types.ObjectId) => Promise<User & import("mongoose").Document<any, any, any>>;

@@ -21,9 +21,35 @@ const borrarContenido = async (_id) => {
     const contenidoResponse = await contenido.findByIdAndDelete(_id);
     return contenidoResponse;
 };
-const leerContenidos = async () => {
-    const contenidoResponse = await contenido.find();
-    return contenidoResponse;
+const leerContenidos = async (idGrupos) => {
+    return new Promise(async (resolve) => {
+        const lista = [];
+        const resultados = await Promise.all(idGrupos.map(async (id) => {
+            const elementos = await contenido.find({ nivel: id, state: true }).populate('nivel');
+            return elementos;
+        }));
+        organizarContenidos(lista, resultados, 0, (filtrados) => {
+            resolve(filtrados);
+        });
+    });
+};
+const organizarContenidos = (lista, contenidos, index, callback) => {
+    if (!contenidos[index]) {
+        const filtered = Array.from(new Set(lista.map(a => a._id)))
+            .map(_id => {
+            return lista.find(a => a._id === _id);
+        });
+        callback(filtered);
+    }
+    else {
+        const contenido = contenidos[index];
+        contenido.forEach((c, n) => {
+            lista.push(c);
+            if (n === contenido.length - 1) {
+                organizarContenidos(lista, contenidos, index + 1, callback);
+            }
+        });
+    }
 };
 const leerContenidosV2 = async () => {
     const contenidoResponse = await contenidoV2.find();

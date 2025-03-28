@@ -21,12 +21,10 @@ const postDatosFormulario = async (req, res) => {
             apoderado.roles = [findRole._id];
             let apoderadoBD;
             let exist = false;
-            let alumnosSave = [];
             const findApoderado = await users_model_1.default.findOne({ email: apoderado.email });
             if (findApoderado) {
                 apoderadoBD = findApoderado;
                 exist = true;
-                alumnosSave = [...findApoderado.alumnos];
             }
             else {
                 const newApoderado = await users_model_1.default.create(apoderado);
@@ -38,7 +36,10 @@ const postDatosFormulario = async (req, res) => {
                 const alumnoGuardado = await alumnos_provisorios_model_1.default.create(newAlumno);
                 return alumnoGuardado._id;
             }));
-            const apoderadoDatos = await users_model_1.default.findByIdAndUpdate(apoderadoBD._id, { alumnos: [...alumnosSave, ...alumnosGuardados] }, { new: true }).populate('roles').populate('alumnos');
+            alumnosGuardados.forEach((a) => {
+                apoderadoBD.alumnos.push(a);
+            });
+            const apoderadoDatos = await users_model_1.default.findByIdAndUpdate(apoderadoBD._id, apoderadoBD, { new: true }).populate('roles').populate('alumnos');
             res.status(200).json({ msg: 'ok', apoderado: apoderadoDatos, exist });
         }
         catch ({ name, message }) {

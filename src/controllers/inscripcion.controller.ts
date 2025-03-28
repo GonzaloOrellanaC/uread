@@ -22,12 +22,10 @@ export const postDatosFormulario = async (req: Request, res: Response) => {
             apoderado.roles = [findRole._id]
             let apoderadoBD: any
             let exist: boolean = false
-            let alumnosSave: any[] = []
             const findApoderado: User = await userModel.findOne({email: apoderado.email})
             if (findApoderado) {
                 apoderadoBD = findApoderado
                 exist = true
-                alumnosSave = [...findApoderado.alumnos]
             } else {
                 const newApoderado = await userModel.create(apoderado)
                 apoderadoBD = newApoderado
@@ -43,7 +41,11 @@ export const postDatosFormulario = async (req: Request, res: Response) => {
                 return alumnoGuardado._id
             }))
 
-            const apoderadoDatos = await userModel.findByIdAndUpdate(apoderadoBD._id, {alumnos: [...alumnosSave, ...alumnosGuardados]}, {new: true}).populate('roles').populate('alumnos')
+            alumnosGuardados.forEach((a) => {
+                apoderadoBD.alumnos.push(a)
+            })
+
+            const apoderadoDatos = await userModel.findByIdAndUpdate(apoderadoBD._id, apoderadoBD, {new: true}).populate('roles').populate('alumnos')
     
             res.status(200).json({msg: 'ok', apoderado: apoderadoDatos, exist})
         } catch ({name, message}) {

@@ -1,0 +1,327 @@
+2025-03-28 06:44:14 info: ====================================
+2025-03-28 06:44:14 info: ============ ENV: development ===========
+2025-03-28 06:44:14 info: 🚀 App listening on the port 5212
+2025-03-28 06:44:14 info: ====================================
+2025-03-28 06:45:30 info: [0mGET /api/roles/getRoles [32m200[0m 105.223 ms - 734[0m
+2025-03-28 06:45:30 info: [0mGET /api/roles/getRoles [36m304[0m 97.546 ms - -[0m
+2025-03-28 06:45:30 info: [0mGET /api/niveles/leerNiveles [32m200[0m 82.021 ms - 543[0m
+2025-03-28 06:45:30 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 502.049 ms - 49[0m
+2025-03-28 06:45:31 info: [0mGET /api/users/getUsers [32m200[0m 835.191 ms - -[0m
+2025-03-28 06:45:31 info: [0mGET /api/contenido/leerContenidosBasicos [32m200[0m 995.877 ms - -[0m
+2025-03-28 06:45:31 info: [0mGET /api/contenido/leerContenidosV2 [32m200[0m 71.476 ms - 46[0m
+2025-03-28 06:45:41 info: [0mOPTIONS /api/login [32m204[0m 0.675 ms - 0[0m
+2025-03-28 06:45:41 info: [0mPOST /api/login [32m200[0m 743.792 ms - 790[0m
+2025-03-28 06:45:42 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 78.315 ms - -[0m
+2025-03-28 06:45:42 info: [0mGET /api/niveles/leerNiveles [36m304[0m 96.482 ms - -[0m
+2025-03-28 06:45:42 info: [0mGET /api/contenido/leerContenidos [32m200[0m 745.943 ms - -[0m
+2025-03-28 06:45:42 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 75.243 ms - -[0m
+2025-03-28 06:46:10 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 73.634 ms - -[0m
+2025-03-28 06:46:10 info: [0mGET /api/niveles/leerNiveles [36m304[0m 81.182 ms - -[0m
+2025-03-28 06:46:10 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 73.547 ms - -[0m
+2025-03-28 06:46:10 info: [0mGET /api/niveles/leerNiveles [36m304[0m 75.364 ms - -[0m
+2025-03-28 06:46:11 info: [0mGET /api/contenido/leerContenidos [36m304[0m 629.851 ms - -[0m
+2025-03-28 06:46:11 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 69.930 ms - -[0m
+2025-03-28 06:46:11 info: [0mGET /api/contenido/leerContenidos [36m304[0m 610.154 ms - -[0m
+2025-03-28 06:46:11 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 73.308 ms - -[0m
+2025-03-28 06:47:35 info: [0mGET /api/niveles/leerNiveles [36m304[0m 70.294 ms - -[0m
+2025-03-28 06:47:35 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 83.998 ms - -[0m
+2025-03-28 06:47:35 info: [0mGET /api/users/getUsers [36m304[0m 324.828 ms - -[0m
+2025-03-28 06:47:35 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 465.904 ms - -[0m
+2025-03-28 06:47:35 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 67.529 ms - -[0m
+2025-03-28 06:48:15 info: ====================================
+2025-03-28 06:48:15 info: ============ ENV: development ===========
+2025-03-28 06:48:15 info: 🚀 App listening on the port 5212
+2025-03-28 06:48:15 info: ====================================
+2025-03-28 06:48:21 info: [0mGET /api/niveles/leerNiveles [36m304[0m 104.675 ms - -[0m
+2025-03-28 06:48:21 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 102.687 ms - -[0m
+2025-03-28 06:48:21 info: [0mGET /api/users/getUsers [36m304[0m 782.058 ms - -[0m
+2025-03-28 06:48:21 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 881.982 ms - -[0m
+2025-03-28 06:48:22 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 77.037 ms - -[0m
+2025-03-28 06:52:54 info: ====================================
+2025-03-28 06:52:54 info: ============ ENV: development ===========
+2025-03-28 06:52:54 info: 🚀 App listening on the port 5212
+2025-03-28 06:52:54 info: ====================================
+2025-03-28 06:54:23 info: ====================================
+2025-03-28 06:54:23 info: ============ ENV: development ===========
+2025-03-28 06:54:23 info: 🚀 App listening on the port 5212
+2025-03-28 06:54:23 info: ====================================
+2025-03-28 06:54:37 info: ====================================
+2025-03-28 06:54:37 info: ============ ENV: development ===========
+2025-03-28 06:54:37 info: 🚀 App listening on the port 5212
+2025-03-28 06:54:37 info: ====================================
+2025-03-28 06:54:50 info: ====================================
+2025-03-28 06:54:50 info: ============ ENV: development ===========
+2025-03-28 06:54:50 info: 🚀 App listening on the port 5212
+2025-03-28 06:54:50 info: ====================================
+2025-03-28 06:55:02 info: ====================================
+2025-03-28 06:55:02 info: ============ ENV: development ===========
+2025-03-28 06:55:02 info: 🚀 App listening on the port 5212
+2025-03-28 06:55:02 info: ====================================
+2025-03-28 06:55:06 info: [0mGET /api/niveles/leerNiveles [36m304[0m 86.835 ms - -[0m
+2025-03-28 06:55:06 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 573.607 ms - -[0m
+2025-03-28 06:55:07 info: [0mGET /api/users/getUsers [36m304[0m 845.131 ms - -[0m
+2025-03-28 06:55:07 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 987.276 ms - -[0m
+2025-03-28 06:55:07 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 90.662 ms - -[0m
+2025-03-28 07:03:08 info: [0mGET /api/roles/getRoles [36m304[0m 96.911 ms - -[0m
+2025-03-28 07:03:08 info: [0mGET /api/roles/getRoles [36m304[0m 95.832 ms - -[0m
+2025-03-28 07:03:08 info: [0mGET /api/niveles/leerNiveles [36m304[0m 84.968 ms - -[0m
+2025-03-28 07:03:08 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 153.318 ms - -[0m
+2025-03-28 07:03:09 info: [0mGET /api/users/getUsers [36m304[0m 423.763 ms - -[0m
+2025-03-28 07:03:09 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 562.217 ms - -[0m
+2025-03-28 07:03:09 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 67.556 ms - -[0m
+2025-03-28 07:03:16 info: [0mOPTIONS /api/login [32m204[0m 0.624 ms - 0[0m
+2025-03-28 07:03:16 info: [0mPOST /api/login [32m200[0m 377.131 ms - 884[0m
+2025-03-28 07:03:16 info: [0mGET /api/niveles/leerNiveles [36m304[0m 79.894 ms - -[0m
+2025-03-28 07:03:16 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 160.793 ms - -[0m
+2025-03-28 07:03:17 info: [0mGET /api/contenido/leerContenidos [36m304[0m 696.310 ms - -[0m
+2025-03-28 07:03:17 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 69.045 ms - -[0m
+2025-03-28 07:37:35 info: [0mGET /api/contenido/leerContenidosBasicos [32m200[0m 374.390 ms - -[0m
+2025-03-28 07:37:35 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 87.586 ms - -[0m
+2025-03-28 07:50:05 info: ====================================
+2025-03-28 07:50:05 info: ============ ENV: development ===========
+2025-03-28 07:50:05 info: 🚀 App listening on the port 5212
+2025-03-28 07:50:05 info: ====================================
+2025-03-28 07:51:11 info: [0mGET /api/contenido/leerContenidosBasicos [32m200[0m 418.572 ms - -[0m
+2025-03-28 07:51:11 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 75.923 ms - -[0m
+2025-03-28 07:51:18 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 398.534 ms - -[0m
+2025-03-28 07:51:18 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 71.718 ms - -[0m
+2025-03-28 07:51:24 info: [0mGET /api/roles/getRoles [36m304[0m 71.632 ms - -[0m
+2025-03-28 07:51:25 info: [0mGET /api/roles/getRoles [36m304[0m 75.155 ms - -[0m
+2025-03-28 07:51:26 info: [0mGET /api/roles/getRoles [36m304[0m 78.039 ms - -[0m
+2025-03-28 07:51:26 info: [0mGET /api/roles/getRoles [36m304[0m 77.857 ms - -[0m
+2025-03-28 07:51:32 info: [0mOPTIONS /api/login [32m204[0m 0.417 ms - 0[0m
+2025-03-28 07:51:32 info: [0mPOST /api/login [32m200[0m 407.538 ms - 884[0m
+2025-03-28 07:51:32 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 376.846 ms - -[0m
+2025-03-28 07:51:33 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 88.272 ms - -[0m
+2025-03-28 07:53:07 info: ====================================
+2025-03-28 07:53:07 info: ============ ENV: development ===========
+2025-03-28 07:53:07 info: 🚀 App listening on the port 5212
+2025-03-28 07:53:07 info: ====================================
+2025-03-28 07:54:31 info: ====================================
+2025-03-28 07:54:31 info: ============ ENV: development ===========
+2025-03-28 07:54:31 info: 🚀 App listening on the port 5212
+2025-03-28 07:54:31 info: ====================================
+2025-03-28 07:57:58 info: ====================================
+2025-03-28 07:57:58 info: ============ ENV: development ===========
+2025-03-28 07:57:58 info: 🚀 App listening on the port 5212
+2025-03-28 07:57:58 info: ====================================
+2025-03-28 07:58:45 info: ====================================
+2025-03-28 07:58:45 info: ============ ENV: development ===========
+2025-03-28 07:58:45 info: 🚀 App listening on the port 5212
+2025-03-28 07:58:45 info: ====================================
+2025-03-28 07:59:07 info: ====================================
+2025-03-28 07:59:07 info: ============ ENV: development ===========
+2025-03-28 07:59:07 info: 🚀 App listening on the port 5212
+2025-03-28 07:59:07 info: ====================================
+2025-03-28 07:59:54 info: ====================================
+2025-03-28 07:59:54 info: ============ ENV: development ===========
+2025-03-28 07:59:54 info: 🚀 App listening on the port 5212
+2025-03-28 07:59:54 info: ====================================
+2025-03-28 08:03:23 info: ====================================
+2025-03-28 08:03:23 info: ============ ENV: development ===========
+2025-03-28 08:03:23 info: 🚀 App listening on the port 5212
+2025-03-28 08:03:23 info: ====================================
+2025-03-28 08:04:49 info: ====================================
+2025-03-28 08:04:49 info: ============ ENV: development ===========
+2025-03-28 08:04:49 info: 🚀 App listening on the port 5212
+2025-03-28 08:04:49 info: ====================================
+2025-03-28 08:06:12 info: ====================================
+2025-03-28 08:06:12 info: ============ ENV: development ===========
+2025-03-28 08:06:12 info: 🚀 App listening on the port 5212
+2025-03-28 08:06:12 info: ====================================
+2025-03-28 08:07:46 info: ====================================
+2025-03-28 08:07:46 info: ============ ENV: development ===========
+2025-03-28 08:07:46 info: 🚀 App listening on the port 5212
+2025-03-28 08:07:46 info: ====================================
+2025-03-28 08:12:40 info: ====================================
+2025-03-28 08:12:40 info: ============ ENV: development ===========
+2025-03-28 08:12:40 info: 🚀 App listening on the port 5212
+2025-03-28 08:12:40 info: ====================================
+2025-03-28 08:16:29 info: ====================================
+2025-03-28 08:16:29 info: ============ ENV: development ===========
+2025-03-28 08:16:29 info: 🚀 App listening on the port 5212
+2025-03-28 08:16:29 info: ====================================
+2025-03-28 08:17:00 info: ====================================
+2025-03-28 08:17:00 info: ============ ENV: development ===========
+2025-03-28 08:17:00 info: 🚀 App listening on the port 5212
+2025-03-28 08:17:00 info: ====================================
+2025-03-28 08:17:21 info: ====================================
+2025-03-28 08:17:21 info: ============ ENV: development ===========
+2025-03-28 08:17:21 info: 🚀 App listening on the port 5212
+2025-03-28 08:17:21 info: ====================================
+2025-03-28 08:19:58 info: ====================================
+2025-03-28 08:19:58 info: ============ ENV: development ===========
+2025-03-28 08:19:58 info: 🚀 App listening on the port 5212
+2025-03-28 08:19:58 info: ====================================
+2025-03-28 08:23:40 info: ====================================
+2025-03-28 08:23:40 info: ============ ENV: development ===========
+2025-03-28 08:23:40 info: 🚀 App listening on the port 5212
+2025-03-28 08:23:40 info: ====================================
+2025-03-28 08:24:48 info: [0mGET /api/contenido/leerContenidosBasicos [32m200[0m 421.153 ms - -[0m
+2025-03-28 08:24:48 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 67.054 ms - -[0m
+2025-03-28 08:25:36 info: ====================================
+2025-03-28 08:25:36 info: ============ ENV: development ===========
+2025-03-28 08:25:36 info: 🚀 App listening on the port 5212
+2025-03-28 08:25:36 info: ====================================
+2025-03-28 08:27:08 info: ====================================
+2025-03-28 08:27:08 info: ============ ENV: development ===========
+2025-03-28 08:27:08 info: 🚀 App listening on the port 5212
+2025-03-28 08:27:08 info: ====================================
+2025-03-28 08:28:14 info: ====================================
+2025-03-28 08:28:14 info: ============ ENV: development ===========
+2025-03-28 08:28:14 info: 🚀 App listening on the port 5212
+2025-03-28 08:28:14 info: ====================================
+2025-03-28 08:34:26 info: [0mGET /api/contenido/leerContenidosBasicos [32m200[0m 150.171 ms - 43[0m
+2025-03-28 08:34:26 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 70.476 ms - -[0m
+2025-03-28 08:35:06 info: ====================================
+2025-03-28 08:35:06 info: ============ ENV: development ===========
+2025-03-28 08:35:06 info: 🚀 App listening on the port 5212
+2025-03-28 08:35:06 info: ====================================
+2025-03-28 09:14:34 info: ====================================
+2025-03-28 09:14:34 info: ============ ENV: development ===========
+2025-03-28 09:14:34 info: 🚀 App listening on the port 5212
+2025-03-28 09:14:34 info: ====================================
+2025-03-28 09:14:38 info: [0mGET /api/roles/getRoles [36m304[0m 100.844 ms - -[0m
+2025-03-28 09:14:38 info: [0mGET /api/roles/getRoles [36m304[0m 71.612 ms - -[0m
+2025-03-28 09:14:41 info: [0mOPTIONS /api/login [32m204[0m 0.309 ms - 0[0m
+2025-03-28 09:14:41 info: [0mPOST /api/login [32m200[0m 444.901 ms - 884[0m
+2025-03-28 09:14:42 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 137.155 ms - -[0m
+2025-03-28 09:14:42 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 64.780 ms - -[0m
+2025-03-28 09:15:43 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 150.077 ms - -[0m
+2025-03-28 09:15:43 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 69.526 ms - -[0m
+2025-03-28 09:15:43 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 165.260 ms - -[0m
+2025-03-28 09:15:43 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 66.027 ms - -[0m
+2025-03-28 09:15:58 info: [0mGET /api/roles/getRoles [36m304[0m 79.639 ms - -[0m
+2025-03-28 09:15:58 info: [0mGET /api/roles/getRoles [36m304[0m 78.623 ms - -[0m
+2025-03-28 09:16:06 info: [0mOPTIONS /api/login [32m204[0m 0.178 ms - 0[0m
+2025-03-28 09:16:06 info: [0mPOST /api/login [32m200[0m 272.292 ms - 884[0m
+2025-03-28 09:16:06 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 135.140 ms - -[0m
+2025-03-28 09:16:06 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 65.813 ms - -[0m
+2025-03-28 09:16:20 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 159.270 ms - -[0m
+2025-03-28 09:16:20 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 70.598 ms - -[0m
+2025-03-28 09:16:20 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 143.931 ms - -[0m
+2025-03-28 09:16:20 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 67.112 ms - -[0m
+2025-03-28 09:16:28 info: [0mGET /api/roles/getRoles [36m304[0m 72.213 ms - -[0m
+2025-03-28 09:16:28 info: [0mGET /api/roles/getRoles [36m304[0m 76.095 ms - -[0m
+2025-03-28 09:16:31 info: [0mOPTIONS /api/login [32m204[0m 0.250 ms - 0[0m
+2025-03-28 09:16:31 info: [0mPOST /api/login [32m200[0m 282.327 ms - 884[0m
+2025-03-28 09:16:31 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 135.183 ms - -[0m
+2025-03-28 09:16:31 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 68.828 ms - -[0m
+2025-03-28 09:17:47 info: ====================================
+2025-03-28 09:17:47 info: ============ ENV: development ===========
+2025-03-28 09:17:47 info: 🚀 App listening on the port 5212
+2025-03-28 09:17:47 info: ====================================
+2025-03-28 09:17:51 info: [0mOPTIONS /api/login [32m204[0m 1.112 ms - 0[0m
+2025-03-28 09:17:51 info: [0mPOST /api/login [32m200[0m 316.224 ms - -[0m
+2025-03-28 09:17:51 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 141.300 ms - -[0m
+2025-03-28 09:17:52 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 67.354 ms - -[0m
+2025-03-28 09:54:42 info: ====================================
+2025-03-28 09:54:42 info: ============ ENV: development ===========
+2025-03-28 09:54:42 info: 🚀 App listening on the port 5212
+2025-03-28 09:54:42 info: ====================================
+2025-03-28 09:54:47 info: [0mGET /api/roles/getRoles [36m304[0m 81.620 ms - -[0m
+2025-03-28 09:54:48 info: [0mGET /api/roles/getRoles [36m304[0m 70.383 ms - -[0m
+2025-03-28 09:55:05 info: [0mOPTIONS /api/login [32m204[0m 0.691 ms - 0[0m
+2025-03-28 09:55:06 info: [0mPOST /api/login [32m200[0m 307.385 ms - -[0m
+2025-03-28 09:55:27 info: [0mGET /api/roles/getRoles [36m304[0m 75.784 ms - -[0m
+2025-03-28 09:55:27 info: [0mGET /api/roles/getRoles [36m304[0m 74.727 ms - -[0m
+2025-03-28 09:55:29 info: [0mOPTIONS /api/login [32m204[0m 0.260 ms - 0[0m
+2025-03-28 09:55:30 info: [0mPOST /api/login [32m200[0m 565.560 ms - -[0m
+2025-03-28 09:57:05 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.173 ms - 0[0m
+2025-03-28 09:57:05 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 2.401 ms - 43[0m
+2025-03-28 09:57:05 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.233 ms - 0[0m
+2025-03-28 09:57:05 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 2.991 ms - 43[0m
+2025-03-28 09:57:13 info: [0mGET /api/roles/getRoles [36m304[0m 76.290 ms - -[0m
+2025-03-28 09:57:14 info: [0mGET /api/roles/getRoles [36m304[0m 77.727 ms - -[0m
+2025-03-28 09:57:21 info: [0mOPTIONS /api/login [32m204[0m 0.297 ms - 0[0m
+2025-03-28 09:57:21 info: [0mPOST /api/login [32m200[0m 313.445 ms - -[0m
+2025-03-28 09:57:21 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.138 ms - 0[0m
+2025-03-28 09:57:21 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 1.198 ms - 43[0m
+2025-03-28 09:57:48 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.137 ms - 0[0m
+2025-03-28 09:57:48 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 1.237 ms - 43[0m
+2025-03-28 09:58:36 info: ====================================
+2025-03-28 09:58:36 info: ============ ENV: development ===========
+2025-03-28 09:58:36 info: 🚀 App listening on the port 5212
+2025-03-28 09:58:36 info: ====================================
+2025-03-28 09:58:44 info: [0mGET /api/roles/getRoles [36m304[0m 78.654 ms - -[0m
+2025-03-28 09:58:44 info: [0mGET /api/roles/getRoles [36m304[0m 76.512 ms - -[0m
+2025-03-28 09:58:49 info: [0mOPTIONS /api/login [32m204[0m 0.789 ms - 0[0m
+2025-03-28 09:58:49 info: [0mPOST /api/login [32m200[0m 312.290 ms - -[0m
+2025-03-28 09:58:49 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.213 ms - 0[0m
+2025-03-28 09:58:49 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 4.357 ms - 43[0m
+2025-03-28 09:59:59 info: ====================================
+2025-03-28 09:59:59 info: ============ ENV: development ===========
+2025-03-28 09:59:59 info: 🚀 App listening on the port 5212
+2025-03-28 09:59:59 info: ====================================
+2025-03-28 10:00:03 info: [0mOPTIONS /api/login [32m204[0m 0.933 ms - 0[0m
+2025-03-28 10:00:04 info: [0mPOST /api/login [32m200[0m 308.140 ms - -[0m
+2025-03-28 10:00:04 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.142 ms - 0[0m
+2025-03-28 10:00:04 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 4.790 ms - 43[0m
+2025-03-28 10:02:04 info: ====================================
+2025-03-28 10:02:04 info: ============ ENV: development ===========
+2025-03-28 10:02:04 info: 🚀 App listening on the port 5212
+2025-03-28 10:02:04 info: ====================================
+2025-03-28 10:02:13 info: ====================================
+2025-03-28 10:02:13 info: ============ ENV: development ===========
+2025-03-28 10:02:13 info: 🚀 App listening on the port 5212
+2025-03-28 10:02:13 info: ====================================
+2025-03-28 10:02:18 info: [0mOPTIONS /api/login [32m204[0m 1.821 ms - 0[0m
+2025-03-28 10:02:18 info: [0mPOST /api/login [32m200[0m 318.586 ms - -[0m
+2025-03-28 10:02:18 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.159 ms - 0[0m
+2025-03-28 10:02:18 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 307.695 ms - -[0m
+2025-03-28 10:03:19 info: [0mOPTIONS /api/login [32m204[0m 0.227 ms - 0[0m
+2025-03-28 10:03:20 info: [0mPOST /api/login [32m200[0m 293.093 ms - -[0m
+2025-03-28 10:03:20 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.133 ms - 0[0m
+2025-03-28 10:03:20 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 315.369 ms - -[0m
+2025-03-28 10:04:23 info: ====================================
+2025-03-28 10:04:23 info: ============ ENV: development ===========
+2025-03-28 10:04:23 info: 🚀 App listening on the port 5212
+2025-03-28 10:04:23 info: ====================================
+2025-03-28 10:04:32 info: [0mOPTIONS /api/login [32m204[0m 1.062 ms - 0[0m
+2025-03-28 10:04:32 info: [0mPOST /api/login [32m200[0m 316.667 ms - -[0m
+2025-03-28 10:04:32 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.134 ms - 0[0m
+2025-03-28 10:04:33 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 368.231 ms - -[0m
+2025-03-28 10:05:33 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.214 ms - 0[0m
+2025-03-28 10:05:33 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 322.572 ms - -[0m
+2025-03-28 10:05:43 info: [0mGET /api/roles/getRoles [36m304[0m 70.951 ms - -[0m
+2025-03-28 10:05:44 info: [0mGET /api/roles/getRoles [36m304[0m 74.468 ms - -[0m
+2025-03-28 10:05:50 info: [0mOPTIONS /api/login [32m204[0m 0.273 ms - 0[0m
+2025-03-28 10:05:50 info: [0mPOST /api/login [32m200[0m 338.864 ms - -[0m
+2025-03-28 10:05:50 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.345 ms - 0[0m
+2025-03-28 10:05:50 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 309.787 ms - -[0m
+2025-03-28 10:08:23 info: [0mOPTIONS /api/login [32m204[0m 0.285 ms - 0[0m
+2025-03-28 10:08:23 info: [0mPOST /api/login [32m200[0m 370.241 ms - -[0m
+2025-03-28 10:08:23 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.151 ms - 0[0m
+2025-03-28 10:08:24 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 325.657 ms - -[0m
+2025-03-28 10:39:00 info: ====================================
+2025-03-28 10:39:00 info: ============ ENV: development ===========
+2025-03-28 10:39:00 info: 🚀 App listening on the port 5212
+2025-03-28 10:39:00 info: ====================================
+2025-03-28 10:39:06 info: [0mOPTIONS /api/login [32m204[0m 1.040 ms - 0[0m
+2025-03-28 10:39:06 info: [0mPOST /api/login [32m200[0m 478.062 ms - -[0m
+2025-03-28 10:39:06 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.127 ms - 0[0m
+2025-03-28 10:39:06 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 346.936 ms - -[0m
+2025-03-28 10:41:56 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [32m200[0m 89.619 ms - 1018[0m
+2025-03-28 10:41:56 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 82.334 ms - -[0m
+2025-03-28 11:17:32 info: ====================================
+2025-03-28 11:17:32 info: ============ ENV: development ===========
+2025-03-28 11:17:32 info: 🚀 App listening on the port 5212
+2025-03-28 11:17:32 info: ====================================
+2025-03-28 11:18:56 info: [0mGET /api/roles/getRoles [36m304[0m 86.365 ms - -[0m
+2025-03-28 11:18:56 info: [0mGET /api/roles/getRoles [36m304[0m 80.505 ms - -[0m
+2025-03-28 11:19:02 info: [0mOPTIONS /api/login [32m204[0m 0.532 ms - 0[0m
+2025-03-28 11:19:02 info: [0mPOST /api/login [32m200[0m 388.734 ms - -[0m
+2025-03-28 11:19:02 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.603 ms - 0[0m
+2025-03-28 11:19:03 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 426.101 ms - -[0m
+2025-03-28 11:51:38 info: ====================================
+2025-03-28 11:51:38 info: ============ ENV: development ===========
+2025-03-28 11:51:38 info: 🚀 App listening on the port 5212
+2025-03-28 11:51:38 info: ====================================
+2025-03-28 11:53:51 info: [0mOPTIONS /api/login [32m204[0m 0.980 ms - 0[0m
+2025-03-28 11:53:52 info: [0mPOST /api/login [32m200[0m 317.288 ms - -[0m
+2025-03-28 11:53:52 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.403 ms - 0[0m
+2025-03-28 11:53:52 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 367.499 ms - -[0m
+2025-03-28 11:56:35 info: ====================================
+2025-03-28 11:56:35 info: ============ ENV: development ===========
+2025-03-28 11:56:35 info: 🚀 App listening on the port 5212
+2025-03-28 11:56:35 info: ====================================

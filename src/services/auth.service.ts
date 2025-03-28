@@ -13,6 +13,7 @@ import { sendHTMLEmail } from './email.service'
 import path from 'path'
 import { ObjectId } from 'mongoose'
 import { environment } from '@/configs/env'
+import gruposNivelesModel from '@/models/gruposNiveles.model'
 
 const user = userModel
 
@@ -93,13 +94,21 @@ const login = async (
     if (!findUser)
         throw new HttpException(409, __({ phrase: 'Email {{email}} not found', locale }, { email: userData.email }))
 
+    let grupos: any
+
+    if (findUser.roles[0].name === 'user') {
+        grupos = await gruposNivelesModel.find({cursos: {$in: [findUser.levelUser._id]}})
+    }
+
+    console.log(grupos)
+
     const isPasswordMatching: boolean = await bcrypt.compare(userData.password, findUser.password)
     if (!isPasswordMatching) throw new HttpException(409, __({ phrase: 'Wrong password', locale }))
 
     const token = createToken(findUser, 86400)
     const cookie = createCookie(token)
 
-    return { cookie, findUser, token }
+    return { cookie, findUser, token, grupos }
 }
 
 const logout = async (userData: User, locale: string = env.locale) => {

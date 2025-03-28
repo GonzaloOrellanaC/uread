@@ -28,7 +28,7 @@ const env = configs_1.default.env.environment;
 const locale = configs_1.default.env.locale;
 const connectToDatabase = async () => {
     if (env !== 'production') {
-        (0, mongoose_1.set)('debug', true);
+        (0, mongoose_1.set)('debug', false);
     }
     try {
         await (0, mongoose_1.connect)(_databases_1.dbConnection.url);

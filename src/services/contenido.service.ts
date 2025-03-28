@@ -10,7 +10,7 @@ import userModel from '@models/users.model'
 import { isEmpty } from '@utils/util'
 import bcrypt from 'bcrypt'
 import { __ } from 'i18n'
-import { ObjectId } from 'mongoose'
+import mongoose, { ObjectId } from 'mongoose'
 import { createAudio, transcript, translateText } from './ia.service'
 /* import { TranslationServiceClient } from '@google-cloud/translate' */
 
@@ -33,9 +33,35 @@ const borrarContenido = async (_id: ObjectId) => {
     return contenidoResponse
 }
 
-const leerContenidos = async () => {
-    const contenidoResponse: Contenido[] = await contenido.find()
-    return contenidoResponse
+const leerContenidos = async (idGrupos: string[]) => {
+    return new Promise<any[]>(async resolve => {
+        const lista: any[] = []
+        const resultados = await Promise.all(idGrupos.map(async (id: any) => {
+            const elementos = await contenido.find({nivel: id, state: true}).populate('nivel')
+            return elementos
+        }))
+        organizarContenidos(lista, resultados, 0, (filtrados) => {
+            resolve(filtrados)
+        })
+    })
+}
+
+const organizarContenidos = (lista: any[], contenidos: any[][], index: number, callback: (filtrados: any[]) => void) => {
+    if (!contenidos[index]) {
+        const filtered = Array.from(new Set(lista.map(a => a._id)))
+            .map(_id => {
+                return lista.find(a => a._id === _id)
+            })
+        callback(filtered)
+    } else {
+        const contenido = contenidos[index]
+        contenido.forEach((c, n) => {
+            lista.push(c)
+            if (n === contenido.length - 1) {
+                organizarContenidos(lista, contenidos, index + 1, callback)
+            }
+        })
+    }
 }
 
 const leerContenidosV2 = async () => {

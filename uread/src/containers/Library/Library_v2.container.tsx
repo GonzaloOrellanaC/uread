@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react"
 import { Contenido } from "../../interfaces/Contenido.interface"
 import { ContenidoContext } from "../../context/Contenido.context"
 import { TaleModal } from "./Tale.modal"
-import { arrowBack } from "ionicons/icons"
+import { arrowBack, arrowForward } from "ionicons/icons"
 import { useHistory } from "react-router"
 
 export const LibraryContainerV2 = () => {
@@ -52,37 +52,54 @@ export const LibraryContainerV2 = () => {
                 item={item}
             />
             
-            <div style={{height: 'calc(100vh - 60px)', overflowY: 'auto'}}>
+            <div style={{height: 'calc(100vh - 60px)', overflowY: 'auto', fontSize: 12}}>
                 <IonGrid>
                     <IonRow>
-                        <IonCol sizeXs="0" sizeMd="2" sizeLg="4">
-
-                        </IonCol>
-                        <IonCol sizeXs="12" sizeMd="10" sizeLg="4">
-                            <IonList>
+                        <IonCol />
+                        <IonCol sizeXs="12" sizeMd="10" sizeLg="5" sizeXl="4">
+                                <IonGrid>
                                 {
                                     listaContenido.map((elemento, index) => {
                                         return (
-                                            <IonItem key={index} button onClick={() => {seleccionarItem(elemento)}}>
-                                                <img 
-                                                    style={{height: 20, width: 20, objectFit: 'cover', marginRight: 10}}
-                                                    src={
-                                                        (
-                                                            elemento.imageUrl && 
-                                                            elemento.imageUrl[0] && 
-                                                            elemento.imageUrl[0].url
-                                                        ) ? elemento.imageUrl[0].url 
-                                                        : 'https://imkchat.blob.core.windows.net/extras/noimage.jpg'} />
-                                                {elemento.nombreTexto}
-                                            </IonItem>
+                                            <IonRow key={index} style={{borderBottom: '1px #ccc solid'}}>
+                                                <IonCol size="1">
+                                                    
+                                                <p>{index + 1}.-</p> 
+                                                </IonCol>
+                                                <IonCol size="2">
+                                                <div style={{textAlign: 'center', width: '100%'}}>
+                                                    <p>
+                                                    <img 
+                                                        style={{height: 15, objectFit: 'cover', marginRight: 10, marginLeft: 10}}
+                                                        src={
+                                                            (
+                                                                elemento.imageUrl && 
+                                                                elemento.imageUrl[0] && 
+                                                                elemento.imageUrl[0].url
+                                                            ) ? elemento.imageUrl[0].url 
+                                                            : 'https://imkchat.blob.core.windows.net/extras/noimage.jpg'} />
+                                                    </p>
+                                                </div>
+                                                </IonCol>
+                                                
+                                                <IonCol size="6">
+                                                    <p>{elemento.nombreTexto}</p>
+                                                </IonCol>
+                                                <IonCol size="1">
+
+                                                </IonCol>
+                                                <IonCol size="2">
+                                                    <IonButton onClick={() => {seleccionarItem(elemento)}}>
+                                                        <IonIcon icon={arrowForward} />
+                                                    </IonButton>
+                                                </IonCol>
+                                            </IonRow>
                                         )
                                     })
                                 }
-                            </IonList>
+                                </IonGrid>
                         </IonCol>
-                        <IonCol sizeXs="0" sizeMd="2" sizeLg="4">
-                            
-                        </IonCol>
+                        <IonCol />
                     </IonRow>
                 </IonGrid>
             </div>

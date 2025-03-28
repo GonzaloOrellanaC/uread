@@ -15,6 +15,7 @@ interface AuthContextValues {
     alumno: boolean
     profesor: boolean
     traducirNombreRol: (name: string) => "Apoderado" | "Alumno" | "Administrador" | "SuperAdmin"
+    grupos: any[]
 }
 
 export const AuthContext = createContext<AuthContextValues>({} as AuthContextValues)
@@ -26,6 +27,8 @@ export const AuthProvider = (props: any) => {
     const [apoderado, setApoderado] = useState(false)
     const [alumno, setAlumno] = useState(false)
     const [profesor, setProfesor] = useState(false)
+
+    const [grupos, setGrupos] = useState<any[]>([])
 
     const [openRunEditor, setOpenRunEditor] = useState(false)
 
@@ -39,6 +42,7 @@ export const AuthProvider = (props: any) => {
             try {
                 userRouter.login(email, password)
                 .then(response => {
+                    setGrupos(response.grupos)
                     setUserData(response.data)
                     localStorage.setItem('uread_user', JSON.stringify(response.data))
                     setLoading(false)
@@ -148,7 +152,8 @@ export const AuthProvider = (props: any) => {
         apoderado,
         alumno,
         profesor,
-        traducirNombreRol
+        traducirNombreRol,
+        grupos
     }
     return (
         <AuthContext.Provider value={provider}>

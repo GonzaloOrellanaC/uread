@@ -22,7 +22,8 @@ const guardarClassroom = async (req, res) => {
 };
 exports.guardarClassroom = guardarClassroom;
 const getClassrooms = async (req, res) => {
-    const list = await classroom_model_1.default.find();
+    const response = await classroom_model_1.default.find().sort({ _id: -1 });
+    const list = response.reverse();
     res.status(200).json({ list });
 };
 exports.getClassrooms = getClassrooms;

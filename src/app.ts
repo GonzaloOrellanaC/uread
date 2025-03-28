@@ -28,7 +28,7 @@ const locale: string = config.env.locale
 
 const connectToDatabase = async () => {
     if (env !== 'production') {
-        set('debug', true)
+        set('debug', false)
     }
     try {
         await connect(dbConnection.url)

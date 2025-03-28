@@ -13,6 +13,7 @@ const i18n_1 = require("i18n");
 const jsonwebtoken_1 = (0, tslib_1.__importDefault)(require("jsonwebtoken"));
 const email_service_1 = require("./email.service");
 const path_1 = (0, tslib_1.__importDefault)(require("path"));
+const gruposNiveles_model_1 = (0, tslib_1.__importDefault)(require("../models/gruposNiveles.model"));
 const user = users_model_1.default;
 const signup = async (userData) => {
     if ((0, util_1.isEmpty)(userData))
@@ -67,12 +68,17 @@ const login = async (userData, locale = index_1.env.locale) => {
     }).populate('levelUser');
     if (!findUser)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Email {{email}} not found', locale }, { email: userData.email }));
+    let grupos;
+    if (findUser.roles[0].name === 'user') {
+        grupos = await gruposNiveles_model_1.default.find({ cursos: { $in: [findUser.levelUser._id] } });
+    }
+    console.log(grupos);
     const isPasswordMatching = await bcrypt_1.default.compare(userData.password, findUser.password);
     if (!isPasswordMatching)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Wrong password', locale }));
     const token = (0, exports.createToken)(findUser, 86400);
     const cookie = (0, exports.createCookie)(token);
-    return { cookie, findUser, token };
+    return { cookie, findUser, token, grupos };
 };
 const logout = async (userData, locale = index_1.env.locale) => {
     if ((0, util_1.isEmpty)(userData))

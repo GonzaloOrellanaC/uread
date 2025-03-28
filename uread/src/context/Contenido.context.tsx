@@ -12,40 +12,47 @@ interface ContenidoContextValues {
     crearContenido: (contenido: Contenido) => Promise<any>
     editarContenido: (contenido: Contenido) => Promise<any>
     setLoading: React.Dispatch<React.SetStateAction<boolean>>
+    gruposNiveles: any[]
 }
 
 export const ContenidoContext = createContext<ContenidoContextValues>({} as ContenidoContextValues)
 
 export const ContenidoProvider = (props: any) => {
-    const {userData, isAdmin} = useContext(AuthContext)
+    const {userData, isAdmin, grupos} = useContext(AuthContext)
     const [ contenido, setContenido ] = useState<Contenido[]>([])
     const [ contenidoV2, setContenidoV2 ] = useState<Contenido[]>([])
     const [niveles, setNiveles] = useState<any[]>([])
+    const [gruposNiveles, setGruposNiveles] = useState<any[]>([])
 
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        if (userData) {
-            console.log(userData)
-            const premium = isAdmin ? true : userData.premium
-            getContenido(premium)
+        if (userData && grupos && grupos.length > 0) {
+            getContenido()
+        }
+    }, [userData, grupos])
+
+    useEffect(() => {
+        if (userData && isAdmin) {
             leerNiveles()
+            leerGruposNiveles()
         }
     }, [userData, isAdmin])
     
-    const getContenido = async (premium: boolean) => {
-        const response = await contenidoRouter.getContenido(premium)
-        console.log(response)
-        const res = await contenidoRouter.getContenidoV2()
-        console.log(res)
+    const getContenido = async () => {
+        const response = await contenidoRouter.getContenido(grupos.map(g => {return g._id}))
         setContenido(response.data)
-        setContenidoV2(res.data)
     }
 
     const leerNiveles = async () => {
         const response = await contenidoRouter.getNiveles()
         console.log(response)
         setNiveles(response.data)
+    }
+
+    const leerGruposNiveles = async () => {
+        const response = await contenidoRouter.getGruposNiveles()
+        console.log(response)
     }
 
     const crearContenido = async (contenido: Contenido) => {
@@ -68,7 +75,8 @@ export const ContenidoProvider = (props: any) => {
         niveles,
         crearContenido,
         editarContenido,
-        setLoading
+        setLoading,
+        gruposNiveles
     }
     return (
         <ContenidoContext.Provider value={provider}>

@@ -8,7 +8,7 @@ import { NewContentModal } from "../../../components/Modals/ContentModal/NewCont
 import { useContenidoContext } from "../../../context/Contenido.context"
 
 const SubirContenidoComponent = () => {
-    const {niveles, contenido} = useContenidoContext()
+    const {gruposNiveles, contenido} = useContenidoContext()
     const [data, setData] = useState<Contenido|null>(null)
     const [contenidosCache, setContenidosCache] = useState<Contenido[]>([])
     const [openNewContent, setOpenNewContent] = useState<boolean>(false)
@@ -34,9 +34,9 @@ const SubirContenidoComponent = () => {
 
     const init = async () => {
         /* const response = await axios.get('/api/contenido/leerContenidos')
-        console.log(response.data)
-        setContenidos(response.data.data) */
-        /* setContenidosCache(contenido) */
+        console.log(response.data) */
+        /* setContenidos(response.data.data) */
+        setContenidosCache(contenido)
         /* const res = await axios.get('/api/niveles/leerNiveles') */
         const filtros = [
             {
@@ -45,8 +45,8 @@ const SubirContenidoComponent = () => {
                 number: 0
             }
         ]
-        console.log(filtros.concat(niveles/* res.data.data */))
-        const buttons: any[] = [...filtros.concat(niveles/* res.data.data */)]
+        console.log(filtros.concat(gruposNiveles/* res.data.data */))
+        const buttons: any[] = [...filtros.concat(gruposNiveles/* res.data.data */)]
         buttons.forEach((button: any) => {
             button.state = false
         })
@@ -128,7 +128,7 @@ const SubirContenidoComponent = () => {
                         <IonCol sizeXl="1" sizeLg="1" sizeMd="1" sizeSm="0"></IonCol>
                     </IonRow>
                 </IonGrid>
-                <NewContentTextModal open={openNewContent} closeModal={closeNewContentModal} data={data} />
+                {openNewContent && <NewContentTextModal open={openNewContent} closeModal={closeNewContentModal} data={data} />}
             </IonContent>
         </IonPage>
     )

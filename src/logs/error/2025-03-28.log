@@ -1,0 +1,498 @@
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 07:58:47 error: uncaughtException: newCont.toJSON is not a function
+TypeError: newCont.toJSON is not a function
+    at C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:59:29
+    at Array.forEach (<anonymous>)
+    at review (C:\Users\gorel\Documents\Personales\uread\src\services\accessControl.service.ts:52:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-28 11:57:02 error: uncaughtException: listen EADDRINUSE: address already in use :::5212
+Error: listen EADDRINUSE: address already in use :::5212
+    at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+    at listenInCluster (node:net:1865:12)
+    at Server.listen (node:net:1953:7)
+    at Function.listen (C:\Users\gorel\Documents\Personales\uread\node_modules\express\lib\application.js:618:24)
+    at App (C:\Users\gorel\Documents\Personales\uread\src\app.ts:109:28)
+    at startServer (C:\Users\gorel\Documents\Personales\uread\src\server.ts:4:8)
+    at Object.<anonymous> (C:\Users\gorel\Documents\Personales\uread\src\server.ts:7:12)
+    at Module._compile (node:internal/modules/cjs/loader:1364:14)
+    at Module.m._compile (C:\Users\gorel\Documents\Personales\uread\node_modules\ts-node\src\index.ts:1371:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\gorel\Documents\Personales\uread\node_modules\ts-node\src\index.ts:1374:12)
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1019:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+    at main (C:\Users\gorel\Documents\Personales\uread\node_modules\ts-node\src\bin.ts:331:12)
+    at Object.<anonymous> (C:\Users\gorel\Documents\Personales\uread\node_modules\ts-node\src\bin.ts:482:3)

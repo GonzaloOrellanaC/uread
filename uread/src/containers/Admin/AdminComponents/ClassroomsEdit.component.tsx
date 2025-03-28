@@ -226,7 +226,6 @@ export const ClassRoomsComponent = () => {
                                     return (
                                         <div key={index} style={{paddingTop: 10, paddingBottom: 30, borderBottom: '1px solid #ccc'}}>
                                             <IonToolbar>
-                                            <IonTitle slot="start">Classroom {index + 1}</IonTitle>
                                             <IonButtons slot="end">
                                                 <IonButton onClick={() => {removeItem(index)}}>
                                                     <IonIcon icon={close} />

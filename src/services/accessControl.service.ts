@@ -11,6 +11,8 @@ import RoleModel from '@/models/roles.model'
 import { superAdmin, admin, user/* , seller */ } from '@/configs/roles.config'
 import { CreateRoleDto, UpdateRoleDto } from '@/dtos/roles.dto'
 import { Role } from '@interfaces/roles.interface'
+import gruposNivelesModel from '@/models/gruposNiveles.model'
+import contenidoModel from '@/models/contenido.model'
 
 const ac = new AccessControl()
 
@@ -39,7 +41,6 @@ const initAccessControl = async () => {
             console.log('Super Admin Creado: ', superAdmin)
         }
         console.info(`Initialized access control. ${adminResult}`)
-        
     } catch (error) {
         console.error(error)
     }

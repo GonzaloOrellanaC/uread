@@ -30,9 +30,9 @@ const logIn = async (req, res, next) => {
     try {
         const userData = req.body;
         const userLocale = req.cookies.language || env_1.locale;
-        const { cookie, findUser, token } = await auth_service_1.default.login(userData, userLocale);
+        const { cookie, findUser, token, grupos } = await auth_service_1.default.login(userData, userLocale);
         res.setHeader('Set-Cookie', [cookie]);
-        res.status(200).json({ data: findUser, token: token.token, message: 'login' });
+        res.status(200).json({ data: findUser, token: token.token, message: 'login', grupos });
     }
     catch (error) {
         next(error);

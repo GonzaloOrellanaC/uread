@@ -12,14 +12,10 @@ const editarContenido = async (contenido: Contenido) => {
     return response.data
 }
 
-const getContenido = async (premium: boolean) => {
-    if (premium) {
-        const response = await axios.get(api.url + '/api/contenido/leerContenidos')
-        return response.data
-    } else {
-        const response = await axios.get(api.url + '/api/contenido/leerContenidosBasicos')
-        return response.data
-    }
+const getContenido = async (idGrupos: string[]) => {
+    console.log(idGrupos)
+    const response = await axios.post(api.url + `/api/contenido/leerContenidos`, {idGrupos})
+    return response.data
 }
 
 const getContenidoV2 = async () => {
@@ -33,10 +29,17 @@ const getNiveles = async () => {
 
 }
 
+const getGruposNiveles = async () => {
+    const response = await axios.get(api.url + '/api/niveles/gruposNiveles')
+    return response.data
+
+}
+
 export default {
     getContenido,
     getContenidoV2,
     getNiveles,
     crearContenido,
-    editarContenido
+    editarContenido,
+    getGruposNiveles
 }

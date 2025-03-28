@@ -137,10 +137,10 @@ const NewContentTextModal = ({open, closeModal, data}: ModalData) => {
     }, [textList])
 
     const init = async () => {
-        const response = await axios.get('/api/lenguajes/leerLenguajes')
+        /* const response = await axios.get('/api/lenguajes/leerLenguajes')
         const responseNiveles = await axios.get('/api/niveles/leerNiveles')
         setAppLanguages(response.data.data)
-        setNiveles(responseNiveles.data.data)
+        setNiveles(responseNiveles.data.data) */
     }
 
     const newText = () => {

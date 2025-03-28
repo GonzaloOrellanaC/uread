@@ -1,0 +1,90 @@
+2025-03-27 20:47:15 info: ====================================
+2025-03-27 20:47:15 info: ============ ENV: development ===========
+2025-03-27 20:47:15 info: 🚀 App listening on the port 5212
+2025-03-27 20:47:15 info: ====================================
+2025-03-27 20:47:47 info: [0mGET /api/roles/getRoles [32m200[0m 99.844 ms - 734[0m
+2025-03-27 20:47:47 info: [0mGET /api/roles/getRoles [36m304[0m 95.818 ms - -[0m
+2025-03-27 20:47:47 info: [0mGET /api/niveles/leerNiveles [32m200[0m 99.242 ms - 543[0m
+2025-03-27 20:47:48 info: [0mGET /api/niveles/leerNiveles [36m304[0m 433.992 ms - -[0m
+2025-03-27 20:47:48 info: [0mGET /api/contenido/leerContenidos [32m200[0m 1203.217 ms - -[0m
+2025-03-27 20:47:49 info: [0mGET /api/contenido/leerContenidosV2 [32m200[0m 192.140 ms - 46[0m
+2025-03-27 20:47:49 info: [0mGET /api/contenido/leerContenidosBasicos [32m200[0m 1469.653 ms - -[0m
+2025-03-27 20:47:49 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 99.253 ms - -[0m
+2025-03-27 20:47:49 info: [0mGET /api/users/getUsers [32m200[0m 1543.339 ms - -[0m
+2025-03-27 20:47:53 info: [0mOPTIONS /api/login [32m204[0m 0.796 ms - 0[0m
+2025-03-27 20:47:53 error: [POST] /api/login >> StatusCode:: 409, Message:: Contraseña incorrecta
+2025-03-27 20:47:53 info: [0mPOST /api/login [33m409[0m 677.246 ms - 36[0m
+2025-03-27 20:48:01 info: [0mOPTIONS /api/login [32m204[0m 1.408 ms - 0[0m
+2025-03-27 20:48:01 info: [0mPOST /api/login [32m200[0m 308.113 ms - 790[0m
+2025-03-27 20:48:01 info: [0mGET /api/niveles/leerNiveles [36m304[0m 77.234 ms - -[0m
+2025-03-27 20:48:02 info: [0mGET /api/contenido/leerContenidos [36m304[0m 718.164 ms - -[0m
+2025-03-27 20:48:02 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 77.375 ms - -[0m
+2025-03-27 20:48:21 info: [0mGET /api/classroom/get-classrooms [32m200[0m 101.013 ms - -[0m
+2025-03-27 20:48:21 info: [0mGET /api/classroom/get-classrooms [36m304[0m 87.169 ms - -[0m
+2025-03-27 20:50:24 info: ====================================
+2025-03-27 20:50:24 info: ============ ENV: development ===========
+2025-03-27 20:50:24 info: 🚀 App listening on the port 5212
+2025-03-27 20:50:24 info: ====================================
+2025-03-27 20:50:26 info: [0mGET /api/contenido/leerContenidos [36m304[0m 2255.367 ms - -[0m
+2025-03-27 20:50:26 info: [0mGET /api/niveles/leerNiveles [36m304[0m 2130.761 ms - -[0m
+2025-03-27 20:50:26 info: [0mGET /api/classroom/get-classrooms [32m200[0m 2161.861 ms - -[0m
+2025-03-27 20:50:27 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 365.952 ms - -[0m
+2025-03-27 20:50:27 info: [0mGET /api/classroom/get-classrooms [36m304[0m 379.781 ms - -[0m
+2025-03-27 20:50:27 info: [0mGET /api/users/getUsers [36m304[0m 2837.395 ms - -[0m
+2025-03-27 20:50:27 info: [0mGET /api/classroom/get-classrooms [36m304[0m 139.916 ms - -[0m
+2025-03-27 20:53:12 info: [0mGET /api/classroom/get-classrooms [36m304[0m 107.809 ms - -[0m
+2025-03-27 20:56:55 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 1.067 ms - 0[0m
+2025-03-27 20:56:55 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 337.690 ms - -[0m
+2025-03-27 20:57:01 info: [0mGET /api/classroom/get-classrooms [32m200[0m 99.389 ms - -[0m
+2025-03-27 20:57:01 info: [0mGET /api/niveles/leerNiveles [36m304[0m 82.012 ms - -[0m
+2025-03-27 20:57:01 info: [0mGET /api/classroom/get-classrooms [36m304[0m 85.697 ms - -[0m
+2025-03-27 20:57:01 info: [0mGET /api/niveles/leerNiveles [36m304[0m 76.726 ms - -[0m
+2025-03-27 20:57:01 info: [0mGET /api/users/getUsers [36m304[0m 354.713 ms - -[0m
+2025-03-27 20:57:01 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 534.288 ms - -[0m
+2025-03-27 20:57:02 info: [0mGET /api/contenido/leerContenidos [36m304[0m 691.406 ms - -[0m
+2025-03-27 20:57:02 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 91.303 ms - -[0m
+2025-03-27 20:57:02 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 68.942 ms - -[0m
+2025-03-27 20:57:04 info: [0mGET /api/classroom/get-classrooms [36m304[0m 116.700 ms - -[0m
+2025-03-27 20:57:04 info: [0mGET /api/classroom/get-classrooms [36m304[0m 109.192 ms - -[0m
+2025-03-27 20:57:50 info: [0mOPTIONS /api/classroom/guardar-classrooms [32m204[0m 0.741 ms - 0[0m
+2025-03-27 20:57:51 info: [0mPOST /api/classroom/guardar-classrooms [32m200[0m 190.255 ms - -[0m
+2025-03-27 20:58:09 info: [0mGET /api/classroom/get-classrooms [32m200[0m 92.812 ms - -[0m
+2025-03-27 20:58:09 info: [0mGET /api/niveles/leerNiveles [36m304[0m 88.026 ms - -[0m
+2025-03-27 20:58:09 info: [0mGET /api/classroom/get-classrooms [36m304[0m 85.290 ms - -[0m
+2025-03-27 20:58:09 info: [0mGET /api/niveles/leerNiveles [36m304[0m 78.146 ms - -[0m
+2025-03-27 20:58:09 info: [0mGET /api/users/getUsers [36m304[0m 342.515 ms - -[0m
+2025-03-27 20:58:09 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 527.695 ms - -[0m
+2025-03-27 20:58:09 info: [0mGET /api/contenido/leerContenidos [36m304[0m 633.148 ms - -[0m
+2025-03-27 20:58:09 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 69.402 ms - -[0m
+2025-03-27 20:58:09 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 68.978 ms - -[0m
+2025-03-27 20:58:11 info: [0mGET /api/classroom/get-classrooms [36m304[0m 94.435 ms - -[0m
+2025-03-27 20:58:11 info: [0mGET /api/classroom/get-classrooms [36m304[0m 84.222 ms - -[0m
+2025-03-27 21:09:40 info: ====================================
+2025-03-27 21:09:40 info: ============ ENV: development ===========
+2025-03-27 21:09:40 info: 🚀 App listening on the port 5212
+2025-03-27 21:09:40 info: ====================================
+2025-03-27 21:17:09 info: [0mGET /api/niveles/leerNiveles [36m304[0m 113.750 ms - -[0m
+2025-03-27 21:17:10 info: [0mGET /api/contenido/leerContenidos [36m304[0m 708.227 ms - -[0m
+2025-03-27 21:17:10 info: [0mGET /api/niveles/leerNiveles [36m304[0m 855.362 ms - -[0m
+2025-03-27 21:17:10 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 181.769 ms - -[0m
+2025-03-27 21:17:11 info: [0mGET /api/contenido/leerContenidosBasicos [36m304[0m 1530.786 ms - -[0m
+2025-03-27 21:17:11 info: [0mGET /api/contenido/leerContenidosV2 [36m304[0m 96.212 ms - -[0m
+2025-03-27 21:17:11 info: [0mGET /api/users/getUsers [32m200[0m 1528.726 ms - -[0m
+2025-03-27 21:21:09 info: [0mGET /api/niveles/leerNiveles [32m200[0m 78.495 ms - 543[0m
+2025-03-27 21:21:09 info: [0mGET /api/niveles/leerNiveles [32m200[0m 76.686 ms - 543[0m
+2025-03-27 21:21:10 info: [0mGET /api/users/getUsers [32m200[0m 387.434 ms - -[0m
+2025-03-27 21:21:10 info: [0mGET /api/contenido/leerContenidosBasicos [32m200[0m 569.372 ms - -[0m
+2025-03-27 21:21:10 info: [0mGET /api/contenido/leerContenidos [32m200[0m 711.738 ms - -[0m
+2025-03-27 21:21:10 info: [0mGET /api/contenido/leerContenidosV2 [32m200[0m 77.129 ms - 46[0m
+2025-03-27 21:21:10 info: [0mGET /api/contenido/leerContenidosV2 [32m200[0m 69.264 ms - 46[0m
+2025-03-27 21:22:27 info: [0mGET /api/niveles/leerNiveles [32m200[0m 81.543 ms - 543[0m
+2025-03-27 21:22:27 info: [0mGET /api/niveles/leerNiveles [32m200[0m 86.495 ms - 543[0m
+2025-03-27 21:22:28 info: [0mGET /api/users/getUsers [32m200[0m 338.158 ms - -[0m
+2025-03-27 21:22:28 info: [0mGET /api/contenido/leerContenidosBasicos [32m200[0m 500.272 ms - -[0m
+2025-03-27 21:22:28 info: [0mGET /api/contenido/leerContenidosV2 [32m200[0m 219.232 ms - 46[0m
+2025-03-27 21:22:28 info: [0mGET /api/contenido/leerContenidos [32m200[0m 638.801 ms - -[0m
+2025-03-27 21:22:28 info: [0mGET /api/contenido/leerContenidosV2 [32m200[0m 70.674 ms - 46[0m
+2025-03-27 21:41:46 info: ====================================
+2025-03-27 21:41:46 info: ============ ENV: development ===========
+2025-03-27 21:41:46 info: 🚀 App listening on the port 5212
+2025-03-27 21:41:46 info: ====================================

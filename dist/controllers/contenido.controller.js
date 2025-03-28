@@ -54,8 +54,10 @@ const borrarContenido = async (req, res, next) => {
     }
 };
 const leerContenidos = async (req, res, next) => {
+    const { idGrupos } = req.body;
+    console.log(idGrupos);
     try {
-        const contenidos = await contenido_service_1.default.leerContenidos();
+        const contenidos = await contenido_service_1.default.leerContenidos(idGrupos);
         res.status(200).json({ data: contenidos, message: 'lista de contenidos' });
     }
     catch (error) {

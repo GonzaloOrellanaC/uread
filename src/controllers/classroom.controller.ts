@@ -19,7 +19,8 @@ export const guardarClassroom = async (req: Request, res: Response) => {
 }
 
 export const getClassrooms = async (req: Request, res: Response) => {
-    const list = await classroomModel.find()
+    const response = await classroomModel.find().sort({_id: -1})
+    const list = response.reverse()
     res.status(200).json({list})
 }
 
