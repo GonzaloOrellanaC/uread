@@ -27,8 +27,11 @@ export const ContenidoProvider = (props: any) => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        if (userData && grupos && grupos.length > 0) {
+        if (!isAdmin && userData && grupos && grupos.length > 0) {
             getContenido()
+        }
+        if (isAdmin) {
+            getContenidoAdmin()
         }
     }, [userData, grupos])
 
@@ -41,6 +44,12 @@ export const ContenidoProvider = (props: any) => {
     
     const getContenido = async () => {
         const response = await contenidoRouter.getContenido(grupos.map(g => {return g._id}))
+        setContenido(response.data)
+    }
+    
+    const getContenidoAdmin = async () => {
+        const response = await contenidoRouter.getTodoContenido()
+        console.log(response)
         setContenido(response.data)
     }
 

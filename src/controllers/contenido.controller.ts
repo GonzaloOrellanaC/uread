@@ -64,6 +64,15 @@ const leerContenidos = async (req: Request, res: Response, next: NextFunction) =
     }
 }
 
+const getTodoContenido = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const contenidos: Contenido[] = await contenidoService.leerContenidos()
+        res.status(200).json({ data: contenidos, message: 'lista de contenidos' })
+    } catch (error) {
+        next(error)
+    }
+}
+
 const leerContenidosV2 = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const contenidos: Contenido[] = await contenidoService.leerContenidosV2()
@@ -94,6 +103,7 @@ export default {
     editarContenido,
     borrarContenido,
     leerContenidos,
+    getTodoContenido,
     leerContenidosV2,
     leerContenidosBasicos,
     buscarContenidoPorId

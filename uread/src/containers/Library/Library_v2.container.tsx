@@ -18,9 +18,9 @@ export const LibraryContainerV2 = () => {
         if(contenido) {
             console.log(contenido)
             const listaContenidoCache = [...contenido]
-            listaContenidoCache.map((contenido) => {
+            /* listaContenidoCache.map((contenido) => {
                 contenido.state = false
-            })
+            }) */
             setListaContenido(listaContenidoCache)
         }
     }, [contenido])
@@ -46,11 +46,11 @@ export const LibraryContainerV2 = () => {
                     Biblioteca
                 </IonTitle>
             </IonToolbar>
-            <TaleModal
+            {isOpenModal && <TaleModal
                 isOpen={isOpenModal}
                 closeModal={cerrarModal}
                 item={item}
-            />
+            />}
             
             <div style={{height: 'calc(100vh - 60px)', overflowY: 'auto', fontSize: 12}}>
                 <IonGrid>
@@ -61,7 +61,7 @@ export const LibraryContainerV2 = () => {
                                 {
                                     listaContenido.map((elemento, index) => {
                                         return (
-                                            <IonRow key={index} style={{borderBottom: '1px #ccc solid'}}>
+                                            <IonRow key={index} style={{borderBottom: '1px #ccc solid', backgroundColor: elemento.state ? 'white' : '#ccc'}}>
                                                 <IonCol size="1">
                                                     
                                                 <p>{index + 1}.-</p> 

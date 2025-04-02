@@ -33,17 +33,29 @@ const borrarContenido = async (_id: ObjectId) => {
     return contenidoResponse
 }
 
-const leerContenidos = async (idGrupos: string[]) => {
-    return new Promise<any[]>(async resolve => {
-        const lista: any[] = []
-        const resultados = await Promise.all(idGrupos.map(async (id: any) => {
-            const elementos = await contenido.find({nivel: id, state: true}).populate('nivel')
-            return elementos
-        }))
-        organizarContenidos(lista, resultados, 0, (filtrados) => {
-            resolve(filtrados)
+const leerContenidos = async (idGrupos?: string[]) => {
+    if (idGrupos) {
+        return new Promise<any[]>(async resolve => {
+            const lista: any[] = []
+            const resultados = await Promise.all(idGrupos.map(async (id: any) => {
+                const elementos = await contenido.find({nivel: id, state: true}).populate('niveles')
+                return await Promise.all(elementos.map(async e => {
+                    e.nivelData = await nivelesModel.findById(e.nivel)
+                    return e
+                }))
+            }))
+            organizarContenidos(lista, resultados, 0, (filtrados) => {
+                resolve(filtrados)
+            })
         })
-    })
+    } else {
+        const elementos = await contenido.find().populate('nivel')
+        
+        return await Promise.all(elementos.map(async e => {
+            e.nivelData = await nivelesModel.findById(e.nivel)
+            return e
+        }))
+    }
 }
 
 const organizarContenidos = (lista: any[], contenidos: any[][], index: number, callback: (filtrados: any[]) => void) => {

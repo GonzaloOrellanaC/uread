@@ -325,3 +325,11 @@
 2025-03-28 11:56:35 info: ============ ENV: development ===========
 2025-03-28 11:56:35 info: 🚀 App listening on the port 5212
 2025-03-28 11:56:35 info: ====================================
+2025-03-28 12:07:51 info: [0mGET /api/roles/getRoles [36m304[0m 80.590 ms - -[0m
+2025-03-28 12:07:52 info: [0mGET /api/roles/getRoles [36m304[0m 71.204 ms - -[0m
+2025-03-28 12:07:56 info: [0mOPTIONS /api/login [32m204[0m 0.537 ms - 0[0m
+2025-03-28 12:07:57 info: [0mPOST /api/login [32m200[0m 318.472 ms - -[0m
+2025-03-28 12:07:57 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.340 ms - 0[0m
+2025-03-28 12:07:57 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 437.618 ms - -[0m
+2025-03-28 12:21:40 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [32m200[0m 78.568 ms - 1018[0m
+2025-03-28 12:21:40 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 78.459 ms - -[0m

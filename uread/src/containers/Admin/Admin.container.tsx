@@ -11,9 +11,16 @@ const AdminContainer = () => {
     const history = useHistory()
     const [buttons, setButtons] = useState<ButtonAdmin[]>([
         {
-            id: 1,
+            id: 0,
             name: 'Usuarios',
             link: 'usuarios',
+            state: false,
+            enable: true
+        },
+        {
+            id: 1,
+            name: 'Alumnos',
+            link: 'admin-alumnos',
             state: false,
             enable: true
         },
@@ -22,21 +29,21 @@ const AdminContainer = () => {
             name: 'Subir contenido',
             link: 'subir-contenido',
             state: false,
-            enable: true
+            enable: false
         },
         {
             id: 3,
             name: 'Subir contenido V2',
             link: 'subir-contenido-v2',
             state: false,
-            enable: true
+            enable: false
         },
         {
             id: 4,
             name: 'Calendario',
             link: 'calendario',
             state: false,
-            enable: true
+            enable: false
         },
         {
             id: 5,

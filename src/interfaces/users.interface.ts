@@ -17,7 +17,7 @@ export interface User {
     emailVerifiedAt: Date
     state: boolean
     profileImage: string
-    roles: Role[]
+    roles: Role[] | string[]
     organization: Organization[]
     levelUser?: any
     premium: boolean

@@ -1,11 +1,15 @@
-import { IonAccordion, IonAccordionGroup, IonButton, IonButtons, IonCheckbox, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonItemDivider, IonLabel, IonModal, IonPage, IonRippleEffect, IonRow, IonSelect, IonSelectOption, IonTitle, IonToolbar } from "@ionic/react"
+import { IonAccordion, IonAccordionGroup, IonButton, IonButtons, IonCheckbox, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonItemDivider, IonLabel, IonModal, IonPage, IonRippleEffect, IonRow, IonSelect, IonSelectOption, IonTitle, IonToolbar, useIonAlert } from "@ionic/react"
 import { add, arrowBack, close, planet } from "ionicons/icons"
 import { useEffect, useState } from "react"
-import { useParams } from "react-router"
+import { useHistory, useParams } from "react-router"
 import { formularioInscripcion } from "../../router/form.router"
 import { useContenidoContext } from "../../context/Contenido.context"
+import { useAuthContext } from "../../context/Auth.context"
 
 export const ContartarPlanPage = () => {
+    const {userData} = useAuthContext()
+    const history = useHistory()
+    const [presentAlert] = useIonAlert()
     const {setLoading} = useContenidoContext()
     const transbankList: {A: string[], B: string[], C: string[]} = {
         'A': ['https://www.webpay.cl/form-pay/253730', 'https://www.webpay.cl/form-pay/262693', 'https://www.webpay.cl/form-pay/262694'],
@@ -20,14 +24,9 @@ export const ContartarPlanPage = () => {
         lastName: '',
         year: '1',
         plan: '',
-        medioPago: ''
+        medioPago: '',
+        apoderado: userData ? userData._id : ''
     }])
-    const [apoderado, setApoderado] = useState({
-        name: '',
-        lastName: '',
-        email: '',
-        medioPago: ''
-    })
    /*  const [datoPago, setDatoPago] = useState({
         nameLastName: '',
         email: ''
@@ -50,16 +49,16 @@ export const ContartarPlanPage = () => {
     useEffect(() => {
         if (idPlan === 'A') {
             setTotalAPagar(3000 * alumnos.length)
-        } else if (params.idPlan === 'A') {
+        } else if (idPlan === 'B') {
             setTotalAPagar(6000 * alumnos.length)
         } else {
             setTotalAPagar(15000 * alumnos.length)
         }
-    }, [alumnos])
+    }, [alumnos, idPlan])
 
     const agregarAlumno = () => {
         if (alumnos.length < 3) {
-            setAlumnos([...alumnos, {name: '', lastName: '', year: '1', plan: '', medioPago: ''}])
+            setAlumnos([...alumnos, {name: '', lastName: '', year: '1', plan: '', medioPago: '', apoderado: userData ? userData._id : ''}])
         } else {
             alert('Máximo 3 alumnos por apoderado. Estamos trabajando para mejorar nuestros procesos.')
         }
@@ -76,7 +75,8 @@ export const ContartarPlanPage = () => {
                     lastName: string;
                     year: string;
                     plan: string;
-                    medioPago: string
+                    medioPago: string;
+                    apoderado: string;
                 } = {
                     ...alumno,
                     [name]: value
@@ -90,78 +90,104 @@ export const ContartarPlanPage = () => {
         setAlumnos(alumnosTemp)
     }
 
-    const editarDataApoderado = (e: any) => {
-        const name: string = e.target.name
-        const value: string = e.target.value
-        const apoderadoCache: {
-            name: string;
-            lastName: string;
-            email: string;
-            medioPago: string
-        } = {
-            ...apoderado,
-            [name]: (name === 'email') ? value.toLowerCase() : value
-        }
-        setApoderado(apoderadoCache)
-    }
-
-/*     const editarDataPago = (e: any) => {
-        const name: string = e.target.name
-        const value: string = e.target.value
-        const pagoCache: {
-            nameLastName: string;
-            email: string;
-        } = {
-            ...datoPago,
-            [name]: value
-        }
-        setDatoPago(pagoCache)
-    } */
     const pagar = async () => {
         if (transbanckSelected && !transferenciaBancaria) {
-            const params = `location=no, toolbar=no, menubar=no`
-            const popup = window.open(transbankList[`${idPlan!}`][alumnos.length-1], 'Transbank Webpay', params)
-            if (popup) {
-                let tiempo= 0;
-                const interval = setInterval(async () => {
-                    if(popup.closed !== false) {
-                        window.clearInterval(interval)
-                        if (confirm('¿Su pago fue exitoso?')) {
-                            const state = await guardarDatosPago()
-                            if (state) {
-                                alert('¡Genial!. En un plazo máximo de 24 hrs te llagerá un correo de bienvenida, una vez confirmemos el pago.')
-                            } else {
-                                alert('Error 403. Hubo un error en la conexión con el servidor, pero no te preocupes. El pago es independiente y avanza desde pasos paralelos, asi que confirmaremos el pago y te contactaremos. ¡Nos vemos!')
+            if (alumnos[0].name.length > 0 && alumnos[0].lastName.length > 0) {
+                presentAlert({
+                    header: 'Aviso importante!',
+                    subHeader: 'Lea cuidadosamente lo siguiente:',
+                    message:    'Será abrirá una nueva página para conectar con Transbank, el cual es un servicio externo a esta plataforma.\n' +
+                                'Para que el sistema valide correctamente el pago, coloque el mismo correo con el que inicia sesión en su cuenta como apoderado.\n' +
+                                '\n' +
+                                'Si por algún motivo no recibe un correo de aviso de parte de Uread, comuníquese con nosotros.',
+                    buttons: [
+                        {
+                            text: 'Continuar',
+                            handler: async () => {
+                                const state = await guardarDatosPago()
+                                if (state) {
+                                    const params = `location=no, toolbar=no, menubar=no`
+                                    const popup = window.open(transbankList[`${idPlan!}`][alumnos.length-1], 'Transbank Webpay', params)
+                                    if (popup) {
+                                        let tiempo= 0;
+                                        const interval = setInterval(async () => {
+                                            if(popup.closed !== false) {
+                                                window.clearInterval(interval)
+                                                if (confirm('¿Su pago fue exitoso?')) {
+                                                    alert('¡Genial!. En un plazo máximo de 24 hrs te llagerá un correo de bienvenida, una vez confirmemos el pago.')
+                                                    history.goBack()
+                                                } else {
+                                                    setTimeout(() => {
+                                                        alert('No importa. Intente nuevamente.')
+                                                    }, 1000);
+                                                }
+                                            } else {
+                                            tiempo +=1;
+                                            }
+                                        }, 500)
+                                    }
+                                } else {
+                                    alert('Error 403. Hubo un error en la conexión con el servidor. Si el problema persiste, comuníquese con el Administrador.')
+                                }
+                                
                             }
-                            if (process.env.NODE_ENV === 'production') {
-                                window.open('https://uread.cl/', "_self")
-                            }
-                        } else {
-                            setTimeout(() => {
-                                alert('No importa. Intente nuevamente.')
-                            }, 1000);
+                        },
+                        {
+                            text: 'Mejor en otro momento...'
                         }
-                    } else {
-                      tiempo +=1;
-                    }
-                }, 500)
+                    ],
+                })
+            } else {
+                presentAlert({
+                    header: 'Faltan datos',
+                    message: 'Debe ingresar nombre y apellido de al menos un alumno.',
+                    buttons: [
+                        {
+                            text: 'Ok'
+                        }
+                    ],
+                })
             }
         } else if (transferenciaBancaria && !transbanckSelected) {
-            setOpenTransferencia(true)
+            if (alumnos[0].name.length > 0 && alumnos[0].lastName.length > 0) {
+                presentAlert({
+                    header: 'Aviso importante!',
+                    subHeader: 'Lea cuidadosamente lo siguiente:',
+                    message: `Éste método de pago es ejecutado por usted y por Uread de manera completamente manual. Para validar el pago de $${totalAPagar} pesos siempre guarde el comprobante del pago en caso de ser necesario.`,
+                    buttons: [
+                        {
+                            text: 'Continuar',
+                            handler: () => {
+                                setOpenTransferencia(true)
+                            }
+                        }
+                    ],
+                })
+            } else {
+                presentAlert({
+                    header: 'Faltan datos',
+                    message: 'Debe ingresar nombre y apellido de al menos un alumno.',
+                    buttons: [
+                        {
+                            text: 'Ok'
+                        }
+                    ],
+                })
+            }
         } else {
             alert('Debe seleccionar su método de pago.')
         }
     }
 
     const guardarDatosPago = async () => {
+        const medioPago = (transbanckSelected && !transferenciaBancaria) ? 'transbank' : 'transferencia'
         try {
             const response = await formularioInscripcion({
                 alumnos: alumnos.map(alumno => {
                     alumno.plan = idPlan!
-                    alumno.medioPago = (transbanckSelected && !transferenciaBancaria) ? 'transbank' : 'transferencia'
+                    alumno.medioPago = medioPago
                     return alumno
-                }),
-                apoderado
+                })
             })
             return ({
              state: true,
@@ -297,7 +323,7 @@ export const ContartarPlanPage = () => {
             <IonHeader>
                 <IonToolbar>
                     <IonButtons slot="start">
-                        <IonButton href="https://uread.cl/wp/#planes">
+                        <IonButton onClick={() => {history.goBack()}}>
                             <IonIcon icon={arrowBack}></IonIcon>
                         </IonButton>
                     </IonButtons>
@@ -375,24 +401,6 @@ export const ContartarPlanPage = () => {
                                     <IonButton expand={'block'} onClick={agregarAlumno}>
                                         <IonIcon icon={add} /> Agregar alumno
                                     </IonButton>
-                                    <p style={{fontWeight: 'bold'}}>Datos del Apoderado o Apoderada</p>
-                                    <IonItem>
-                                        <IonInput onIonChange={editarDataApoderado} value={apoderado.name} name={'name'} label="Nombre" labelPlacement="floating"/>
-                                    </IonItem>
-                                    <IonItem>
-                                        <IonInput onIonChange={editarDataApoderado} value={apoderado.lastName} name={'lastName'} label="Apellido" labelPlacement="floating"/>
-                                    </IonItem>
-                                    <IonItem>
-                                        <IonInput onIonChange={editarDataApoderado} value={apoderado.email} name={'email'} label="Email" labelPlacement="floating"/>
-                                    </IonItem>
-                                    {/* <p style={{fontWeight: 'bold'}}>Datos de pago</p>
-                                    <p onClick={mismosDatosDeApoderado} style={{color: 'blue', textDecoration: 'underline', cursor: 'pointer'}}>Mismos datos de apoderado</p>
-                                    <IonItem>
-                                        <IonInput onIonChange={editarDataPago} value={datoPago.nameLastName} name={'name-lastName'} label="Nombre y apellido de quien paga" labelPlacement="floating"/>
-                                    </IonItem> */}
-                                    {/* <IonItem>
-                                        <IonInput onIonChange={editarDataPago} value={datoPago.email} name={'email'} label="Correo electrónico" labelPlacement="floating"/>
-                                    </IonItem> */}
                                     <IonItemDivider />
                                     <h3>Seleccione medio de pago</h3>
                                     <IonAccordionGroup>

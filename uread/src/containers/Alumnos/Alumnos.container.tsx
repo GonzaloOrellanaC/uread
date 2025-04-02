@@ -1,4 +1,4 @@
-import { IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonInputPasswordToggle, IonItem, IonModal, IonRadio, IonRow, IonTitle, IonToolbar } from "@ionic/react"
+import { IonAlert, IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonInputPasswordToggle, IonItem, IonModal, IonRadio, IonRow, IonTitle, IonToolbar, useIonAlert } from "@ionic/react"
 import { useAuthContext } from "../../context/Auth.context"
 import { useEffect, useState } from "react"
 import { arrowBack, arrowUp, close } from "ionicons/icons"
@@ -7,7 +7,7 @@ import userRouter from "../../router/user.router"
 import { useContenidoContext } from "../../context/Contenido.context"
 
 export const AlumnosContainer = () => {
-
+    const [presentAlert] = useIonAlert()
     const history = useHistory()
     const {userData} = useAuthContext()
     const {setLoading} = useContenidoContext()
@@ -22,17 +22,36 @@ export const AlumnosContainer = () => {
     const [typePassword, setTypePassword] = useState<'password' | 'text'>('password')
     const [typePasswordConfirm, setTypePasswordConfirm] = useState<'password' | 'text'>('password')
 
+    const [openAlertPlan, setOpenAlertPlan] = useState(false)
+
     useEffect(() => {
         if (userData)
-        setAlumnos(userData.alumnos)
+            obtenerAlumnos()
     },[userData])
+
+    const obtenerAlumnos = async () => {
+        const response = await userRouter.alumnosPorApoderado(userData!._id)
+        setAlumnos(response.alumnos)
+    }
 
 
     const seleccionarUsuario = (alumno: any) => {
-        setAlumnoSeleccionado({
-            ...alumno
-        })
-        setOpenAlumnoModal(true)
+        if (alumno.permiteValidar) {
+            setAlumnoSeleccionado({
+                ...alumno
+            })
+            setOpenAlumnoModal(true)
+        } else {
+            presentAlert({
+                header: 'Aviso!',
+                message: 'Estamos en proceso de validación de pago del alumno. Este proceso puede tardar máximo 24 hrs desde que se realizó el pago del plan.',
+                buttons: [
+                    {
+                        text: 'Ok'
+                    }
+                ],
+            })
+        }
     }
 
     const editUsuario = (e: any) => {
@@ -60,8 +79,48 @@ export const AlumnosContainer = () => {
         setLoading(false)
     }
 
+    const abrirSeleccionarPlan = () => {
+        setOpenAlertPlan(true)
+    }
+
+    const seleccionarPlan = (plan: string) => {
+        history.push(`/plan/${plan}`)
+    }
+
     return (
         <IonContent class="ion-padding">
+            {openAlertPlan &&
+                <IonAlert
+                    isOpen={openAlertPlan}
+                    onWillDismiss={() => {setOpenAlertPlan(false)}}
+                    trigger="present-alert"
+                    header="Seleccione plan:"
+                    /* className="custom-alert" */
+                    buttons={[
+                        {
+                            text: 'Plan A',
+                            cssClass: 'alert-button-cancel',
+                            handler: () => {
+                                seleccionarPlan('A')
+                            }
+                        },
+                        {
+                            text: 'Plan B',
+                            cssClass: 'alert-button-cancel',
+                            handler: () => {
+                                seleccionarPlan('B')
+                            }
+                        },
+                        {
+                            text: 'Plan C',
+                            cssClass: 'alert-button-cancel',
+                            handler: () => {
+                                seleccionarPlan('C')
+                            }
+                        }
+                    ]}
+                ></IonAlert>
+            }
             {openAlumnoModal && <IonModal
                 isOpen={openAlumnoModal}
                 onWillDismiss={() => setOpenAlumnoModal(false)}
@@ -115,6 +174,11 @@ export const AlumnosContainer = () => {
                     <IonTitle slot="start">
                         Mis Alumnos
                     </IonTitle>
+                    <IonButtons slot={'end'}>
+                        <IonButton onClick={() => {abrirSeleccionarPlan()}}>
+                            + Inscribir Alumno
+                        </IonButton>
+                    </IonButtons>
                 </IonToolbar>
             </IonHeader>
             <IonGrid>

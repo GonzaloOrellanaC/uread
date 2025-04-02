@@ -4,7 +4,7 @@ declare const _default: {
     guardarContenido: (contenidoData: Contenido) => Promise<Contenido>;
     editarContenido: (contenidoData: Contenido) => Promise<Contenido>;
     borrarContenido: (_id: mongoose.Schema.Types.ObjectId) => Promise<Contenido>;
-    leerContenidos: (idGrupos: string[]) => Promise<any[]>;
+    leerContenidos: (idGrupos?: string[]) => Promise<any[]>;
     leerContenidosV2: () => Promise<Contenido[]>;
     leerContenidosBasicos: () => Promise<Contenido[]>;
     crearContenidoV2: (contenido: Contenido) => Promise<{

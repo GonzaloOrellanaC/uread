@@ -21,6 +21,23 @@ const multer_1 = (0, tslib_1.__importDefault)(require("multer"));
 const index_route_1 = (0, tslib_1.__importDefault)(require("./routes/index.route"));
 const accessControl_service_1 = (0, tslib_1.__importDefault)(require("./services/accessControl.service"));
 const socket_controller_1 = (0, tslib_1.__importDefault)(require("./controllers/socket.controller"));
+const imap_service_1 = require("./services/imap.service");
+const imap_1 = require("./configs/imap");
+const cron_1 = require("cron");
+const iniciaJob = () => {
+    const job = new cron_1.CronJob('*/5 * * * *', function () {
+        (0, imap_service_1.checkEmails)({
+            user: imap_1.imap_email,
+            password: imap_1.imap_password,
+            host: imap_1.imap_host,
+            port: 993,
+            tls: true
+        });
+    }, () => {
+        console.log('Terminado');
+    });
+    return job;
+};
 process.env.SUPPRESS_NO_CONFIG_WARNING = 'true';
 const app = (0, express_1.default)();
 const port = configs_1.default.env.port;
@@ -33,6 +50,14 @@ const connectToDatabase = async () => {
     try {
         await (0, mongoose_1.connect)(_databases_1.dbConnection.url);
         await accessControl_service_1.default.initAccessControl();
+        (0, imap_service_1.checkEmails)({
+            user: imap_1.imap_email,
+            password: imap_1.imap_password,
+            host: imap_1.imap_host,
+            port: 993,
+            tls: true
+        });
+        iniciaJob().start();
     }
     catch (error) {
         console.log(error);

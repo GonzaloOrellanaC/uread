@@ -16,6 +16,7 @@ interface AuthContextValues {
     profesor: boolean
     traducirNombreRol: (name: string) => "Apoderado" | "Alumno" | "Administrador" | "SuperAdmin"
     grupos: any[]
+    loginToken: (token: string) => void
 }
 
 export const AuthContext = createContext<AuthContextValues>({} as AuthContextValues)
@@ -58,6 +59,16 @@ export const AuthProvider = (props: any) => {
                 setLoading(false)
             }
         }
+    }
+
+    const loginToken = (token: string) => {
+        userRouter.usuarioDesdeToken(token).then(response => {
+            setUserData(response.data)
+            console.log(response.data)
+            localStorage.setItem('uread_user', JSON.stringify(response.data))
+            setLoading(false)
+            history.push('/home')
+        })
     }
 
     const editRun = async () => {
@@ -105,7 +116,8 @@ export const AuthProvider = (props: any) => {
                     location.pathname.includes('reset-password') ||
                     location.pathname.includes('validate-password') ||
                     location.pathname.includes('plan') ||
-                    location.pathname.includes('bienvenida')
+                    location.pathname.includes('bienvenida') ||
+                    location.pathname.includes('signup')
                 ) {
                     console.log('Nothing')
                 } else {
@@ -119,7 +131,8 @@ export const AuthProvider = (props: any) => {
                     location.pathname.includes('reset-password') ||
                     location.pathname.includes('validate-password') ||
                     location.pathname.includes('plan') ||
-                    location.pathname.includes('bienvenida')
+                    location.pathname.includes('bienvenida') ||
+                    location.pathname.includes('signup')
                 ) {
                     console.log('Nothing')
                 } else {
@@ -153,7 +166,8 @@ export const AuthProvider = (props: any) => {
         alumno,
         profesor,
         traducirNombreRol,
-        grupos
+        grupos,
+        loginToken
     }
     return (
         <AuthContext.Provider value={provider}>

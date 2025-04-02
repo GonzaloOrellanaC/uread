@@ -22,16 +22,28 @@ const borrarContenido = async (_id) => {
     return contenidoResponse;
 };
 const leerContenidos = async (idGrupos) => {
-    return new Promise(async (resolve) => {
-        const lista = [];
-        const resultados = await Promise.all(idGrupos.map(async (id) => {
-            const elementos = await contenido.find({ nivel: id, state: true }).populate('nivel');
-            return elementos;
-        }));
-        organizarContenidos(lista, resultados, 0, (filtrados) => {
-            resolve(filtrados);
+    if (idGrupos) {
+        return new Promise(async (resolve) => {
+            const lista = [];
+            const resultados = await Promise.all(idGrupos.map(async (id) => {
+                const elementos = await contenido.find({ nivel: id, state: true }).populate('niveles');
+                return await Promise.all(elementos.map(async (e) => {
+                    e.nivelData = await niveles_model_1.default.findById(e.nivel);
+                    return e;
+                }));
+            }));
+            organizarContenidos(lista, resultados, 0, (filtrados) => {
+                resolve(filtrados);
+            });
         });
-    });
+    }
+    else {
+        const elementos = await contenido.find().populate('nivel');
+        return await Promise.all(elementos.map(async (e) => {
+            e.nivelData = await niveles_model_1.default.findById(e.nivel);
+            return e;
+        }));
+    }
 };
 const organizarContenidos = (lista, contenidos, index, callback) => {
     if (!contenidos[index]) {

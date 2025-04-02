@@ -50,7 +50,7 @@ const NewContentTextModal = ({open, closeModal, data}: ModalData) => {
                     listaTexto: []
                 })
             })
-            const contenido : Contenido = {
+            const contenido = {
                 nombreTexto: '',
                 relator: '',
                 lenguajes: list,
@@ -58,7 +58,7 @@ const NewContentTextModal = ({open, closeModal, data}: ModalData) => {
                 updatedBy: '',
                 state: true,
                 nivel: nivelSeleccionado,
-            }
+            } as Contenido
             setContenido(contenido)
         }
     }, [appLanguages])
@@ -286,7 +286,7 @@ const NewContentTextModal = ({open, closeModal, data}: ModalData) => {
         const lenguajesCache = [...lenguajes]
         lenguajesCache[indexLanguageSelected].listaTexto = textList
         if (!isEdit) {
-            const contenido : Contenido = {
+            const contenido = {
                 nombreTexto: nombreTexto ? nombreTexto : '',
                 relator: '',
                 lenguajes: lenguajesCache,
@@ -298,11 +298,11 @@ const NewContentTextModal = ({open, closeModal, data}: ModalData) => {
                 audioEsUrl: audioEsUrl,
                 imageUrl: images,
                 pdf: PDFs
-            }
+            } as Contenido
             await axios.post('/api/contenido/guardarContenido', contenido)
         } else {
             if (data) {
-                const contenido : Contenido = {
+                const contenido = {
                     _id: data._id,
                     nombreTexto: nombreTexto ? nombreTexto : '',
                     relator: data.relator,
@@ -315,7 +315,7 @@ const NewContentTextModal = ({open, closeModal, data}: ModalData) => {
                     audioEsUrl: audioEsUrl,
                     imageUrl: images,
                     pdf: PDFs
-                }
+                } as Contenido
                 await axios.post('/api/contenido/editarContenido', contenido)
             }
         }

@@ -15,6 +15,7 @@ export interface Contenido {
     updatedAt?: Date
     state: boolean
     nivel: string
+    nivelData: any
     pdf?: PDFData[]
     idContenido?: number
 }

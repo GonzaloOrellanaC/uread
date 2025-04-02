@@ -2,9 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
 const userSchema = new mongoose_1.Schema({
-    idUser: {
-        type: Number
-    },
     name: {
         type: String,
         required: [true, 'Name is required']
@@ -99,6 +96,10 @@ const userSchema = new mongoose_1.Schema({
     validado: {
         type: mongoose_1.Schema.Types.String,
         default: 'No validado'
+    },
+    apoderado: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: 'User'
     }
 }, {
     timestamps: true,

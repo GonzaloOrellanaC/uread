@@ -204,8 +204,9 @@ const UserAdminComponent = () => {
         history.goBack()
     }
 
-    const revealAlumnos = (alumnos: User[]) => {
-        setAlumnosDeApoderado(alumnos)
+    const revealAlumnos = async (user: User) => {
+        const response = await userRouter.alumnosPorApoderado(user._id)
+        setAlumnosDeApoderado(response.alumnos)
         setOpenAlumnos(true)
     }
 
@@ -356,7 +357,7 @@ const UserAdminComponent = () => {
                                                     <IonButton fill={'outline'} color={(user.validado === 'No validado') ? 'primary' : 'warning'} onClick={() => { (user.id! > 1) ? validarUsuario(user) : alert('Super Usuario no puede ser editado') }}>
                                                         <IonIcon icon={arrowUp} style={{ marginRight: 10 }} /> 
                                                     </IonButton>}
-                                                    {(traducirNombreRol(user.roles[0].name) === 'Apoderado') && <IonButton fill={'outline'} color={'primary'} onClick={() => { revealAlumnos(user.alumnos) }}>
+                                                    {(traducirNombreRol(user.roles[0].name) === 'Apoderado') && <IonButton fill={'outline'} color={'primary'} onClick={() => { revealAlumnos(user) }}>
                                                         <IonIcon icon={people} style={{ marginRight: 10 }} /> 
                                                     </IonButton>}
                                                     <IonButton fill={'outline'} color={'primary'} onClick={() => { (user.id! > 1) ? editUser(user) : alert('Super Usuario no puede ser editado') }}>

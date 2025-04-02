@@ -32,6 +32,14 @@ const alumnoProvisorioSchema = new mongoose_1.Schema({
     },
     medioPago: {
         type: mongoose_1.Schema.Types.String
+    },
+    apoderado: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: 'User'
+    },
+    permiteValidar: {
+        type: Boolean,
+        default: false
     }
 }, {
     timestamps: true,

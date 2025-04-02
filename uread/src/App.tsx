@@ -44,6 +44,9 @@ import { AlumnosPage } from './pages/Alumnos/Alumnos.page';
 import { BienvenidaPage } from './pages/Bienvenida/Bienvenida.page';
 import { EspacioEstudiantesPage } from './pages/EspacioEstudiantes/EspacioEstudiantes.page';
 import { ClassRoomsComponent } from './containers/Admin/AdminComponents/ClassroomsEdit.component';
+import { SignupPage } from './pages/Signup/Signup.page';
+import { AlumnosContainer } from './containers/Alumnos/Alumnos.container';
+import { AlumnosAdminPage } from './containers/Admin/AdminComponents/Alumnos.component';
 
 setupIonicReact();
 
@@ -72,6 +75,9 @@ const RouterApp = () => {
     <IonRouterOutlet>
       <Route exact path='/'>
         <Redirect to={'/login'} />
+      </Route>
+      <Route exact path='/signup'>
+        <SignupPage />
       </Route>
       <Route exact path='/home'>
         <HomePage />
@@ -108,6 +114,9 @@ const RouterApp = () => {
       </Route>
       <Route exact path='/usuarios'>
           <UserAdminComponent />
+      </Route>
+      <Route exact path='/admin-alumnos'>
+          <AlumnosAdminPage />
       </Route>
       <Route exact path='/classroom-edit'>
           <ClassRoomsComponent />

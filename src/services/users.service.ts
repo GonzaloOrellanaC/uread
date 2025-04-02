@@ -7,13 +7,14 @@ import { isEmpty } from '@utils/util'
 import bcrypt from 'bcrypt'
 import { __ } from 'i18n'
 import { ObjectId } from 'mongoose'
-import { createToken } from './auth.service'
+import { createToken, verifyToken } from './auth.service'
 import { sendHTMLEmail } from './email.service'
 import { generateHTML } from '@/utils/html'
 import { logger } from '@/utils/logger'
 import path from 'path'
 import alumnoProvisorioModel from '@/models/alumnos-provisorios.model'
 import roleModel from '@/models/roles.model'
+import { DataStoredInToken } from '@/interfaces/auth.interface'
 
 const user = userModel
 
@@ -106,10 +107,8 @@ const createUser = async (userData: User, locale: string = env.locale) => {
             __({ phrase: 'Email {{email}} already exists', locale }, { email: userData.email })
         )
 
-    const lastUser = await userModel.find().sort({_id:-1}).limit(1)
     const hashedPassword = await bcrypt.hash(userData.password, 10)
-    userData.idUser = lastUser[0].idUser + 1
-    const createUserData: User = await user.create({ ...userData, password: hashedPassword })
+    const createUserData: User = await user.create({ ...userData, password: hashedPassword, roles: ['67d08179b9faf99da335828d'] })
     return createUserData
 }
 
@@ -208,6 +207,21 @@ const camibiarPassword = async (userId: string, password: string) => {
     return findUser
 }
 
+const userFromToken = async (token: string) => {
+    const tokenData: DataStoredInToken = verifyToken(token)
+    console.log(tokenData)
+    if (!tokenData) throw new HttpException(409, __({ phrase: 'Invalid token', locale: 'es' }))
+
+    const findUser: User = await user.findByIdAndUpdate(tokenData._id, {validado: 'Validado'}, {new: true}).populate('roles').populate('organization').populate({
+        path : 'alumnos',
+        populate : {
+            path : 'levelUser'
+        }
+        }).populate('levelUser')
+
+    return findUser
+}
+
 export default {
     findAllUser,
     findAllAdminUser,
@@ -223,6 +237,7 @@ export default {
     updateUser,
     deleteUser,
     validar,
+    userFromToken,
     habilitarAlumno,
     camibiarPassword
 }

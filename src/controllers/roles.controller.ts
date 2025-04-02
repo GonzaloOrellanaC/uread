@@ -91,7 +91,7 @@ const getAllRoles = async (req: RequestWithUser, res: Response, next: NextFuncti
  */
 const getMyRoles = async (req: RequestWithUser, res: Response, next: NextFunction) => {
     try {
-        const findMyRoles: Role[] = req.user.roles
+        const findMyRoles: Role[] = req.user.roles as Role[]
         res.status(200).json({ data: findMyRoles, message: 'findRoles' })
     } catch (error) {
         next(error)

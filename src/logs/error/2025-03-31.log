@@ -1,0 +1,22 @@
+2025-03-31 11:35:00 error: uncaughtException: Cannot read properties of undefined (reading 'match')
+TypeError: Cannot read properties of undefined (reading 'match')
+    at extract (C:\Users\gorel\Documents\Personales\uread\src\services\imap.service.ts:42:24)
+    at C:\Users\gorel\Documents\Personales\uread\src\services\imap.service.ts:52:29
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mailparser\lib\simple-parser.js:106:17
+    at Immediate.<anonymous> (C:\Users\gorel\Documents\Personales\uread\node_modules\mailparser\lib\mail-parser.js:1045:39)
+    at processImmediate (node:internal/timers:476:21)
+2025-03-31 12:22:00 error: uncaughtException: UID/seqno must be an integer, "*", or a range: [object Object]
+Error: UID/seqno must be an integer, "*", or a range: [object Object]
+    at validateUIDList (C:\Users\gorel\Documents\Personales\uread\node_modules\node-imap\lib\utils.js:37:19)
+    at Connection._store (C:\Users\gorel\Documents\Personales\uread\node_modules\node-imap\lib\Connection.js:560:5)
+    at Connection.setFlags (C:\Users\gorel\Documents\Personales\uread\node_modules\node-imap\lib\Connection.js:540:10)
+    at C:\Users\gorel\Documents\Personales\uread\src\services\imap.service.ts:76:30
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mailparser\lib\simple-parser.js:106:17
+    at Immediate.<anonymous> (C:\Users\gorel\Documents\Personales\uread\node_modules\mailparser\lib\mail-parser.js:1045:39)
+    at processImmediate (node:internal/timers:476:21)
+2025-03-31 12:57:00 error: uncaughtException: Cannot read properties of null (reading 'forEach')
+TypeError: Cannot read properties of null (reading 'forEach')
+    at C:\Users\gorel\Documents\Personales\uread\src\services\imap.service.ts:66:43
+    at C:\Users\gorel\Documents\Personales\uread\node_modules\mailparser\lib\simple-parser.js:106:17
+    at Immediate.processNext (C:\Users\gorel\Documents\Personales\uread\node_modules\mailparser\lib\mail-parser.js:1082:24)
+    at processImmediate (node:internal/timers:476:21)

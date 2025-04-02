@@ -18,6 +18,11 @@ const getContenido = async (idGrupos: string[]) => {
     return response.data
 }
 
+const getTodoContenido = async () => {
+    const response = await axios.get(api.url + `/api/contenido/getTodoContenido`)
+    return response.data
+}
+
 const getContenidoV2 = async () => {
     const response = await axios.get(api.url + '/api/contenido/leerContenidosV2')
     return response.data
@@ -37,6 +42,7 @@ const getGruposNiveles = async () => {
 
 export default {
     getContenido,
+    getTodoContenido,
     getContenidoV2,
     getNiveles,
     crearContenido,

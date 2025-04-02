@@ -1,12 +1,14 @@
-import { IonButton, IonButtons, IonCard, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonModal, IonRow, IonTitle, IonToolbar } from "@ionic/react"
-import { close, playOutline, stopOutline } from "ionicons/icons"
+import { IonButton, IonButtons, IonCard, IonCheckbox, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonModal, IonRow, IonTitle, IonToolbar } from "@ionic/react"
+import { close, pencil, playOutline, stopOutline } from "ionicons/icons"
 import { useEffect, useState } from "react"
 import { TextList } from "../../interfaces/TextList.interface"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 import { Image } from "../../interfaces/Contenido.interface";
+import { useAuthContext } from "../../context/Auth.context";
 
 export const TaleModal = ({closeModal, isOpen, item}: any) => {
+    const {isAdmin} = useAuthContext()
     const [listaTexto, setListaTexto] = useState([])
     const [lenguageSelected, setLenguageSelected] = useState<any>()
     const [indexLenguaje, setIndexLenguaje] = useState(0)
@@ -17,6 +19,8 @@ export const TaleModal = ({closeModal, isOpen, item}: any) => {
     const [images, setImages] = useState<Image[]>()
     const [pdfs, setPdfs] = useState<{description: string, pdfUrl: string}[]>()
     const [widthScreen, setWidthScreen] = useState(window.innerWidth)
+
+    const [openEdit, setOpenEdit] = useState(false)
 
     let timeoutId: any = null
     let stoped = true
@@ -124,12 +128,65 @@ export const TaleModal = ({closeModal, isOpen, item}: any) => {
             setElementTimeout(timeoutId)
         }
     }
+
+    const openUrl = (url: string) => {
+        window.open(url, '_blank')
+    }
+
     return (
         <IonModal isOpen={isOpen} className="item-container">
+            {
+                openEdit && <IonModal isOpen={openEdit} onWillDismiss={() => {setOpenEdit(false)}}>
+                        <IonContent style={{border: '1px #ccc solid'}} class="ion-padding">
+                            <IonToolbar>
+                                <IonButtons slot={'end'}>
+                                    <IonButton onClick={() => {setOpenEdit(false)}}>
+                                        <IonIcon icon={close} />
+                                    </IonButton>
+                                </IonButtons>
+                            </IonToolbar>
+                            <IonGrid>
+                                <IonRow>
+                                    <IonCol />
+                                    <IonCol sizeXl="10" sizeLg="10" sizeMd="12" sizeSm="12" sizeXs="12">
+                                        <IonItem>
+                                            <IonInput label="Nearpod" labelPlacement={'floating'} value={element.nearpod} onIonChange={(e) => {
+                                                setElement({...element, nearpod: e.target.value})
+                                            }} />
+                                        </IonItem>
+                                        <IonItem>
+                                            <IonInput label="Kahoot" labelPlacement={'floating'} value={element.kahoot} onIonChange={(e) => {
+                                                setElement({...element, kahoot: e.target.value})
+                                            }} />
+                                        </IonItem>
+                                        <IonItem>
+                                            <IonCheckbox
+                                                checked={element.state}
+                                                justify="start"
+                                                onIonChange={(e) => {setElement({...element, state: e.target.checked })}}>Habilitado</IonCheckbox>
+                                        </IonItem>
+                                    </IonCol>
+                                    <IonCol />
+                                </IonRow>
+                            </IonGrid>
+                        </IonContent>
+                    </IonModal>
+            }
           <IonHeader className="ion-no-border">
             <IonToolbar>
               <IonTitle>{element && element.nombreTexto}</IonTitle>
               <IonButtons slot="end">
+                {
+                    isAdmin && <IonButton onClick={() => {setOpenEdit(true)}}>
+                        <IonIcon icon={pencil} />
+                    </IonButton>
+                }
+                {element && element.kahoot && <IonButton onClick={() => {openUrl(element.kahoot)}}>
+                    <img height={'30px'} src={'./assets/images/kahoot-logo.png'} />
+                </IonButton>}
+                {element && element.nearpod && <IonButton onClick={() => {openUrl(element.nearpod)}}>
+                    <img height={'30px'} src={'./assets/images/nearpod-logo.webp'} />
+                </IonButton>}
                 <IonButton onClick={() => closeModal()}>
                     <IonIcon icon={close} />
                 </IonButton>

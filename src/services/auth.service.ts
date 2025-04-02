@@ -14,6 +14,7 @@ import path from 'path'
 import { ObjectId } from 'mongoose'
 import { environment } from '@/configs/env'
 import gruposNivelesModel from '@/models/gruposNiveles.model'
+import { Role } from '@/interfaces/roles.interface'
 
 const user = userModel
 
@@ -32,9 +33,9 @@ const signup = async (
     const hashedPassword = await bcrypt.hash(userData.password, 10)
     const createUserData: User = await user.create({ ...userData, password: hashedPassword })
     const loginToken = createToken(createUserData)
-    const cookie = createCookie(loginToken)
+    const cookie = /* createCookie(loginToken) */''
 
-    const verificationToken = createToken(createUserData, 0)
+    const verificationToken = createToken(createUserData)
     const args = {
         fullName: `${createUserData.name} ${createUserData.lastName}` ,
         email: createUserData.email,
@@ -59,8 +60,8 @@ const resendVerification = async (
     userData: User,
 ) => {
     const loginToken = createToken(userData)
-    const cookie = createCookie(loginToken)
-    const verificationToken = createToken(userData, 0)
+    const cookie = ''/* createCookie(loginToken) */
+    const verificationToken = createToken(userData)
     const args = {
         fullName: `${userData.name} ${userData.lastName}` ,
         email: userData.email,
@@ -96,7 +97,9 @@ const login = async (
 
     let grupos: any
 
-    if (findUser.roles[0].name === 'user') {
+    const roles = findUser.roles as Role[]
+
+    if (roles[0] && roles[0].name === 'user') {
         grupos = await gruposNivelesModel.find({cursos: {$in: [findUser.levelUser._id]}})
     }
 
@@ -105,8 +108,8 @@ const login = async (
     const isPasswordMatching: boolean = await bcrypt.compare(userData.password, findUser.password)
     if (!isPasswordMatching) throw new HttpException(409, __({ phrase: 'Wrong password', locale }))
 
-    const token = createToken(findUser, 86400)
-    const cookie = createCookie(token)
+    const token = createToken(findUser)
+    const cookie = ''/* createCookie(token) */
 
     return { cookie, findUser, token, grupos }
 }
@@ -186,7 +189,7 @@ const resetPassword = async (token: string, password: string) => {
     return findUser
 }
 
-export const createToken = (user: User, expiresIn = (3600 * 24)) => {
+export const createToken = (user: User, expiresIn = "2 days") => {
     const dataStoredInToken: DataStoredInToken = { _id: user._id } // user._id, [organizationId, resources]
     const secretKey: string = keys.secretKey
 

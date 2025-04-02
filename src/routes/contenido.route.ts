@@ -7,6 +7,7 @@ router.post(`/guardarContenido`, contenidoController.guardarContenido)
 router.post(`/editarContenido`, contenidoController.editarContenido)
 router.post(`/borrarContenido`, contenidoController.borrarContenido)
 router.post(`/leerContenidos`, contenidoController.leerContenidos)
+router.get(`/getTodoContenido`, contenidoController.getTodoContenido)
 router.get(`/leerContenidosBasicos`, contenidoController.leerContenidosBasicos)
 
 

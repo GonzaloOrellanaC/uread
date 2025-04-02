@@ -5,6 +5,8 @@ import { NextFunction, Request, Response } from 'express'
 import { RequestWithUser } from '@interfaces/auth.interface'
 import { Organization } from '@/interfaces/roles.interface'
 import organizationModel from '@/models/organizations.model'
+import usersService from '@services/users.service'
+import alumnoProvisorioModel from '@/models/alumnos-provisorios.model'
 
 const getUsers = async (req: RequestWithUser, res: Response, next: NextFunction) => {
     try {
@@ -74,6 +76,7 @@ const createUser = async (req: Request, res: Response, next: NextFunction) => {
         if (createUserData.organization[0]) {
             await organizationModel.findOneAndUpdate({_id: createUserData.organization[0]._id}, { $push: { users: createUserData._id } })
         }
+        await usersService.validar(createUserData)
         res.status(201).json({ data: [createUserData], message: 'created' })
     } catch (error) {
         res.status(401).json({data: error, message: 'error'})
@@ -117,6 +120,19 @@ const validarUsuario = async (req: Request, res: Response, next: NextFunction) =
     }
 }
 
+const usuarioDesdeToken = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        
+        const {token} = req.params
+        const userData = await UserService.userFromToken(token as string)
+
+        res.status(200).json({ data: userData, message: 'validado' })
+    } catch ({name, message}) {
+        console.log({name, message})
+        res.status(200).json({ data: {name}, message })
+    }
+}
+
 const habilitarUsuarioDesdeAlumno = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const {alumno} = req.body
@@ -142,6 +158,50 @@ const cambiarPassword = async (req: Request, res: Response, next: NextFunction) 
     }
 }
 
+const alumnosUsuario = async (req: Request, res: Response) => {
+    const {idUser} = req.query
+    try {
+        const alumnos = await alumnoProvisorioModel.find({apoderado: idUser}).populate('levelUser')
+        res.status(200).json({alumnos})
+    } catch ({name, message}) {
+        console.log(name, message)
+        res.status(400).json({name, message})
+    }
+}
+
+const leerAlumnos = async (req: Request, res: Response) => {
+    try {
+        const alumnos = await alumnoProvisorioModel.find().populate('levelUser').populate('apoderado')
+        res.status(200).json({alumnos})
+    } catch ({name, message}) {
+        console.log(name, message)
+        res.status(400).json({name, message})
+    }
+}
+
+const crearAlumno = async (req: Request, res: Response) => {
+    const alumno = req.body
+    try {
+        const nuevoAlumno = await alumnoProvisorioModel.create(alumno)
+        res.status(200).json({nuevoAlumno})
+    } catch ({name, message}) {
+        console.log(name, message)
+        res.status(400).json({name, message})
+    }
+} 
+
+const editarAlumno = async (req: Request, res: Response) => {
+    const {alumno} = req.body
+    console.log(alumno)
+    try {
+        const alumnoEditado = await alumnoProvisorioModel.findByIdAndUpdate(alumno._id, alumno, {new: true}).populate('apoderado')
+        res.status(200).json({alumno: alumnoEditado})
+    } catch ({name, message}) {
+        console.log(name, message)
+        res.status(400).json({name, message})
+    }
+} 
+
 export default {
     getUsers,
     getAdminUsers,
@@ -153,6 +213,11 @@ export default {
     editUser,
     deleteUser,
     validarUsuario,
+    usuarioDesdeToken,
     habilitarUsuarioDesdeAlumno,
-    cambiarPassword
+    cambiarPassword,
+    alumnosUsuario,
+    leerAlumnos,
+    crearAlumno,
+    editarAlumno
 }

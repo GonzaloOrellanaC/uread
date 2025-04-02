@@ -4,6 +4,8 @@ const tslib_1 = require("tslib");
 const env_1 = require("../configs/env");
 const users_service_1 = (0, tslib_1.__importDefault)(require("../services/users.service"));
 const organizations_model_1 = (0, tslib_1.__importDefault)(require("../models/organizations.model"));
+const users_service_2 = (0, tslib_1.__importDefault)(require("../services/users.service"));
+const alumnos_provisorios_model_1 = (0, tslib_1.__importDefault)(require("../models/alumnos-provisorios.model"));
 const getUsers = async (req, res, next) => {
     try {
         const findAllUsersData = await users_service_1.default.findAllUser();
@@ -70,6 +72,7 @@ const createUser = async (req, res, next) => {
         if (createUserData.organization[0]) {
             await organizations_model_1.default.findOneAndUpdate({ _id: createUserData.organization[0]._id }, { $push: { users: createUserData._id } });
         }
+        await users_service_2.default.validar(createUserData);
         res.status(201).json({ data: [createUserData], message: 'created' });
     }
     catch (error) {
@@ -110,6 +113,17 @@ const validarUsuario = async (req, res, next) => {
         res.status(200).json({ data: { name }, message });
     }
 };
+const usuarioDesdeToken = async (req, res, next) => {
+    try {
+        const { token } = req.params;
+        const userData = await users_service_1.default.userFromToken(token);
+        res.status(200).json({ data: userData, message: 'validado' });
+    }
+    catch ({ name, message }) {
+        console.log({ name, message });
+        res.status(200).json({ data: { name }, message });
+    }
+};
 const habilitarUsuarioDesdeAlumno = async (req, res, next) => {
     try {
         const { alumno } = req.body;
@@ -133,6 +147,50 @@ const cambiarPassword = async (req, res, next) => {
         res.status(200).json({ data: { name }, message });
     }
 };
+const alumnosUsuario = async (req, res) => {
+    const { idUser } = req.query;
+    try {
+        const alumnos = await alumnos_provisorios_model_1.default.find({ apoderado: idUser }).populate('levelUser');
+        res.status(200).json({ alumnos });
+    }
+    catch ({ name, message }) {
+        console.log(name, message);
+        res.status(400).json({ name, message });
+    }
+};
+const leerAlumnos = async (req, res) => {
+    try {
+        const alumnos = await alumnos_provisorios_model_1.default.find().populate('levelUser').populate('apoderado');
+        res.status(200).json({ alumnos });
+    }
+    catch ({ name, message }) {
+        console.log(name, message);
+        res.status(400).json({ name, message });
+    }
+};
+const crearAlumno = async (req, res) => {
+    const alumno = req.body;
+    try {
+        const nuevoAlumno = await alumnos_provisorios_model_1.default.create(alumno);
+        res.status(200).json({ nuevoAlumno });
+    }
+    catch ({ name, message }) {
+        console.log(name, message);
+        res.status(400).json({ name, message });
+    }
+};
+const editarAlumno = async (req, res) => {
+    const { alumno } = req.body;
+    console.log(alumno);
+    try {
+        const alumnoEditado = await alumnos_provisorios_model_1.default.findByIdAndUpdate(alumno._id, alumno, { new: true }).populate('apoderado');
+        res.status(200).json({ alumno: alumnoEditado });
+    }
+    catch ({ name, message }) {
+        console.log(name, message);
+        res.status(400).json({ name, message });
+    }
+};
 exports.default = {
     getUsers,
     getAdminUsers,
@@ -144,7 +202,12 @@ exports.default = {
     editUser,
     deleteUser,
     validarUsuario,
+    usuarioDesdeToken,
     habilitarUsuarioDesdeAlumno,
-    cambiarPassword
+    cambiarPassword,
+    alumnosUsuario,
+    leerAlumnos,
+    crearAlumno,
+    editarAlumno
 };
 //# sourceMappingURL=users.controller.js.map

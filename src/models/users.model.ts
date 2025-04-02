@@ -3,9 +3,6 @@ import { User } from '@interfaces/users.interface'
 
 const userSchema: Schema = new Schema(
     {
-        idUser: {
-            type: Number
-        },
         name: {
             type: String,
             required: [true, 'Name is required']
@@ -100,6 +97,10 @@ const userSchema: Schema = new Schema(
         validado: {
             type: Schema.Types.String,
             default: 'No validado'
+        },
+        apoderado: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
         }
     },
     {

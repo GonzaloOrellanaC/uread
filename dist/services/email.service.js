@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendEmail = exports.sendHTMLEmail = exports.createTransporter = void 0;
+exports.sendEmail = exports.sendPagoValidadoEmail = exports.sendHTMLEmail = exports.createTransporter = void 0;
 const tslib_1 = require("tslib");
 const smtp_1 = (0, tslib_1.__importDefault)(require("../configs/smtp"));
 const nodemailer_1 = (0, tslib_1.__importDefault)(require("nodemailer"));
@@ -49,6 +49,19 @@ const sendHTMLEmail = async (to, subject, html, optionals) => {
     });
 };
 exports.sendHTMLEmail = sendHTMLEmail;
+const sendPagoValidadoEmail = async (to, subject, html, optionals) => {
+    const user = smtp_1.default.user_pago_valido;
+    const password = smtp_1.default.pass_pago_valido;
+    const transporter = (0, exports.createTransporter)(smtp_1.default.host, smtp_1.default.port, user, password);
+    return await transporter.sendMail({
+        from: (optionals === null || optionals === void 0 ? void 0 : optionals.from) || { name: 'Uread', address: user },
+        to,
+        subject,
+        html,
+        attachments: optionals === null || optionals === void 0 ? void 0 : optionals.attachments
+    });
+};
+exports.sendPagoValidadoEmail = sendPagoValidadoEmail;
 /**
  * Send a plain text email
  * @param {string} to - The email address to send to

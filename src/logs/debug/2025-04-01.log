@@ -1,0 +1,52 @@
+2025-04-01 21:47:58 info: ====================================
+2025-04-01 21:47:58 info: ============ ENV: development ===========
+2025-04-01 21:47:58 info: 🚀 App listening on the port 5212
+2025-04-01 21:47:58 info: ====================================
+2025-04-01 21:55:07 info: [0mGET /api/roles/getRoles [36m304[0m 106.199 ms - -[0m
+2025-04-01 21:55:07 info: [0mGET /api/roles/getRoles [36m304[0m 84.725 ms - -[0m
+2025-04-01 21:55:12 info: [0mGET /api/roles/getRoles [36m304[0m 75.771 ms - -[0m
+2025-04-01 21:55:12 info: [0mGET /api/roles/getRoles [36m304[0m 77.822 ms - -[0m
+2025-04-01 21:56:06 info: [0mGET /api/roles/getRoles [36m304[0m 96.966 ms - -[0m
+2025-04-01 21:56:06 info: [0mGET /api/roles/getRoles [36m304[0m 79.832 ms - -[0m
+2025-04-01 22:23:08 info: [0mGET /api/roles/getRoles [36m304[0m 93.868 ms - -[0m
+2025-04-01 22:23:08 info: [0mGET /api/roles/getRoles [36m304[0m 85.164 ms - -[0m
+2025-04-01 23:02:48 info: [0mOPTIONS /api/users/createUser [32m204[0m 5.132 ms - 0[0m
+2025-04-01 23:02:48 info: [0mPOST /api/users/createUser [0m-[0m - ms - -[0m
+2025-04-01 23:05:40 info: ====================================
+2025-04-01 23:05:40 info: ============ ENV: development ===========
+2025-04-01 23:05:40 info: 🚀 App listening on the port 5212
+2025-04-01 23:05:40 info: ====================================
+2025-04-01 23:07:28 info: [0mOPTIONS /api/users/createUser [32m204[0m 3.740 ms - 0[0m
+2025-04-01 23:07:28 info: [0mPOST /api/users/createUser [32m201[0m 420.588 ms - 463[0m
+2025-04-01 23:14:15 info: ====================================
+2025-04-01 23:14:15 info: ============ ENV: development ===========
+2025-04-01 23:14:15 info: 🚀 App listening on the port 5212
+2025-04-01 23:14:15 info: ====================================
+2025-04-01 23:14:15 info: [0mOPTIONS /api/users/createUser [32m204[0m 2.718 ms - 0[0m
+2025-04-01 23:14:18 info: [0mPOST /api/users/createUser [32m201[0m 2661.498 ms - 463[0m
+2025-04-01 23:19:34 info: [0mGET /api/roles/getRoles [36m304[0m 89.855 ms - -[0m
+2025-04-01 23:19:34 info: [0mGET /api/roles/getRoles [36m304[0m 80.423 ms - -[0m
+2025-04-01 23:41:27 info: ====================================
+2025-04-01 23:41:27 info: ============ ENV: development ===========
+2025-04-01 23:41:27 info: 🚀 App listening on the port 5212
+2025-04-01 23:41:27 info: ====================================
+2025-04-01 23:41:30 info: [0mGET /api/roles/getRoles [36m304[0m 92.091 ms - -[0m
+2025-04-01 23:41:30 info: [0mGET /api/roles/getRoles [36m304[0m 74.801 ms - -[0m
+2025-04-01 23:42:11 info: [0mOPTIONS /api/users/createUser [32m204[0m 0.748 ms - 0[0m
+2025-04-01 23:42:12 info: [0mPOST /api/users/createUser [32m201[0m 979.804 ms - 490[0m
+2025-04-01 23:44:30 info: ====================================
+2025-04-01 23:44:30 info: ============ ENV: development ===========
+2025-04-01 23:44:30 info: 🚀 App listening on the port 5212
+2025-04-01 23:44:30 info: ====================================
+2025-04-01 23:50:15 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3Njk0OTMzMjQxYTNmOGQ0NTBkNDEiLCJpYXQiOjE3NDIxNzA0NzMsImV4cCI6MTc0MjE3NDA3M30.twuSfccX8EF6ZsfQwiONCnmHhaO_XpNjSQ1PT8zM9Oo [32m200[0m 16.204 ms - 70[0m
+2025-04-01 23:50:15 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3Njk0OTMzMjQxYTNmOGQ0NTBkNDEiLCJpYXQiOjE3NDIxNzA0NzMsImV4cCI6MTc0MjE3NDA3M30.twuSfccX8EF6ZsfQwiONCnmHhaO_XpNjSQ1PT8zM9Oo [36m304[0m 7.970 ms - -[0m
+2025-04-01 23:54:23 info: ====================================
+2025-04-01 23:54:23 info: ============ ENV: development ===========
+2025-04-01 23:54:23 info: 🚀 App listening on the port 5212
+2025-04-01 23:54:23 info: ====================================
+2025-04-01 23:54:27 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3Njk0OTMzMjQxYTNmOGQ0NTBkNDEiLCJpYXQiOjE3NDIxNzA0NzMsImV4cCI6MTc0MjE3NDA3M30.twuSfccX8EF6ZsfQwiONCnmHhaO_XpNjSQ1PT8zM9Oo [36m304[0m 17.455 ms - -[0m
+2025-04-01 23:54:27 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3Njk0OTMzMjQxYTNmOGQ0NTBkNDEiLCJpYXQiOjE3NDIxNzA0NzMsImV4cCI6MTc0MjE3NDA3M30.twuSfccX8EF6ZsfQwiONCnmHhaO_XpNjSQ1PT8zM9Oo [36m304[0m 7.516 ms - -[0m
+2025-04-01 23:59:24 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3Njk0OTMzMjQxYTNmOGQ0NTBkNDEiLCJpYXQiOjE3NDIxNzA0NzMsImV4cCI6MTc0MjE3NDA3M30.twuSfccX8EF6ZsfQwiONCnmHhaO_XpNjSQ1PT8zM9Oo [36m304[0m 3.667 ms - -[0m
+2025-04-01 23:59:24 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3Njk0OTMzMjQxYTNmOGQ0NTBkNDEiLCJpYXQiOjE3NDIxNzA0NzMsImV4cCI6MTc0MjE3NDA3M30.twuSfccX8EF6ZsfQwiONCnmHhaO_XpNjSQ1PT8zM9Oo [36m304[0m 4.560 ms - -[0m
+2025-04-01 23:59:40 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYTQwM2ZjMTlkNDA4ZDBlMDYwZDEiLCJpYXQiOjE3NDM1NjE3MzEsImV4cCI6MTc0MzY0ODEzMX0.qJFRYzM-eTi4nwX5ei_zybv2xCd4GMUPn9zPxxRqBEY [32m200[0m 4.830 ms - 70[0m
+2025-04-01 23:59:40 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYTQwM2ZjMTlkNDA4ZDBlMDYwZDEiLCJpYXQiOjE3NDM1NjE3MzEsImV4cCI6MTc0MzY0ODEzMX0.qJFRYzM-eTi4nwX5ei_zybv2xCd4GMUPn9zPxxRqBEY [36m304[0m 3.638 ms - -[0m

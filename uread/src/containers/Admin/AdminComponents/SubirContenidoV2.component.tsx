@@ -3,7 +3,7 @@ import { add, arrowBack } from "ionicons/icons"
 import { useContenidoContext } from "../../../context/Contenido.context"
 import { useEffect, useState } from "react"
 import { Contenido } from "../../../interfaces/Contenido.interface"
-import { NewContentModal } from "../../../components/Modals/ContentModal/NewContent_v2.modal"
+/* import { NewContentModal } from "../../../components/Modals/ContentModal/NewContent_v2.modal" */
 import { LibraryV2ContentModal } from "../../../components/Modals/ContentModal/LibraryV2Content.modal"
 import { useHistory } from "react-router"
 
@@ -135,7 +135,7 @@ export const SubirContenidoV2Component = () => {
                     </IonRow>
                 </IonGrid>
             </IonContent>
-            <NewContentModal open={openNewContent} closeModal={closeNewContentModal} data={data} />
+            {/* <NewContentModal open={openNewContent} closeModal={closeNewContentModal} data={data} /> */}
             {data && <LibraryV2ContentModal open={openPreview} closeModal={closePreview} data={data} />}
         </IonPage>
     )

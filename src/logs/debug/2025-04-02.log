@@ -1,0 +1,218 @@
+2025-04-02 00:02:13 info: ====================================
+2025-04-02 00:02:13 info: ============ ENV: development ===========
+2025-04-02 00:02:13 info: 🚀 App listening on the port 5212
+2025-04-02 00:02:13 info: ====================================
+2025-04-02 00:02:47 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYTQwM2ZjMTlkNDA4ZDBlMDYwZDEiLCJpYXQiOjE3NDM1NjE3MzEsImV4cCI6MTc0MzY0ODEzMX0.qJFRYzM-eTi4nwX5ei_zybv2xCd4GMUPn9zPxxRqBEY [36m304[0m 16.666 ms - -[0m
+2025-04-02 00:02:47 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYTQwM2ZjMTlkNDA4ZDBlMDYwZDEiLCJpYXQiOjE3NDM1NjE3MzEsImV4cCI6MTc0MzY0ODEzMX0.qJFRYzM-eTi4nwX5ei_zybv2xCd4GMUPn9zPxxRqBEY [36m304[0m 7.471 ms - -[0m
+2025-04-02 00:03:51 info: ====================================
+2025-04-02 00:03:51 info: ============ ENV: development ===========
+2025-04-02 00:03:51 info: 🚀 App listening on the port 5212
+2025-04-02 00:03:51 info: ====================================
+2025-04-02 00:07:54 info: ====================================
+2025-04-02 00:07:54 info: ============ ENV: development ===========
+2025-04-02 00:07:54 info: 🚀 App listening on the port 5212
+2025-04-02 00:07:54 info: ====================================
+2025-04-02 00:08:34 info: [0mOPTIONS /api/users/createUser [32m204[0m 2.148 ms - 0[0m
+2025-04-02 00:08:35 info: [0mPOST /api/users/createUser [32m201[0m 1032.845 ms - 492[0m
+2025-04-02 00:08:46 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYTQwM2ZjMTlkNDA4ZDBlMDYwZDEiLCJpYXQiOjE3NDM1NjE3MzEsImV4cCI6MTc0MzY0ODEzMX0.qJFRYzM-eTi4nwX5ei_zybv2xCd4GMUPn9zPxxRqBEY [36m304[0m 10.109 ms - -[0m
+2025-04-02 00:08:46 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYTQwM2ZjMTlkNDA4ZDBlMDYwZDEiLCJpYXQiOjE3NDM1NjE3MzEsImV4cCI6MTc0MzY0ODEzMX0.qJFRYzM-eTi4nwX5ei_zybv2xCd4GMUPn9zPxxRqBEY [36m304[0m 14.527 ms - -[0m
+2025-04-02 00:08:52 info: [0mGET /api/roles/getRoles [36m304[0m 106.205 ms - -[0m
+2025-04-02 00:08:52 info: [0mGET /api/roles/getRoles [36m304[0m 79.145 ms - -[0m
+2025-04-02 00:09:05 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYWEzMzJiNTk4ZTAxYzBmZWZhZTciLCJpYXQiOjE3NDM1NjMzMTUsImV4cCI6MTc0MzczNjExNX0.s2kPH4pRtE55IZBFBQvY3X1vHJoqw3oW87zWCARb1vU [32m200[0m 2.762 ms - 70[0m
+2025-04-02 00:09:05 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYWEzMzJiNTk4ZTAxYzBmZWZhZTciLCJpYXQiOjE3NDM1NjMzMTUsImV4cCI6MTc0MzczNjExNX0.s2kPH4pRtE55IZBFBQvY3X1vHJoqw3oW87zWCARb1vU [36m304[0m 2.918 ms - -[0m
+2025-04-02 00:10:29 info: ====================================
+2025-04-02 00:10:29 info: ============ ENV: development ===========
+2025-04-02 00:10:29 info: 🚀 App listening on the port 5212
+2025-04-02 00:10:29 info: ====================================
+2025-04-02 00:10:37 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYWEzMzJiNTk4ZTAxYzBmZWZhZTciLCJpYXQiOjE3NDM1NjMzMTUsImV4cCI6MTc0MzczNjExNX0.s2kPH4pRtE55IZBFBQvY3X1vHJoqw3oW87zWCARb1vU [32m200[0m 222.886 ms - 613[0m
+2025-04-02 00:10:38 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYWEzMzJiNTk4ZTAxYzBmZWZhZTciLCJpYXQiOjE3NDM1NjMzMTUsImV4cCI6MTc0MzczNjExNX0.s2kPH4pRtE55IZBFBQvY3X1vHJoqw3oW87zWCARb1vU [32m200[0m 165.327 ms - 613[0m
+2025-04-02 00:11:58 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYWEzMzJiNTk4ZTAxYzBmZWZhZTciLCJpYXQiOjE3NDM1NjMzMTUsImV4cCI6MTc0MzczNjExNX0.s2kPH4pRtE55IZBFBQvY3X1vHJoqw3oW87zWCARb1vU [32m200[0m 179.836 ms - 613[0m
+2025-04-02 00:11:58 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VjYWEzMzJiNTk4ZTAxYzBmZWZhZTciLCJpYXQiOjE3NDM1NjMzMTUsImV4cCI6MTc0MzczNjExNX0.s2kPH4pRtE55IZBFBQvY3X1vHJoqw3oW87zWCARb1vU [32m200[0m 162.150 ms - 613[0m
+2025-04-02 00:12:07 info: [0mOPTIONS /api/users/editUser [32m204[0m 1.243 ms - 0[0m
+2025-04-02 00:12:08 info: [0mPOST /api/users/editUser [32m200[0m 286.619 ms - 633[0m
+2025-04-02 07:59:16 info: ====================================
+2025-04-02 07:59:16 info: ============ ENV: development ===========
+2025-04-02 07:59:16 info: 🚀 App listening on the port 5212
+2025-04-02 07:59:16 info: ====================================
+2025-04-02 08:02:58 info: [0mGET /api/roles/getRoles [36m304[0m 103.996 ms - -[0m
+2025-04-02 08:02:58 info: [0mGET /api/roles/getRoles [36m304[0m 80.345 ms - -[0m
+2025-04-02 08:03:37 info: [0mOPTIONS /api/login [32m204[0m 0.883 ms - 0[0m
+2025-04-02 08:03:37 info: [0mPOST /api/login [32m200[0m 435.830 ms - 814[0m
+2025-04-02 08:26:15 info: ====================================
+2025-04-02 08:26:15 info: ============ ENV: development ===========
+2025-04-02 08:26:15 info: 🚀 App listening on the port 5212
+2025-04-02 08:26:15 info: ====================================
+2025-04-02 08:27:21 info: ====================================
+2025-04-02 08:27:21 info: ============ ENV: development ===========
+2025-04-02 08:27:21 info: 🚀 App listening on the port 5212
+2025-04-02 08:27:21 info: ====================================
+2025-04-02 08:28:01 info: ====================================
+2025-04-02 08:28:01 info: ============ ENV: development ===========
+2025-04-02 08:28:01 info: 🚀 App listening on the port 5212
+2025-04-02 08:28:01 info: ====================================
+2025-04-02 08:31:27 info: ====================================
+2025-04-02 08:31:27 info: ============ ENV: development ===========
+2025-04-02 08:31:27 info: 🚀 App listening on the port 5212
+2025-04-02 08:31:27 info: ====================================
+2025-04-02 09:58:26 info: ====================================
+2025-04-02 09:58:26 info: ============ ENV: development ===========
+2025-04-02 09:58:26 info: 🚀 App listening on the port 5212
+2025-04-02 09:58:26 info: ====================================
+2025-04-02 10:00:31 info: ====================================
+2025-04-02 10:00:31 info: ============ ENV: development ===========
+2025-04-02 10:00:31 info: 🚀 App listening on the port 5212
+2025-04-02 10:00:31 info: ====================================
+2025-04-02 10:01:36 info: [0mOPTIONS /api/form [32m204[0m 3.389 ms - 0[0m
+2025-04-02 10:01:36 info: [0mPOST /api/form [32m200[0m 267.591 ms - 375[0m
+2025-04-02 10:08:00 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [32m200[0m 82.195 ms - 355[0m
+2025-04-02 10:08:00 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 81.217 ms - -[0m
+2025-04-02 10:08:39 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 78.549 ms - -[0m
+2025-04-02 10:08:40 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 79.732 ms - -[0m
+2025-04-02 10:09:02 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 71.338 ms - -[0m
+2025-04-02 10:09:57 info: ====================================
+2025-04-02 10:09:57 info: ============ ENV: development ===========
+2025-04-02 10:09:57 info: 🚀 App listening on the port 5212
+2025-04-02 10:09:57 info: ====================================
+2025-04-02 10:10:15 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [32m200[0m 201.320 ms - 391[0m
+2025-04-02 10:10:16 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 154.112 ms - -[0m
+2025-04-02 10:10:17 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 152.771 ms - -[0m
+2025-04-02 10:13:24 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 162.273 ms - -[0m
+2025-04-02 10:13:25 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 145.533 ms - -[0m
+2025-04-02 10:18:22 info: [0mGET /api/roles/getRoles [32m200[0m 76.932 ms - 734[0m
+2025-04-02 10:18:22 info: [0mGET /api/roles/getRoles [36m304[0m 76.691 ms - -[0m
+2025-04-02 10:18:22 info: [0mGET /api/niveles/leerNiveles [32m200[0m 73.769 ms - 543[0m
+2025-04-02 10:18:22 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 205.893 ms - -[0m
+2025-04-02 10:18:23 info: [0mGET /api/users/getUsers [32m200[0m 887.886 ms - -[0m
+2025-04-02 10:18:23 info: [0mOPTIONS /api/login [32m204[0m 0.523 ms - 0[0m
+2025-04-02 10:18:24 info: [0mPOST /api/login [32m200[0m 279.459 ms - 790[0m
+2025-04-02 10:18:24 info: [0mGET /api/niveles/leerNiveles [36m304[0m 82.113 ms - -[0m
+2025-04-02 10:18:24 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 152.340 ms - -[0m
+2025-04-02 10:18:25 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 1188.275 ms - -[0m
+2025-04-02 10:18:33 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [32m200[0m 147.633 ms - 391[0m
+2025-04-02 11:06:00 info: ====================================
+2025-04-02 11:06:00 info: ============ ENV: development ===========
+2025-04-02 11:06:00 info: 🚀 App listening on the port 5212
+2025-04-02 11:06:00 info: ====================================
+2025-04-02 11:06:55 info: [0mGET /api/users/alumnos-usuario?idUser=67d0b62246a9e99d0c977ab4 [32m200[0m 90.975 ms - 14[0m
+2025-04-02 11:06:56 info: [0mGET /api/users/alumnos-usuario?idUser=67d0b62246a9e99d0c977ab4 [36m304[0m 75.978 ms - -[0m
+2025-04-02 11:08:31 info: [0mGET /api/users/alumnos [32m200[0m 167.575 ms - -[0m
+2025-04-02 11:08:31 info: [0mGET /api/users/alumnos [36m304[0m 159.450 ms - -[0m
+2025-04-02 11:09:34 info: ====================================
+2025-04-02 11:09:34 info: ============ ENV: development ===========
+2025-04-02 11:09:34 info: 🚀 App listening on the port 5212
+2025-04-02 11:09:34 info: ====================================
+2025-04-02 11:10:53 info: [0mGET /api/users/alumnos [36m304[0m 178.679 ms - -[0m
+2025-04-02 11:11:02 info: [0mGET /api/users/alumnos [36m304[0m 161.742 ms - -[0m
+2025-04-02 11:11:02 info: [0mGET /api/users/alumnos [36m304[0m 158.336 ms - -[0m
+2025-04-02 11:11:46 info: ====================================
+2025-04-02 11:11:46 info: ============ ENV: development ===========
+2025-04-02 11:11:46 info: 🚀 App listening on the port 5212
+2025-04-02 11:11:46 info: ====================================
+2025-04-02 11:11:48 info: [0mGET /api/users/alumnos [32m200[0m 1867.535 ms - -[0m
+2025-04-02 11:11:48 info: [0mGET /api/users/alumnos [36m304[0m 158.815 ms - -[0m
+2025-04-02 11:11:50 info: [0mGET /api/users/alumnos [36m304[0m 160.959 ms - -[0m
+2025-04-02 11:11:50 info: [0mGET /api/users/alumnos [36m304[0m 205.514 ms - -[0m
+2025-04-02 11:13:04 info: [0mGET /api/users/alumnos [32m200[0m 161.101 ms - -[0m
+2025-04-02 11:13:05 info: [0mGET /api/users/alumnos [36m304[0m 184.430 ms - -[0m
+2025-04-02 11:13:18 info: [0mGET /api/users/alumnos [32m200[0m 207.904 ms - -[0m
+2025-04-02 11:13:18 info: [0mGET /api/users/alumnos [36m304[0m 205.800 ms - -[0m
+2025-04-02 11:13:41 info: [0mGET /api/users/alumnos [36m304[0m 178.458 ms - -[0m
+2025-04-02 11:13:41 info: [0mGET /api/users/alumnos [36m304[0m 152.299 ms - -[0m
+2025-04-02 11:13:44 info: [0mGET /api/users/alumnos [36m304[0m 160.608 ms - -[0m
+2025-04-02 11:13:44 info: [0mGET /api/users/alumnos [36m304[0m 155.429 ms - -[0m
+2025-04-02 11:14:03 info: [0mOPTIONS /api/users/edit-alumno [32m204[0m 0.236 ms - 0[0m
+2025-04-02 11:14:03 info: [0mPOST /api/users/edit-alumno [32m200[0m 217.990 ms - 15[0m
+2025-04-02 11:15:48 info: ====================================
+2025-04-02 11:15:48 info: ============ ENV: development ===========
+2025-04-02 11:15:48 info: 🚀 App listening on the port 5212
+2025-04-02 11:15:48 info: ====================================
+2025-04-02 11:15:55 info: [0mGET /api/users/alumnos [32m200[0m 174.847 ms - -[0m
+2025-04-02 11:15:55 info: [0mGET /api/users/alumnos [32m200[0m 583.454 ms - -[0m
+2025-04-02 11:15:58 info: [0mOPTIONS /api/users/edit-alumno [32m204[0m 0.508 ms - 0[0m
+2025-04-02 11:15:58 info: [0mPOST /api/users/edit-alumno [32m200[0m 126.924 ms - 15[0m
+2025-04-02 11:16:34 info: ====================================
+2025-04-02 11:16:34 info: ============ ENV: development ===========
+2025-04-02 11:16:34 info: 🚀 App listening on the port 5212
+2025-04-02 11:16:34 info: ====================================
+2025-04-02 11:16:42 info: [0mGET /api/users/alumnos [32m200[0m 181.280 ms - -[0m
+2025-04-02 11:16:42 info: [0mGET /api/users/alumnos [32m200[0m 589.462 ms - -[0m
+2025-04-02 11:16:44 info: [0mOPTIONS /api/users/edit-alumno [32m204[0m 0.460 ms - 0[0m
+2025-04-02 11:16:44 info: [0mPOST /api/users/edit-alumno [32m200[0m 233.826 ms - 804[0m
+2025-04-02 11:21:05 info: [0mGET /api/users/alumnos [32m200[0m 158.846 ms - -[0m
+2025-04-02 11:21:05 info: [0mGET /api/users/alumnos [32m200[0m 172.382 ms - -[0m
+2025-04-02 11:21:11 info: [0mOPTIONS /api/users/edit-alumno [32m204[0m 0.240 ms - 0[0m
+2025-04-02 11:21:11 info: [0mPOST /api/users/edit-alumno [32m200[0m 158.586 ms - 804[0m
+2025-04-02 11:21:55 info: [0mGET /api/niveles/leerNiveles [32m200[0m 133.399 ms - 543[0m
+2025-04-02 11:21:56 info: [0mGET /api/users/alumnos [32m200[0m 647.748 ms - -[0m
+2025-04-02 11:21:56 info: [0mGET /api/users/alumnos [32m200[0m 658.979 ms - -[0m
+2025-04-02 11:21:56 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 654.301 ms - -[0m
+2025-04-02 11:21:56 info: [0mGET /api/users/getUsers [32m200[0m 824.021 ms - -[0m
+2025-04-02 11:22:13 info: [0mGET /api/users/alumnos [32m200[0m 174.377 ms - -[0m
+2025-04-02 11:22:13 info: [0mGET /api/users/alumnos [32m200[0m 185.963 ms - -[0m
+2025-04-02 11:22:15 info: [0mOPTIONS /api/users/edit-alumno [32m204[0m 0.236 ms - 0[0m
+2025-04-02 11:22:15 info: [0mPOST /api/users/edit-alumno [32m200[0m 157.783 ms - 804[0m
+2025-04-02 11:22:55 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [32m200[0m 143.522 ms - 390[0m
+2025-04-02 11:22:55 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 147.260 ms - -[0m
+2025-04-02 11:23:12 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.137 ms - 0[0m
+2025-04-02 11:23:13 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 928.352 ms - 407[0m
+2025-04-02 11:25:24 info: [0mGET /api/roles/getRoles [32m200[0m 75.875 ms - 734[0m
+2025-04-02 11:25:24 info: [0mGET /api/roles/getRoles [36m304[0m 72.595 ms - -[0m
+2025-04-02 11:26:04 info: [0mOPTIONS /api/login [32m204[0m 0.226 ms - 0[0m
+2025-04-02 11:26:04 error: [POST] /api/login >> StatusCode:: 409, Message:: Email pruebas.alumno1@uread.cl no encontrado
+2025-04-02 11:26:04 info: [0mPOST /api/login [33m409[0m 74.224 ms - 58[0m
+2025-04-02 11:26:36 info: [0mOPTIONS /api/login [32m204[0m 0.200 ms - 0[0m
+2025-04-02 11:26:36 info: [0mPOST /api/login [32m200[0m 319.958 ms - -[0m
+2025-04-02 11:26:36 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.258 ms - 0[0m
+2025-04-02 11:26:37 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 438.418 ms - -[0m
+2025-04-02 11:26:39 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=1&plan=A [32m200[0m 93.194 ms - 1018[0m
+2025-04-02 11:26:39 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=1&plan=A [36m304[0m 78.931 ms - -[0m
+2025-04-02 11:27:25 info: [0mGET /api/users/alumnos-usuario?idUser=67d0b62246a9e99d0c977ab4 [32m200[0m 75.978 ms - 14[0m
+2025-04-02 11:27:25 info: [0mGET /api/users/alumnos-usuario?idUser=67d0b62246a9e99d0c977ab4 [32m200[0m 75.209 ms - 14[0m
+2025-04-02 11:27:47 info: [0mGET /api/niveles/leerNiveles [32m200[0m 70.231 ms - 543[0m
+2025-04-02 11:27:47 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 162.541 ms - -[0m
+2025-04-02 11:27:47 info: [0mGET /api/users/getUsers [32m200[0m 318.046 ms - -[0m
+2025-04-02 11:28:03 info: [0mGET /api/roles/getRoles [32m200[0m 73.246 ms - 734[0m
+2025-04-02 11:28:06 info: [0mGET /api/users/getUsers [36m304[0m 305.186 ms - -[0m
+2025-04-02 11:28:06 info: [0mGET /api/users/getUsers [36m304[0m 277.845 ms - -[0m
+2025-04-02 11:28:10 info: [0mGET /api/users/alumnos [32m200[0m 162.626 ms - -[0m
+2025-04-02 11:28:10 info: [0mGET /api/users/alumnos [36m304[0m 157.332 ms - -[0m
+2025-04-02 11:38:15 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=1&plan=A [36m304[0m 76.135 ms - -[0m
+2025-04-02 11:38:15 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=1&plan=A [36m304[0m 76.293 ms - -[0m
+2025-04-02 11:48:36 info: [0mOPTIONS /api/form [32m204[0m 0.140 ms - 0[0m
+2025-04-02 11:48:36 info: [0mPOST /api/form [32m200[0m 167.133 ms - 372[0m
+2025-04-02 11:49:29 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [32m200[0m 157.409 ms - 766[0m
+2025-04-02 11:49:29 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 151.262 ms - -[0m
+2025-04-02 12:13:33 info: ====================================
+2025-04-02 12:13:33 info: ============ ENV: development ===========
+2025-04-02 12:13:33 info: 🚀 App listening on the port 5212
+2025-04-02 12:13:33 info: ====================================
+2025-04-02 12:24:59 info: ====================================
+2025-04-02 12:24:59 info: ============ ENV: development ===========
+2025-04-02 12:24:59 info: 🚀 App listening on the port 5212
+2025-04-02 12:24:59 info: ====================================
+2025-04-02 12:25:26 info: ====================================
+2025-04-02 12:25:26 info: ============ ENV: development ===========
+2025-04-02 12:25:26 info: 🚀 App listening on the port 5212
+2025-04-02 12:25:26 info: ====================================
+2025-04-02 12:26:22 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [32m200[0m 160.129 ms - 391[0m
+2025-04-02 12:26:24 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 153.833 ms - -[0m
+2025-04-02 12:26:24 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 144.260 ms - -[0m
+2025-04-02 12:26:55 info: [0mOPTIONS /api/form [32m204[0m 0.423 ms - 0[0m
+2025-04-02 12:26:55 info: [0mPOST /api/form [32m200[0m 192.606 ms - 372[0m
+2025-04-02 12:29:14 info: ====================================
+2025-04-02 12:29:14 info: ============ ENV: development ===========
+2025-04-02 12:29:14 info: 🚀 App listening on the port 5212
+2025-04-02 12:29:14 info: ====================================
+2025-04-02 12:30:05 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [32m200[0m 155.709 ms - 766[0m
+2025-04-02 12:30:05 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 152.144 ms - -[0m
+2025-04-02 12:35:00 info: De: %s webpaycl@transbank.cl
+2025-04-02 12:35:00 info: De: %s webpay.cl - pago recibido
+2025-04-02 12:35:00 info: pruebas.apoderado@uread.cl
+2025-04-02 12:35:00 info: 3.000
+2025-04-02 12:36:24 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [32m200[0m 149.894 ms - 765[0m
+2025-04-02 12:36:25 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 156.127 ms - -[0m
+2025-04-02 12:36:25 info: [0mGET /api/users/alumnos-usuario?idUser=67ecaa332b598e01c0fefae7 [36m304[0m 144.268 ms - -[0m
+2025-04-02 12:38:49 info: [0mGET /api/roles/getRoles [36m304[0m 99.984 ms - -[0m
+2025-04-02 12:38:49 info: [0mGET /api/roles/getRoles [36m304[0m 77.033 ms - -[0m
+2025-04-02 12:38:53 info: [0mGET /api/roles/getRoles [36m304[0m 71.067 ms - -[0m
+2025-04-02 12:38:55 info: [0mGET /api/roles/getRoles [36m304[0m 78.077 ms - -[0m

@@ -72,6 +72,27 @@ const habilitarUsuarioDesdeAlumno = async (alumno: User) => {
     return response.data
 }
 
+const usuarioDesdeToken = async (token: string) => {
+    const response = await axios.get(api.url + `/api/users/usuarioDesdeToken/${token}`)
+    return response.data
+}
+
+const alumnosPorApoderado = async (userId: string ) => {
+    const response = await axios.get(api.url + `/api/users/alumnos-usuario?idUser=${userId}`)
+    return response.data
+}
+
+const todosLosAlumnos = async () => {
+    const response = await axios.get(api.url + `/api/users/alumnos`)
+    return response.data
+}
+
+const editarAlumno = async (alumno: any) => {
+    const response = await axios.post(api.url + `/api/users/edit-alumno`, {alumno})
+    return response.data
+
+}
+
 export default {
     login,
     resendVerification,
@@ -86,5 +107,9 @@ export default {
     restorePassword,
     enviarValidacionUsuario,
     habilitarUsuarioDesdeAlumno,
-    cambiarPassword
+    cambiarPassword,
+    usuarioDesdeToken,
+    alumnosPorApoderado,
+    todosLosAlumnos,
+    editarAlumno
 }

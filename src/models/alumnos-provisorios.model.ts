@@ -32,6 +32,14 @@ const alumnoProvisorioSchema: Schema = new Schema(
         },
         medioPago: {
             type: Schema.Types.String
+        },
+        apoderado: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        },
+        permiteValidar: {
+            type: Boolean,
+            default: false
         }
     },
     {

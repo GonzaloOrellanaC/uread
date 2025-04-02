@@ -4,7 +4,6 @@ import { add } from "ionicons/icons"
 import { useEffect, useState } from "react"
 import NewContentTextModal from "../../../components/Modals/ContentModal/NewContentText.modal"
 import { Contenido } from "../../../interfaces/Contenido.interface"
-import { NewContentModal } from "../../../components/Modals/ContentModal/NewContent_v2.modal"
 import { useContenidoContext } from "../../../context/Contenido.context"
 
 const SubirContenidoComponent = () => {

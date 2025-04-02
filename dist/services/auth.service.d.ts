@@ -1,8 +1,8 @@
 /// <reference types="mongoose" />
 import { DataStoredInToken, TokenData } from '../interfaces/auth.interface';
 import { LoginData, User } from '../interfaces/users.interface';
-export declare const createToken: (user: User, expiresIn?: number) => {
-    expiresIn: number;
+export declare const createToken: (user: User, expiresIn?: string) => {
+    expiresIn: string;
     token: string;
 };
 export declare const verifyToken: (token: string, ignoreExpiration?: boolean) => DataStoredInToken;
@@ -20,7 +20,7 @@ declare const _default: {
         cookie: string;
         findUser: User;
         token: {
-            expiresIn: number;
+            expiresIn: string;
             token: string;
         };
         grupos: any;
@@ -29,8 +29,8 @@ declare const _default: {
     verifyUserEmail: (userId: import("mongoose").Schema.Types.ObjectId) => Promise<User & import("mongoose").Document<any, any, any>>;
     forgotPassword: (email: string) => Promise<User>;
     resetPassword: (token: string, password: string) => Promise<User>;
-    createToken: (user: User, expiresIn?: number) => {
-        expiresIn: number;
+    createToken: (user: User, expiresIn?: string) => {
+        expiresIn: string;
         token: string;
     };
     verifyToken: (token: string, ignoreExpiration?: boolean) => DataStoredInToken;

@@ -109,7 +109,7 @@ const LoginContainer = () => {
                                     Login
                                 </IonButton>
                                 <br />
-                                <IonButton color={'secondary'} expand={'block'} onClick={() => {setOpenRegistreModal(true)}}>
+                                <IonButton color={'secondary'} expand={'block'} onClick={() => {history.push('/signup')}}>
                                     Registre
                                 </IonButton>
                                 <br />

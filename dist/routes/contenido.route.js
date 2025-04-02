@@ -8,6 +8,7 @@ router.post(`/guardarContenido`, contenido_controller_1.default.guardarContenido
 router.post(`/editarContenido`, contenido_controller_1.default.editarContenido);
 router.post(`/borrarContenido`, contenido_controller_1.default.borrarContenido);
 router.post(`/leerContenidos`, contenido_controller_1.default.leerContenidos);
+router.get(`/getTodoContenido`, contenido_controller_1.default.getTodoContenido);
 router.get(`/leerContenidosBasicos`, contenido_controller_1.default.leerContenidosBasicos);
 router.get(`/leerContenidosV2`, contenido_controller_1.default.leerContenidosV2);
 router.post(`/crearContenido`, contenido_controller_1.default.crearContenidoV2);

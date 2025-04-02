@@ -24,6 +24,10 @@ export declare const sendHTMLEmail: (to: string, subject: string, html: string, 
     from?: AddressObject;
     attachments?: Mail.Attachment[];
 }) => Promise<nodemailer.SentMessageInfo>;
+export declare const sendPagoValidadoEmail: (to: string, subject: string, html: string, optionals?: {
+    from?: AddressObject;
+    attachments?: Mail.Attachment[];
+}) => Promise<nodemailer.SentMessageInfo>;
 /**
  * Send a plain text email
  * @param {string} to - The email address to send to

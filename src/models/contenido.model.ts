@@ -74,7 +74,13 @@ const contenidoSchema = new Schema(
                     type: String
                 }
             }
-        ]
+        ],
+        nearpod: {
+            type: Schema.Types.String
+        },
+        kahoot: {
+            type: Schema.Types.String
+        }
     },
     {
         timestamps: true,

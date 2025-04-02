@@ -16,8 +16,13 @@ router.post('/getUsersByOrg', /* authMiddleware, */ UsersController.getUsersByOr
 
 
 router.post('/validarUsuario', /* authMiddleware, */ UsersController.validarUsuario)
+router.get('/usuarioDesdeToken/:token', /* authMiddleware, */ UsersController.usuarioDesdeToken)
 router.post('/habilitarUsuarioDesdeAlumno', /* authMiddleware, */ UsersController.habilitarUsuarioDesdeAlumno)
 
 router.post('/cambiar-password', UsersController.cambiarPassword)
+router.get('/alumnos-usuario', UsersController.alumnosUsuario)
+router.get('/alumnos', UsersController.leerAlumnos)
+router.post('/crearAlumno', UsersController.crearAlumno)
+router.post('/edit-alumno', UsersController.editarAlumno)
 
 export default router

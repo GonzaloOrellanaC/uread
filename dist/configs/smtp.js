@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.pass_bienvenida = exports.from_bienvenida = exports.user_bienvenida = exports.from_email = exports.from_name = exports.pass = exports.user = exports.port = exports.host = void 0;
+exports.pass_pago_valido = exports.user_pago_valido = exports.pass_bienvenida = exports.from_bienvenida = exports.user_bienvenida = exports.from_email = exports.from_name = exports.pass = exports.user = exports.port = exports.host = void 0;
 /* eslint-disable camelcase */
 const host = process.env.SMTP_HOST;
 exports.host = host;
@@ -20,6 +20,10 @@ const from_bienvenida = process.env.SMTP_FROM_BIENVENIDA;
 exports.from_bienvenida = from_bienvenida;
 const pass_bienvenida = process.env.SMTP_PASS_BIENVENIDA;
 exports.pass_bienvenida = pass_bienvenida;
-const smtpConfig = { host, port, user, pass, from_name, from_email, user_bienvenida, from_bienvenida, pass_bienvenida };
+const user_pago_valido = process.env.SMTP_EMAIL_PAGO_VALIDO;
+exports.user_pago_valido = user_pago_valido;
+const pass_pago_valido = process.env.SMTP_PASS_PAGO_VALIDO;
+exports.pass_pago_valido = pass_pago_valido;
+const smtpConfig = { host, port, user, pass, from_name, from_email, user_bienvenida, from_bienvenida, pass_bienvenida, user_pago_valido, pass_pago_valido };
 exports.default = smtpConfig;
 //# sourceMappingURL=smtp.js.map

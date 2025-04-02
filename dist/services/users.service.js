@@ -93,10 +93,8 @@ const createUser = async (userData, locale = configs_1.env.locale) => {
     const findUser = await user.findOne({ email: userData.email }, '-password'); // .select('-password')
     if (findUser)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Email {{email}} already exists', locale }, { email: userData.email }));
-    const lastUser = await users_model_1.default.find().sort({ _id: -1 }).limit(1);
     const hashedPassword = await bcrypt_1.default.hash(userData.password, 10);
-    userData.idUser = lastUser[0].idUser + 1;
-    const createUserData = await user.create(Object.assign(Object.assign({}, userData), { password: hashedPassword }));
+    const createUserData = await user.create(Object.assign(Object.assign({}, userData), { password: hashedPassword, roles: ['67d08179b9faf99da335828d'] }));
     return createUserData;
 };
 const updateUser = async (userId, userData, locale = configs_1.env.locale) => {
@@ -168,6 +166,19 @@ const camibiarPassword = async (userId, password) => {
     const findUser = await users_model_1.default.findByIdAndUpdate(userId, { password: hashedPassword });
     return findUser;
 };
+const userFromToken = async (token) => {
+    const tokenData = (0, auth_service_1.verifyToken)(token);
+    console.log(tokenData);
+    if (!tokenData)
+        throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Invalid token', locale: 'es' }));
+    const findUser = await user.findByIdAndUpdate(tokenData._id, { validado: 'Validado' }, { new: true }).populate('roles').populate('organization').populate({
+        path: 'alumnos',
+        populate: {
+            path: 'levelUser'
+        }
+    }).populate('levelUser');
+    return findUser;
+};
 exports.default = {
     findAllUser,
     findAllAdminUser,
@@ -183,6 +194,7 @@ exports.default = {
     updateUser,
     deleteUser,
     validar,
+    userFromToken,
     habilitarAlumno,
     camibiarPassword
 };

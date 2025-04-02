@@ -19,6 +19,32 @@ import multer from 'multer'
 import router from './routes/index.route'
 import AccessControlServices from '@services/accessControl.service'
 import SocketController from './controllers/socket.controller'
+import { checkEmails } from './services/imap.service'
+import { imap_email, imap_host, imap_password } from './configs/imap'
+
+import { CronJob } from 'cron';
+
+const iniciaJob = () => {
+    const job = new CronJob(
+        '*/5 * * * *',
+        function () {
+            checkEmails(
+                {
+                    user: imap_email,
+                    password: imap_password,
+                    host: imap_host,
+                    port: 993,
+                    tls: true
+                }
+            )
+        },
+        () => {
+            console.log('Terminado')
+        }
+    );
+    return job
+}
+
 
 process.env.SUPPRESS_NO_CONFIG_WARNING = 'true'
 const app: express.Application = express()
@@ -33,6 +59,16 @@ const connectToDatabase = async () => {
     try {
         await connect(dbConnection.url)
         await AccessControlServices.initAccessControl()
+        checkEmails(
+            {
+                user: imap_email,
+                password: imap_password,
+                host: imap_host,
+                port: 993,
+                tls: true
+            }
+        )
+        iniciaJob().start()
     } catch (error) {
         console.log(error)
     }

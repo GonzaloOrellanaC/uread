@@ -15,7 +15,12 @@ router.get(`/getAdminUsers`, /* authMiddleware, */ users_controller_1.default.ge
 router.get('/getAllSystemUser', /* authMiddleware, */ users_controller_1.default.getAllSystemUser);
 router.post('/getUsersByOrg', /* authMiddleware, */ users_controller_1.default.getUsersByOrg);
 router.post('/validarUsuario', /* authMiddleware, */ users_controller_1.default.validarUsuario);
+router.get('/usuarioDesdeToken/:token', /* authMiddleware, */ users_controller_1.default.usuarioDesdeToken);
 router.post('/habilitarUsuarioDesdeAlumno', /* authMiddleware, */ users_controller_1.default.habilitarUsuarioDesdeAlumno);
 router.post('/cambiar-password', users_controller_1.default.cambiarPassword);
+router.get('/alumnos-usuario', users_controller_1.default.alumnosUsuario);
+router.get('/alumnos', users_controller_1.default.leerAlumnos);
+router.post('/crearAlumno', users_controller_1.default.crearAlumno);
+router.post('/edit-alumno', users_controller_1.default.editarAlumno);
 exports.default = router;
 //# sourceMappingURL=users.route.js.map

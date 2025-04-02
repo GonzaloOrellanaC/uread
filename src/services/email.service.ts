@@ -59,6 +59,27 @@ export const sendHTMLEmail = async (
     })
 }
 
+export const sendPagoValidadoEmail = async (
+    to: string,
+    subject: string,
+    html: string,
+    optionals?: {
+        from?: AddressObject
+        attachments?: Mail.Attachment[]
+    }
+): Promise<nodemailer.SentMessageInfo> => {
+    const user = smtp.user_pago_valido
+    const password = smtp.pass_pago_valido
+    const transporter = createTransporter(smtp.host, smtp.port, user, password)
+    return await transporter.sendMail({
+        from: optionals?.from || { name: 'Uread', address: user },
+        to,
+        subject,
+        html,
+        attachments: optionals?.attachments
+    })
+}
+
 /**
  * Send a plain text email
  * @param {string} to - The email address to send to

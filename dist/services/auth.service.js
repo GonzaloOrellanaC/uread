@@ -24,8 +24,8 @@ const signup = async (userData) => {
     const hashedPassword = await bcrypt_1.default.hash(userData.password, 10);
     const createUserData = await user.create(Object.assign(Object.assign({}, userData), { password: hashedPassword }));
     const loginToken = (0, exports.createToken)(createUserData);
-    const cookie = (0, exports.createCookie)(loginToken);
-    const verificationToken = (0, exports.createToken)(createUserData, 0);
+    const cookie = /* createCookie(loginToken) */ '';
+    const verificationToken = (0, exports.createToken)(createUserData);
     const args = {
         fullName: `${createUserData.name} ${createUserData.lastName}`,
         email: createUserData.email,
@@ -42,8 +42,8 @@ const signup = async (userData) => {
 };
 const resendVerification = async (userData) => {
     const loginToken = (0, exports.createToken)(userData);
-    const cookie = (0, exports.createCookie)(loginToken);
-    const verificationToken = (0, exports.createToken)(userData, 0);
+    const cookie = ''; /* createCookie(loginToken) */
+    const verificationToken = (0, exports.createToken)(userData);
     const args = {
         fullName: `${userData.name} ${userData.lastName}`,
         email: userData.email,
@@ -69,15 +69,16 @@ const login = async (userData, locale = index_1.env.locale) => {
     if (!findUser)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Email {{email}} not found', locale }, { email: userData.email }));
     let grupos;
-    if (findUser.roles[0].name === 'user') {
+    const roles = findUser.roles;
+    if (roles[0] && roles[0].name === 'user') {
         grupos = await gruposNiveles_model_1.default.find({ cursos: { $in: [findUser.levelUser._id] } });
     }
     console.log(grupos);
     const isPasswordMatching = await bcrypt_1.default.compare(userData.password, findUser.password);
     if (!isPasswordMatching)
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Wrong password', locale }));
-    const token = (0, exports.createToken)(findUser, 86400);
-    const cookie = (0, exports.createCookie)(token);
+    const token = (0, exports.createToken)(findUser);
+    const cookie = ''; /* createCookie(token) */
     return { cookie, findUser, token, grupos };
 };
 const logout = async (userData, locale = index_1.env.locale) => {
@@ -139,7 +140,7 @@ const resetPassword = async (token, password) => {
         throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'User not found', locale: 'es' }));
     return findUser;
 };
-const createToken = (user, expiresIn = (3600 * 24)) => {
+const createToken = (user, expiresIn = "2 days") => {
     const dataStoredInToken = { _id: user._id }; // user._id, [organizationId, resources]
     const secretKey = index_1.keys.secretKey;
     return { expiresIn, token: jsonwebtoken_1.default.sign(dataStoredInToken, secretKey, { expiresIn }) };

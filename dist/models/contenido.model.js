@@ -73,7 +73,13 @@ const contenidoSchema = new mongoose_1.Schema({
                 type: String
             }
         }
-    ]
+    ],
+    nearpod: {
+        type: mongoose_1.Schema.Types.String
+    },
+    kahoot: {
+        type: mongoose_1.Schema.Types.String
+    }
 }, {
     timestamps: true,
     id: false
