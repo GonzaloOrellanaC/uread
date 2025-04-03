@@ -15,7 +15,7 @@ export interface Contenido {
     createdAt: Date
     updatedAt: Date
     state: boolean,
-    nivel: any
+    nivel: ObjectId
     nivelData: any
     pdf: PDFData[]
     idContenido?: number

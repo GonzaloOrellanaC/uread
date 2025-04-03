@@ -13,6 +13,7 @@ interface ContenidoContextValues {
     editarContenido: (contenido: Contenido) => Promise<any>
     setLoading: React.Dispatch<React.SetStateAction<boolean>>
     gruposNiveles: any[]
+    leerContenidosBiblioteca: () => void
 }
 
 export const ContenidoContext = createContext<ContenidoContextValues>({} as ContenidoContextValues)
@@ -27,13 +28,17 @@ export const ContenidoProvider = (props: any) => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
+        leerContenidosBiblioteca()
+    }, [userData, grupos, isAdmin])
+
+    const leerContenidosBiblioteca = () => {
         if (!isAdmin && userData && grupos && grupos.length > 0) {
             getContenido()
         }
         if (isAdmin) {
             getContenidoAdmin()
         }
-    }, [userData, grupos])
+    }
 
     useEffect(() => {
         if (userData && isAdmin) {
@@ -85,7 +90,8 @@ export const ContenidoProvider = (props: any) => {
         crearContenido,
         editarContenido,
         setLoading,
-        gruposNiveles
+        gruposNiveles,
+        leerContenidosBiblioteca
     }
     return (
         <ContenidoContext.Provider value={provider}>

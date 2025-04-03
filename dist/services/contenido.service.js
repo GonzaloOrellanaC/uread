@@ -14,8 +14,10 @@ const guardarContenido = async (contenidoData) => {
     return contenidoResponse;
 };
 const editarContenido = async (contenidoData) => {
-    const contenidoResponse = await contenido.findByIdAndUpdate(contenidoData._id, contenidoData);
+    console.log(contenidoData);
+    const contenidoResponse = await contenido.findByIdAndUpdate(contenidoData._id, contenidoData, { new: true });
     return contenidoResponse;
+    /* return contenidoData */
 };
 const borrarContenido = async (_id) => {
     const contenidoResponse = await contenido.findByIdAndDelete(_id);
@@ -26,11 +28,12 @@ const leerContenidos = async (idGrupos) => {
         return new Promise(async (resolve) => {
             const lista = [];
             const resultados = await Promise.all(idGrupos.map(async (id) => {
-                const elementos = await contenido.find({ nivel: id, state: true }).populate('niveles');
-                return await Promise.all(elementos.map(async (e) => {
-                    e.nivelData = await niveles_model_1.default.findById(e.nivel);
-                    return e;
-                }));
+                const elementos = await contenido.find({ nivel: id, state: true }).populate('nivel');
+                /* return await Promise.all(elementos.map(async e => {
+                    e.nivelData = await nivelesModel.findById(e.nivel)
+                    return e
+                })) */
+                return elementos;
             }));
             organizarContenidos(lista, resultados, 0, (filtrados) => {
                 resolve(filtrados);
@@ -39,10 +42,11 @@ const leerContenidos = async (idGrupos) => {
     }
     else {
         const elementos = await contenido.find().populate('nivel');
-        return await Promise.all(elementos.map(async (e) => {
-            e.nivelData = await niveles_model_1.default.findById(e.nivel);
-            return e;
-        }));
+        /* return await Promise.all(elementos.map(async (e: any) => {
+            e.nivelData = await nivelesModel.findById(e.nivel)
+            return e
+        })) */
+        return elementos;
     }
 };
 const organizarContenidos = (lista, contenidos, index, callback) => {

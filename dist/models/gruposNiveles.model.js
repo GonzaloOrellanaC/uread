@@ -11,7 +11,7 @@ const gruposNivelesSchema = new mongoose_1.Schema({
     cursos: [
         {
             type: mongoose_1.Schema.Types.ObjectId,
-            ref: "Niveles"
+            ref: "Level"
         }
     ]
 }, {

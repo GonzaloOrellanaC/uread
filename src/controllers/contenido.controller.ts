@@ -34,7 +34,6 @@ const editarContenidoV2 = async (req: Request, res: Response, next: NextFunction
 }
 
 const editarContenido = async (req: Request, res: Response, next: NextFunction) => {
-    console.log(req.body)
     try {
         const contenido: Contenido = await contenidoService.editarContenido(req.body)
         res.status(200).json({ data: contenido, message: 'contenido editado' })

@@ -20,7 +20,7 @@ export const createNewContent = async (req: Request, res: Response) => {
 export const editContent = async (req: Request, res: Response) => {
     const {idContent, content, nameVoice, language} = req.body
     const contentFound = await contenidoController.buscarContenidoPorId(idContent)
-    const contenidoCache: Contenido = {...contentFound}
+    const contenidoCache: any = {...contentFound}
     try {
         const id = Date.now()
         const audio : any = await createAudio(content, id, nameVoice)

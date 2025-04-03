@@ -8,7 +8,7 @@ const crearContenido = async (contenido: Contenido) => {
 }
 
 const editarContenido = async (contenido: Contenido) => {
-    const response = await axios.post(api.url + '/api/contenido/editarContenidoV2', contenido)
+    const response = await axios.post(api.url + '/api/contenido/editarContenido', contenido)
     return response.data
 }
 

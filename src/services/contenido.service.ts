@@ -18,18 +18,20 @@ const contenido = contenidoModel
 const contenidoV2 = contenidoV2Model
 const niveles = nivelesModel
 
-const guardarContenido = async (contenidoData: Contenido) => {
-    const contenidoResponse: Contenido = await contenido.create(contenidoData)
+const guardarContenido = async (contenidoData: any) => {
+    const contenidoResponse: any = await contenido.create(contenidoData)
     return contenidoResponse
 }
 
-const editarContenido = async (contenidoData: Contenido) => {
-    const contenidoResponse: Contenido = await contenido.findByIdAndUpdate(contenidoData._id, contenidoData)
+const editarContenido = async (contenidoData: any) => {
+    console.log(contenidoData)
+    const contenidoResponse: any = await contenido.findByIdAndUpdate(contenidoData._id, contenidoData, {new: true})
     return contenidoResponse
+    /* return contenidoData */
 }
 
 const borrarContenido = async (_id: ObjectId) => {
-    const contenidoResponse: Contenido = await contenido.findByIdAndDelete(_id)
+    const contenidoResponse: any = await contenido.findByIdAndDelete(_id)
     return contenidoResponse
 }
 
@@ -38,11 +40,12 @@ const leerContenidos = async (idGrupos?: string[]) => {
         return new Promise<any[]>(async resolve => {
             const lista: any[] = []
             const resultados = await Promise.all(idGrupos.map(async (id: any) => {
-                const elementos = await contenido.find({nivel: id, state: true}).populate('niveles')
-                return await Promise.all(elementos.map(async e => {
+                const elementos = await contenido.find({nivel: id, state: true}).populate('nivel')
+                /* return await Promise.all(elementos.map(async e => {
                     e.nivelData = await nivelesModel.findById(e.nivel)
                     return e
-                }))
+                })) */
+               return elementos
             }))
             organizarContenidos(lista, resultados, 0, (filtrados) => {
                 resolve(filtrados)
@@ -51,10 +54,11 @@ const leerContenidos = async (idGrupos?: string[]) => {
     } else {
         const elementos = await contenido.find().populate('nivel')
         
-        return await Promise.all(elementos.map(async e => {
+        /* return await Promise.all(elementos.map(async (e: any) => {
             e.nivelData = await nivelesModel.findById(e.nivel)
             return e
-        }))
+        })) */
+       return elementos
     }
 }
 
@@ -77,17 +81,17 @@ const organizarContenidos = (lista: any[], contenidos: any[][], index: number, c
 }
 
 const leerContenidosV2 = async () => {
-    const contenidoResponse: Contenido[] = await contenidoV2.find()
+    const contenidoResponse: any[] = await contenidoV2.find()
     return contenidoResponse
 }
 
 const leerContenidosBasicos = async () => {
     const resNiveles: any[] = await niveles.find()
-    const contenidoBasicoResponse: Contenido[] = await contenido.find({nivel: resNiveles[0]._id}).populate('nivel')
+    const contenidoBasicoResponse: any[] = await contenido.find({nivel: resNiveles[0]._id}).populate('nivel')
     return contenidoBasicoResponse
 }
 
-const crearContenidoV2 = async (contenido: Contenido) => {
+const crearContenidoV2 = async (contenido: any) => {
     try {
         const audioEs: any = await createAudio(contenido.lenguajes[0].contenido, Date.now(), 'nova')
         const audioEsUrl = audioEs.url
@@ -99,7 +103,7 @@ const crearContenidoV2 = async (contenido: Contenido) => {
         const transcriptionEn: any = await transcript(audioEn.fileName)
         contenido.lenguajes[1].transcripcion = transcriptionEn
         contenido.lenguajes[1].contenido = translation.choices[0].message.content
-        const newContent: Contenido = {
+        const newContent: any = {
             ...contenido,
             audioEnUrl,
             audioEsUrl
@@ -111,9 +115,9 @@ const crearContenidoV2 = async (contenido: Contenido) => {
     }
 }
 
-const editarContenidoV2 = async (contenido: Contenido) => {
+const editarContenidoV2 = async (contenido: any) => {
     try {
-        const newContent: Contenido = {
+        const newContent: any = {
             ...contenido
         }
         const response = await contenidoV2.findByIdAndUpdate(newContent._id, newContent)

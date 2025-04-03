@@ -11,7 +11,7 @@ const gruposNivelesSchema = new Schema(
         cursos: [
             {
                 type: Schema.Types.ObjectId,
-                ref: "Niveles"
+                ref: "Level"
             }
         ]
     },

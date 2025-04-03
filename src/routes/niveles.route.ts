@@ -8,7 +8,7 @@ const niveles = nivelesModel
 
 const router = Router()
 
-interface Niveles {
+interface Level {
     _id: ObjectId
     name: string
     number: number
@@ -16,7 +16,7 @@ interface Niveles {
 
 router.get(`/leerNiveles`, async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const nivelesToSend: Niveles[] = await niveles.find()
+        const nivelesToSend: Level[] = await niveles.find()
         res.status(200).json({ data: nivelesToSend, message: 'lista de niveles' })
     } catch (error) {
         console.log(error)

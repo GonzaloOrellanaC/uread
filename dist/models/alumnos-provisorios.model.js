@@ -24,7 +24,7 @@ const alumnoProvisorioSchema = new mongoose_1.Schema({
     },
     levelUser: {
         type: mongoose_1.Schema.Types.ObjectId,
-        ref: 'Niveles'
+        ref: 'Level'
     },
     plan: {
         type: String,

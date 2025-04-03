@@ -58,7 +58,7 @@ const userSchema: Schema = new Schema(
         },
         levelUser: {
             type: Schema.Types.ObjectId,
-            ref: 'Niveles'
+            ref: 'Level'
         },
         premium: {
             type: Boolean,

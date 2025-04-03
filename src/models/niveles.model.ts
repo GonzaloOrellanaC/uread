@@ -19,6 +19,6 @@ const nivelesModel = model<{
     _id: ObjectId
     name: string
     number: number
-} & Document>('Niveles', nivelesSchema)
+} & Document>('Level', nivelesSchema)
 
 export default nivelesModel

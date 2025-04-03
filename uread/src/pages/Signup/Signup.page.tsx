@@ -1,4 +1,4 @@
-import { IonButton, IonCol, IonContent, IonGrid, IonImg, IonInput, IonItem, IonList, IonPage, IonRow } from "@ionic/react"
+import { IonButton, IonCol, IonContent, IonGrid, IonImg, IonInput, IonInputPasswordToggle, IonItem, IonList, IonPage, IonRow } from "@ionic/react"
 import { useState } from "react"
 import userRouter from "../../router/user.router"
 import { User } from "../../interfaces/User.interface"
@@ -28,7 +28,7 @@ export const SignupPage = () => {
                             const response = await userRouter.createUser(newUser)
                             if (response) {
                                 alert(`Se ha enviará un correo a ${userData.email} con instrucciones para validar su cuenta.`)
-                                history.goBack()
+                                history.replace('/login')
                             }
                         } else {
                             alert('Falta ingresar el email.')
@@ -94,10 +94,14 @@ export const SignupPage = () => {
                                                     <IonInput value={userData.email} onIonChange={(e) => {setUserData({...userData, [e.target.name] : e.target.value})}} name={'email'} label="Email" labelPlacement={'floating'} />
                                                 </IonItem>
                                                 <IonItem>
-                                                    <IonInput value={password} onIonChange={(e) => {setPassword(e.target.value as string)}} name={'password'} label="Password" labelPlacement={'floating'} />
+                                                    <IonInput type={'password'} value={password} onIonChange={(e) => {setPassword(e.target.value as string)}} name={'password'} label="Password" labelPlacement={'floating'} >
+                                                        <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
+                                                    </IonInput>
                                                 </IonItem>
                                                 <IonItem>
-                                                    <IonInput value={confirmarPassword} onIonChange={(e) => {setConfirmarPassword(e.target.value as string)}} name={'confirmPassword'} label="Confirme Password" labelPlacement={'floating'} />
+                                                    <IonInput type={'password'} value={confirmarPassword} onIonChange={(e) => {setConfirmarPassword(e.target.value as string)}} name={'confirmPassword'} label="Confirme Password" labelPlacement={'floating'} >
+                                                        <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
+                                                    </IonInput>
                                                 </IonItem>
                                             </IonList>
                                             <br />

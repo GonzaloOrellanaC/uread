@@ -1,4 +1,4 @@
-import { IonButton, IonButtons, IonCard, IonCheckbox, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonModal, IonRow, IonTitle, IonToolbar } from "@ionic/react"
+import { IonButton, IonButtons, IonCard, IonCheckbox, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonInput, IonItem, IonModal, IonRow, IonTitle, IonToolbar, useIonAlert } from "@ionic/react"
 import { close, pencil, playOutline, stopOutline } from "ionicons/icons"
 import { useEffect, useState } from "react"
 import { TextList } from "../../interfaces/TextList.interface"
@@ -6,8 +6,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 import { Image } from "../../interfaces/Contenido.interface";
 import { useAuthContext } from "../../context/Auth.context";
+import contenidoRouter from "../../router/contenido.router";
+import { useContenidoContext } from "../../context/Contenido.context";
 
 export const TaleModal = ({closeModal, isOpen, item}: any) => {
+    const [presentAlert] = useIonAlert()
+    const {leerContenidosBiblioteca} = useContenidoContext()
     const {isAdmin} = useAuthContext()
     const [listaTexto, setListaTexto] = useState([])
     const [lenguageSelected, setLenguageSelected] = useState<any>()
@@ -133,6 +137,21 @@ export const TaleModal = ({closeModal, isOpen, item}: any) => {
         window.open(url, '_blank')
     }
 
+    const guardarCuento = async () => {
+        const response = await contenidoRouter.editarContenido({...element})
+        presentAlert({
+            header: '¡Aviso!',
+            message: 'Contenido modificado correctamente',
+            buttons: [
+                {
+                    text: 'Ok'
+                }
+            ],
+        })
+        setElement(response.data)
+        leerContenidosBiblioteca()
+    }
+
     return (
         <IonModal isOpen={isOpen} className="item-container">
             {
@@ -165,6 +184,10 @@ export const TaleModal = ({closeModal, isOpen, item}: any) => {
                                                 justify="start"
                                                 onIonChange={(e) => {setElement({...element, state: e.target.checked })}}>Habilitado</IonCheckbox>
                                         </IonItem>
+                                        <br />
+                                        <IonButton expand={'block'} onClick={() => {guardarCuento()}}>
+                                            Guardar
+                                        </IonButton>
                                     </IonCol>
                                     <IonCol />
                                 </IonRow>

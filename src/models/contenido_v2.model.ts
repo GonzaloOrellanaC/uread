@@ -66,7 +66,7 @@ const contenidoV2Schema = new Schema(
         },
         nivel: {
             type: Schema.Types.ObjectId,
-            ref: 'Niveles'
+            ref: 'Level'
         },
         pdf: [
             {

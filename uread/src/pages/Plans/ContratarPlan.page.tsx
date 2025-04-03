@@ -94,12 +94,12 @@ export const ContartarPlanPage = () => {
         if (transbanckSelected && !transferenciaBancaria) {
             if (alumnos[0].name.length > 0 && alumnos[0].lastName.length > 0) {
                 presentAlert({
-                    header: 'Aviso importante!',
+                    header: '¡Aviso importante!',
                     subHeader: 'Lea cuidadosamente lo siguiente:',
-                    message:    'Será abrirá una nueva página para conectar con Transbank, el cual es un servicio externo a esta plataforma.\n' +
-                                'Para que el sistema valide correctamente el pago, coloque el mismo correo con el que inicia sesión en su cuenta como apoderado.\n' +
+                    message:    'Se abrirá una nueva página de pagos externo Transbank.\n' +
+                                'Donde solicite correo electrónico use el mismo de inicio de sesión en su cuenta como apoderado para validar su pago correctamente.\n' +
                                 '\n' +
-                                'Si por algún motivo no recibe un correo de aviso de parte de Uread, comuníquese con nosotros.',
+                                'Recibirá un correo de confirmación. Cualquier duda contáctenos al Whatsapp.',
                     buttons: [
                         {
                             text: 'Continuar',
@@ -133,7 +133,7 @@ export const ContartarPlanPage = () => {
                             }
                         },
                         {
-                            text: 'Mejor en otro momento...'
+                            text: 'Mejor en otro momento'
                         }
                     ],
                 })
@@ -151,7 +151,7 @@ export const ContartarPlanPage = () => {
         } else if (transferenciaBancaria && !transbanckSelected) {
             if (alumnos[0].name.length > 0 && alumnos[0].lastName.length > 0) {
                 presentAlert({
-                    header: 'Aviso importante!',
+                    header: '¡Aviso importante!',
                     subHeader: 'Lea cuidadosamente lo siguiente:',
                     message: `Éste método de pago es ejecutado por usted y por Uread de manera completamente manual. Para validar el pago de $${totalAPagar} pesos siempre guarde el comprobante del pago en caso de ser necesario.`,
                     buttons: [

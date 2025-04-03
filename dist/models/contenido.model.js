@@ -62,7 +62,7 @@ const contenidoSchema = new mongoose_1.Schema({
     },
     nivel: {
         type: mongoose_1.Schema.Types.ObjectId,
-        ref: 'Niveles'
+        ref: 'Level'
     },
     pdf: [
         {

@@ -63,7 +63,7 @@ const contenidoSchema = new Schema(
         },
         nivel: {
             type: Schema.Types.ObjectId,
-            ref: 'Niveles'
+            ref: 'Level'
         },
         pdf: [
             {
@@ -88,6 +88,6 @@ const contenidoSchema = new Schema(
     }
 )
 
-const contenidoModel = model<Contenido & Document>('Contenido', contenidoSchema)
+const contenidoModel = model<Document>('Contenido', contenidoSchema)
 
 export default contenidoModel

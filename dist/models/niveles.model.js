@@ -12,6 +12,6 @@ const nivelesSchema = new mongoose_1.Schema({
     timestamps: true,
     id: false
 });
-const nivelesModel = (0, mongoose_1.model)('Niveles', nivelesSchema);
+const nivelesModel = (0, mongoose_1.model)('Level', nivelesSchema);
 exports.default = nivelesModel;
 //# sourceMappingURL=niveles.model.js.map

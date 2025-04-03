@@ -216,3 +216,13 @@
 2025-04-02 12:38:49 info: [0mGET /api/roles/getRoles [36m304[0m 77.033 ms - -[0m
 2025-04-02 12:38:53 info: [0mGET /api/roles/getRoles [36m304[0m 71.067 ms - -[0m
 2025-04-02 12:38:55 info: [0mGET /api/roles/getRoles [36m304[0m 78.077 ms - -[0m
+2025-04-02 12:42:35 info: ====================================
+2025-04-02 12:42:35 info: ============ ENV: development ===========
+2025-04-02 12:42:35 info: 🚀 App listening on the port 5212
+2025-04-02 12:42:35 info: ====================================
+2025-04-02 12:56:43 info: [0mOPTIONS /api/login [32m204[0m 0.895 ms - 0[0m
+2025-04-02 12:56:44 info: [0mPOST /api/login [32m200[0m 329.045 ms - -[0m
+2025-04-02 12:56:44 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [32m200[0m 72.936 ms - 14[0m
+2025-04-02 13:41:11 info: [0mGET /api/roles/getRoles [36m304[0m 77.449 ms - -[0m
+2025-04-02 13:41:11 info: [0mGET /api/roles/getRoles [36m304[0m 103.014 ms - -[0m
+2025-04-02 13:41:13 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 1906.371 ms - -[0m

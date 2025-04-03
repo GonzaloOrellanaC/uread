@@ -24,7 +24,7 @@ const alumnoProvisorioSchema: Schema = new Schema(
         },
         levelUser: {
             type: Schema.Types.ObjectId,
-            ref: 'Niveles'
+            ref: 'Level'
         },
         plan: {
             type: String,
