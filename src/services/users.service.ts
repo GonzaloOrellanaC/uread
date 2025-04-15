@@ -1,5 +1,5 @@
 import { env } from '@/configs'
-import { Organization } from '@/interfaces/roles.interface'
+import { Organization, Role } from '@/interfaces/roles.interface'
 import { HttpException } from '@exceptions/HttpException'
 import { User } from '@interfaces/users.interface'
 import userModel from '@models/users.model'
@@ -15,6 +15,7 @@ import path from 'path'
 import alumnoProvisorioModel from '@/models/alumnos-provisorios.model'
 import roleModel from '@/models/roles.model'
 import { DataStoredInToken } from '@/interfaces/auth.interface'
+import gruposNivelesModel from '@/models/gruposNiveles.model'
 
 const user = userModel
 
@@ -196,7 +197,7 @@ const habilitarAlumno = async (user: User) => {
         return alumnoEditado
     } catch (error) {
         logger.error(__({ phrase: error.message, locale: 'es' }))
-        return null
+        throw error
     }
 }
 
@@ -218,8 +219,17 @@ const userFromToken = async (token: string) => {
             path : 'levelUser'
         }
         }).populate('levelUser')
+    
+    let grupos: any
 
-    return findUser
+    const roles = findUser.roles as Role[]
+
+    if (roles[0] && roles[0].name === 'user') {
+        grupos = await gruposNivelesModel.find({cursos: {$in: [findUser.levelUser._id]}})
+    }
+
+
+    return {findUser, grupos}
 }
 
 export default {

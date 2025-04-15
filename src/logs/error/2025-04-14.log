@@ -1,0 +1,12 @@
+2025-04-14 22:16:03 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:19:26 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:20:20 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:22:16 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:52:00 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:54:36 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:54:58 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:58:47 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:59:12 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 23:01:32 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 23:01:53 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "gonzalo.orellana@kauel.com" }
+2025-04-14 23:03:31 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }

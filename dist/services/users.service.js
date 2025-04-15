@@ -14,6 +14,7 @@ const logger_1 = require("../utils/logger");
 const path_1 = (0, tslib_1.__importDefault)(require("path"));
 const alumnos_provisorios_model_1 = (0, tslib_1.__importDefault)(require("../models/alumnos-provisorios.model"));
 const roles_model_1 = (0, tslib_1.__importDefault)(require("../models/roles.model"));
+const gruposNiveles_model_1 = (0, tslib_1.__importDefault)(require("../models/gruposNiveles.model"));
 const user = users_model_1.default;
 const findAllUser = async () => {
     const users = await user.find().populate('roles').populate('levelUser').populate({
@@ -158,7 +159,7 @@ const habilitarAlumno = async (user) => {
     }
     catch (error) {
         logger_1.logger.error((0, i18n_1.__)({ phrase: error.message, locale: 'es' }));
-        return null;
+        throw error;
     }
 };
 const camibiarPassword = async (userId, password) => {
@@ -177,7 +178,12 @@ const userFromToken = async (token) => {
             path: 'levelUser'
         }
     }).populate('levelUser');
-    return findUser;
+    let grupos;
+    const roles = findUser.roles;
+    if (roles[0] && roles[0].name === 'user') {
+        grupos = await gruposNiveles_model_1.default.find({ cursos: { $in: [findUser.levelUser._id] } });
+    }
+    return { findUser, grupos };
 };
 exports.default = {
     findAllUser,

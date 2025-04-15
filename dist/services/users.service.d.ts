@@ -15,7 +15,10 @@ declare const _default: {
     updateUser: (userId: string, userData: User, locale?: string) => Promise<User>;
     deleteUser: (userId: string, locale?: string) => Promise<User>;
     validar: (user: User) => Promise<User & import("mongoose").Document<any, any, any>>;
-    userFromToken: (token: string) => Promise<User>;
+    userFromToken: (token: string) => Promise<{
+        findUser: User;
+        grupos: any;
+    }>;
     habilitarAlumno: (user: User) => Promise<import("mongoose").Document<any, any, any>>;
     camibiarPassword: (userId: string, password: string) => Promise<User & import("mongoose").Document<any, any, any>>;
 };

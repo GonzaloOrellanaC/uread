@@ -125,8 +125,8 @@ const usuarioDesdeToken = async (req: Request, res: Response, next: NextFunction
         
         const {token} = req.params
         const userData = await UserService.userFromToken(token as string)
-
-        res.status(200).json({ data: userData, message: 'validado' })
+        const { findUser, grupos } = userData
+        res.status(200).json({ findUser, grupos, message: 'validado' })
     } catch ({name, message}) {
         console.log({name, message})
         res.status(200).json({ data: {name}, message })
@@ -137,11 +137,11 @@ const habilitarUsuarioDesdeAlumno = async (req: Request, res: Response, next: Ne
     try {
         const {alumno} = req.body
         const userData: any = await UserService.habilitarAlumno(alumno)
-
         res.status(200).json({ user: userData, message: 'validado' })
-    } catch ({name, message}) {
-        console.log({name, message})
-        res.status(200).json({ data: {name}, message })
+    } catch (error: any) {
+
+        console.error('Error', error)
+        res.status(400).json({ error })
     }
 }
 
