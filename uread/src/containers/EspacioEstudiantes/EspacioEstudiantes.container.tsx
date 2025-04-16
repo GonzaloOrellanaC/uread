@@ -63,7 +63,7 @@ export const EspacioEstudiantesContainer = () => {
                                         })
                                     }
                                     {
-                                        userData && (userData.plan === 'B' || userData?.plan === 'C') && <div>
+                                        userData && (userData.plan === 'B' || userData.plan === 'C') && <div>
                                                 <h2 style={{margin: '10px 0px'}}>Videoconferencia en vivo</h2>
 
                                                 <IonButton href={userData.plan === 'B' ? 'https://meet.google.com/jpk-vwjg-den' : userData.plan === 'C' ? 'https://meet.google.com/jxc-byes-ppg' : ''}>
