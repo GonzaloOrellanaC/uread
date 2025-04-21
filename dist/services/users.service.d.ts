@@ -3,6 +3,7 @@ import { User } from '../interfaces/users.interface';
 declare const _default: {
     findAllUser: () => Promise<User[]>;
     findAllAdminUser: () => Promise<User[]>;
+    findAllStudents: () => Promise<any[]>;
     findSupervisores: () => Promise<User[]>;
     findAllSystemUser: () => Promise<User[]>;
     getUsersByOrg: (orgId: import("mongoose").Schema.Types.ObjectId) => Promise<User[]>;

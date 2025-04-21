@@ -11,6 +11,7 @@ interface UsersContextValues {
     profesores: any[]
     usuarios: any[]
     editUser: (userData: User) => Promise<any>
+    historialPagosAlumno: (alumnoId: string) => Promise<any>
 }
 
 export const UsersContext = createContext<UsersContextValues>({} as UsersContextValues)
@@ -33,14 +34,23 @@ export const UsersProvider = (props: any) => {
         if (users) {
             const profesoresCache: any[] = []
             const usuariosCache: any[] = []
-            users.forEach((user) => {
+            users.forEach((user: any) => {
                 if (user.roles) {
-                    user.roles.forEach((role) => {
+                    user.roles.forEach(async (role: any) => {
                         if (role.name === 'teacher' || role.name === 'admin') {
                             profesoresCache.push(user)
                         }
                         if (role.name === 'user') {
-                            usuariosCache.push(user)
+                            const response = await historialPagosAlumno(user._id)
+                            if (response.pagos !== null) {
+                                const proximoPago = new Date(response.pagos.fechasPago[response.pagos.fechasPago.length - 1]).getTime()
+                                const hoy = Date.now()
+                                user.pendientePago = (proximoPago < hoy)
+                                usuariosCache.push(user)
+                            } else {
+                                user.pendientePago = false
+                                usuariosCache.push(user)
+                            }
                         }
                     })
                 }
@@ -64,6 +74,11 @@ export const UsersProvider = (props: any) => {
         return response
     }
 
+    const historialPagosAlumno = async (alumnoId: string) => {
+        const response = await userRouter.alumnoFechaPago(alumnoId)
+        return response
+    }
+
 
     const getUserById = async (id: string) => {
         const response = await userRouter.getUser(id)
@@ -77,7 +92,8 @@ export const UsersProvider = (props: any) => {
         init,
         profesores,
         usuarios,
-        editUser
+        editUser,
+        historialPagosAlumno
     }
     return (
         <UsersContext.Provider value={provider}>

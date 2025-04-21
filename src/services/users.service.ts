@@ -16,6 +16,9 @@ import alumnoProvisorioModel from '@/models/alumnos-provisorios.model'
 import roleModel from '@/models/roles.model'
 import { DataStoredInToken } from '@/interfaces/auth.interface'
 import gruposNivelesModel from '@/models/gruposNiveles.model'
+import alumnoFechaPagoModel from '@/models/alumno-fechapago.model'
+import { pagosAlumno } from './alumnoFechaPago.service'
+import { lastName } from '@/configs/env'
 
 const user = userModel
 
@@ -232,9 +235,29 @@ const userFromToken = async (token: string) => {
     return {findUser, grupos}
 }
 
+const findAllStudents = async () => {
+    const role = await roleModel.findOne({name: 'user'})
+    const students = await user.find({
+        roles:[role._id]
+    }).select({email: 1, name: 1, lastName, levelUser: 1, plan: 1, createdAt: 1, apoderado: 1}).populate('apoderado').populate('levelUser')
+
+    const response = await Promise.all(students.map(async student => {
+        const alumnoFechaPago = await pagosAlumno(student._id)
+        const newStudent : any = {
+            ...student.toJSON(),
+            alumnoFechaPago
+        }
+        return newStudent
+    }))
+
+    return response
+    
+}
+
 export default {
     findAllUser,
     findAllAdminUser,
+    findAllStudents,
     findSupervisores,
     findAllSystemUser,
     getUsersByOrg,

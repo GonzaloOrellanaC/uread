@@ -16,7 +16,6 @@ interface EmailConfig {
     tls: boolean;
 }
 
-
 function extract(str: string) {
     const email = 
         /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
@@ -37,7 +36,7 @@ const obtenerPago = (text: string) => {
     }
 }
 
-export async function checkEmails(config: EmailConfig): Promise<void> {
+export const checkEmails = async (config: EmailConfig): Promise<void> => {
     const imap = new Imap({
       user: config.user,
       password: config.password,
@@ -46,15 +45,15 @@ export async function checkEmails(config: EmailConfig): Promise<void> {
       tls: config.tls,
     });
   
-    function openInbox(cb: (err: any, mailbox: Imap.Box) => void) {
+    const openInbox = (cb: (err: any, mailbox: Imap.Box) => void) => {
       imap.openBox('INBOX', false, cb);
     }
   
-    imap.once('ready', function () {
-      openInbox(function (err, box) {
+    imap.once('ready', () => {
+      openInbox((err, box) => {
         if (err) throw err;
         try {
-            imap.search(['UNSEEN', ['SINCE', new Date(Date.now() - 86400000)]], function (err, results) { // Busca correos no leídos del último día
+            imap.search(['UNSEEN', ['SINCE', new Date(Date.now() - 86400000)]], (err, results) => { // Busca correos no leídos del último día
                 if (err) throw err;
                 if (results.length === 0) {
                   imap.end();
@@ -62,8 +61,8 @@ export async function checkEmails(config: EmailConfig): Promise<void> {
                 }
 
                 const f = imap.fetch(results, { bodies: '' });
-                f.on('message', function (msg, seqno) {
-                  msg.on('body', function (stream, info) {
+                f.on('message', (msg, seqno) => {
+                  msg.on('body', (stream, info) => {
                     simpleParser(stream, async (err, parsed) => {
                       if (err) {
                         logger.error(err)
@@ -83,22 +82,22 @@ export async function checkEmails(config: EmailConfig): Promise<void> {
                     });
                   });
                   
-                  msg.once('attributes', function (attrs) {
+                  msg.once('attributes', (attrs) => {
                     const uid = attrs.uid;
-                    imap.addFlags(`${uid}:${uid}`, ['Seen'], function (err) {
+                    imap.addFlags(`${uid}:${uid}`, ['Seen'], (err) => {
                         if (err) {
                             logger.error(err);
                         }
                     });
                   });
-                  msg.once('end', function () {
+                  msg.once('end', () => {
                     console.log('Finalizado el mensaje #%d', seqno);
                   });
                 });
-                f.once('error', function (err) {
+                f.once('error', (err) => {
                   console.log('Error de búsqueda:', err);
                 });
-                f.once('end', function () {
+                f.once('end', () => {
                   console.log('Terminado de obtener todos los mensajes');
                   imap.end();
                 });
@@ -109,11 +108,11 @@ export async function checkEmails(config: EmailConfig): Promise<void> {
       });
     });
   
-    imap.once('error', function (err) {
+    imap.once('error', (err) => {
         logger.error(err);
     });
   
-    imap.once('end', function () {
+    imap.once('end', () => {
       console.log('Conexión IMAP cerrada');
     });
   

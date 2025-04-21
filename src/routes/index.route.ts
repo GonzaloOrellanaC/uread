@@ -14,7 +14,8 @@ import CalendarRouter from './calendar.route'
 import IaRouter from './ia.router'
 import InscripcionRouter from './inscripcion.route'
 import ClassroomRouter from './classroom.route'
-
+import NotificacionesRouter from './notificaciones.route'
+import AlumnoFechaPagoRouter from './alumnoFechaPago.route'
 const router = Router()
 
 router.use('/api', AuthRouter)
@@ -32,5 +33,7 @@ router.use('/api/calendar', CalendarRouter)
 router.use('/api/ia', IaRouter)
 router.use('/api/form', InscripcionRouter)
 router.use('/api/classroom', ClassroomRouter)
+router.use('/api/notificaciones', NotificacionesRouter)
+router.use('/api/alumnoFechaPago', AlumnoFechaPagoRouter)
 
 export default router

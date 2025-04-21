@@ -15,6 +15,8 @@ const path_1 = (0, tslib_1.__importDefault)(require("path"));
 const alumnos_provisorios_model_1 = (0, tslib_1.__importDefault)(require("../models/alumnos-provisorios.model"));
 const roles_model_1 = (0, tslib_1.__importDefault)(require("../models/roles.model"));
 const gruposNiveles_model_1 = (0, tslib_1.__importDefault)(require("../models/gruposNiveles.model"));
+const alumnoFechaPago_service_1 = require("./alumnoFechaPago.service");
+const env_1 = require("../configs/env");
 const user = users_model_1.default;
 const findAllUser = async () => {
     const users = await user.find().populate('roles').populate('levelUser').populate({
@@ -185,9 +187,22 @@ const userFromToken = async (token) => {
     }
     return { findUser, grupos };
 };
+const findAllStudents = async () => {
+    const role = await roles_model_1.default.findOne({ name: 'user' });
+    const students = await user.find({
+        roles: [role._id]
+    }).select({ email: 1, name: 1, lastName: env_1.lastName, levelUser: 1, plan: 1, createdAt: 1, apoderado: 1 }).populate('apoderado').populate('levelUser');
+    const response = await Promise.all(students.map(async (student) => {
+        const alumnoFechaPago = await (0, alumnoFechaPago_service_1.pagosAlumno)(student._id);
+        const newStudent = Object.assign(Object.assign({}, student.toJSON()), { alumnoFechaPago });
+        return newStudent;
+    }));
+    return response;
+};
 exports.default = {
     findAllUser,
     findAllAdminUser,
+    findAllStudents,
     findSupervisores,
     findAllSystemUser,
     getUsersByOrg,

@@ -2,11 +2,13 @@ import { IonButton, IonButtons, IonCard, IonCol, IonContent, IonGrid, IonIcon, I
 import { UseUreadContainer } from '../../components/Containers'
 import { useAuthContext } from '../../context/Auth.context'
 import { useHistory, useLocation } from 'react-router'
-import { exitOutline, menu } from 'ionicons/icons'
+import { exitOutline, menu, notifications } from 'ionicons/icons'
 import { menuController } from '@ionic/core/components';
+import { useNotificacionesContext } from '../../context/Notificaciones.context'
 
 const HomeContainer = () => {
     const {isAdmin, userData, setUserData, alumno, apoderado, profesor} = useAuthContext()
+    const {totalNuevasNotificaciones} = useNotificacionesContext()
     const history = useHistory()
     const location = useLocation()
 
@@ -33,9 +35,23 @@ const HomeContainer = () => {
                         <IonIcon icon={menu} />
                     </IonButton>
                 </IonButtons>
-                <IonTitle slot='start'>
+                <h5 slot='start'>
                     Bienvenid@ {userData?.name}
-                </IonTitle>
+                </h5>
+                <IonButtons slot={'end'}>
+                    <IonButton style={{position: 'relative'}} onClick={() => {
+                        history.push('/notifications')
+                    }}>
+                        <IonIcon icon={notifications}/>
+                        {
+                            totalNuevasNotificaciones > 0
+                            &&
+                            <div style={{backgroundColor: 'red', color: 'white', position: 'absolute', padding: 3, top: 0, right: 0, borderRadius: '50%', fontSize: 8}}>
+                                {totalNuevasNotificaciones}
+                            </div>
+                        }
+                    </IonButton>
+                </IonButtons>
             </IonToolbar>
                 <IonGrid>
                     <IonRow>
