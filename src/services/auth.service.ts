@@ -83,35 +83,41 @@ const login = async (
     userData: LoginData,
     locale: string = env.locale
 ) => {
-    console.log(userData)
-    if (isEmpty(userData)) throw new HttpException(400, __({ phrase: 'Credentials are required', locale }))
+    try {
+        console.log(userData)
+        if (isEmpty(userData)) throw new HttpException(400, __({ phrase: 'Credentials are required', locale }))
 
-    const findUser: User = await user.findOne({ email: userData.email }).populate('roles').populate('organization').populate({
-        path : 'alumnos',
-        populate : {
-          path : 'levelUser'
+        const findUser: User = await user.findOne({ email: userData.email }).populate('roles').populate('organization').populate({
+            path : 'alumnos',
+            populate : {
+            path : 'levelUser'
+            }
+        }).populate('levelUser')
+        if (!findUser)
+            throw new HttpException(409, __({ phrase: 'Email {{email}} not found', locale }, { email: userData.email }))
+
+        let grupos: any
+
+        const roles = findUser.roles as Role[]
+        console.log(findUser.levelUser)
+        if (roles[0] && roles[0].name === 'user' && findUser.levelUser && findUser.levelUser._id) {
+            grupos = await gruposNivelesModel.find({cursos: {$in: [findUser.levelUser._id]}})
         }
-      }).populate('levelUser')
-    if (!findUser)
-        throw new HttpException(409, __({ phrase: 'Email {{email}} not found', locale }, { email: userData.email }))
 
-    let grupos: any
+        console.log(grupos)
 
-    const roles = findUser.roles as Role[]
+        const isPasswordMatching: boolean = await bcrypt.compare(userData.password, findUser.password)
+        if (!isPasswordMatching) throw new HttpException(409, __({ phrase: 'Wrong password', locale }))
 
-    if (roles[0] && roles[0].name === 'user') {
-        grupos = await gruposNivelesModel.find({cursos: {$in: [findUser.levelUser._id]}})
+        const token = createToken(findUser)
+        const cookie = ''/* createCookie(token) */
+
+        return { cookie, findUser, token, grupos }
+    } catch ({name, message}) {
+        logger.error(`Error logging in | ${name}: ${message}`)
+        throw new HttpException(409, __({ phrase: 'Error logging in', locale }))
+        
     }
-
-    console.log(grupos)
-
-    const isPasswordMatching: boolean = await bcrypt.compare(userData.password, findUser.password)
-    if (!isPasswordMatching) throw new HttpException(409, __({ phrase: 'Wrong password', locale }))
-
-    const token = createToken(findUser)
-    const cookie = ''/* createCookie(token) */
-
-    return { cookie, findUser, token, grupos }
 }
 
 const logout = async (userData: User, locale: string = env.locale) => {

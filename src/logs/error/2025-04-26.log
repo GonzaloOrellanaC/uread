@@ -1,0 +1,10 @@
+2025-04-26 09:20:05 error: [POST] /api/login >> StatusCode:: 409, Message:: Contraseña incorrecta
+2025-04-26 09:20:11 error: [POST] /api/login >> StatusCode:: 409, Message:: Contraseña incorrecta
+2025-04-26 10:44:32 error: [POST] /api/login >> StatusCode:: 500, Message:: Cannot read properties of null (reading '_id')
+2025-04-26 10:45:06 error: [POST] /api/login >> StatusCode:: 500, Message:: Cannot read properties of null (reading '_id')
+2025-04-26 10:45:12 error: [POST] /api/login >> StatusCode:: 500, Message:: Cannot read properties of null (reading '_id')
+2025-04-26 10:45:47 error: [POST] /api/login >> StatusCode:: 500, Message:: Cannot read properties of null (reading '_id')
+2025-04-26 10:47:40 error: Error logging in | TypeError: Cannot read properties of null (reading '_id')
+2025-04-26 10:47:40 error: [POST] /api/login >> StatusCode:: 409, Message:: Error logging in
+2025-04-26 10:47:49 error: Error logging in | TypeError: Cannot read properties of null (reading '_id')
+2025-04-26 10:47:49 error: [POST] /api/login >> StatusCode:: 409, Message:: Error logging in

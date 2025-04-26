@@ -27,6 +27,8 @@ import usersService from './services/users.service'
 import { crearNotificacion, leerUltimaNotificacionPagoPendiente } from './services/notificaciones.service'
 import { dateTranslate } from './utils/date'
 
+const unDia = (60000 * 60) * 24
+
 const iniciaJob = () => {
     const job = new CronJob(
         '*/5 * * * *',
@@ -50,20 +52,23 @@ const iniciaJob = () => {
 
 const revisionPayment = async () => {
     const alumnos = await usersService.findAllStudents()
-    const currentDate = new Date()
+    const currentDate = new Date().getTime()
+    const proximos5Dias = new Date(currentDate + (unDia * 5)).getTime()
     const alumnosPorPagar: any[] = []
 
     console.log(alumnos.length)
     alumnos.forEach((alumno) => {
-        if (alumno.alumnoFechaPago !== null)
-        if (currentDate > alumno.alumnoFechaPago.fechasPago[alumno.alumnoFechaPago.fechasPago.length - 1]) {
-            alumnosPorPagar.push(alumno)
+        if (alumno.alumnoFechaPago !== null) {
+            const fechaPago = new Date(alumno.alumnoFechaPago.fechasPago[alumno.alumnoFechaPago.fechasPago.length - 1]).getTime()
+            if ((currentDate + proximos5Dias) > fechaPago) {
+                alumnosPorPagar.push(alumno)
+            }
         }
     })
 
     alumnosPorPagar.forEach(async (alumno, index) => {
         const currentDate = new Date(alumno.alumnoFechaPago.fechasPago[alumno.alumnoFechaPago.fechasPago.length - 1]).getTime()
-        const quinceDias = ((60000 * 60) * 24) * 15
+        const quinceDias = unDia * 15
         if (alumno.apoderado) {
             
             const newNotificationApoderado = {
@@ -81,7 +86,8 @@ const revisionPayment = async () => {
             try {
                 const ultimaNotificacion: any = await leerUltimaNotificacionPagoPendiente(alumno.apoderado._id, alumno._id)
                 if (ultimaNotificacion !== null) {
-                    const cincoDias = ((60000 * 60) * 24) * 5
+                    const cincoDias = unDia * 5
+                    const dosDias = unDia * 2
                     const fechaUltimaNotificacion = new Date(ultimaNotificacion.createdAt).getTime()
                     if (fechaUltimaNotificacion + cincoDias < Date.now()) {
                         const notificacion = await crearNotificacion(newNotificationApoderado)

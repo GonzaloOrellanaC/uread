@@ -27,6 +27,7 @@ const cron_1 = require("cron");
 const users_service_1 = (0, tslib_1.__importDefault)(require("./services/users.service"));
 const notificaciones_service_1 = require("./services/notificaciones.service");
 const date_1 = require("./utils/date");
+const unDia = (60000 * 60) * 24;
 const iniciaJob = () => {
     const job = new cron_1.CronJob('*/5 * * * *', function () {
         (0, imap_service_1.checkEmails)({
@@ -43,18 +44,21 @@ const iniciaJob = () => {
 };
 const revisionPayment = async () => {
     const alumnos = await users_service_1.default.findAllStudents();
-    const currentDate = new Date();
+    const currentDate = new Date().getTime();
+    const proximos5Dias = new Date(currentDate + (unDia * 5)).getTime();
     const alumnosPorPagar = [];
     console.log(alumnos.length);
     alumnos.forEach((alumno) => {
-        if (alumno.alumnoFechaPago !== null)
-            if (currentDate > alumno.alumnoFechaPago.fechasPago[alumno.alumnoFechaPago.fechasPago.length - 1]) {
+        if (alumno.alumnoFechaPago !== null) {
+            const fechaPago = new Date(alumno.alumnoFechaPago.fechasPago[alumno.alumnoFechaPago.fechasPago.length - 1]).getTime();
+            if ((currentDate + proximos5Dias) > fechaPago) {
                 alumnosPorPagar.push(alumno);
             }
+        }
     });
     alumnosPorPagar.forEach(async (alumno, index) => {
         const currentDate = new Date(alumno.alumnoFechaPago.fechasPago[alumno.alumnoFechaPago.fechasPago.length - 1]).getTime();
-        const quinceDias = ((60000 * 60) * 24) * 15;
+        const quinceDias = unDia * 15;
         if (alumno.apoderado) {
             const newNotificationApoderado = {
                 title: `Recordatorio próximo pago`,
@@ -70,7 +74,8 @@ const revisionPayment = async () => {
             try {
                 const ultimaNotificacion = await (0, notificaciones_service_1.leerUltimaNotificacionPagoPendiente)(alumno.apoderado._id, alumno._id);
                 if (ultimaNotificacion !== null) {
-                    const cincoDias = ((60000 * 60) * 24) * 5;
+                    const cincoDias = unDia * 5;
+                    const dosDias = unDia * 2;
                     const fechaUltimaNotificacion = new Date(ultimaNotificacion.createdAt).getTime();
                     if (fechaUltimaNotificacion + cincoDias < Date.now()) {
                         const notificacion = await (0, notificaciones_service_1.crearNotificacion)(newNotificationApoderado);

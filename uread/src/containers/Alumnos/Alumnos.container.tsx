@@ -5,6 +5,7 @@ import { arrowBack, arrowUp, close } from "ionicons/icons"
 import { useHistory } from "react-router"
 import userRouter from "../../router/user.router"
 import { useContenidoContext } from "../../context/Contenido.context"
+import { useUsersContext } from "../../context/Users.context"
 
 export const AlumnosContainer = () => {
     const [presentAlert] = useIonAlert()
@@ -12,9 +13,11 @@ export const AlumnosContainer = () => {
     const {userData} = useAuthContext()
     const {setLoading} = useContenidoContext()
 
+    const {alumnos, setAlumnos} = useUsersContext()
 
-    const [alumnos, setAlumnos] = useState<any[]>([])
 
+    /* const [alumnos, setAlumnos] = useState<any[]>([])
+ */
     const [alumnoSeleccionado, setAlumnoSeleccionado] = useState<any>()
 
     const [openAlumnoModal, setOpenAlumnoModal] = useState(false)
@@ -24,7 +27,7 @@ export const AlumnosContainer = () => {
 
     const [openAlertPlan, setOpenAlertPlan] = useState(false)
 
-    useEffect(() => {
+/*     useEffect(() => {
         if (userData)
             obtenerAlumnos()
     },[userData])
@@ -32,7 +35,7 @@ export const AlumnosContainer = () => {
     const obtenerAlumnos = async () => {
         const response = await userRouter.alumnosPorApoderado(userData!._id)
         setAlumnos(response.alumnos)
-    }
+    } */
 
 
     const seleccionarUsuario = (alumno: any) => {
@@ -271,7 +274,7 @@ export const AlumnosContainer = () => {
                                                 </IonCol>
                                                 <IonCol size="2">
                                                     <div style={{textAlign: 'center', width: '100%'}}>
-                                                        <p>{alumno.levelUser.name}</p>
+                                                        <p>{alumno.levelUser && alumno.levelUser.name}</p>
                                                     </div>
                                                 </IonCol>
                                                 <IonCol>

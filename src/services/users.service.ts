@@ -240,9 +240,14 @@ const findAllStudents = async () => {
     const students = await user.find({
         roles:[role._id]
     }).select({email: 1, name: 1, lastName, levelUser: 1, plan: 1, createdAt: 1, apoderado: 1}).populate('apoderado').populate('levelUser')
+    const unDia = (60000 * 60) * 24
 
     const response = await Promise.all(students.map(async student => {
-        const alumnoFechaPago = await pagosAlumno(student._id)
+        let alumnoFechaPago = await pagosAlumno(student._id)
+        if (!alumnoFechaPago) {
+            alumnoFechaPago = await alumnoFechaPagoModel.create({alumno: student._id, fechasPago: [new Date(student.createdAt).getTime() + (unDia * 30)], fechasPagadas: []})
+        }
+        console.log(alumnoFechaPago)
         const newStudent : any = {
             ...student.toJSON(),
             alumnoFechaPago
