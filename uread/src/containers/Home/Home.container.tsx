@@ -112,6 +112,7 @@ const HomeContainer = () => {
                                                                                 <IonButton href='https://www.webpay.cl/form-pay/192335' target='_blank' style={{width: '100%'}}>
                                                                                     Pagar
                                                                                 </IonButton>
+                                                                                <h3><strong>Valor: ${alumno.plan === 'A' ? '3.000' : alumno.plan === 'B' ? '6.000' : '15.000'}</strong></h3>
                                                                                 <p><strong>Nota:</strong></p>
                                                                                 <p><strong>Este botón se mantendrá hasta que el pago sea validado. Si usted ya pagó, han pasado más de 48 hrs y el botón sigue apareciendo, contáctenos al Whatsapp que está en el menú de la aplicación.</strong></p>
                                                                             </div>
