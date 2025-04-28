@@ -3,10 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.stream = exports.logger = void 0;
 const tslib_1 = require("tslib");
 const log_1 = require("../configs/log");
-const fs_1 = (0, tslib_1.__importDefault)(require("fs"));
-const path_1 = (0, tslib_1.__importDefault)(require("path"));
-const winston_1 = (0, tslib_1.__importDefault)(require("winston"));
-const winston_daily_rotate_file_1 = (0, tslib_1.__importDefault)(require("winston-daily-rotate-file"));
+const fs_1 = tslib_1.__importDefault(require("fs"));
+const path_1 = tslib_1.__importDefault(require("path"));
+const winston_1 = tslib_1.__importDefault(require("winston"));
+const winston_daily_rotate_file_1 = tslib_1.__importDefault(require("winston-daily-rotate-file"));
 // logs dir
 const logDir = path_1.default.join(__dirname, log_1.dir);
 if (!fs_1.default.existsSync(logDir)) {

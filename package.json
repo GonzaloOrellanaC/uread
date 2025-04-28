@@ -24,7 +24,8 @@
         "deploy:dev": "pm2 start ecosystem.config.js --only dev",
         "dev-client": "npm run dev --prefix uread",
         "dev": "concurrently --kill-others-on-fail \"npm run start-dev\" \"npm run dev-client\"",
-        "build-prod": "npm run build-server && npm run build-client"
+        "build-prod": "npm run build-server && npm run build-client",
+        "postinstall": "npm install --prefix uread"
     },
     "dependencies": {
         "@azure/identity": "^3.1.3",

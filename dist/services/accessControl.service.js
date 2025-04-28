@@ -2,13 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const accesscontrol_1 = require("accesscontrol");
-const bcrypt_1 = (0, tslib_1.__importDefault)(require("bcrypt"));
+const bcrypt_1 = tslib_1.__importDefault(require("bcrypt"));
 const i18n_1 = require("i18n");
-const users_model_1 = (0, tslib_1.__importDefault)(require("../models/users.model"));
+const users_model_1 = tslib_1.__importDefault(require("../models/users.model"));
 const util_1 = require("../utils/util");
 const configs_1 = require("../configs");
 const HttpException_1 = require("../exceptions/HttpException");
-const roles_model_1 = (0, tslib_1.__importDefault)(require("../models/roles.model"));
+const roles_model_1 = tslib_1.__importDefault(require("../models/roles.model"));
 const roles_config_1 = require("../configs/roles.config");
 const ac = new accesscontrol_1.AccessControl();
 const initAccessControl = async () => {

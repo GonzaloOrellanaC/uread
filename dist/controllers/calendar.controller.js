@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getMeetings = exports.createMeeting = void 0;
 const tslib_1 = require("tslib");
-const calendar_model_1 = (0, tslib_1.__importDefault)(require("../models/calendar.model"));
+const calendar_model_1 = tslib_1.__importDefault(require("../models/calendar.model"));
 const createMeeting = async (req, res) => {
     try {
         const data = req.body;

@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const contenido_service_1 = (0, tslib_1.__importDefault)(require("../services/contenido.service"));
-const contenido_model_1 = (0, tslib_1.__importDefault)(require("../models/contenido.model"));
+const contenido_service_1 = tslib_1.__importDefault(require("../services/contenido.service"));
+const contenido_model_1 = tslib_1.__importDefault(require("../models/contenido.model"));
 const guardarContenido = async (req, res, next) => {
     console.log(req.body);
     try {

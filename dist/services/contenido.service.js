@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const contenido_model_1 = (0, tslib_1.__importDefault)(require("../models/contenido.model"));
-const contenido_v2_model_1 = (0, tslib_1.__importDefault)(require("../models/contenido_v2.model"));
-const niveles_model_1 = (0, tslib_1.__importDefault)(require("../models/niveles.model"));
+const contenido_model_1 = tslib_1.__importDefault(require("../models/contenido.model"));
+const contenido_v2_model_1 = tslib_1.__importDefault(require("../models/contenido_v2.model"));
+const niveles_model_1 = tslib_1.__importDefault(require("../models/niveles.model"));
 const ia_service_1 = require("./ia.service");
 /* import { TranslationServiceClient } from '@google-cloud/translate' */
 const contenido = contenido_model_1.default;

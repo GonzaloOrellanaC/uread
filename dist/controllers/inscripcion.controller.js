@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.postDatosFormulario = exports.validarDatos = void 0;
 const tslib_1 = require("tslib");
-const alumnos_provisorios_model_1 = (0, tslib_1.__importDefault)(require("../models/alumnos-provisorios.model"));
-const niveles_model_1 = (0, tslib_1.__importDefault)(require("../models/niveles.model"));
+const alumnos_provisorios_model_1 = tslib_1.__importDefault(require("../models/alumnos-provisorios.model"));
+const niveles_model_1 = tslib_1.__importDefault(require("../models/niveles.model"));
 const validarDatos = async (req, res) => {
 };
 exports.validarDatos = validarDatos;

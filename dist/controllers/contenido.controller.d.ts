@@ -1,4 +1,5 @@
 /// <reference types="qs" />
+/// <reference types="cookie-parser" />
 /// <reference types="mongoose" />
 import { NextFunction, Request, Response } from 'express';
 declare const _default: {

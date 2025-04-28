@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const jsonwebtoken_1 = (0, tslib_1.__importDefault)(require("jsonwebtoken"));
+const jsonwebtoken_1 = tslib_1.__importDefault(require("jsonwebtoken"));
 const HttpException_1 = require("../exceptions/HttpException");
-const users_model_1 = (0, tslib_1.__importDefault)(require("../models/users.model"));
+const users_model_1 = tslib_1.__importDefault(require("../models/users.model"));
 const configs_1 = require("../configs");
 const authMiddleware = async (req, res, next) => {
     try {

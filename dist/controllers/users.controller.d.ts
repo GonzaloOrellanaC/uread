@@ -1,4 +1,5 @@
 /// <reference types="qs" />
+/// <reference types="cookie-parser" />
 import { NextFunction, Request, Response } from 'express';
 import { RequestWithUser } from '../interfaces/auth.interface';
 declare const _default: {

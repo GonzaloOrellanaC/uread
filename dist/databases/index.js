@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.dbConnection = void 0;
 const tslib_1 = require("tslib");
 const dbConfig_1 = require("../configs/dbConfig");
-const configs_1 = (0, tslib_1.__importDefault)(require("../configs"));
+const configs_1 = tslib_1.__importDefault(require("../configs"));
 const env = configs_1.default.env.environment;
 let url;
 if (env === 'production') {

@@ -2,14 +2,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkEmails = void 0;
 const tslib_1 = require("tslib");
-const node_imap_1 = (0, tslib_1.__importDefault)(require("node-imap"));
+const node_imap_1 = tslib_1.__importDefault(require("node-imap"));
 const mailparser_1 = require("mailparser");
 const logger_1 = require("../utils/logger");
-const users_model_1 = (0, tslib_1.__importDefault)(require("../models/users.model"));
-const alumnos_provisorios_model_1 = (0, tslib_1.__importDefault)(require("../models/alumnos-provisorios.model"));
+const users_model_1 = tslib_1.__importDefault(require("../models/users.model"));
+const alumnos_provisorios_model_1 = tslib_1.__importDefault(require("../models/alumnos-provisorios.model"));
 const email_service_1 = require("./email.service");
 const html_1 = require("../utils/html");
-const path_1 = (0, tslib_1.__importDefault)(require("path"));
+const path_1 = tslib_1.__importDefault(require("path"));
 const i18n_1 = require("i18n");
 function extract(str) {
     const email = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;

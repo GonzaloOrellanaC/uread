@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const gruposNiveles_model_1 = (0, tslib_1.__importDefault)(require("../models/gruposNiveles.model"));
-const niveles_model_1 = (0, tslib_1.__importDefault)(require("../models/niveles.model"));
+const gruposNiveles_model_1 = tslib_1.__importDefault(require("../models/gruposNiveles.model"));
+const niveles_model_1 = tslib_1.__importDefault(require("../models/niveles.model"));
 const express_1 = require("express");
 const niveles = niveles_model_1.default;
 const router = (0, express_1.Router)();

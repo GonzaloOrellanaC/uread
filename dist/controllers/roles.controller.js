@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const accessControl_service_1 = (0, tslib_1.__importDefault)(require("../services/accessControl.service"));
+const accessControl_service_1 = tslib_1.__importDefault(require("../services/accessControl.service"));
 /**
  * Creates a new Role for an existing organization
  * @param  {Request} req http request arguments

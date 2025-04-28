@@ -3,17 +3,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const configs_1 = require("../configs");
 const HttpException_1 = require("../exceptions/HttpException");
-const users_model_1 = (0, tslib_1.__importDefault)(require("../models/users.model"));
+const users_model_1 = tslib_1.__importDefault(require("../models/users.model"));
 const util_1 = require("../utils/util");
-const bcrypt_1 = (0, tslib_1.__importDefault)(require("bcrypt"));
+const bcrypt_1 = tslib_1.__importDefault(require("bcrypt"));
 const i18n_1 = require("i18n");
 const auth_service_1 = require("./auth.service");
 const email_service_1 = require("./email.service");
 const html_1 = require("../utils/html");
 const logger_1 = require("../utils/logger");
-const path_1 = (0, tslib_1.__importDefault)(require("path"));
-const alumnos_provisorios_model_1 = (0, tslib_1.__importDefault)(require("../models/alumnos-provisorios.model"));
-const roles_model_1 = (0, tslib_1.__importDefault)(require("../models/roles.model"));
+const path_1 = tslib_1.__importDefault(require("path"));
+const alumnos_provisorios_model_1 = tslib_1.__importDefault(require("../models/alumnos-provisorios.model"));
+const roles_model_1 = tslib_1.__importDefault(require("../models/roles.model"));
 const user = users_model_1.default;
 const findAllUser = async () => {
     const users = await user.find().populate('roles').populate('levelUser').populate({

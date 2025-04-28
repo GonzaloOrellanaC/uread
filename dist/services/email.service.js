@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sendEmail = exports.sendPagoValidadoEmail = exports.sendHTMLEmail = exports.createTransporter = void 0;
 const tslib_1 = require("tslib");
-const smtp_1 = (0, tslib_1.__importDefault)(require("../configs/smtp"));
-const nodemailer_1 = (0, tslib_1.__importDefault)(require("nodemailer"));
+const smtp_1 = tslib_1.__importDefault(require("../configs/smtp"));
+const nodemailer_1 = tslib_1.__importDefault(require("nodemailer"));
 const util_1 = require("../utils/util");
 /**
  * Create a new email transporter

@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateHTML = void 0;
 const tslib_1 = require("tslib");
-const handlebars_1 = (0, tslib_1.__importDefault)(require("handlebars"));
-const fs_1 = (0, tslib_1.__importDefault)(require("fs"));
+const handlebars_1 = tslib_1.__importDefault(require("handlebars"));
+const fs_1 = tslib_1.__importDefault(require("fs"));
 /**
  * @method generateHTML
  * @param {String} path - Template path

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const organization_service_1 = (0, tslib_1.__importDefault)(require("../services/organization.service"));
+const organization_service_1 = tslib_1.__importDefault(require("../services/organization.service"));
 /**
  * Creates a new organization
  * @param  {Request} req http request arguments
@@ -10,7 +10,7 @@ const organization_service_1 = (0, tslib_1.__importDefault)(require("../services
  */
 const createOrg = async (req, res, next) => {
     try {
-        const orgInfo = req.body;
+        const orgInfo /* CreateOrgDto */ = req.body;
         const findAllOrgs = await organization_service_1.default.getOrganizations();
         orgInfo.idOrg = findAllOrgs.length + 1;
         const newOrganization = await organization_service_1.default.createOrganization(orgInfo);
@@ -22,7 +22,7 @@ const createOrg = async (req, res, next) => {
 };
 const editOrg = async (req, res, next) => {
     try {
-        const orgInfo = req.body;
+        const orgInfo /* CreateOrgDto */ = req.body;
         const org = await organization_service_1.default.editOrganization(orgInfo);
         res.status(201).json({ data: org, message: 'edited' });
     }

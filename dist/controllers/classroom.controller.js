@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.leerClassroomsPorNivelPlan = exports.getClassrooms = exports.guardarClassroom = void 0;
 const tslib_1 = require("tslib");
-const classroom_model_1 = (0, tslib_1.__importDefault)(require("../models/classroom.model"));
+const classroom_model_1 = tslib_1.__importDefault(require("../models/classroom.model"));
 const guardarClassroom = async (req, res) => {
     const { classRoomList } = req.body;
     /* classRoomList.forEach(c=> {

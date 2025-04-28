@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const express_1 = require("express");
-const auth_controller_1 = (0, tslib_1.__importDefault)(require("../controllers/auth.controller"));
+const auth_controller_1 = tslib_1.__importDefault(require("../controllers/auth.controller"));
 const router = (0, express_1.Router)();
 router.post(`/signup`, auth_controller_1.default.signUp);
 router.post(`/login`, auth_controller_1.default.logIn);

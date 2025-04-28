@@ -1,3 +1,4 @@
+/// <reference types="cookie-parser" />
 import { Request } from 'express';
 import { User } from './users.interface';
 import { ObjectId } from 'mongoose';

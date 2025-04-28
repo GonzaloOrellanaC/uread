@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const pre_users_model_1 = (0, tslib_1.__importDefault)(require("../models/pre-users.model"));
-const users_model_1 = (0, tslib_1.__importDefault)(require("../models/users.model"));
-const convert_excel_to_json_1 = (0, tslib_1.__importDefault)(require("convert-excel-to-json"));
+const pre_users_model_1 = tslib_1.__importDefault(require("../models/pre-users.model"));
+const users_model_1 = tslib_1.__importDefault(require("../models/users.model"));
+const convert_excel_to_json_1 = tslib_1.__importDefault(require("convert-excel-to-json"));
 const rut_js_1 = require("rut.js");
 const preUserData = pre_users_model_1.default;
 const userData = users_model_1.default;

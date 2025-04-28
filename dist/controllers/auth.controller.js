@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const logger_1 = require("../utils/logger");
 const env_1 = require("../configs/env");
-const auth_service_1 = (0, tslib_1.__importDefault)(require("../services/auth.service"));
+const auth_service_1 = tslib_1.__importDefault(require("../services/auth.service"));
 const signUp = async (req, res, next) => {
     try {
         const userData = req.body;

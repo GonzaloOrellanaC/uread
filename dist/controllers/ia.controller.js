@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.editContent = exports.createNewContent = void 0;
 const tslib_1 = require("tslib");
 const ia_service_1 = require("../services/ia.service");
-const contenido_controller_1 = (0, tslib_1.__importDefault)(require("./contenido.controller"));
-const contenido_model_1 = (0, tslib_1.__importDefault)(require("../models/contenido.model"));
+const contenido_controller_1 = tslib_1.__importDefault(require("./contenido.controller"));
+const contenido_model_1 = tslib_1.__importDefault(require("../models/contenido.model"));
 const createNewContent = async (req, res) => {
     const { title, description } = req.body;
     try {

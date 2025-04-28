@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const env_1 = require("../configs/env");
-const users_service_1 = (0, tslib_1.__importDefault)(require("../services/users.service"));
-const organizations_model_1 = (0, tslib_1.__importDefault)(require("../models/organizations.model"));
-const users_service_2 = (0, tslib_1.__importDefault)(require("../services/users.service"));
-const alumnos_provisorios_model_1 = (0, tslib_1.__importDefault)(require("../models/alumnos-provisorios.model"));
+const users_service_1 = tslib_1.__importDefault(require("../services/users.service"));
+const organizations_model_1 = tslib_1.__importDefault(require("../models/organizations.model"));
+const users_service_2 = tslib_1.__importDefault(require("../services/users.service"));
+const alumnos_provisorios_model_1 = tslib_1.__importDefault(require("../models/alumnos-provisorios.model"));
 const getUsers = async (req, res, next) => {
     try {
         const findAllUsersData = await users_service_1.default.findAllUser();

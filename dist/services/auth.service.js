@@ -4,16 +4,16 @@ exports.createCookie = exports.verifyToken = exports.createToken = void 0;
 const tslib_1 = require("tslib");
 const index_1 = require("../configs/index");
 const HttpException_1 = require("../exceptions/HttpException");
-const users_model_1 = (0, tslib_1.__importDefault)(require("../models/users.model"));
+const users_model_1 = tslib_1.__importDefault(require("../models/users.model"));
 const util_1 = require("../utils/util");
 const logger_1 = require("../utils/logger");
 const html_1 = require("../utils/html");
-const bcrypt_1 = (0, tslib_1.__importDefault)(require("bcrypt"));
+const bcrypt_1 = tslib_1.__importDefault(require("bcrypt"));
 const i18n_1 = require("i18n");
-const jsonwebtoken_1 = (0, tslib_1.__importDefault)(require("jsonwebtoken"));
+const jsonwebtoken_1 = tslib_1.__importDefault(require("jsonwebtoken"));
 const email_service_1 = require("./email.service");
-const path_1 = (0, tslib_1.__importDefault)(require("path"));
-const gruposNiveles_model_1 = (0, tslib_1.__importDefault)(require("../models/gruposNiveles.model"));
+const path_1 = tslib_1.__importDefault(require("path"));
+const gruposNiveles_model_1 = tslib_1.__importDefault(require("../models/gruposNiveles.model"));
 const user = users_model_1.default;
 const signup = async (userData) => {
     if ((0, util_1.isEmpty)(userData))

@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/imac/Documents/Proyectos_Personales/uread/src/logs/debug/.5590c5f9e7479b33d3c68e4e1ee6c57ebc353e7c-audit.json",
+    "files": [
+        {
+            "date": 1744682187692,
+            "name": "/Users/imac/Documents/Proyectos_Personales/uread/src/logs/debug/2025-04-14.log",
+            "hash": "27606f9fa36d858d6203b9a73f0ccea9a704ded80046bae79747eabf1367413b"
+        },
+        {
+            "date": 1745850885232,
+            "name": "/Users/imac/Documents/Proyectos_Personales/uread/src/logs/debug/2025-04-28.log",
+            "hash": "c70a674cd8dddace339160b00bb81ce1cc0f352185dfa423adcbfee2499f29b8"
+        }
+    ],
+    "hashType": "sha256"
+}

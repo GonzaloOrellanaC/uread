@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const i18n_1 = require("i18n");
 const configs_1 = require("../configs");
-const organizations_model_1 = (0, tslib_1.__importDefault)(require("../models/organizations.model"));
+const organizations_model_1 = tslib_1.__importDefault(require("../models/organizations.model"));
 const HttpException_1 = require("../exceptions/HttpException");
 /**
  * Creates a new Organization

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const surveys_services_1 = (0, tslib_1.__importDefault)(require("../services/surveys.services"));
+const surveys_services_1 = tslib_1.__importDefault(require("../services/surveys.services"));
 const createSurvey = async (req, res, next) => {
     console.log(req.body);
     try {

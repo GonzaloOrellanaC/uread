@@ -1,4 +1,5 @@
 /// <reference types="qs" />
+/// <reference types="cookie-parser" />
 import { Response, Request, NextFunction } from 'express';
 declare const _default: {
     uploadImage: (req: Request<import("express-serve-static-core").ParamsDictionary, any, any, import("qs").ParsedQs, Record<string, any>>, res: Response<any, Record<string, any>>, next: NextFunction) => Promise<void>;

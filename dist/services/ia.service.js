@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.translateText = exports.transcript = exports.createAudio = void 0;
 const tslib_1 = require("tslib");
-const fs_1 = (0, tslib_1.__importDefault)(require("fs"));
-const path_1 = (0, tslib_1.__importDefault)(require("path"));
-const text_to_speech_1 = (0, tslib_1.__importDefault)(require("@google-cloud/text-to-speech"));
+const fs_1 = tslib_1.__importDefault(require("fs"));
+const path_1 = tslib_1.__importDefault(require("path"));
+const text_to_speech_1 = tslib_1.__importDefault(require("@google-cloud/text-to-speech"));
 const ia_connection_1 = require("../configs/ia.connection");
 const createAudio = async (message, id, voice) => {
     try {

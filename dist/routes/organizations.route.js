@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const express_1 = require("express");
 const permission_middleware_1 = require("../middlewares/permission.middleware");
-const organizations_controller_1 = (0, tslib_1.__importDefault)(require("../controllers/organizations.controller"));
+const organizations_controller_1 = tslib_1.__importDefault(require("../controllers/organizations.controller"));
 const router = (0, express_1.Router)();
 router.post(`/createOrg`, 
 /* authMiddleware, */
