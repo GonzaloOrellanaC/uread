@@ -1,8 +1,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { User } from "../interfaces/User.interface";
 import userRouter from "../router/user.router";
-import { useHistory } from "react-router";
-import { IonButton, IonCol, IonContent, IonGrid, IonInput, IonItem, IonModal, IonRow } from "@ionic/react";
+import { useHistory, useLocation } from "react-router";
+import { IonButton, IonCol, IonContent, IonGrid, IonInput, IonItem, IonModal, IonRow, useIonAlert } from "@ionic/react";
 import { format } from "rut.js";
 
 interface AuthContextValues {
@@ -22,6 +22,7 @@ interface AuthContextValues {
 export const AuthContext = createContext<AuthContextValues>({} as AuthContextValues)
 
 export const AuthProvider = (props: any) => {
+    const [presentAlert] = useIonAlert()
     const [ userData, setUserData ] = useState<User>()
     const [loading, setLoading] = useState<boolean>(false)
     const [isAdmin, setIsAdmin] = useState(false)
@@ -34,8 +35,15 @@ export const AuthProvider = (props: any) => {
     const [openRunEditor, setOpenRunEditor] = useState(false)
 
     const [newRun, setNewRun] = useState('')
-
+    const location = useLocation()
     const history = useHistory()
+
+    useEffect(() => {
+        const token = localStorage.getItem('token')
+        if (token) {
+            loginToken(token)
+        }
+    }, [])
     
     const login = (email: string, password: string) => {
         if (email && password) {
@@ -46,8 +54,9 @@ export const AuthProvider = (props: any) => {
                     setGrupos(response.grupos)
                     setUserData(response.data)
                     localStorage.setItem('uread_user', JSON.stringify(response.data))
+                    localStorage.setItem('token', response.token)
                     setLoading(false)
-                    history.push('/home')
+                    history.replace('/home')
                 })
                 .catch(err => {
                     console.log(err)
@@ -63,11 +72,38 @@ export const AuthProvider = (props: any) => {
 
     const loginToken = (token: string) => {
         userRouter.usuarioDesdeToken(token).then(response => {
-            setUserData(response.data)
-            console.log(response.data)
-            localStorage.setItem('uread_user', JSON.stringify(response.data))
-            setLoading(false)
-            history.push('/home')
+            console.log(response)
+            if (response.message === 'invalid token' || response.message === 'invalid signature' || response.message === 'jwt malformed') {
+                localStorage.clear()
+                presentAlert({
+                    header: 'Aviso!',
+                    message: `
+                    Su sesión ha caducado. Vuelva a iniciar con su email y contraseña.
+                    `,
+                    buttons: [
+                        {
+                            text: 'Ok',
+                            handler: (value) => {
+                                history.replace('/login')
+                                window.location.reload()
+                            },
+                        }
+                    ],
+                })
+                
+            } else {
+                setUserData(response.findUser)
+                console.log(response.findUser)
+                setGrupos(response.grupos)
+                localStorage.setItem('uread_user', JSON.stringify(response.data))
+                setLoading(false)
+                if (location.pathname === '/login') {
+                    history.replace('/home')
+                }
+            }
+        }).catch(err => {
+            alert('Error 410: Un error ha ocurrido. Informe al administrador de sistema el número del error para verificar.')
+            console.log(err)
         })
     }
 
@@ -107,7 +143,7 @@ export const AuthProvider = (props: any) => {
             if ((!userData.run || userData.run.length < 1) && (userData.roles[0].name === "studentRepresentative")) {
                 setOpenRunEditor(true)
             }
-        } else {
+        } /* else {
             const userCache = localStorage.getItem('uread_user')
             if (userCache) {
                 if (
@@ -139,7 +175,7 @@ export const AuthProvider = (props: any) => {
                     history.replace('/login')
                 }
             }
-        }
+        } */
     },[userData])
 
 

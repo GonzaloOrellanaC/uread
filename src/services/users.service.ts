@@ -1,5 +1,5 @@
 import { env } from '@/configs'
-import { Organization } from '@/interfaces/roles.interface'
+import { Organization, Role } from '@/interfaces/roles.interface'
 import { HttpException } from '@exceptions/HttpException'
 import { User } from '@interfaces/users.interface'
 import userModel from '@models/users.model'
@@ -15,6 +15,10 @@ import path from 'path'
 import alumnoProvisorioModel from '@/models/alumnos-provisorios.model'
 import roleModel from '@/models/roles.model'
 import { DataStoredInToken } from '@/interfaces/auth.interface'
+import gruposNivelesModel from '@/models/gruposNiveles.model'
+import alumnoFechaPagoModel from '@/models/alumno-fechapago.model'
+import { pagosAlumno } from './alumnoFechaPago.service'
+import { lastName } from '@/configs/env'
 
 const user = userModel
 
@@ -196,7 +200,7 @@ const habilitarAlumno = async (user: User) => {
         return alumnoEditado
     } catch (error) {
         logger.error(__({ phrase: error.message, locale: 'es' }))
-        return null
+        throw error
     }
 }
 
@@ -218,13 +222,46 @@ const userFromToken = async (token: string) => {
             path : 'levelUser'
         }
         }).populate('levelUser')
+    
+    let grupos: any
 
-    return findUser
+    const roles = findUser.roles as Role[]
+
+    if (roles[0] && roles[0].name === 'user') {
+        grupos = await gruposNivelesModel.find({cursos: {$in: [findUser.levelUser._id]}})
+    }
+
+
+    return {findUser, grupos}
+}
+
+const findAllStudents = async () => {
+    const role = await roleModel.findOne({name: 'user'})
+    const students = await user.find({
+        roles:[role._id]
+    }).select({email: 1, name: 1, lastName: 1, levelUser: 1, plan: 1, createdAt: 1, apoderado: 1}).populate('apoderado').populate('levelUser')
+    const unDia = (60000 * 60) * 24
+
+    const response = await Promise.all(students.map(async student => {
+        let alumnoFechaPago = await pagosAlumno(student._id)
+        if (!alumnoFechaPago) {
+            alumnoFechaPago = await alumnoFechaPagoModel.create({alumno: student._id, fechasPago: [new Date(student.createdAt).getTime() + (unDia * 30)], fechasPagadas: []})
+        }
+        console.log(alumnoFechaPago)
+        const newStudent : any = {
+            ...student.toJSON(),
+            alumnoFechaPago
+        }
+        return newStudent
+    }))
+
+    return response
 }
 
 export default {
     findAllUser,
     findAllAdminUser,
+    findAllStudents,
     findSupervisores,
     findAllSystemUser,
     getUsersByOrg,

@@ -1,0 +1,54 @@
+2025-04-21 07:08:36 error: undefined
+2025-04-21 07:08:36 error: undefined
+2025-04-21 12:00:00 error: uncaughtException: Cannot read properties of null (reading 'fechasPago')
+TypeError: Cannot read properties of null (reading 'fechasPago')
+    at C:\Users\gorel\Documents\Personales\uread\src\app.ts:57:50
+    at Array.forEach (<anonymous>)
+    at revisionPayment (C:\Users\gorel\Documents\Personales\uread\src\app.ts:56:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-21 12:10:14 error: uncaughtException: Cannot read properties of null (reading 'fechasPago')
+TypeError: Cannot read properties of null (reading 'fechasPago')
+    at C:\Users\gorel\Documents\Personales\uread\src\app.ts:57:50
+    at Array.forEach (<anonymous>)
+    at revisionPayment (C:\Users\gorel\Documents\Personales\uread\src\app.ts:56:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-21 12:11:46 error: uncaughtException: Cannot read properties of null (reading 'fechasPago')
+TypeError: Cannot read properties of null (reading 'fechasPago')
+    at C:\Users\gorel\Documents\Personales\uread\src\app.ts:57:50
+    at Array.forEach (<anonymous>)
+    at revisionPayment (C:\Users\gorel\Documents\Personales\uread\src\app.ts:56:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-21 12:18:46 error: uncaughtException: Cannot read properties of null (reading 'fechasPago')
+TypeError: Cannot read properties of null (reading 'fechasPago')
+    at C:\Users\gorel\Documents\Personales\uread\src\app.ts:57:50
+    at Array.forEach (<anonymous>)
+    at revisionPayment (C:\Users\gorel\Documents\Personales\uread\src\app.ts:56:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-21 12:38:24 error: uncaughtException: Cannot read properties of null (reading 'fechasPago')
+TypeError: Cannot read properties of null (reading 'fechasPago')
+    at C:\Users\gorel\Documents\Personales\uread\src\app.ts:57:50
+    at Array.forEach (<anonymous>)
+    at revisionPayment (C:\Users\gorel\Documents\Personales\uread\src\app.ts:56:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-21 12:45:23 error: uncaughtException: Cannot read properties of null (reading 'fechasPago')
+TypeError: Cannot read properties of null (reading 'fechasPago')
+    at C:\Users\gorel\Documents\Personales\uread\src\app.ts:57:50
+    at Array.forEach (<anonymous>)
+    at revisionPayment (C:\Users\gorel\Documents\Personales\uread\src\app.ts:56:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-21 12:46:28 error: uncaughtException: Cannot read properties of null (reading 'fechasPago')
+TypeError: Cannot read properties of null (reading 'fechasPago')
+    at C:\Users\gorel\Documents\Personales\uread\src\app.ts:58:50
+    at Array.forEach (<anonymous>)
+    at revisionPayment (C:\Users\gorel\Documents\Personales\uread\src\app.ts:57:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-21 12:47:15 error: uncaughtException: Cannot read properties of null (reading 'fechasPago')
+TypeError: Cannot read properties of null (reading 'fechasPago')
+    at C:\Users\gorel\Documents\Personales\uread\src\app.ts:58:50
+    at Array.forEach (<anonymous>)
+    at revisionPayment (C:\Users\gorel\Documents\Personales\uread\src\app.ts:57:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-21 14:17:07 error: uncaughtException: Cannot read properties of null (reading 'toJSON')
+TypeError: Cannot read properties of null (reading 'toJSON')
+    at actualizarPago (C:\Users\gorel\Documents\Personales\uread\src\services\alumnoFechaPago.service.ts:12:29)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)

@@ -101,6 +101,10 @@ const userSchema: Schema = new Schema(
         apoderado: {
             type: Schema.Types.ObjectId,
             ref: 'User'
+        },
+        estadoPago: {
+            type: Schema.Types.String,
+            default: 'ok'
         }
     },
     {

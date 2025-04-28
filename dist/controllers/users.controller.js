@@ -117,7 +117,8 @@ const usuarioDesdeToken = async (req, res, next) => {
     try {
         const { token } = req.params;
         const userData = await users_service_1.default.userFromToken(token);
-        res.status(200).json({ data: userData, message: 'validado' });
+        const { findUser, grupos } = userData;
+        res.status(200).json({ findUser, grupos, message: 'validado' });
     }
     catch ({ name, message }) {
         console.log({ name, message });
@@ -130,9 +131,9 @@ const habilitarUsuarioDesdeAlumno = async (req, res, next) => {
         const userData = await users_service_1.default.habilitarAlumno(alumno);
         res.status(200).json({ user: userData, message: 'validado' });
     }
-    catch ({ name, message }) {
-        console.log({ name, message });
-        res.status(200).json({ data: { name }, message });
+    catch (error) {
+        console.error('Error', error);
+        res.status(400).json({ error });
     }
 };
 const cambiarPassword = async (req, res, next) => {
@@ -149,6 +150,7 @@ const cambiarPassword = async (req, res, next) => {
 };
 const alumnosUsuario = async (req, res) => {
     const { idUser } = req.query;
+    console.log(idUser);
     try {
         const alumnos = await alumnos_provisorios_model_1.default.find({ apoderado: idUser }).populate('levelUser');
         res.status(200).json({ alumnos });

@@ -5,5 +5,5 @@ interface EmailConfig {
     port: number;
     tls: boolean;
 }
-export declare function checkEmails(config: EmailConfig): Promise<void>;
+export declare const checkEmails: (config: EmailConfig) => Promise<void>;
 export {};

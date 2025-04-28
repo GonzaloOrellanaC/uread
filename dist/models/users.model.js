@@ -100,6 +100,10 @@ const userSchema = new mongoose_1.Schema({
     apoderado: {
         type: mongoose_1.Schema.Types.ObjectId,
         ref: 'User'
+    },
+    estadoPago: {
+        type: mongoose_1.Schema.Types.String,
+        default: 'ok'
     }
 }, {
     timestamps: true,

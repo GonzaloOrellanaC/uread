@@ -17,6 +17,8 @@ const calendar_route_1 = tslib_1.__importDefault(require("./calendar.route"));
 const ia_router_1 = tslib_1.__importDefault(require("./ia.router"));
 const inscripcion_route_1 = tslib_1.__importDefault(require("./inscripcion.route"));
 const classroom_route_1 = tslib_1.__importDefault(require("./classroom.route"));
+const notificaciones_route_1 = tslib_1.__importDefault(require("./notificaciones.route"));
+const alumnoFechaPago_route_1 = tslib_1.__importDefault(require("./alumnoFechaPago.route"));
 const router = (0, express_1.Router)();
 router.use('/api', auth_route_1.default);
 router.use('/api/users', users_route_1.default);
@@ -33,5 +35,7 @@ router.use('/api/calendar', calendar_route_1.default);
 router.use('/api/ia', ia_router_1.default);
 router.use('/api/form', inscripcion_route_1.default);
 router.use('/api/classroom', classroom_route_1.default);
+router.use('/api/notificaciones', notificaciones_route_1.default);
+router.use('/api/alumnoFechaPago', alumnoFechaPago_route_1.default);
 exports.default = router;
 //# sourceMappingURL=index.route.js.map

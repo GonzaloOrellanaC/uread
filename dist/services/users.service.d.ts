@@ -3,6 +3,7 @@ import { User } from '../interfaces/users.interface';
 declare const _default: {
     findAllUser: () => Promise<User[]>;
     findAllAdminUser: () => Promise<User[]>;
+    findAllStudents: () => Promise<any[]>;
     findSupervisores: () => Promise<User[]>;
     findAllSystemUser: () => Promise<User[]>;
     getUsersByOrg: (orgId: import("mongoose").Schema.Types.ObjectId) => Promise<User[]>;
@@ -15,7 +16,10 @@ declare const _default: {
     updateUser: (userId: string, userData: User, locale?: string) => Promise<User>;
     deleteUser: (userId: string, locale?: string) => Promise<User>;
     validar: (user: User) => Promise<User & import("mongoose").Document<any, any, any>>;
-    userFromToken: (token: string) => Promise<User>;
+    userFromToken: (token: string) => Promise<{
+        findUser: User;
+        grupos: any;
+    }>;
     habilitarAlumno: (user: User) => Promise<import("mongoose").Document<any, any, any>>;
     camibiarPassword: (userId: string, password: string) => Promise<User & import("mongoose").Document<any, any, any>>;
 };

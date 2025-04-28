@@ -1,0 +1,57 @@
+2025-04-16 08:05:46 info: ====================================
+2025-04-16 08:05:46 info: ============ ENV: development ===========
+2025-04-16 08:05:46 info: 🚀 App listening on the port 5212
+2025-04-16 08:05:46 info: ====================================
+2025-04-16 08:09:55 info: [0mGET /api/roles/getRoles [32m200[0m 68.675 ms - 734[0m
+2025-04-16 08:09:55 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg3NTAsImV4cCI6MTc0NDg2MTU1MH0.WuBne4LlyO4-ufVvfM5r1uGT03XK41qzz1BC19DRXzM [32m200[0m 170.929 ms - 614[0m
+2025-04-16 08:09:55 info: [0mGET /api/roles/getRoles [36m304[0m 68.909 ms - -[0m
+2025-04-16 08:09:55 info: [0mGET /api/niveles/leerNiveles [32m200[0m 71.755 ms - 543[0m
+2025-04-16 08:09:56 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg3NTAsImV4cCI6MTc0NDg2MTU1MH0.WuBne4LlyO4-ufVvfM5r1uGT03XK41qzz1BC19DRXzM [32m200[0m 600.286 ms - 614[0m
+2025-04-16 08:09:56 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 706.878 ms - -[0m
+2025-04-16 08:09:56 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 760.780 ms - -[0m
+2025-04-16 08:09:56 info: [0mGET /api/niveles/leerNiveles [36m304[0m 68.471 ms - -[0m
+2025-04-16 08:09:57 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 441.112 ms - -[0m
+2025-04-16 08:09:57 info: [0mGET /api/users/getUsers [32m200[0m 1197.112 ms - -[0m
+2025-04-16 08:09:57 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 657.556 ms - -[0m
+2025-04-16 08:10:16 info: [0mGET /api/roles/getRoles [36m304[0m 61.213 ms - -[0m
+2025-04-16 08:10:16 info: [0mGET /api/roles/getRoles [36m304[0m 59.735 ms - -[0m
+2025-04-16 08:10:22 info: [0mOPTIONS /api/login [32m204[0m 0.380 ms - 0[0m
+2025-04-16 08:10:22 info: [0mPOST /api/login [32m200[0m 442.204 ms - -[0m
+2025-04-16 08:10:22 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.170 ms - 0[0m
+2025-04-16 08:10:23 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 305.187 ms - -[0m
+2025-04-16 08:10:25 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 61.892 ms - -[0m
+2025-04-16 08:10:25 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 59.290 ms - -[0m
+2025-04-16 08:12:21 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ4MDU0MjIsImV4cCI6MTc0NDk3ODIyMn0.YJbkQRwhvyfE8PL5MSVrn2tVIs7cOd08nVlfD3bhg_o [32m200[0m 210.985 ms - -[0m
+2025-04-16 08:12:21 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.139 ms - 0[0m
+2025-04-16 08:12:21 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 59.736 ms - -[0m
+2025-04-16 08:12:21 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 307.584 ms - -[0m
+2025-04-16 08:12:54 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ4MDU0MjIsImV4cCI6MTc0NDk3ODIyMn0.YJbkQRwhvyfE8PL5MSVrn2tVIs7cOd08nVlfD3bhg_o [32m200[0m 187.780 ms - -[0m
+2025-04-16 08:12:54 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 58.293 ms - -[0m
+2025-04-16 08:12:54 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ4MDU0MjIsImV4cCI6MTc0NDk3ODIyMn0.YJbkQRwhvyfE8PL5MSVrn2tVIs7cOd08nVlfD3bhg_o [32m200[0m 181.921 ms - -[0m
+2025-04-16 08:12:54 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 60.325 ms - -[0m
+2025-04-16 08:13:11 info: [0mOPTIONS /api/login [32m204[0m 0.200 ms - 0[0m
+2025-04-16 08:13:11 info: [0mPOST /api/login [32m200[0m 263.227 ms - -[0m
+2025-04-16 08:13:11 info: [0mGET /api/niveles/leerNiveles [36m304[0m 61.587 ms - -[0m
+2025-04-16 08:13:11 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 125.317 ms - -[0m
+2025-04-16 08:13:12 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 504.536 ms - -[0m
+2025-04-16 08:13:13 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [32m200[0m 120.283 ms - 388[0m
+2025-04-16 08:13:13 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [36m304[0m 117.058 ms - -[0m
+2025-04-16 08:13:32 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.194 ms - 0[0m
+2025-04-16 08:13:37 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 5211.780 ms - 405[0m
+2025-04-16 08:15:14 info: [0mGET /api/roles/getRoles [36m304[0m 63.008 ms - -[0m
+2025-04-16 08:15:15 info: [0mGET /api/roles/getRoles [36m304[0m 58.863 ms - -[0m
+2025-04-16 08:15:25 info: [0mOPTIONS /api/login [32m204[0m 0.229 ms - 0[0m
+2025-04-16 08:15:25 info: [0mPOST /api/login [32m200[0m 239.078 ms - -[0m
+2025-04-16 08:15:25 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.134 ms - 0[0m
+2025-04-16 08:15:26 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 354.593 ms - -[0m
+2025-04-16 08:15:27 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=7&plan=A [32m200[0m 59.919 ms - 1018[0m
+2025-04-16 08:15:27 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=7&plan=A [36m304[0m 60.332 ms - -[0m
+2025-04-16 08:15:57 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZGUiLCJpYXQiOjE3NDQ4MDU3MjUsImV4cCI6MTc0NDk3ODUyNX0.YSkPzf0_uWmznqNmBq43x2s9o-3jqwXil4Ty0mr1Y7I [32m200[0m 191.610 ms - -[0m
+2025-04-16 08:15:57 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.200 ms - 0[0m
+2025-04-16 08:15:57 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZGUiLCJpYXQiOjE3NDQ4MDU3MjUsImV4cCI6MTc0NDk3ODUyNX0.YSkPzf0_uWmznqNmBq43x2s9o-3jqwXil4Ty0mr1Y7I [32m200[0m 184.336 ms - -[0m
+2025-04-16 08:15:58 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 369.477 ms - -[0m
+2025-04-16 08:15:58 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 385.978 ms - -[0m
+2025-04-16 08:15:58 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=7&plan=B [32m200[0m 60.495 ms - 11[0m
+2025-04-16 08:15:58 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=7&plan=B [36m304[0m 59.623 ms - -[0m
+2025-04-16 08:25:10 error: undefined
+2025-04-16 08:30:10 error: undefined

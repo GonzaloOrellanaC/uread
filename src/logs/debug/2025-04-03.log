@@ -220,3 +220,7 @@
 2025-04-03 11:37:53 info: [0mOPTIONS /api/contenido/editarContenido [32m204[0m 0.189 ms - 0[0m
 2025-04-03 11:37:53 info: [0mPOST /api/contenido/editarContenido [32m200[0m 131.837 ms - -[0m
 2025-04-03 11:37:54 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 592.050 ms - -[0m
+2025-04-03 11:39:10 info: ====================================
+2025-04-03 11:39:10 info: ============ ENV: development ===========
+2025-04-03 11:39:10 info: 🚀 App listening on the port 5212
+2025-04-03 11:39:10 info: ====================================

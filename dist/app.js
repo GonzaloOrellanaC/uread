@@ -24,6 +24,10 @@ const socket_controller_1 = tslib_1.__importDefault(require("./controllers/socke
 const imap_service_1 = require("./services/imap.service");
 const imap_1 = require("./configs/imap");
 const cron_1 = require("cron");
+const users_service_1 = tslib_1.__importDefault(require("./services/users.service"));
+const notificaciones_service_1 = require("./services/notificaciones.service");
+const date_1 = require("./utils/date");
+const unDia = (60000 * 60) * 24;
 const iniciaJob = () => {
     const job = new cron_1.CronJob('*/5 * * * *', function () {
         (0, imap_service_1.checkEmails)({
@@ -33,6 +37,73 @@ const iniciaJob = () => {
             port: 993,
             tls: true
         });
+    }, () => {
+        console.log('Terminado');
+    });
+    return job;
+};
+const revisionPayment = async () => {
+    const alumnos = await users_service_1.default.findAllStudents();
+    const currentDate = new Date().getTime();
+    const proximos5Dias = new Date(currentDate + (unDia * 5)).getTime();
+    const alumnosPorPagar = [];
+    console.log(alumnos.length);
+    alumnos.forEach((alumno) => {
+        console.log(alumno.name, alumno.lastName);
+        if (alumno.alumnoFechaPago !== null) {
+            const fechaPago = new Date(alumno.alumnoFechaPago.fechasPago[alumno.alumnoFechaPago.fechasPago.length - 1]).getTime();
+            if ((currentDate + proximos5Dias) > fechaPago) {
+                alumnosPorPagar.push(alumno);
+            }
+        }
+    });
+    alumnosPorPagar.forEach(async (alumno, index) => {
+        const currentDate = new Date(alumno.alumnoFechaPago.fechasPago[alumno.alumnoFechaPago.fechasPago.length - 1]).getTime();
+        const quinceDias = unDia * 15;
+        if (alumno.apoderado) {
+            const newNotificationApoderado = {
+                title: `Recordatorio próximo pago`,
+                detail: `La cuenta de alumno ${alumno.name} ${alumno.lastName} está por vencer.`,
+                longText: `Hola ${alumno.apoderado.name} ${alumno.apoderado.lastName}. Saludos desde UREAD. Informamos que el la cuenta de ${alumno.name} vence el próximo ${(0, date_1.dateTranslate)(new Date(currentDate + quinceDias), 'Nombre Día, Fecha ["Día" de "Mes"]')}. Pague con transferencia electrónica bancaria, envíe su comprobante  a recepcion.pagos@uread.cl o Pague con transbank en el siguiente link`,
+                links: ['https://www.webpay.cl/form-pay/192335'],
+                user: alumno.apoderado,
+                idType: 'recordatorio_pago',
+                metadata: {
+                    alumno: alumno._id
+                }
+            };
+            try {
+                const ultimaNotificacion = await (0, notificaciones_service_1.leerUltimaNotificacionPagoPendiente)(alumno.apoderado._id, alumno._id);
+                if (ultimaNotificacion !== null) {
+                    const cincoDias = unDia * 5;
+                    const dosDias = unDia * 2;
+                    const fechaUltimaNotificacion = new Date(ultimaNotificacion.createdAt).getTime();
+                    if (fechaUltimaNotificacion + cincoDias < Date.now()) {
+                        /* console.log(newNotificationApoderado) */
+                        const notificacion = await (0, notificaciones_service_1.crearNotificacion)(newNotificationApoderado);
+                        console.log(notificacion);
+                    }
+                    else {
+                        console.log('No han pasado más de 5 días desde última notificación.');
+                    }
+                }
+                else {
+                    const notificacion = await (0, notificaciones_service_1.crearNotificacion)(newNotificationApoderado);
+                    console.log(notificacion);
+                }
+            }
+            catch ({ name, message }) {
+                console.log(name, message);
+            }
+        }
+        else {
+            console.log(`Alumno name: "${alumno.name}", lastName: "${alumno.lastName}" no tiene apoderado.`);
+        }
+    });
+};
+const jobsPayment = () => {
+    const job = new cron_1.CronJob('00 12 * * *', () => {
+        revisionPayment();
     }, () => {
         console.log('Terminado');
     });
@@ -58,6 +129,8 @@ const connectToDatabase = async () => {
             tls: true
         });
         iniciaJob().start();
+        jobsPayment().start();
+        revisionPayment();
     }
     catch (error) {
         console.log(error);

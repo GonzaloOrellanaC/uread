@@ -5,6 +5,7 @@ import { arrowBack, arrowUp, close } from "ionicons/icons"
 import { useHistory } from "react-router"
 import userRouter from "../../router/user.router"
 import { useContenidoContext } from "../../context/Contenido.context"
+import { useUsersContext } from "../../context/Users.context"
 
 export const AlumnosContainer = () => {
     const [presentAlert] = useIonAlert()
@@ -12,9 +13,11 @@ export const AlumnosContainer = () => {
     const {userData} = useAuthContext()
     const {setLoading} = useContenidoContext()
 
+    const {alumnos, setAlumnos} = useUsersContext()
 
-    const [alumnos, setAlumnos] = useState<any[]>([])
 
+    /* const [alumnos, setAlumnos] = useState<any[]>([])
+ */
     const [alumnoSeleccionado, setAlumnoSeleccionado] = useState<any>()
 
     const [openAlumnoModal, setOpenAlumnoModal] = useState(false)
@@ -24,7 +27,7 @@ export const AlumnosContainer = () => {
 
     const [openAlertPlan, setOpenAlertPlan] = useState(false)
 
-    useEffect(() => {
+/*     useEffect(() => {
         if (userData)
             obtenerAlumnos()
     },[userData])
@@ -32,7 +35,7 @@ export const AlumnosContainer = () => {
     const obtenerAlumnos = async () => {
         const response = await userRouter.alumnosPorApoderado(userData!._id)
         setAlumnos(response.alumnos)
-    }
+    } */
 
 
     const seleccionarUsuario = (alumno: any) => {
@@ -65,18 +68,48 @@ export const AlumnosContainer = () => {
 
     const habilitarUsuarioDesdeAlumno = async () => {
         setLoading(true)
-        const response = await userRouter.habilitarUsuarioDesdeAlumno(alumnoSeleccionado)
-        console.log(response)
-        setAlumnos(alumnos.map(alumno => {
-            if (alumno._id === response.user._id) {
-                return response.user
-            } else {
-                return alumno
+        try {
+            const response = await userRouter.habilitarUsuarioDesdeAlumno(alumnoSeleccionado)
+            setAlumnos(alumnos.map(alumno => {
+                if (alumno._id === response.user._id) {
+                    return response.user
+                } else {
+                    return alumno
+                }
+            }))
+            alert('Alumno validado. Se ha enviado un correo electrónico para darle la bienvenida.')
+            setOpenAlumnoModal(false)
+        } catch (error: any) {
+            console.error(error)
+            if (error && error.response ) {
+                const {response} = error
+                if (response.data && response.data.error) {
+                    if (response.data.error.keyValue) {
+                        if (response.data.error.keyValue.email) {
+                            const detectMismoEmail = response.data.error.keyValue.email === userData?.email
+                            presentAlert({
+                                header: 'Aviso!',
+                                message: `
+                                ${response.data.error.keyValue.email} ${detectMismoEmail ? 'ya es usado por usted' : 'ya es usado por otro usuario'}.
+                                Debe indicar un correo válido diferente. 
+                                Recuerde que la información de acceso le llegará a ese correo.
+                                Atte.
+                                Plataforma UREAD
+                                `,
+                                buttons: [
+                                    {
+                                        text: 'Ok'
+                                    }
+                                ],
+                            })
+                        }
+                    }
+                }
             }
-        }))
-        alert('Alumno validado. Se ha enviado un correo electrónico para darle la bienvenida.')
-        setOpenAlumnoModal(false)
-        setLoading(false)
+        } finally {
+            setLoading(false)
+
+        }
     }
 
     const abrirSeleccionarPlan = () => {
@@ -241,7 +274,7 @@ export const AlumnosContainer = () => {
                                                 </IonCol>
                                                 <IonCol size="2">
                                                     <div style={{textAlign: 'center', width: '100%'}}>
-                                                        <p>{alumno.levelUser.name}</p>
+                                                        <p>{alumno.levelUser && alumno.levelUser.name}</p>
                                                     </div>
                                                 </IonCol>
                                                 <IonCol>

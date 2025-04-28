@@ -14,6 +14,9 @@ const logger_1 = require("../utils/logger");
 const path_1 = tslib_1.__importDefault(require("path"));
 const alumnos_provisorios_model_1 = tslib_1.__importDefault(require("../models/alumnos-provisorios.model"));
 const roles_model_1 = tslib_1.__importDefault(require("../models/roles.model"));
+const gruposNiveles_model_1 = tslib_1.__importDefault(require("../models/gruposNiveles.model"));
+const alumno_fechapago_model_1 = tslib_1.__importDefault(require("../models/alumno-fechapago.model"));
+const alumnoFechaPago_service_1 = require("./alumnoFechaPago.service");
 const user = users_model_1.default;
 const findAllUser = async () => {
     const users = await user.find().populate('roles').populate('levelUser').populate({
@@ -158,7 +161,7 @@ const habilitarAlumno = async (user) => {
     }
     catch (error) {
         logger_1.logger.error((0, i18n_1.__)({ phrase: error.message, locale: 'es' }));
-        return null;
+        throw error;
     }
 };
 const camibiarPassword = async (userId, password) => {
@@ -177,11 +180,34 @@ const userFromToken = async (token) => {
             path: 'levelUser'
         }
     }).populate('levelUser');
-    return findUser;
+    let grupos;
+    const roles = findUser.roles;
+    if (roles[0] && roles[0].name === 'user') {
+        grupos = await gruposNiveles_model_1.default.find({ cursos: { $in: [findUser.levelUser._id] } });
+    }
+    return { findUser, grupos };
+};
+const findAllStudents = async () => {
+    const role = await roles_model_1.default.findOne({ name: 'user' });
+    const students = await user.find({
+        roles: [role._id]
+    }).select({ email: 1, name: 1, lastName: 1, levelUser: 1, plan: 1, createdAt: 1, apoderado: 1 }).populate('apoderado').populate('levelUser');
+    const unDia = (60000 * 60) * 24;
+    const response = await Promise.all(students.map(async (student) => {
+        let alumnoFechaPago = await (0, alumnoFechaPago_service_1.pagosAlumno)(student._id);
+        if (!alumnoFechaPago) {
+            alumnoFechaPago = await alumno_fechapago_model_1.default.create({ alumno: student._id, fechasPago: [new Date(student.createdAt).getTime() + (unDia * 30)], fechasPagadas: [] });
+        }
+        console.log(alumnoFechaPago);
+        const newStudent = Object.assign(Object.assign({}, student.toJSON()), { alumnoFechaPago });
+        return newStudent;
+    }));
+    return response;
 };
 exports.default = {
     findAllUser,
     findAllAdminUser,
+    findAllStudents,
     findSupervisores,
     findAllSystemUser,
     getUsersByOrg,

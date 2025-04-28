@@ -62,11 +62,33 @@ export const EspacioEstudiantesContainer = () => {
                                             )
                                         })
                                     }
+                                    {
+                                        userData && (userData.plan === 'B' || userData.plan === 'C') && <div>
+                                                <h2 style={{margin: '10px 0px'}}>Videoconferencia en vivo</h2>
+
+                                                <IonButton href={userData.plan === 'B' ? 'https://meet.google.com/jpk-vwjg-den' : userData.plan === 'C' ? 'https://meet.google.com/jxc-byes-ppg' : ''}>
+                                                    Abrir Google Meet
+                                                </IonButton>
+
+                                            </div>
+                                    }
+                                    {
+                                        userData && userData.plan && <div>
+                                                <h2 style={{margin: '10px 0px'}}>Grupo de WhatsApp</h2>
+
+                                                <IonButton href={userData.plan === 'A' ? 'https://chat.whatsapp.com/ByLIPtrcgUg6BkRI8m3PvB' : 'https://chat.whatsapp.com/ECIvsT5pGJtA6YvXTCAMtb'}>
+                                                    Solicitar ingresar al grupo
+                                                </IonButton>
+
+                                            </div>
+                                    }
+
                                 </div>
                             </div>
                         </IonCol>
                         <IonCol />
                     </IonRow>
+                    
                 </IonGrid>
             </IonContent>
         </>

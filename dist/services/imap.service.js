@@ -32,7 +32,7 @@ const obtenerPago = (text) => {
         return 'no value';
     }
 };
-async function checkEmails(config) {
+const checkEmails = async (config) => {
     const imap = new node_imap_1.default({
         user: config.user,
         password: config.password,
@@ -40,15 +40,15 @@ async function checkEmails(config) {
         port: config.port,
         tls: config.tls,
     });
-    function openInbox(cb) {
+    const openInbox = (cb) => {
         imap.openBox('INBOX', false, cb);
-    }
-    imap.once('ready', function () {
-        openInbox(function (err, box) {
+    };
+    imap.once('ready', () => {
+        openInbox((err, box) => {
             if (err)
                 throw err;
             try {
-                imap.search(['UNSEEN', ['SINCE', new Date(Date.now() - 86400000)]], function (err, results) {
+                imap.search(['UNSEEN', ['SINCE', new Date(Date.now() - 86400000)]], (err, results) => {
                     if (err)
                         throw err;
                     if (results.length === 0) {
@@ -56,8 +56,8 @@ async function checkEmails(config) {
                         return;
                     }
                     const f = imap.fetch(results, { bodies: '' });
-                    f.on('message', function (msg, seqno) {
-                        msg.on('body', function (stream, info) {
+                    f.on('message', (msg, seqno) => {
+                        msg.on('body', (stream, info) => {
                             (0, mailparser_1.simpleParser)(stream, async (err, parsed) => {
                                 var _a;
                                 if (err) {
@@ -78,22 +78,22 @@ async function checkEmails(config) {
                                 logger_1.logger.info(obtenerPago(parsed.text));
                             });
                         });
-                        msg.once('attributes', function (attrs) {
+                        msg.once('attributes', (attrs) => {
                             const uid = attrs.uid;
-                            imap.addFlags(`${uid}:${uid}`, ['Seen'], function (err) {
+                            imap.addFlags(`${uid}:${uid}`, ['Seen'], (err) => {
                                 if (err) {
                                     logger_1.logger.error(err);
                                 }
                             });
                         });
-                        msg.once('end', function () {
+                        msg.once('end', () => {
                             console.log('Finalizado el mensaje #%d', seqno);
                         });
                     });
-                    f.once('error', function (err) {
+                    f.once('error', (err) => {
                         console.log('Error de búsqueda:', err);
                     });
-                    f.once('end', function () {
+                    f.once('end', () => {
                         console.log('Terminado de obtener todos los mensajes');
                         imap.end();
                     });
@@ -104,14 +104,14 @@ async function checkEmails(config) {
             }
         });
     });
-    imap.once('error', function (err) {
+    imap.once('error', (err) => {
         logger_1.logger.error(err);
     });
-    imap.once('end', function () {
+    imap.once('end', () => {
         console.log('Conexión IMAP cerrada');
     });
     imap.connect();
-}
+};
 exports.checkEmails = checkEmails;
 const validarPagos = async (email, pago) => {
     console.log(Number(pago.replace('.', '')));

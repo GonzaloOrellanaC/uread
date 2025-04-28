@@ -40,6 +40,9 @@ declare const locales: {
         "connect ETIMEDOUT 186.64.116.140:465": string;
         "Invalid login: 535 Incorrect authentication data": string;
         "E11000 duplicate key error collection: uread.users index: _id_ dup key: { _id: ObjectId('67d7694933241a3f8d450d47') }": string;
+        "E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: \"go.orellana.c@gmail.com\" }": string;
+        "E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: \"gonzalo.orellana@kauel.com\" }": string;
+        "Error logging in": string;
     };
     en: {
         "An ID is required": string;

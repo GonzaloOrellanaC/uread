@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025-04-14 21:56:34 info: ====================================
 2025-04-14 21:56:34 info: ============ ENV: development ===========
 2025-04-14 21:56:34 info: 🚀 App listening on the port 5212
@@ -6,3 +7,403 @@
 2025-04-14 22:02:51 info: ============ ENV: development ===========
 2025-04-14 22:02:51 info: 🚀 App listening on the port 5212
 2025-04-14 22:02:51 info: ====================================
+=======
+2025-04-14 22:04:03 info: ====================================
+2025-04-14 22:04:03 info: ============ ENV: development ===========
+2025-04-14 22:04:03 info: 🚀 App listening on the port 5212
+2025-04-14 22:04:03 info: ====================================
+2025-04-14 22:08:03 info: [0mGET /api/roles/getRoles [32m200[0m 104.592 ms - 734[0m
+2025-04-14 22:08:03 info: [0mGET /api/niveles/leerNiveles [32m200[0m 90.032 ms - 543[0m
+2025-04-14 22:08:04 info: [0mGET /api/roles/getRoles [36m304[0m 696.933 ms - -[0m
+2025-04-14 22:08:04 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 750.647 ms - -[0m
+2025-04-14 22:08:04 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 1236.376 ms - -[0m
+2025-04-14 22:08:04 info: [0mGET /api/users/getUsers [32m200[0m 1302.393 ms - -[0m
+2025-04-14 22:15:22 info: [0mOPTIONS /api/login [32m204[0m 0.592 ms - 0[0m
+2025-04-14 22:15:23 info: [0mPOST /api/login [32m200[0m 447.709 ms - 790[0m
+2025-04-14 22:15:23 info: [0mGET /api/niveles/leerNiveles [36m304[0m 115.314 ms - -[0m
+2025-04-14 22:15:23 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 195.248 ms - -[0m
+2025-04-14 22:15:23 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 667.198 ms - -[0m
+2025-04-14 22:15:37 info: [0mGET /api/roles/getRoles [36m304[0m 70.902 ms - -[0m
+2025-04-14 22:15:37 info: [0mGET /api/roles/getRoles [36m304[0m 75.511 ms - -[0m
+2025-04-14 22:15:47 info: [0mOPTIONS /api/login [32m204[0m 0.141 ms - 0[0m
+2025-04-14 22:15:48 info: [0mPOST /api/login [32m200[0m 404.651 ms - -[0m
+2025-04-14 22:15:50 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [32m200[0m 153.851 ms - 388[0m
+2025-04-14 22:15:50 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [36m304[0m 150.098 ms - -[0m
+2025-04-14 22:16:03 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.127 ms - 0[0m
+2025-04-14 22:16:03 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:16:03 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 162.834 ms - 34[0m
+2025-04-14 22:16:44 info: ====================================
+2025-04-14 22:16:44 info: ============ ENV: development ===========
+2025-04-14 22:16:44 info: 🚀 App listening on the port 5212
+2025-04-14 22:16:44 info: ====================================
+2025-04-14 22:18:51 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [36m304[0m 162.719 ms - -[0m
+2025-04-14 22:18:59 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [36m304[0m 168.094 ms - -[0m
+2025-04-14 22:19:00 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [36m304[0m 152.624 ms - -[0m
+2025-04-14 22:19:00 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [36m304[0m 150.971 ms - -[0m
+2025-04-14 22:19:25 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.506 ms - 0[0m
+2025-04-14 22:19:26 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:19:26 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 178.605 ms - 34[0m
+2025-04-14 22:20:08 info: ====================================
+2025-04-14 22:20:08 info: ============ ENV: development ===========
+2025-04-14 22:20:08 info: 🚀 App listening on the port 5212
+2025-04-14 22:20:08 info: ====================================
+2025-04-14 22:20:20 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 1.048 ms - 0[0m
+2025-04-14 22:20:20 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:20:20 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [32m200[0m 172.323 ms - 34[0m
+2025-04-14 22:22:14 info: ====================================
+2025-04-14 22:22:14 info: ============ ENV: development ===========
+2025-04-14 22:22:14 info: 🚀 App listening on the port 5212
+2025-04-14 22:22:14 info: ====================================
+2025-04-14 22:22:16 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.888 ms - 0[0m
+2025-04-14 22:22:16 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:22:16 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [33m400[0m 384.738 ms - 161[0m
+2025-04-14 22:51:54 info: ====================================
+2025-04-14 22:51:54 info: ============ ENV: development ===========
+2025-04-14 22:51:54 info: 🚀 App listening on the port 5212
+2025-04-14 22:51:54 info: ====================================
+2025-04-14 22:52:00 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.765 ms - 0[0m
+2025-04-14 22:52:00 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:52:00 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [33m400[0m 309.596 ms - 140[0m
+2025-04-14 22:54:24 info: ====================================
+2025-04-14 22:54:24 info: ============ ENV: development ===========
+2025-04-14 22:54:24 info: 🚀 App listening on the port 5212
+2025-04-14 22:54:24 info: ====================================
+2025-04-14 22:54:26 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [36m304[0m 1344.874 ms - -[0m
+2025-04-14 22:54:35 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.607 ms - 0[0m
+2025-04-14 22:54:36 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:54:36 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [33m400[0m 187.712 ms - 140[0m
+2025-04-14 22:54:54 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [36m304[0m 152.704 ms - -[0m
+2025-04-14 22:54:58 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.158 ms - 0[0m
+2025-04-14 22:54:58 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:54:58 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [33m400[0m 143.769 ms - 140[0m
+2025-04-14 22:58:40 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [36m304[0m 152.037 ms - -[0m
+2025-04-14 22:58:47 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.207 ms - 0[0m
+2025-04-14 22:58:47 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:58:47 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [33m400[0m 140.018 ms - 140[0m
+2025-04-14 22:59:12 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.346 ms - 0[0m
+2025-04-14 22:59:12 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 22:59:12 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [33m400[0m 132.763 ms - 140[0m
+2025-04-14 23:01:25 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [36m304[0m 175.353 ms - -[0m
+2025-04-14 23:01:32 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.165 ms - 0[0m
+2025-04-14 23:01:32 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 23:01:32 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [33m400[0m 146.943 ms - 140[0m
+2025-04-14 23:01:53 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.304 ms - 0[0m
+2025-04-14 23:01:53 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "gonzalo.orellana@kauel.com" }
+2025-04-14 23:01:53 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [33m400[0m 141.725 ms - 143[0m
+2025-04-14 23:01:58 info: ====================================
+2025-04-14 23:01:58 info: ============ ENV: development ===========
+2025-04-14 23:01:58 info: 🚀 App listening on the port 5212
+2025-04-14 23:01:58 info: ====================================
+2025-04-14 23:03:13 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6da [36m304[0m 174.059 ms - -[0m
+2025-04-14 23:03:31 info: [0mOPTIONS /api/users/habilitarUsuarioDesdeAlumno [32m204[0m 0.613 ms - 0[0m
+2025-04-14 23:03:31 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+2025-04-14 23:03:31 info: [0mPOST /api/users/habilitarUsuarioDesdeAlumno [33m400[0m 197.600 ms - 140[0m
+2025-04-14 23:04:14 info: [0mGET /api/roles/getRoles [36m304[0m 78.935 ms - -[0m
+2025-04-14 23:04:14 info: [0mGET /api/roles/getRoles [36m304[0m 91.036 ms - -[0m
+2025-04-14 23:04:20 info: [0mOPTIONS /api/login [32m204[0m 0.147 ms - 0[0m
+2025-04-14 23:04:20 info: [0mPOST /api/login [32m200[0m 335.009 ms - -[0m
+2025-04-14 23:04:20 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.327 ms - 0[0m
+2025-04-14 23:04:20 info: [0mGET /api/users/alumnos-usuario?idUser=67d7867ac6ea0f0456bfb6e0 [32m200[0m 155.213 ms - 390[0m
+2025-04-14 23:04:20 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 403.860 ms - -[0m
+2025-04-14 23:04:22 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [32m200[0m 80.583 ms - 1018[0m
+2025-04-14 23:04:22 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 90.437 ms - -[0m
+2025-04-14 23:07:10 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 94.815 ms - -[0m
+2025-04-14 23:11:30 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 76.564 ms - -[0m
+2025-04-14 23:13:16 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 78.896 ms - -[0m
+2025-04-14 23:13:49 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 78.728 ms - -[0m
+2025-04-14 23:13:49 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 85.236 ms - -[0m
+2025-04-14 23:14:57 info: [0mGET /api/niveles/leerNiveles [36m304[0m 79.999 ms - -[0m
+2025-04-14 23:14:57 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 153.917 ms - -[0m
+2025-04-14 23:14:58 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 641.550 ms - -[0m
+2025-04-14 23:18:41 info: [0mGET /api/niveles/leerNiveles [36m304[0m 97.224 ms - -[0m
+2025-04-14 23:18:42 info: [0mGET /api/niveles/leerNiveles [36m304[0m 515.153 ms - -[0m
+2025-04-14 23:18:42 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 617.947 ms - -[0m
+2025-04-14 23:18:42 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 700.411 ms - -[0m
+2025-04-14 23:18:42 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 489.058 ms - -[0m
+2025-04-14 23:18:42 info: [0mGET /api/users/getUsers [36m304[0m 1201.094 ms - -[0m
+2025-04-14 23:18:43 info: [0mGET /api/users/getUsers [36m304[0m 298.586 ms - -[0m
+2025-04-14 23:18:43 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 962.069 ms - -[0m
+2025-04-14 23:19:03 info: [0mGET /api/roles/getRoles [36m304[0m 94.004 ms - -[0m
+2025-04-14 23:19:03 info: [0mGET /api/roles/getRoles [36m304[0m 71.188 ms - -[0m
+2025-04-14 23:19:10 info: [0mOPTIONS /api/login [32m204[0m 0.132 ms - 0[0m
+2025-04-14 23:19:10 info: [0mPOST /api/login [32m200[0m 283.057 ms - -[0m
+2025-04-14 23:19:10 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.192 ms - 0[0m
+2025-04-14 23:19:11 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 381.778 ms - -[0m
+2025-04-14 23:19:54 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.158 ms - 0[0m
+2025-04-14 23:19:54 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.186 ms - 0[0m
+2025-04-14 23:19:54 info: [0mGET /api/niveles/leerNiveles [36m304[0m 75.003 ms - -[0m
+2025-04-14 23:19:54 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 174.155 ms - -[0m
+2025-04-14 23:19:54 info: [0mGET /api/niveles/leerNiveles [36m304[0m 207.216 ms - -[0m
+2025-04-14 23:19:54 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 137.965 ms - -[0m
+2025-04-14 23:19:54 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 385.849 ms - -[0m
+2025-04-14 23:19:55 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 490.551 ms - -[0m
+2025-04-14 23:19:55 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 613.328 ms - -[0m
+2025-04-14 23:19:55 info: [0mGET /api/users/getUsers [36m304[0m 622.912 ms - -[0m
+2025-04-14 23:19:55 info: [0mGET /api/users/getUsers [36m304[0m 258.161 ms - -[0m
+2025-04-14 23:19:55 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 591.395 ms - -[0m
+2025-04-14 23:20:09 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.141 ms - 0[0m
+2025-04-14 23:20:09 info: [0mGET /api/niveles/leerNiveles [36m304[0m 157.471 ms - -[0m
+2025-04-14 23:20:09 info: [0mGET /api/niveles/leerNiveles [36m304[0m 69.135 ms - -[0m
+2025-04-14 23:20:09 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 374.023 ms - -[0m
+2025-04-14 23:20:10 info: [0mGET /api/users/getUsers [36m304[0m 452.721 ms - -[0m
+2025-04-14 23:20:10 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 496.435 ms - -[0m
+2025-04-14 23:20:10 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 617.903 ms - -[0m
+2025-04-14 23:20:10 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 618.269 ms - -[0m
+2025-04-14 23:20:10 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 139.215 ms - -[0m
+2025-04-14 23:20:10 info: [0mGET /api/users/getUsers [36m304[0m 296.377 ms - -[0m
+2025-04-14 23:20:10 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 256.427 ms - -[0m
+2025-04-14 23:22:40 info: [0mGET /api/niveles/leerNiveles [36m304[0m 93.623 ms - -[0m
+2025-04-14 23:22:40 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 188.969 ms - 704[0m
+2025-04-14 23:22:40 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 170.866 ms - -[0m
+2025-04-14 23:22:40 info: [0mGET /api/users/getUsers [32m200[0m 335.782 ms - -[0m
+2025-04-14 23:22:41 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 364.381 ms - 704[0m
+2025-04-14 23:22:41 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 619.676 ms - -[0m
+2025-04-14 23:22:50 info: [0mGET /api/roles/getRoles [36m304[0m 74.048 ms - -[0m
+2025-04-14 23:22:50 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 159.486 ms - 704[0m
+2025-04-14 23:22:50 info: [0mGET /api/roles/getRoles [36m304[0m 72.720 ms - -[0m
+2025-04-14 23:22:50 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 307.769 ms - 704[0m
+2025-04-14 23:27:38 info: ====================================
+2025-04-14 23:27:38 info: ============ ENV: development ===========
+2025-04-14 23:27:38 info: 🚀 App listening on the port 5212
+2025-04-14 23:27:38 info: ====================================
+2025-04-14 23:27:45 info: [0mGET /api/niveles/leerNiveles [36m304[0m 89.055 ms - -[0m
+2025-04-14 23:27:46 info: [0mGET /api/niveles/leerNiveles [36m304[0m 435.587 ms - -[0m
+2025-04-14 23:27:46 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 917.346 ms - -[0m
+2025-04-14 23:27:46 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 1031.439 ms - -[0m
+2025-04-14 23:27:46 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 1030.607 ms - -[0m
+2025-04-14 23:27:46 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.373 ms - 0[0m
+2025-04-14 23:27:46 info: [0mGET /api/users/getUsers [32m200[0m 1099.639 ms - -[0m
+2025-04-14 23:27:46 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 227.899 ms - -[0m
+2025-04-14 23:27:47 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 396.767 ms - -[0m
+2025-04-14 23:27:47 info: [0mGET /api/users/getUsers [36m304[0m 372.544 ms - -[0m
+2025-04-14 23:27:47 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 560.322 ms - -[0m
+2025-04-14 23:27:57 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 242.530 ms - -[0m
+2025-04-14 23:27:57 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 286.779 ms - -[0m
+2025-04-14 23:28:41 info: [0mGET /api/niveles/leerNiveles [36m304[0m 81.266 ms - -[0m
+2025-04-14 23:28:41 info: [0mGET /api/niveles/leerNiveles [36m304[0m 73.155 ms - -[0m
+2025-04-14 23:28:41 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 161.429 ms - -[0m
+2025-04-14 23:28:41 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 237.901 ms - -[0m
+2025-04-14 23:28:41 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 168.035 ms - -[0m
+2025-04-14 23:28:41 info: [0mGET /api/users/getUsers [32m200[0m 323.166 ms - -[0m
+2025-04-14 23:28:42 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 257.764 ms - -[0m
+2025-04-14 23:28:42 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 617.553 ms - -[0m
+2025-04-14 23:28:42 info: [0mGET /api/users/getUsers [32m200[0m 364.693 ms - -[0m
+2025-04-14 23:28:42 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 501.325 ms - -[0m
+2025-04-14 23:28:50 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 231.380 ms - -[0m
+2025-04-14 23:28:50 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 229.789 ms - -[0m
+2025-04-14 23:30:14 info: [0mGET /api/niveles/leerNiveles [36m304[0m 84.123 ms - -[0m
+2025-04-14 23:30:14 info: [0mGET /api/niveles/leerNiveles [36m304[0m 78.216 ms - -[0m
+2025-04-14 23:30:14 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 168.174 ms - -[0m
+2025-04-14 23:30:14 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 274.351 ms - -[0m
+2025-04-14 23:30:14 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 139.662 ms - -[0m
+2025-04-14 23:30:15 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 253.233 ms - -[0m
+2025-04-14 23:30:15 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 633.612 ms - -[0m
+2025-04-14 23:30:15 info: [0mGET /api/users/getUsers [32m200[0m 643.215 ms - -[0m
+2025-04-14 23:30:15 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 316.225 ms - -[0m
+2025-04-14 23:30:15 info: [0mGET /api/users/getUsers [32m200[0m 258.722 ms - -[0m
+2025-04-14 23:30:21 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 231.138 ms - -[0m
+2025-04-14 23:30:21 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 234.643 ms - -[0m
+2025-04-14 23:30:48 info: [0mGET /api/niveles/leerNiveles [36m304[0m 86.274 ms - -[0m
+2025-04-14 23:30:48 info: [0mGET /api/niveles/leerNiveles [36m304[0m 69.862 ms - -[0m
+2025-04-14 23:30:48 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 165.376 ms - -[0m
+2025-04-14 23:30:48 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 231.673 ms - -[0m
+2025-04-14 23:30:48 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.246 ms - 0[0m
+2025-04-14 23:30:48 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 151.238 ms - -[0m
+2025-04-14 23:30:48 info: [0mGET /api/users/getUsers [32m200[0m 439.093 ms - -[0m
+2025-04-14 23:30:49 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 580.029 ms - -[0m
+2025-04-14 23:30:49 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 342.825 ms - -[0m
+2025-04-14 23:30:49 info: [0mGET /api/users/getUsers [32m200[0m 302.941 ms - -[0m
+2025-04-14 23:30:49 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 358.606 ms - -[0m
+2025-04-14 23:30:55 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 79.121 ms - -[0m
+2025-04-14 23:30:55 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 81.679 ms - -[0m
+2025-04-14 23:31:01 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 238.658 ms - -[0m
+2025-04-14 23:31:01 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.283 ms - 0[0m
+2025-04-14 23:31:01 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 216.693 ms - -[0m
+2025-04-14 23:31:01 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 423.198 ms - -[0m
+2025-04-14 23:31:01 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 302.514 ms - -[0m
+2025-04-14 23:31:07 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 73.384 ms - -[0m
+2025-04-14 23:31:07 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 75.468 ms - -[0m
+2025-04-14 23:31:10 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 76.186 ms - -[0m
+2025-04-14 23:31:10 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 72.051 ms - -[0m
+2025-04-14 23:31:12 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 246.929 ms - -[0m
+2025-04-14 23:31:12 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.140 ms - 0[0m
+2025-04-14 23:31:12 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 76.190 ms - -[0m
+2025-04-14 23:31:12 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 262.227 ms - -[0m
+2025-04-14 23:31:12 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 80.891 ms - -[0m
+2025-04-14 23:31:12 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 389.721 ms - -[0m
+2025-04-14 23:31:12 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 366.028 ms - -[0m
+2025-04-14 23:31:21 info: [0mGET /api/roles/getRoles [36m304[0m 99.341 ms - -[0m
+2025-04-14 23:31:21 info: [0mGET /api/roles/getRoles [36m304[0m 74.525 ms - -[0m
+2025-04-14 23:31:21 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 221.321 ms - -[0m
+2025-04-14 23:31:21 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.170 ms - 0[0m
+2025-04-14 23:31:21 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 228.173 ms - -[0m
+2025-04-14 23:31:21 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 378.641 ms - -[0m
+2025-04-14 23:31:22 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 369.458 ms - -[0m
+2025-04-14 23:31:54 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.153 ms - 0[0m
+2025-04-14 23:31:54 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.184 ms - 0[0m
+2025-04-14 23:31:54 info: [0mGET /api/niveles/leerNiveles [36m304[0m 87.055 ms - -[0m
+2025-04-14 23:31:54 info: [0mGET /api/niveles/leerNiveles [36m304[0m 80.525 ms - -[0m
+2025-04-14 23:31:54 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 375.636 ms - -[0m
+2025-04-14 23:31:54 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 362.981 ms - -[0m
+2025-04-14 23:31:54 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 431.386 ms - -[0m
+2025-04-14 23:31:55 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 602.192 ms - -[0m
+2025-04-14 23:31:55 info: [0mGET /api/users/getUsers [32m200[0m 526.017 ms - -[0m
+2025-04-14 23:31:55 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 502.351 ms - -[0m
+2025-04-14 23:31:55 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 225.823 ms - -[0m
+2025-04-14 23:31:55 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 234.545 ms - -[0m
+2025-04-14 23:31:55 info: [0mGET /api/users/getUsers [36m304[0m 272.242 ms - -[0m
+2025-04-14 23:31:55 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 417.772 ms - -[0m
+2025-04-14 23:32:17 info: [0mGET /api/users/usuarioDesdeToken/eyJhGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [32m200[0m 2.617 ms - 63[0m
+2025-04-14 23:32:17 info: [0mGET /api/users/usuarioDesdeToken/eyJhGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [36m304[0m 1.846 ms - -[0m
+2025-04-14 23:34:08 info: [0mGET /api/users/usuarioDesdeToken/eyJhGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [36m304[0m 1.143 ms - -[0m
+2025-04-14 23:34:08 info: [0mGET /api/niveles/leerNiveles [36m304[0m 81.761 ms - -[0m
+2025-04-14 23:34:08 info: [0mGET /api/niveles/leerNiveles [36m304[0m 76.096 ms - -[0m
+2025-04-14 23:34:08 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 162.614 ms - -[0m
+2025-04-14 23:34:08 info: [0mGET /api/roles/getRoles [36m304[0m 71.819 ms - -[0m
+2025-04-14 23:34:08 info: [0mGET /api/roles/getRoles [36m304[0m 70.007 ms - -[0m
+2025-04-14 23:34:08 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 142.258 ms - -[0m
+2025-04-14 23:34:08 info: [0mGET /api/users/getUsers [36m304[0m 393.797 ms - -[0m
+2025-04-14 23:34:09 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 586.397 ms - -[0m
+2025-04-14 23:34:09 info: [0mGET /api/users/getUsers [36m304[0m 347.360 ms - -[0m
+2025-04-14 23:34:09 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 550.280 ms - -[0m
+2025-04-14 23:34:31 info: [0mGET /api/users/usuarioDesdeToken/eyJhGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODcxNTAsImV4cCI6MTc0NDg1OTk1MH0.yJlM0vKtO238shr8dE_psDmQzVR2Egkxyxg7NWKJFwk [36m304[0m 0.996 ms - -[0m
+2025-04-14 23:34:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 77.062 ms - -[0m
+2025-04-14 23:34:31 info: [0mGET /api/roles/getRoles [36m304[0m 76.212 ms - -[0m
+2025-04-14 23:34:31 info: [0mGET /api/niveles/leerNiveles [36m304[0m 67.978 ms - -[0m
+2025-04-14 23:34:31 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 155.564 ms - -[0m
+2025-04-14 23:34:31 info: [0mGET /api/roles/getRoles [36m304[0m 69.392 ms - -[0m
+2025-04-14 23:34:31 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 155.641 ms - -[0m
+2025-04-14 23:34:32 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 580.671 ms - -[0m
+2025-04-14 23:34:32 info: [0mGET /api/users/getUsers [36m304[0m 590.331 ms - -[0m
+2025-04-14 23:34:32 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 239.051 ms - -[0m
+2025-04-14 23:34:32 info: [0mGET /api/users/getUsers [36m304[0m 333.210 ms - -[0m
+2025-04-14 23:34:43 info: [0mGET /api/roles/getRoles [36m304[0m 92.988 ms - -[0m
+2025-04-14 23:34:43 info: [0mGET /api/roles/getRoles [36m304[0m 75.908 ms - -[0m
+2025-04-14 23:34:55 info: [0mOPTIONS /api/login [32m204[0m 0.482 ms - 0[0m
+2025-04-14 23:34:55 info: [0mPOST /api/login [32m200[0m 289.801 ms - -[0m
+2025-04-14 23:34:55 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.177 ms - 0[0m
+2025-04-14 23:34:56 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 401.184 ms - -[0m
+2025-04-14 23:34:58 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 98.294 ms - -[0m
+2025-04-14 23:34:58 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 78.805 ms - -[0m
+2025-04-14 23:35:03 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODgwOTUsImV4cCI6MTc0NDg2MDg5NX0.JdoKFhNw-45jgBmzN-HD-NUUKOI4HlN3XHHJZb4PLEs [32m200[0m 260.861 ms - -[0m
+2025-04-14 23:35:03 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.175 ms - 0[0m
+2025-04-14 23:35:03 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 76.886 ms - -[0m
+2025-04-14 23:35:03 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODgwOTUsImV4cCI6MTc0NDg2MDg5NX0.JdoKFhNw-45jgBmzN-HD-NUUKOI4HlN3XHHJZb4PLEs [32m200[0m 220.730 ms - -[0m
+2025-04-14 23:35:04 info: [0mGET /api/classroom/leer-classrooms-por-nivel-plan?nivel=6&plan=A [36m304[0m 72.753 ms - -[0m
+2025-04-14 23:35:04 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 381.408 ms - -[0m
+2025-04-14 23:35:04 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 298.206 ms - -[0m
+2025-04-14 23:35:17 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODgwOTUsImV4cCI6MTc0NDg2MDg5NX0.JdoKFhNw-45jgBmzN-HD-NUUKOI4HlN3XHHJZb4PLEs [32m200[0m 243.151 ms - -[0m
+2025-04-14 23:35:17 info: [0mOPTIONS /api/contenido/leerContenidos [32m204[0m 0.258 ms - 0[0m
+2025-04-14 23:35:17 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODgwOTUsImV4cCI6MTc0NDg2MDg5NX0.JdoKFhNw-45jgBmzN-HD-NUUKOI4HlN3XHHJZb4PLEs [32m200[0m 288.389 ms - -[0m
+2025-04-14 23:35:17 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 375.627 ms - -[0m
+2025-04-14 23:35:18 info: [0mPOST /api/contenido/leerContenidos [32m200[0m 307.029 ms - -[0m
+2025-04-14 23:35:51 info: [0mGET /api/users/usuarioDesdeToken/eJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODgwOTUsImV4cCI6MTc0NDg2MDg5NX0.JdoKFhNw-45jgBmzN-HD-NUUKOI4HlN3XHHJZb4PLEs [32m200[0m 1.380 ms - 63[0m
+2025-04-14 23:35:51 info: [0mGET /api/users/usuarioDesdeToken/eJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2Q3ODY3YWM2ZWEwZjA0NTZiZmI2ZTAiLCJpYXQiOjE3NDQ2ODgwOTUsImV4cCI6MTc0NDg2MDg5NX0.JdoKFhNw-45jgBmzN-HD-NUUKOI4HlN3XHHJZb4PLEs [36m304[0m 1.156 ms - -[0m
+2025-04-14 23:35:51 info: [0mGET /api/roles/getRoles [36m304[0m 135.816 ms - -[0m
+2025-04-14 23:35:51 info: [0mGET /api/roles/getRoles [36m304[0m 76.830 ms - -[0m
+2025-04-14 23:39:08 info: [0mGET /api/roles/getRoles [36m304[0m 69.227 ms - -[0m
+2025-04-14 23:39:08 info: [0mGET /api/roles/getRoles [36m304[0m 91.612 ms - -[0m
+2025-04-14 23:39:27 info: [0mGET /api/roles/getRoles [36m304[0m 74.286 ms - -[0m
+2025-04-14 23:39:27 info: [0mGET /api/roles/getRoles [36m304[0m 71.972 ms - -[0m
+2025-04-14 23:39:28 info: [0mOPTIONS /api/login [32m204[0m 0.262 ms - 0[0m
+2025-04-14 23:39:28 info: [0mPOST /api/login [32m200[0m 234.148 ms - 790[0m
+2025-04-14 23:39:28 info: [0mGET /api/niveles/leerNiveles [36m304[0m 78.427 ms - -[0m
+2025-04-14 23:39:28 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 149.202 ms - -[0m
+2025-04-14 23:39:29 info: [0mGET /api/users/getUsers [32m200[0m 314.555 ms - -[0m
+2025-04-14 23:39:29 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 585.972 ms - -[0m
+2025-04-14 23:39:38 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODgzNjgsImV4cCI6MTc0NDg2MTE2OH0.56MUUOt2Ug0hdTT9RndsDalAD9hJVhiutrv0NfAvIpY [32m200[0m 192.540 ms - 614[0m
+2025-04-14 23:39:38 info: [0mGET /api/niveles/leerNiveles [36m304[0m 87.113 ms - -[0m
+2025-04-14 23:39:38 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 174.393 ms - -[0m
+2025-04-14 23:39:38 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODgzNjgsImV4cCI6MTc0NDg2MTE2OH0.56MUUOt2Ug0hdTT9RndsDalAD9hJVhiutrv0NfAvIpY [32m200[0m 193.626 ms - 614[0m
+2025-04-14 23:39:38 info: [0mGET /api/niveles/leerNiveles [36m304[0m 70.984 ms - -[0m
+2025-04-14 23:39:38 info: [0mGET /api/niveles/gruposNiveles [36m304[0m 152.925 ms - -[0m
+2025-04-14 23:39:38 info: [0mGET /api/users/getUsers [32m200[0m 335.170 ms - -[0m
+2025-04-14 23:39:38 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 626.196 ms - -[0m
+2025-04-14 23:39:39 info: [0mGET /api/contenido/getTodoContenido [36m304[0m 583.325 ms - -[0m
+2025-04-14 23:39:53 info: [0mGET /api/users/usuarioDesdeToken/ehbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODgzNjgsImV4cCI6MTc0NDg2MTE2OH0.56MUUOt2Ug0hdTT9RndsDalAD9hJVhiutrv0NfAvIpY [32m200[0m 2.505 ms - 63[0m
+2025-04-14 23:39:53 info: [0mGET /api/users/usuarioDesdeToken/ehbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODgzNjgsImV4cCI6MTc0NDg2MTE2OH0.56MUUOt2Ug0hdTT9RndsDalAD9hJVhiutrv0NfAvIpY [32m200[0m 1.196 ms - 63[0m
+2025-04-14 23:39:57 info: [0mGET /api/roles/getRoles [32m200[0m 73.377 ms - 734[0m
+2025-04-14 23:39:57 info: [0mGET /api/roles/getRoles [32m200[0m 77.960 ms - 734[0m
+2025-04-14 23:40:40 info: [0mOPTIONS /api/login [32m204[0m 0.311 ms - 0[0m
+2025-04-14 23:40:40 info: [0mPOST /api/login [32m200[0m 229.693 ms - 790[0m
+2025-04-14 23:40:40 info: [0mGET /api/niveles/leerNiveles [32m200[0m 92.035 ms - 543[0m
+2025-04-14 23:40:40 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 155.455 ms - -[0m
+2025-04-14 23:40:41 info: [0mGET /api/users/getUsers [32m200[0m 322.448 ms - -[0m
+2025-04-14 23:40:41 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 564.379 ms - -[0m
+2025-04-14 23:40:49 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg0NDAsImV4cCI6MTc0NDg2MTI0MH0.BlPbfxMRx_eAwx0ATE3DdIabI4KBbIzFkNcgxJw6Dt [32m200[0m 2.512 ms - 67[0m
+2025-04-14 23:40:49 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg0NDAsImV4cCI6MTc0NDg2MTI0MH0.BlPbfxMRx_eAwx0ATE3DdIabI4KBbIzFkNcgxJw6Dt [32m200[0m 2.649 ms - 67[0m
+2025-04-14 23:40:53 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg0NDAsImV4cCI6MTc0NDg2MTI0MH0.BlPbfxMRx_eAwx0ATE3DdIabI4KBbIzFkNcgxJw6Dt [32m200[0m 2.259 ms - 67[0m
+2025-04-14 23:40:53 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg0NDAsImV4cCI6MTc0NDg2MTI0MH0.BlPbfxMRx_eAwx0ATE3DdIabI4KBbIzFkNcgxJw6Dt [32m200[0m 1.640 ms - 67[0m
+2025-04-14 23:41:06 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg0NDAsImV4cCI6MTc0NDg2MTI0MH0.BlPbfxMRx_eAwx0ATE3DdIabI4KBbIzFkNcgxJw6Dt [32m200[0m 2.061 ms - 67[0m
+2025-04-14 23:41:06 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg0NDAsImV4cCI6MTc0NDg2MTI0MH0.BlPbfxMRx_eAwx0ATE3DdIabI4KBbIzFkNcgxJw6Dt [32m200[0m 2.027 ms - 67[0m
+2025-04-14 23:41:51 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg0NDAsImV4cCI6MTc0NDg2MTI0MH0.BlPbfxMRx_eAwx0ATE3DdIabI4KBbIzFkNcgxJw6Dt [32m200[0m 2.154 ms - 67[0m
+2025-04-14 23:41:51 info: [0mGET /api/roles/getRoles [36m304[0m 75.206 ms - -[0m
+2025-04-14 23:41:51 info: [0mGET /api/roles/getRoles [36m304[0m 72.593 ms - -[0m
+2025-04-14 23:41:57 info: [0mGET /api/roles/getRoles [32m200[0m 77.442 ms - 734[0m
+2025-04-14 23:41:57 info: [0mGET /api/roles/getRoles [32m200[0m 81.091 ms - 734[0m
+2025-04-14 23:41:59 info: [0mOPTIONS /api/login [32m204[0m 0.305 ms - 0[0m
+2025-04-14 23:41:59 info: [0mPOST /api/login [32m200[0m 205.479 ms - 790[0m
+2025-04-14 23:41:59 info: [0mGET /api/niveles/leerNiveles [32m200[0m 78.557 ms - 543[0m
+2025-04-14 23:41:59 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 156.106 ms - -[0m
+2025-04-14 23:42:00 info: [0mGET /api/users/getUsers [32m200[0m 313.224 ms - -[0m
+2025-04-14 23:42:00 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 566.095 ms - -[0m
+2025-04-14 23:42:11 info: [0mGET /api/users/usuarioDesdeToken/kbkb [32m200[0m 1.269 ms - 63[0m
+2025-04-14 23:42:11 info: [0mGET /api/users/usuarioDesdeToken/kbkb [32m200[0m 1.775 ms - 63[0m
+2025-04-14 23:42:46 info: [0mGET /api/users/usuarioDesdeToken/kbkb [32m200[0m 1.005 ms - 63[0m
+2025-04-14 23:42:46 info: [0mGET /api/roles/getRoles [36m304[0m 73.816 ms - -[0m
+2025-04-14 23:42:46 info: [0mGET /api/roles/getRoles [36m304[0m 76.551 ms - -[0m
+2025-04-14 23:42:53 info: [0mGET /api/roles/getRoles [32m200[0m 68.538 ms - 734[0m
+2025-04-14 23:42:53 info: [0mGET /api/roles/getRoles [32m200[0m 75.350 ms - 734[0m
+2025-04-14 23:42:54 info: [0mOPTIONS /api/login [32m204[0m 0.207 ms - 0[0m
+2025-04-14 23:42:55 info: [0mPOST /api/login [32m200[0m 268.978 ms - 790[0m
+2025-04-14 23:42:55 info: [0mGET /api/niveles/leerNiveles [32m200[0m 78.193 ms - 543[0m
+2025-04-14 23:42:55 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 167.439 ms - -[0m
+2025-04-14 23:42:55 info: [0mGET /api/users/getUsers [32m200[0m 328.910 ms - -[0m
+2025-04-14 23:42:55 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 586.571 ms - -[0m
+2025-04-14 23:43:05 info: [0mGET /api/users/usuarioDesdeToken/jhvjhbhj [32m200[0m 1.618 ms - 63[0m
+2025-04-14 23:43:05 info: [0mGET /api/users/usuarioDesdeToken/jhvjhbhj [32m200[0m 2.101 ms - 63[0m
+2025-04-14 23:43:08 info: [0mGET /api/roles/getRoles [32m200[0m 90.854 ms - 734[0m
+2025-04-14 23:43:08 info: [0mGET /api/roles/getRoles [32m200[0m 91.844 ms - 734[0m
+2025-04-14 23:43:58 info: [0mGET /api/roles/getRoles [36m304[0m 74.394 ms - -[0m
+2025-04-14 23:43:58 info: [0mGET /api/roles/getRoles [32m200[0m 72.994 ms - 734[0m
+2025-04-14 23:43:58 info: [0mGET /api/roles/getRoles [32m200[0m 76.748 ms - 734[0m
+2025-04-14 23:43:58 info: [0mGET /api/roles/getRoles [36m304[0m 76.814 ms - -[0m
+2025-04-14 23:44:02 info: [0mOPTIONS /api/login [32m204[0m 0.255 ms - 0[0m
+2025-04-14 23:44:02 info: [0mPOST /api/login [32m200[0m 227.806 ms - 790[0m
+2025-04-14 23:44:03 info: [0mGET /api/niveles/leerNiveles [32m200[0m 78.979 ms - 543[0m
+2025-04-14 23:44:03 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 172.784 ms - -[0m
+2025-04-14 23:44:03 info: [0mGET /api/users/getUsers [32m200[0m 300.690 ms - -[0m
+2025-04-14 23:44:03 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 581.046 ms - -[0m
+2025-04-14 23:44:10 info: [0mGET /api/users/usuarioDesdeToken/lnkjn [32m200[0m 1.301 ms - 63[0m
+2025-04-14 23:44:10 info: [0mGET /api/users/usuarioDesdeToken/lnkjn [32m200[0m 1.090 ms - 63[0m
+2025-04-14 23:44:14 info: [0mGET /api/roles/getRoles [32m200[0m 80.163 ms - 734[0m
+2025-04-14 23:44:14 info: [0mGET /api/roles/getRoles [32m200[0m 79.942 ms - 734[0m
+2025-04-14 23:45:26 info: [0mGET /api/roles/getRoles [36m304[0m 76.924 ms - -[0m
+2025-04-14 23:45:26 info: [0mGET /api/roles/getRoles [32m200[0m 80.491 ms - 734[0m
+2025-04-14 23:45:26 info: [0mGET /api/roles/getRoles [32m200[0m 80.434 ms - 734[0m
+2025-04-14 23:45:26 info: [0mGET /api/roles/getRoles [36m304[0m 74.057 ms - -[0m
+2025-04-14 23:45:29 info: [0mOPTIONS /api/login [32m204[0m 0.145 ms - 0[0m
+2025-04-14 23:45:29 info: [0mPOST /api/login [32m200[0m 211.180 ms - 790[0m
+2025-04-14 23:45:30 info: [0mGET /api/niveles/leerNiveles [32m200[0m 93.325 ms - 543[0m
+2025-04-14 23:45:30 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 164.104 ms - -[0m
+2025-04-14 23:45:30 info: [0mGET /api/users/getUsers [32m200[0m 352.166 ms - -[0m
+2025-04-14 23:45:30 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 600.137 ms - -[0m
+2025-04-14 23:45:40 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUz%20kjbhbI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg3MjksImV4cCI6MTc0NDg2MTUyOX0.Vm78y2546N-kC5iL5jgyTTfZxWIbkTKS6aaAWDD-lqU [32m200[0m 1.654 ms - 63[0m
+2025-04-14 23:45:40 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUz%20kjbhbI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg3MjksImV4cCI6MTc0NDg2MTUyOX0.Vm78y2546N-kC5iL5jgyTTfZxWIbkTKS6aaAWDD-lqU [32m200[0m 1.537 ms - 63[0m
+2025-04-14 23:45:42 info: [0mGET /api/roles/getRoles [0m-[0m - ms - -[0m
+2025-04-14 23:45:42 info: [0mGET /api/roles/getRoles [0m-[0m - ms - -[0m
+2025-04-14 23:45:43 info: [0mGET /api/roles/getRoles [32m200[0m 110.974 ms - 734[0m
+2025-04-14 23:45:43 info: [0mGET /api/roles/getRoles [32m200[0m 127.896 ms - 734[0m
+2025-04-14 23:45:49 info: [0mOPTIONS /api/login [32m204[0m 0.130 ms - 0[0m
+2025-04-14 23:45:50 info: [0mPOST /api/login [32m200[0m 207.347 ms - 790[0m
+2025-04-14 23:45:50 info: [0mGET /api/niveles/leerNiveles [32m200[0m 82.622 ms - 543[0m
+2025-04-14 23:45:50 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 159.755 ms - -[0m
+2025-04-14 23:45:50 info: [0mGET /api/users/getUsers [32m200[0m 315.724 ms - -[0m
+2025-04-14 23:45:50 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 577.341 ms - -[0m
+2025-04-14 23:48:06 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg3NTAsImV4cCI6MTc0NDg2MTU1MH0.WuBne4LlyO4-ufVvfM5r1uGT03XK41qzz1BC19DRXzM [32m200[0m 176.288 ms - 614[0m
+2025-04-14 23:48:06 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QwYjYyMjQ2YTllOTlkMGM5NzdhYjQiLCJpYXQiOjE3NDQ2ODg3NTAsImV4cCI6MTc0NDg2MTU1MH0.WuBne4LlyO4-ufVvfM5r1uGT03XK41qzz1BC19DRXzM [32m200[0m 170.102 ms - 614[0m
+2025-04-14 23:48:06 info: [0mGET /api/niveles/leerNiveles [32m200[0m 71.647 ms - 543[0m
+2025-04-14 23:48:06 info: [0mGET /api/niveles/gruposNiveles [32m200[0m 153.076 ms - -[0m
+2025-04-14 23:48:06 info: [0mGET /api/users/getUsers [32m200[0m 311.332 ms - -[0m
+2025-04-14 23:48:06 info: [0mGET /api/contenido/getTodoContenido [32m200[0m 588.712 ms - -[0m
+>>>>>>> dc03094eaf006934f5fc5251a29ae2c92052d355

@@ -93,6 +93,16 @@ const editarAlumno = async (alumno: any) => {
 
 }
 
+const alumnoFechaPago = async (alumnoId: string) => {
+    const response = await axios.get(api.url + `/api/alumnoFechaPago/getFechaPagos?alumnoId=${alumnoId}`)
+    return response.data
+}
+
+const editarAlumnoFechaPago = async (pagosId: string, fechaValidacion: Date) => {
+    const response = await axios.post(api.url + `/api/alumnoFechaPago/editAlumnoPago`, {pagosId, fechaValidacion})
+    return response.data
+}
+
 export default {
     login,
     resendVerification,
@@ -111,5 +121,7 @@ export default {
     usuarioDesdeToken,
     alumnosPorApoderado,
     todosLosAlumnos,
-    editarAlumno
+    editarAlumno,
+    alumnoFechaPago,
+    editarAlumnoFechaPago
 }

@@ -47,6 +47,8 @@ import { ClassRoomsComponent } from './containers/Admin/AdminComponents/Classroo
 import { SignupPage } from './pages/Signup/Signup.page';
 import { AlumnosContainer } from './containers/Alumnos/Alumnos.container';
 import { AlumnosAdminPage } from './containers/Admin/AdminComponents/Alumnos.component';
+import { NotificacionesProvider } from './context/Notificaciones.context';
+import { NotificacionesPage } from './pages/Notificaciones/Notificaciones.page';
 
 setupIonicReact();
 
@@ -56,13 +58,15 @@ const ReactIonApp = () => {
       <IonReactRouter>
         <SocketProvider>
           <AuthProvider>
-            <UsersProvider>
-              <ContenidoProvider>
-                <CalendarProvider>
-                  <RouterApp />
-                </CalendarProvider>
-              </ContenidoProvider>
-            </UsersProvider>
+            <NotificacionesProvider>
+              <UsersProvider>
+                <ContenidoProvider>
+                  <CalendarProvider>
+                    <RouterApp />
+                  </CalendarProvider>
+                </ContenidoProvider>
+              </UsersProvider>
+            </NotificacionesProvider>
           </AuthProvider>
         </SocketProvider>
       </IonReactRouter>
@@ -153,6 +157,9 @@ const RouterApp = () => {
       </Route>
       <Route exact path={'/espacio-estudiantes'}>
         <EspacioEstudiantesPage />
+      </Route>
+      <Route exact path={'/notifications'}>
+        <NotificacionesPage />
       </Route>
     </IonRouterOutlet>
   )

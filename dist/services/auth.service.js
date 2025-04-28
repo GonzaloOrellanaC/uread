@@ -57,29 +57,36 @@ const resendVerification = async (userData) => {
     return { cookie, user: userData };
 };
 const login = async (userData, locale = index_1.env.locale) => {
-    console.log(userData);
-    if ((0, util_1.isEmpty)(userData))
-        throw new HttpException_1.HttpException(400, (0, i18n_1.__)({ phrase: 'Credentials are required', locale }));
-    const findUser = await user.findOne({ email: userData.email }).populate('roles').populate('organization').populate({
-        path: 'alumnos',
-        populate: {
-            path: 'levelUser'
+    try {
+        console.log(userData);
+        if ((0, util_1.isEmpty)(userData))
+            throw new HttpException_1.HttpException(400, (0, i18n_1.__)({ phrase: 'Credentials are required', locale }));
+        const findUser = await user.findOne({ email: userData.email }).populate('roles').populate('organization').populate({
+            path: 'alumnos',
+            populate: {
+                path: 'levelUser'
+            }
+        }).populate('levelUser');
+        if (!findUser)
+            throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Email {{email}} not found', locale }, { email: userData.email }));
+        let grupos;
+        const roles = findUser.roles;
+        console.log(findUser.levelUser);
+        if (roles[0] && roles[0].name === 'user' && findUser.levelUser && findUser.levelUser._id) {
+            grupos = await gruposNiveles_model_1.default.find({ cursos: { $in: [findUser.levelUser._id] } });
         }
-    }).populate('levelUser');
-    if (!findUser)
-        throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Email {{email}} not found', locale }, { email: userData.email }));
-    let grupos;
-    const roles = findUser.roles;
-    if (roles[0] && roles[0].name === 'user') {
-        grupos = await gruposNiveles_model_1.default.find({ cursos: { $in: [findUser.levelUser._id] } });
+        console.log(grupos);
+        const isPasswordMatching = await bcrypt_1.default.compare(userData.password, findUser.password);
+        if (!isPasswordMatching)
+            throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Wrong password', locale }));
+        const token = (0, exports.createToken)(findUser);
+        const cookie = ''; /* createCookie(token) */
+        return { cookie, findUser, token, grupos };
     }
-    console.log(grupos);
-    const isPasswordMatching = await bcrypt_1.default.compare(userData.password, findUser.password);
-    if (!isPasswordMatching)
-        throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Wrong password', locale }));
-    const token = (0, exports.createToken)(findUser);
-    const cookie = ''; /* createCookie(token) */
-    return { cookie, findUser, token, grupos };
+    catch ({ name, message }) {
+        logger_1.logger.error(`Error logging in | ${name}: ${message}`);
+        throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Error logging in', locale }));
+    }
 };
 const logout = async (userData, locale = index_1.env.locale) => {
     if ((0, util_1.isEmpty)(userData))

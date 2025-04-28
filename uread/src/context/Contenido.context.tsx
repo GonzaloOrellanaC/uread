@@ -28,6 +28,7 @@ export const ContenidoProvider = (props: any) => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
+        console.log(userData, grupos, isAdmin)
         leerContenidosBiblioteca()
     }, [userData, grupos, isAdmin])
 
