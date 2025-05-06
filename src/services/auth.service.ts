@@ -115,7 +115,7 @@ const login = async (
         return { cookie, findUser, token, grupos }
     } catch ({name, message}) {
         logger.error(`Error logging in | ${name}: ${message}`)
-        throw new HttpException(409, __({ phrase: 'Error logging in', locale }))
+        throw new HttpException(409, __({ phrase: `${name}: ${message}`, locale }))
         
     }
 }

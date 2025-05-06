@@ -38,5 +38,6 @@
     "E11000 duplicate key error collection: uread.users index: _id_ dup key: { _id: ObjectId('67d7694933241a3f8d450d47') }": "E11000 duplicate key error collection: uread.users index: _id_ dup key: { _id: ObjectId('67d7694933241a3f8d450d47') }",
     "E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: \"go.orellana.c@gmail.com\" }": "E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: \"go.orellana.c@gmail.com\" }",
     "E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: \"gonzalo.orellana@kauel.com\" }": "E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: \"gonzalo.orellana@kauel.com\" }",
-    "Error logging in": "Error logging in"
+    "Error logging in": "Error logging in",
+    "Error: Email alejandracabrera.nsur@gmail.com no encontrado": "Error: Email alejandracabrera.nsur@gmail.com no encontrado"
 }

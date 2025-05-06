@@ -162,6 +162,7 @@ const alumnosUsuario = async (req: Request, res: Response) => {
     const {idUser} = req.query
     try {
         const alumnos = await alumnoProvisorioModel.find({apoderado: idUser}).populate('levelUser')
+        console.log('Alumnos: ', alumnos)
         res.status(200).json({alumnos})
     } catch ({name, message}) {
         console.log(name, message)

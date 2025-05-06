@@ -33,8 +33,8 @@ const logIn = async (req: Request, res: Response, next: NextFunction) => {
         const { cookie, findUser, token, grupos } = await AuthService.login(userData, userLocale)
         res.setHeader('Set-Cookie', [cookie])
         res.status(200).json({ data: findUser, token: token.token, message: 'login', grupos })
-    } catch (error) {
-        next(error)
+    } catch ({name, message}) {
+        res.status(400).json({name, message})
     }
 }
 

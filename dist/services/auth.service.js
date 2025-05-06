@@ -85,7 +85,7 @@ const login = async (userData, locale = index_1.env.locale) => {
     }
     catch ({ name, message }) {
         logger_1.logger.error(`Error logging in | ${name}: ${message}`);
-        throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: 'Error logging in', locale }));
+        throw new HttpException_1.HttpException(409, (0, i18n_1.__)({ phrase: `${name}: ${message}`, locale }));
     }
 };
 const logout = async (userData, locale = index_1.env.locale) => {

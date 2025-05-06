@@ -43,6 +43,7 @@ declare const locales: {
         "E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: \"go.orellana.c@gmail.com\" }": string;
         "E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: \"gonzalo.orellana@kauel.com\" }": string;
         "Error logging in": string;
+        "Error: Email alejandracabrera.nsur@gmail.com no encontrado": string;
     };
     en: {
         "An ID is required": string;

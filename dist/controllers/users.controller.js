@@ -152,6 +152,7 @@ const alumnosUsuario = async (req, res) => {
     const { idUser } = req.query;
     try {
         const alumnos = await alumnos_provisorios_model_1.default.find({ apoderado: idUser }).populate('levelUser');
+        console.log('Alumnos: ', alumnos);
         res.status(200).json({ alumnos });
     }
     catch ({ name, message }) {

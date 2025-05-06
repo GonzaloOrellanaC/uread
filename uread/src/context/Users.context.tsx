@@ -46,8 +46,9 @@ export const UsersProvider = (props: any) => {
         const response = await userRouter.alumnosPorApoderado(userData!._id)
         setAlumnos(await Promise.all(response.alumnos.map(async (alumno: any) => {
             const response = await userRouter.alumnoFechaPago(alumno._id)
-            console.log(response.pagos.fechasPago)
-            alumno.fechaProximoPago = response.pagos.fechasPago[response.pagos.fechasPago.length - 1]
+            if (response.pagos && response.pagos.fechasPago) {
+                alumno.fechaProximoPago = response.pagos.fechasPago[response.pagos.fechasPago.length - 1]
+            }
             if (response.pagos !== null) {
                 const proximoPago = new Date(response.pagos.fechasPago[response.pagos.fechasPago.length - 1]).getTime()
                 const hoy = Date.now()

@@ -1,0 +1,8 @@
+2025-05-05 20:28:37 error: Error logging in | Error: Email alejandracabrera.nsur@gmail.com no encontrado
+2025-05-05 20:28:37 error: [POST] /api/login >> StatusCode:: 409, Message:: Error logging in
+2025-05-05 20:29:00 error: Error logging in | Error: Email alejandracabrera.nsur@gmail.com no encontrado
+2025-05-05 20:29:00 error: [POST] /api/login >> StatusCode:: 409, Message:: Error logging in
+2025-05-05 20:30:13 error: Error logging in | Error: Email alejandracabrera.nsur@gmail.com no encontrado
+2025-05-05 20:30:13 error: [POST] /api/login >> StatusCode:: 409, Message:: Error logging in
+2025-05-05 20:31:36 error: Error logging in | Error: Email alejandracabrera.nsur@gmail.com no encontrado
+2025-05-05 20:33:16 error: Error logging in | Error: Email alejandracabrera.nsur@gmail.com no encontrado
