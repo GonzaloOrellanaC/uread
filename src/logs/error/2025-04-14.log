@@ -1,3 +1,73 @@
+<<<<<<< HEAD
+2025-04-14 22:02:51 error: uncaughtException: write EPIPE
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/Users/imac/Documents/Proyectos_Personales/uread/node_modules/winston/lib/winston/transports/console.js:87:23)
+    at Console._write (/Users/imac/Documents/Proyectos_Personales/uread/node_modules/winston-transport/modern.js:103:17)
+    at doWrite (/Users/imac/Documents/Proyectos_Personales/uread/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+    at writeOrBuffer (/Users/imac/Documents/Proyectos_Personales/uread/node_modules/readable-stream/lib/_stream_writable.js:381:5)
+    at Console.Writable.write (/Users/imac/Documents/Proyectos_Personales/uread/node_modules/readable-stream/lib/_stream_writable.js:302:11)
+    at DerivedLogger.ondata (/Users/imac/Documents/Proyectos_Personales/uread/node_modules/readable-stream/lib/_stream_readable.js:629:20)
+    at DerivedLogger.emit (node:events:529:35)
+    at DerivedLogger.emit (node:domain:489:12)
+    at addChunk (/Users/imac/Documents/Proyectos_Personales/uread/node_modules/readable-stream/lib/_stream_readable.js:279:12)
+2025-04-14 22:02:51 error: uncaughtException: write EPIPE
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at console.value (node:internal/console/constructor:305:16)
+    at console.warn (node:internal/console/constructor:385:26)
+    at writeOut (node:internal/process/warning:60:3)
+    at process.onWarning (node:internal/process/warning:123:3)
+    at process.emit (node:events:517:28)
+    at process.emit (node:domain:489:12)
+    at process.emit.sharedData.processEmitHook.installedValue [as emit] (/Users/imac/Documents/Proyectos_Personales/uread/node_modules/@cspotcode/source-map-support/source-map-support.js:745:40)
+    at doEmitWarning (node:internal/process/warning:89:11)
+    at processTicksAndRejections (node:internal/process/task_queues:81:21)
+2025-04-14 22:02:52 error: uncaughtException: write EPIPE
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at console.value (node:internal/console/constructor:305:16)
+    at console.warn (node:internal/console/constructor:385:26)
+    at writeOut (node:internal/process/warning:60:3)
+    at process.onWarning (node:internal/process/warning:123:3)
+    at process.emit (node:events:517:28)
+    at process.emit (node:domain:489:12)
+    at process.emit.sharedData.processEmitHook.installedValue [as emit] (/Users/imac/Documents/Proyectos_Personales/uread/node_modules/@cspotcode/source-map-support/source-map-support.js:745:40)
+    at doEmitWarning (node:internal/process/warning:89:11)
+    at processTicksAndRejections (node:internal/process/task_queues:81:21)
+2025-04-14 22:02:53 error: uncaughtException: write EPIPE
+Error: write EPIPE
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:962:11)
+    at Socket._write (node:net:974:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Socket.Writable.write (node:internal/streams/writable:337:10)
+    at console.value (node:internal/console/constructor:305:16)
+    at console.log (node:internal/console/constructor:380:26)
+    at Object.initAccessControl (/Users/imac/Documents/Proyectos_Personales/uread/src/services/accessControl.service.ts:43:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async connectToDatabase (/Users/imac/Documents/Proyectos_Personales/uread/src/app.ts:61:9)
+=======
 2025-04-14 22:16:03 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
 2025-04-14 22:19:26 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
 2025-04-14 22:20:20 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
@@ -10,3 +80,4 @@
 2025-04-14 23:01:32 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
 2025-04-14 23:01:53 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "gonzalo.orellana@kauel.com" }
 2025-04-14 23:03:31 error: E11000 duplicate key error collection: uread-prod.users index: email_1 dup key: { email: "go.orellana.c@gmail.com" }
+>>>>>>> dc03094eaf006934f5fc5251a29ae2c92052d355

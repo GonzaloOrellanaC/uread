@@ -1,0 +1,80 @@
+2025-04-28 10:42:36 info: ====================================
+2025-04-28 10:42:36 info: ============ ENV: development ===========
+2025-04-28 10:42:36 info: 🚀 App listening on the port 5212
+2025-04-28 10:42:36 info: ====================================
+2025-04-28 10:42:40 error: undefined
+2025-04-28 10:45:00 info: [0mGET /api/roles/getRoles [32m200[0m 82.619 ms - 734[0m
+2025-04-28 10:45:01 info: [0mGET /api/roles/getRoles [36m304[0m 77.380 ms - -[0m
+2025-04-28 10:45:19 info: [0mOPTIONS /api/login [32m204[0m 1.667 ms - 0[0m
+2025-04-28 10:45:23 info: [0mPOST /api/login [32m200[0m 3383.332 ms - -[0m
+2025-04-28 10:56:35 info: ====================================
+2025-04-28 10:56:35 info: ============ ENV: development ===========
+2025-04-28 10:56:35 info: 🚀 App listening on the port 5212
+2025-04-28 10:56:35 info: ====================================
+2025-04-28 10:57:55 info: [0mGET /api/roles/getRoles [36m304[0m 79.693 ms - -[0m
+2025-04-28 10:57:55 info: [0mGET /api/roles/getRoles [36m304[0m 76.512 ms - -[0m
+2025-04-28 10:57:57 info: [0mOPTIONS /api/login [32m204[0m 0.312 ms - 0[0m
+2025-04-28 10:57:58 info: [0mPOST /api/login [32m200[0m 920.309 ms - -[0m
+2025-04-28 10:57:58 info: [0mGET /api/users/alumnos-usuario?idUser=67e2ceda81266a045881f9d6 [32m200[0m 75.050 ms - 14[0m
+2025-04-28 10:57:59 info: [0mGET /api/notificaciones/getNotifications?userId=67e2ceda81266a045881f9d6&skip=0&limit=10 [32m200[0m 151.593 ms - -[0m
+2025-04-28 11:00:20 info: [0mGET /api/users/alumnos-usuario?idUser=67e2ceda81266a045881f9d6 [36m304[0m 72.304 ms - -[0m
+2025-04-28 11:00:36 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2UyY2VkYTgxMjY2YTA0NTg4MWY5ZDYiLCJpYXQiOjE3NDU4NTIyNzgsImV4cCI6MTc0NjAyNTA3OH0.kwNvnsnKkWnAAXHCpSKiUhTsFjY4unTeKseXOYhCDiM [32m200[0m 266.244 ms - -[0m
+2025-04-28 11:00:36 info: [0mGET /api/users/alumnos-usuario?idUser=67e2ceda81266a045881f9d6 [36m304[0m 75.380 ms - -[0m
+2025-04-28 11:00:36 info: [0mGET /api/notificaciones/getNotifications?userId=67e2ceda81266a045881f9d6&skip=0&limit=10 [32m200[0m 75.408 ms - 15[0m
+2025-04-28 11:00:36 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2UyY2VkYTgxMjY2YTA0NTg4MWY5ZDYiLCJpYXQiOjE3NDU4NTIyNzgsImV4cCI6MTc0NjAyNTA3OH0.kwNvnsnKkWnAAXHCpSKiUhTsFjY4unTeKseXOYhCDiM [32m200[0m 242.624 ms - -[0m
+2025-04-28 11:00:37 info: [0mGET /api/users/alumnos-usuario?idUser=67e2ceda81266a045881f9d6 [36m304[0m 90.778 ms - -[0m
+2025-04-28 11:00:37 info: [0mGET /api/notificaciones/getNotifications?userId=67e2ceda81266a045881f9d6&skip=0&limit=10 [36m304[0m 97.878 ms - -[0m
+2025-04-28 11:02:19 info: ====================================
+2025-04-28 11:02:19 info: ============ ENV: development ===========
+2025-04-28 11:02:19 info: 🚀 App listening on the port 5212
+2025-04-28 11:02:19 info: ====================================
+2025-04-28 11:02:23 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2UyY2VkYTgxMjY2YTA0NTg4MWY5ZDYiLCJpYXQiOjE3NDU4NTIyNzgsImV4cCI6MTc0NjAyNTA3OH0.kwNvnsnKkWnAAXHCpSKiUhTsFjY4unTeKseXOYhCDiM [32m200[0m 264.153 ms - -[0m
+2025-04-28 11:02:23 info: [0mGET /api/users/alumnos-usuario?idUser=67e2ceda81266a045881f9d6 [36m304[0m 75.598 ms - -[0m
+2025-04-28 11:02:23 info: [0mGET /api/notificaciones/getNotifications?userId=67e2ceda81266a045881f9d6&skip=0&limit=10 [32m200[0m 155.328 ms - -[0m
+2025-04-28 11:02:23 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2UyY2VkYTgxMjY2YTA0NTg4MWY5ZDYiLCJpYXQiOjE3NDU4NTIyNzgsImV4cCI6MTc0NjAyNTA3OH0.kwNvnsnKkWnAAXHCpSKiUhTsFjY4unTeKseXOYhCDiM [32m200[0m 233.399 ms - -[0m
+2025-04-28 11:02:23 info: [0mGET /api/users/alumnos-usuario?idUser=67e2ceda81266a045881f9d6 [36m304[0m 71.917 ms - -[0m
+2025-04-28 11:02:24 info: [0mGET /api/notificaciones/getNotifications?userId=67e2ceda81266a045881f9d6&skip=0&limit=10 [36m304[0m 148.105 ms - -[0m
+2025-04-28 11:06:04 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2UyY2VkYTgxMjY2YTA0NTg4MWY5ZDYiLCJpYXQiOjE3NDU4NTIyNzgsImV4cCI6MTc0NjAyNTA3OH0.kwNvnsnKkWnAAXHCpSKiUhTsFjY4unTeKseXOYhCDiM [32m200[0m 233.138 ms - -[0m
+2025-04-28 11:06:04 info: [0mGET /api/notificaciones/getNotifications?userId=67e2ceda81266a045881f9d6&skip=0&limit=10 [36m304[0m 142.203 ms - -[0m
+2025-04-28 11:06:04 info: [0mGET /api/users/alumnos-usuario?idUser=67e2ceda81266a045881f9d6 [32m200[0m 156.410 ms - -[0m
+2025-04-28 11:06:04 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2UyY2VkYTgxMjY2YTA0NTg4MWY5ZDYiLCJpYXQiOjE3NDU4NTIyNzgsImV4cCI6MTc0NjAyNTA3OH0.kwNvnsnKkWnAAXHCpSKiUhTsFjY4unTeKseXOYhCDiM [32m200[0m 247.778 ms - -[0m
+2025-04-28 11:06:04 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2d36b1f99b200ac64a13e [32m200[0m 72.926 ms - 300[0m
+2025-04-28 11:06:04 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2ceda81266a045881f9d9 [32m200[0m 80.944 ms - 300[0m
+2025-04-28 11:06:04 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2d3891f99b200ac64a13f [32m200[0m 79.635 ms - 300[0m
+2025-04-28 11:06:04 info: [0mGET /api/notificaciones/getNotifications?userId=67e2ceda81266a045881f9d6&skip=0&limit=10 [36m304[0m 144.301 ms - -[0m
+2025-04-28 11:06:04 info: [0mGET /api/users/alumnos-usuario?idUser=67e2ceda81266a045881f9d6 [36m304[0m 156.809 ms - -[0m
+2025-04-28 11:06:04 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2d3891f99b200ac64a13f [36m304[0m 72.490 ms - -[0m
+2025-04-28 11:06:04 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2d36b1f99b200ac64a13e [36m304[0m 76.819 ms - -[0m
+2025-04-28 11:06:04 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2ceda81266a045881f9d9 [36m304[0m 80.556 ms - -[0m
+2025-04-28 11:06:42 info: ====================================
+2025-04-28 11:06:42 info: ============ ENV: development ===========
+2025-04-28 11:06:42 info: 🚀 App listening on the port 5212
+2025-04-28 11:06:42 info: ====================================
+2025-04-28 11:12:05 info: ====================================
+2025-04-28 11:12:05 info: ============ ENV: development ===========
+2025-04-28 11:12:05 info: 🚀 App listening on the port 5212
+2025-04-28 11:12:05 info: ====================================
+2025-04-28 11:13:04 info: ====================================
+2025-04-28 11:13:04 info: ============ ENV: development ===========
+2025-04-28 11:13:04 info: 🚀 App listening on the port 5212
+2025-04-28 11:13:04 info: ====================================
+2025-04-28 11:15:33 info: ====================================
+2025-04-28 11:15:33 info: ============ ENV: development ===========
+2025-04-28 11:15:33 info: 🚀 App listening on the port 5212
+2025-04-28 11:15:33 info: ====================================
+2025-04-28 11:16:11 info: ====================================
+2025-04-28 11:16:11 info: ============ ENV: development ===========
+2025-04-28 11:16:11 info: 🚀 App listening on the port 5212
+2025-04-28 11:16:11 info: ====================================
+2025-04-28 11:18:16 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2UyY2VkYTgxMjY2YTA0NTg4MWY5ZDYiLCJpYXQiOjE3NDU4NTIyNzgsImV4cCI6MTc0NjAyNTA3OH0.kwNvnsnKkWnAAXHCpSKiUhTsFjY4unTeKseXOYhCDiM [32m200[0m 290.061 ms - -[0m
+2025-04-28 11:18:16 info: [0mGET /api/users/alumnos-usuario?idUser=67e2ceda81266a045881f9d6 [36m304[0m 164.581 ms - -[0m
+2025-04-28 11:18:16 info: [0mGET /api/notificaciones/getNotifications?userId=67e2ceda81266a045881f9d6&skip=0&limit=10 [32m200[0m 184.240 ms - -[0m
+2025-04-28 11:18:16 info: [0mGET /api/users/usuarioDesdeToken/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2UyY2VkYTgxMjY2YTA0NTg4MWY5ZDYiLCJpYXQiOjE3NDU4NTIyNzgsImV4cCI6MTc0NjAyNTA3OH0.kwNvnsnKkWnAAXHCpSKiUhTsFjY4unTeKseXOYhCDiM [32m200[0m 242.621 ms - -[0m
+2025-04-28 11:18:16 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2ceda81266a045881f9d9 [36m304[0m 70.604 ms - -[0m
+2025-04-28 11:18:16 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2d36b1f99b200ac64a13e [36m304[0m 70.536 ms - -[0m
+2025-04-28 11:18:16 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2d3891f99b200ac64a13f [36m304[0m 70.967 ms - -[0m
+2025-04-28 11:18:16 info: [0mGET /api/users/alumnos-usuario?idUser=67e2ceda81266a045881f9d6 [36m304[0m 162.225 ms - -[0m
+2025-04-28 11:18:16 info: [0mGET /api/notificaciones/getNotifications?userId=67e2ceda81266a045881f9d6&skip=0&limit=10 [36m304[0m 169.258 ms - -[0m
+2025-04-28 11:18:16 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2ceda81266a045881f9d9 [36m304[0m 105.646 ms - -[0m
+2025-04-28 11:18:16 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2d36b1f99b200ac64a13e [36m304[0m 105.446 ms - -[0m
+2025-04-28 11:18:16 info: [0mGET /api/alumnoFechaPago/getFechaPagos?alumnoId=67e2d3891f99b200ac64a13f [36m304[0m 100.515 ms - -[0m

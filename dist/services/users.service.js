@@ -17,7 +17,6 @@ const roles_model_1 = (0, tslib_1.__importDefault)(require("../models/roles.mode
 const gruposNiveles_model_1 = (0, tslib_1.__importDefault)(require("../models/gruposNiveles.model"));
 const alumno_fechapago_model_1 = (0, tslib_1.__importDefault)(require("../models/alumno-fechapago.model"));
 const alumnoFechaPago_service_1 = require("./alumnoFechaPago.service");
-const env_1 = require("../configs/env");
 const user = users_model_1.default;
 const findAllUser = async () => {
     const users = await user.find().populate('roles').populate('levelUser').populate({
@@ -192,7 +191,7 @@ const findAllStudents = async () => {
     const role = await roles_model_1.default.findOne({ name: 'user' });
     const students = await user.find({
         roles: [role._id]
-    }).select({ email: 1, name: 1, lastName: env_1.lastName, levelUser: 1, plan: 1, createdAt: 1, apoderado: 1 }).populate('apoderado').populate('levelUser');
+    }).select({ email: 1, name: 1, lastName: 1, levelUser: 1, plan: 1, createdAt: 1, apoderado: 1 }).populate('apoderado').populate('levelUser');
     const unDia = (60000 * 60) * 24;
     const response = await Promise.all(students.map(async (student) => {
         let alumnoFechaPago = await (0, alumnoFechaPago_service_1.pagosAlumno)(student._id);

@@ -44,6 +44,7 @@ export const UsersProvider = (props: any) => {
 
     const obtenerAlumnos = async () => {
         const response = await userRouter.alumnosPorApoderado(userData!._id)
+        console.log(response)
         setAlumnos(await Promise.all(response.alumnos.map(async (alumno: any) => {
             const response = await userRouter.alumnoFechaPago(alumno._id)
             if (response.pagos && response.pagos.fechasPago) {

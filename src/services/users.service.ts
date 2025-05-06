@@ -239,7 +239,7 @@ const findAllStudents = async () => {
     const role = await roleModel.findOne({name: 'user'})
     const students = await user.find({
         roles:[role._id]
-    }).select({email: 1, name: 1, lastName, levelUser: 1, plan: 1, createdAt: 1, apoderado: 1}).populate('apoderado').populate('levelUser')
+    }).select({email: 1, name: 1, lastName: 1, levelUser: 1, plan: 1, createdAt: 1, apoderado: 1}).populate('apoderado').populate('levelUser')
     const unDia = (60000 * 60) * 24
 
     const response = await Promise.all(students.map(async student => {
@@ -256,7 +256,6 @@ const findAllStudents = async () => {
     }))
 
     return response
-    
 }
 
 export default {

@@ -160,6 +160,7 @@ const cambiarPassword = async (req: Request, res: Response, next: NextFunction) 
 
 const alumnosUsuario = async (req: Request, res: Response) => {
     const {idUser} = req.query
+    console.log(idUser)
     try {
         const alumnos = await alumnoProvisorioModel.find({apoderado: idUser}).populate('levelUser')
         console.log('Alumnos: ', alumnos)
@@ -179,6 +180,7 @@ const leerAlumnos = async (req: Request, res: Response) => {
         res.status(400).json({name, message})
     }
 }
+
 
 const crearAlumno = async (req: Request, res: Response) => {
     const alumno = req.body

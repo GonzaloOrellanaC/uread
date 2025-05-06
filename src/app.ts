@@ -58,6 +58,7 @@ const revisionPayment = async () => {
 
     console.log(alumnos.length)
     alumnos.forEach((alumno) => {
+        console.log(alumno.name, alumno.lastName)
         if (alumno.alumnoFechaPago !== null) {
             const fechaPago = new Date(alumno.alumnoFechaPago.fechasPago[alumno.alumnoFechaPago.fechasPago.length - 1]).getTime()
             if ((currentDate + proximos5Dias) > fechaPago) {
@@ -90,6 +91,7 @@ const revisionPayment = async () => {
                     const dosDias = unDia * 2
                     const fechaUltimaNotificacion = new Date(ultimaNotificacion.createdAt).getTime()
                     if (fechaUltimaNotificacion + cincoDias < Date.now()) {
+                        /* console.log(newNotificationApoderado) */
                         const notificacion = await crearNotificacion(newNotificationApoderado)
                         console.log(notificacion)
                     } else {
